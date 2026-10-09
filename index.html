@@ -13,13 +13,13 @@
   --dark:      #16232A;   /* navy gelap  — header, sidebar  */
   --teal:      #075056;   /* teal        — aksen sekunder   */
   --ice:       #E4EEF0;   /* ice blue    — latar & surface  */
-  --orange:    #FF5B04;   /* oranye      — HIGHLIGHT PENTING */
+  --aqua:      #DE7FFF;   /* biru muda      — HIGHLIGHT PENTING */
   --ice-dark:  #C8DAE0;
   --dark-80:   rgba(22,35,42,0.80);
   --dark-12:   rgba(22,35,42,0.12);
   --dark-06:   rgba(22,35,42,0.06);
   --teal-15:   rgba(7,80,86,0.15);
-  --orange-15: rgba(255,91,4,0.13);
+  --aqua-15:   rgba(222,255,255,0.15);
   --white:     #ffffff;
   --radius:    14px;
   --radius-sm: 8px;
@@ -102,7 +102,7 @@ header h1 em {
 .header-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--orange); color: #fff;
+  background: var(--aqua); color: #fff;
   font-family: inherit; font-size: 0.8rem; font-weight: 800;
   letter-spacing: 0.06em; padding: 11px 22px;
   border-radius: 40px; border: none; cursor: pointer;
@@ -166,7 +166,7 @@ header h1 em {
 .filter-chip.active.p4 { background: #1E8449; border-color: #1E8449; }
 .filter-chip.active.dr-erna { background: var(--teal); border-color: var(--teal); }
 .filter-chip.active.dr-budhi { background: #6C3483; border-color: #6C3483; }
-.filter-chip.active.dr-etha { background: var(--orange); border-color: var(--orange); }
+.filter-chip.active.dr-etha { background: var(--aqua); border-color: var(--aqua); }
 .filter-chip.active.dr-agil { background: #117A65; border-color: #117A65; }
 .filter-divider { width: 1px; height: 22px; background: var(--dark-12); flex-shrink: 0; }
 
@@ -298,7 +298,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
   border-radius: 20px; background: var(--ice);
   color: var(--dark); white-space: nowrap;
 }
-.priority-soal-tag.hot { background: var(--orange-15); color: var(--orange); }
+.priority-soal-tag.hot { background: var(--aqua-15); color: var(--aqua); }
 .priority-arrow {
   font-size: 0.75rem; color: var(--dark); opacity: 0.35;
   transition: transform 0.22s; flex-shrink: 0;
@@ -329,7 +329,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
   background: var(--ice);
   transform: translateX(3px);
 }
-.kuliah-card.highlight { border-left-color: var(--orange); }
+.kuliah-card.highlight { border-left-color: var(--aqua); }
 .kuliah-card.hidden { display: none; }
 
 .k-num {
@@ -348,7 +348,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
 .k-soal {
   font-size: 0.62rem; font-weight: 900;
   padding: 2px 8px; border-radius: 20px;
-  background: var(--orange-15); color: var(--orange);
+  background: var(--aqua-15); color: var(--aqua);
   display: flex; align-items: center; gap: 3px;
 }
 .k-arrow {
@@ -360,7 +360,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
 /* ── DOCTOR COLOR DOTS ── */
 .dot-erna  { width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0; }
 .dot-budhi { width:8px;height:8px;border-radius:50%;background:#6C3483;flex-shrink:0; }
-.dot-etha  { width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0; }
+.dot-etha  { width:8px;height:8px;border-radius:50%;background:var(--aqua);flex-shrink:0; }
 .dot-agil  { width:8px;height:8px;border-radius:50%;background:#117A65;flex-shrink:0; }
 
 /* ═══════════════════════════════════════
@@ -465,7 +465,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
 .quiz-slot.placeholder { opacity: 0.45; pointer-events: none; cursor: default; }
 .quiz-slot-icon {
   width: 40px; height: 40px; border-radius: 10px;
-  background: var(--orange); color: #fff;
+  background: var(--aqua); color: #fff;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.2rem; flex-shrink: 0;
 }
@@ -476,7 +476,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
   display: inline-block;
   font-size: 0.62rem; font-weight: 900;
   padding: 2px 8px; border-radius: 20px;
-  background: var(--orange); color: #fff;
+  background: var(--aqua); color: #fff;
 }
 .quiz-slot.placeholder .quiz-slot-tag {
   background: rgba(228,238,240,0.20); color: rgba(228,238,240,0.55);
@@ -1027,15 +1027,6 @@ footer span { color: rgba(255,140,82,0.80); }
       <div class="k-arrow">→</div>
     </a>
 
-    <a href="K.24 Introduction to Psychiatry - dr. Erna.html" class="kuliah-card" data-priority="px" data-doctor="erna">
-      <div class="k-num">K.24</div>
-      <div class="k-body">
-        <div class="k-title">Introduction to Psychiatry and Mental Health</div>
-        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div></div>
-      </div>
-      <div class="k-arrow">→</div>
-    </a>
-
   </div>
 </div>
 
@@ -1089,7 +1080,7 @@ footer span { color: rgba(255,140,82,0.80); }
      ═══════════════════════════════════════════ -->
 <div id="latsoal" class="quiz-section">
   <div class="quiz-section-title">⚡ Latihan Soal</div>
-  <div class="quiz-section-sub">Klik untuk membuka bank soal. Sisipkan file HTML quiz di slot yang tersedia.</div>
+  <div class="quiz-section-sub">Klik untuk membuka bank soal. Selamat mengerjakan.</div>
   <div class="quiz-slots">
 
     <!-- SLOT 1 — quiz campur (nanti tautkan file quiz HTML yang sudah ada) -->
