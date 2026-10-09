@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧪 NAPZA & Perilaku Adiktif — Study Companion Blok Psikiatri</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lavender: #FF855A;
+  --lavender-light: #FFB394;
+  --lavender-pale: #FFEEE7;
+  --lavender-deep: #351F1E;
+  --lavender-muted: #8A4A3C;
+  --rose: #D4647A;
+  --rose-light: #E88BA0;
+  --rose-pale: #FCE6EA;
+  --rose-deep: #9E3F55;
+  --mint: #7BBFA8;
+  --mint-pale: #E4F5F0;
+  --mint-deep: #2F7A63;
+  --peach: #E9B872;
+  --peach-pale: #FDF1DC;
+  --peach-deep: #8A5A12;
+  --sky: #C0D6FE;
+  --sky-pale: #EAF1FF;
+  --sky-deep: #2C4D8A;
+  --cream: #F6F9FF;
+  --white: #ffffff;
+  --text: #2A1A19;
+  --text-muted: #7A625F;
+  --border: #DCE5F7;
+  --shadow: rgba(53,31,30,0.10);
+  --srgb: 53,31,30;
+  --h1: #351F1E;
+  --h2: #5A312B;
+  --h3: #C4603F;
+  --h4: #FF855A;
+  --em: #C0D6FE;
+  --nav2: #4A2A27;
+  --navshadow: rgba(53,31,30,0.4);
+  --navtxt: rgba(192,214,254,0.72);
+  --navhi: #ffffff;
+  --navact: #FF855A;
+  --th1: #351F1E;
+  --th2: #6B3B33;
+  --zebra: #F8FAFF;
+  --sd1: #2A1716;
+  --sd2: #4A2A27;
+  --sdacc: #FF855A;
+  --sdacc2: #E0663B;
+  --sdstrong: #FFD2C0;
+  --sdrgb: 255,133,90;
+  --ovl: 25,12,12;
+}
+[data-theme="dark"]{
+  --cream: #170F0F;
+  --white: #221615;
+  --text: #F4E9E6;
+  --text-muted: #BBA39F;
+  --border: #43302E;
+  --lavender-pale: #3A2420;
+  --lavender-deep: #FFB394;
+  --lavender-muted: #FF855A;
+  --lavender-light: #8A4A3C;
+  --rose-pale: #3D2027;
+  --rose-deep: #F4A3B3;
+  --mint-pale: #1D2F28;
+  --mint-deep: #93D9BE;
+  --peach-pale: #3B2D17;
+  --peach-deep: #F0C27F;
+  --sky-pale: #1F2A44;
+  --sky-deep: #C0D6FE;
+  --zebra: #1C1211;
+  --shadow: rgba(0,0,0,0.4);
+  --srgb: 0,0,0;
+  --th1: #5A312B;
+  --th2: #8A4A3C;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--h1) 0%, var(--h2) 40%, var(--h3) 70%, var(--h4) 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.06);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(var(--sdrgb),0.14);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:var(--em); }
+.hero-sub { color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:300;max-width:580px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,var(--h1),var(--nav2));
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px var(--navshadow);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:var(--navtxt);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:var(--navhi);border-bottom-color:var(--navact);
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(var(--srgb),0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(var(--srgb),0.15);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Budhi menekankan: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--th1),var(--th2));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:var(--zebra);}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(var(--srgb),0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:var(--h1);color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(var(--srgb),0.25);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--th1),var(--th2));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(var(--srgb),0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,var(--h1),var(--h3),var(--h4));
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:var(--em);line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--h1);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, var(--sd1), var(--sd2));
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid var(--sdacc);
+  position: relative;
+  box-shadow: 0 4px 20px rgba(var(--sdrgb),0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sdacc), var(--sdacc2), var(--sdacc));
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, var(--sdacc), var(--sdacc2));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-badge-warn {
+  background: linear-gradient(90deg, #E84060, #C02040);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+}
+.cohort-axon { background: rgba(var(--srgb),0.35); }
+.cohort-arthron { background: rgba(212,120,138,0.35); }
+.cohort-aorta { background: rgba(123,191,168,0.35); }
+.cohort-anthelix { background: rgba(232,168,124,0.35); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.92);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: var(--sdstrong); }
+.soal-dosen-content .hl-warn {
+  background: rgba(232,60,96,0.25);
+  border: 1px solid rgba(232,60,96,0.5);
+  color: #FFB0C0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,191,168,0.25);
+  border: 1px solid rgba(123,191,168,0.4);
+  color: #A0FFD8;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-keyword {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(var(--sdrgb),0.2);
+  border: 1px solid rgba(var(--sdrgb),0.4);
+  color: var(--sdstrong);
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, var(--sd2), var(--sdacc));
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(var(--sdrgb),0.45);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(var(--sdrgb),0.55); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #fff;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(var(--ovl),0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, var(--sd1), var(--sd2));
+  border: 2px solid var(--sdacc);
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(var(--sdrgb),0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: var(--sdacc); border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(var(--sdrgb),0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--sdstrong);
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.55); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(var(--sdrgb),0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, var(--sdacc), var(--sdacc2));
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: var(--sdstrong); font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #A0FFD8; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, var(--sdacc), var(--sdacc2));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+
+/* ===== EXTRA: tags, tools, diagrams ===== */
+html{scroll-behavior:smooth}
+body{transition:background .25s,color .25s}
+.topbar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--h4),var(--em));z-index:10000;transition:width .1s}
+.tools{display:flex;align-items:center;gap:8px;margin-left:auto;padding:0 12px;flex-shrink:0}
+.tool-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:20px;padding:5px 12px;font-size:12px;cursor:pointer;font-family:inherit}
+.tool-btn:hover{background:rgba(255,255,255,.22)}
+.search-wrap{position:relative}
+.search-in{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:20px;padding:5px 14px;font-size:12px;width:150px;font-family:inherit;outline:none}
+.search-in::placeholder{color:rgba(255,255,255,.65)}
+.search-in:focus{width:220px;background:rgba(255,255,255,.22)}
+.search-res{display:none;position:absolute;right:0;top:36px;width:min(360px,86vw);max-height:60vh;overflow:auto;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.28);z-index:500}
+.search-res.open{display:block}
+.sr-item{padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;color:var(--text);font-size:12.5px}
+.sr-item:last-child{border-bottom:none}
+.sr-item:hover{background:var(--lavender-pale)}
+.sr-item b{display:block;color:var(--lavender-deep);font-size:13px}
+.sr-item small{color:var(--text-muted)}
+.sr-empty{padding:14px;color:var(--text-muted);font-size:12.5px}
+.flash-hit{animation:flash 1.6s ease}
+@keyframes flash{0%,100%{box-shadow:0 2px 14px var(--shadow)}30%{box-shadow:0 0 0 4px var(--lavender-light)}}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin:0 4px 6px 0;vertical-align:middle}
+.t-hy{background:var(--lavender);color:#fff}
+.t-mm{background:var(--h1);color:#fff}
+.t-ct{background:var(--rose-pale);color:var(--rose-deep);border:1px solid var(--rose)}
+.t-fa{background:var(--peach-pale);color:var(--peach-deep);border:1px solid var(--peach)}
+.t-dr{background:var(--mint-pale);color:var(--mint-deep);border:1px solid var(--mint)}
+.t-ex{background:var(--sky-pale);color:var(--sky-deep);border:1px dashed var(--sky-deep)}
+.tagrow{margin-bottom:8px}
+.dr-note.warn{background:linear-gradient(135deg,var(--peach-pale),var(--rose-pale));border-color:var(--peach)}
+.dr-note.warn::before{content:'🎤⚠️ dr. Budhi (transkrip kurang jelas): ';color:var(--peach-deep)}
+.dr-note .src{display:block;font-size:11px;color:var(--text-muted);margin-top:4px;font-style:italic}
+.card-head-tags{margin:-4px 0 10px}
+.done-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:26px;padding:14px 18px;border:1.5px dashed var(--border);border-radius:14px;color:var(--text-muted);font-size:13px}
+.done-btn{background:var(--white);border:1.5px solid var(--lavender);color:var(--lavender-deep);border-radius:20px;padding:7px 18px;font-weight:600;font-family:inherit;cursor:pointer;font-size:12.5px}
+.done-btn.on{background:var(--mint);border-color:var(--mint);color:#fff}
+.prog-line{height:7px;border-radius:5px;background:rgba(255,255,255,.2);margin-top:22px;max-width:420px;overflow:hidden}
+.prog-line i{display:block;height:100%;width:0;background:var(--em);border-radius:5px;transition:width .4s}
+.prog-lbl{font-size:12px;color:rgba(255,255,255,.8);margin-top:6px}
+.nav-btn.done::after{content:' ✓';color:var(--mint);font-weight:700}
+/* pyramid */
+.pyr{display:flex;flex-direction:column;align-items:center;gap:5px;margin:10px 0 16px}
+.pyr div{padding:9px 14px;border-radius:10px;font-size:12.5px;font-weight:700;text-align:center;color:#fff}
+.pyr small{display:block;font-weight:400;font-size:11px;opacity:.9}
+/* triangle */
+.tri{position:relative;max-width:420px;height:230px;margin:10px auto 16px}
+.tri .n{position:absolute;background:var(--h1);color:#fff;border-radius:12px;padding:10px 16px;font-weight:700;font-size:13px;text-align:center}
+.tri .n small{display:block;font-weight:400;font-size:11px;opacity:.85}
+.tri .n1{top:0;left:50%;transform:translateX(-50%);background:var(--h4);}
+.tri .n2{bottom:0;left:0;background:var(--h1)}
+.tri .n3{bottom:0;right:0;background:var(--h2)}
+.tri svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.tri .n{z-index:1}
+/* bars */
+.bar-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:12.5px}
+.bar-row span.l{width:150px;flex-shrink:0;color:var(--text-muted)}
+.bar-row .b{flex:1;background:var(--lavender-pale);border-radius:8px;height:18px;overflow:hidden}
+.bar-row .b i{display:block;height:100%;background:linear-gradient(90deg,var(--lavender),var(--h4));border-radius:8px}
+.bar-row b{width:62px;text-align:right;color:var(--lavender-deep)}
+@media(max-width:600px){.bar-row span.l{width:96px}}
+/* horizontal flow */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:12px 0}
+.flow .s{flex:1;min-width:120px;background:var(--lavender-pale);border:1.5px solid var(--lavender-light);border-radius:12px;padding:10px 12px;font-size:12.5px;text-align:center;position:relative}
+.flow .s b{display:block;color:var(--lavender-deep);font-size:13px}
+.flow .s:not(:last-child)::after{content:'→';position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--lavender);font-weight:800;z-index:2}
+@media(max-width:600px){.flow .s:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-15px;transform:translateX(50%)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{background:var(--lavender-pale);color:var(--lavender-deep);border:1px solid var(--lavender-light);border-radius:16px;padding:3px 11px;font-size:12px;font-weight:600}
+.chip.on{background:var(--lavender);color:#fff;border-color:var(--lavender)}
+button.chip{cursor:pointer;font-family:inherit}
+/* flashcards */
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.fc{perspective:900px;height:170px;cursor:pointer}
+.fc-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.fc-f,.fc-b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:16px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13.5px;line-height:1.55;border:1.5px solid var(--border);overflow:auto}
+.fc-f{background:var(--white);color:var(--text);font-weight:600}
+.fc-b{background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));color:var(--text);transform:rotateY(180deg);font-weight:400}
+.fc-hint{font-size:11px;color:var(--text-muted);text-align:center;margin-top:6px}
+/* quiz extras */
+.q-lvl{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;background:var(--lavender-pale);color:var(--lavender-deep);border-radius:8px;padding:2px 9px;margin-left:8px}
+.q-exp{background:var(--mint-pale)}
+.q-exp .why{margin-top:10px;padding-top:10px;border-top:1px dashed var(--mint)}
+.q-exp .why div{padding:5px 0;font-size:13px;color:var(--text)}
+.q-exp .why div b{color:var(--rose-deep)}
+.q-exp .concept{margin-top:10px;background:var(--lavender-pale);border-radius:9px;padding:9px 12px;font-size:13px;color:var(--lavender-deep)}
+.quiz-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.lvl-stat{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.lvl-stat div{background:rgba(255,255,255,.14);border-radius:12px;padding:8px;font-size:12px}
+.lvl-stat b{display:block;font-size:18px}
+/* floating toc */
+.toc-btn{position:fixed;left:18px;bottom:24px;z-index:9998;background:var(--h1);color:#fff;border:none;border-radius:50px;padding:11px 17px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;box-shadow:0 6px 22px rgba(0,0,0,.3)}
+.toc-panel{display:none;position:fixed;left:18px;bottom:76px;z-index:9998;width:min(300px,86vw);max-height:60vh;overflow:auto;background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.3);padding:12px}
+.toc-panel.open{display:block;animation:fadeUp .2s ease}
+.toc-panel h5{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin:8px 6px 4px}
+.toc-panel a{display:block;padding:6px 10px;border-radius:8px;font-size:12.5px;color:var(--text);cursor:pointer;text-decoration:none}
+.toc-panel a:hover{background:var(--lavender-pale)}
+@media(max-width:600px){.float-btn{bottom:78px;right:14px}.toc-btn{left:14px;bottom:18px}.tools{padding:0 8px}.search-in{width:110px}}
+.kbd{font-family:ui-monospace,monospace;font-size:11px;background:var(--lavender-pale);padding:1px 6px;border-radius:5px}
+.mini-card.hl{border-color:var(--lavender);background:var(--lavender-pale)}
+.small{font-size:12.5px;color:var(--text-muted)}
+.cohort-avicenna{background:rgba(122,163,214,.4)}
+.cohort-ub{background:rgba(255,255,255,.22)}
+.ref{font-size:11px;color:var(--text-muted);font-style:italic;margin-top:8px}
+th.c,td.c{text-align:center}
+@media print{.sticky-nav,.float-btn,.toc-btn,.topbar{display:none}.section{display:block!important}}
+
+</style>
+</head>
+<body>
+<div class="topbar" id="topbar"></div>
+<div class="hero">
+  <div class="hero-eyebrow">🧪 Blok Psychiatry & Mental Health · dr. Rahaju Budhi Muljanto, Sp.KJ</div>
+  <h1>NAPZA &amp; <em>Perilaku Adiktif</em><br>Substance Use Disorders</h1>
+  <p class="hero-sub">Disusun dari PPT 21 &amp; transkrip kuliah dr. Budhi, dipadukan dengan pola soal Axon'20, Arthron'18, Aorta'19, Avicenna'17 dan bank UB.</p>
+  <div class="hero-pills"><span class="pill">🎯 Learning Objectives</span><span class="pill">🚨 Intoksikasi</span><span class="pill">💊 Putus Zat</span><span class="pill">🚬 Nikotin</span><span class="pill">🎤 Highlight Dosen</span><span class="pill">🧠 13 Soal C1–C4</span></div>
+  <div class="prog-line"><i id="progFill"></i></div><div class="prog-lbl" id="progLbl"></div>
+</div>
+<div class="sticky-nav" id="mainNav">
+<button class="nav-btn active" data-sec="overview" onclick="show('overview')">🏠 Overview</button><button class="nav-btn" data-sec="konsep" onclick="show('konsep')">🧬 Konsep & Tingkatan</button><button class="nav-btn" data-sec="intoks" onclick="show('intoks')">🚨 Intoksikasi</button><button class="nav-btn" data-sec="putus" onclick="show('putus')">💊 Putus Zat & Terapi</button><button class="nav-btn" data-sec="nikotin" onclick="show('nikotin')">🚬 Nikotin & Adiksi Perilaku</button><button class="nav-btn" data-sec="dosen" onclick="show('dosen')">🎤 Highlight Dosen</button><button class="nav-btn" data-sec="soal" onclick="show('soal')">📊 Analisis Soal</button><button class="nav-btn" data-sec="review" onclick="show('review')">⚡ Quick Review</button><button class="nav-btn" data-sec="quiz" onclick="show('quiz')">🧠 Quiz</button>
+<div class="tools">
+  <div class="search-wrap"><input class="search-in" id="searchIn" placeholder="🔍 Cari ( / )" autocomplete="off"><div class="search-res" id="searchRes"></div></div>
+  <button class="tool-btn" id="themeBtn" onclick="toggleTheme()">🌙 Dark</button>
+</div>
+</div>
+<div class="container">
+
+<!-- ======== OVERVIEW ======== -->
+<div id="sec-overview" class="section active">
+<h2 class="section-heading">Peta Belajar: NAPZA & Perilaku Adiktif</h2>
+<p class="section-desc">Satu kuliah dr. Budhi (PPT 21) yang diolah jadi learning system: apa yang harus kamu kuasai, seberapa sering keluar ujian, dan apa yang ditekankan dosen.</p>
+<div class="dr-note">Jangan pakai istilah “narkoba ilegal” atau “obat terlarang”. Kalau itu obat/zat, tidak ada yang namanya ilegal secara zat — yang bermasalah adalah <strong>cara pemakaiannya</strong> (salah pakai → penyalahgunaan/ketergantungan). Contoh ekstrem: heroin adalah obat sangat kuat untuk nyeri.<span class="src">Disampaikan dua kali di kuliah — wajib dipakai saat menulis jawaban/ketemu pasien.</span></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎯</span> Learning Objectives</div><ul class="styled-list"><li>Menjelaskan definisi <strong>penyalahgunaan NAPZA</strong>, beda <strong>craving</strong> vs <strong>ketergantungan</strong> (toleransi + putus zat).</li><li>Menyebut faktor penyebab (<strong>individu – zat/media – lingkungan</strong>) dan <strong>6 tingkatan pemakaian</strong>.</li><li>Mengenali &amp; menegakkan diagnosis <strong>intoksikasi akut</strong> (opioid F11.0, amfetamin F15.0) dan <strong>putus zat</strong> (F1x.3).</li><li>Menyusun tatalaksana awal IGD: <strong>life-saving</strong>, naloksona, simtomatik; serta terapi substitusi (metadon/buprenorfin).</li><li>Menangani pasien <strong>perokok</strong>: asesmen, gejala putus nikotin, strategi motivasi.</li><li>Mengenali <strong>perilaku adiktif</strong> non-zat (judi online, game, internet, pornografi, pinjol).</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:#E4F1FA">🗺️</span> SKDI Mapping & Kodifikasi</div><div class="table-wrap"><table><tr><th>Topik</th><th>Kode PPDGJ-III</th><th>Catatan</th></tr><tr><td>Intoksikasi akut</td><td>F1x.0</td><td>Diagnosis lain didahulukan bila ada: F1x.1, F1x.2, F1x.5</td></tr><tr><td>Penggunaan yang merugikan</td><td>F1x.1</td><td>Pola pakai merusak kesehatan, belum memenuhi ketergantungan</td></tr><tr><td>Sindrom ketergantungan</td><td>F1x.2</td><td>Toleransi + gejala putus zat (+ craving)</td></tr><tr><td>Keadaan putus zat</td><td>F1x.3</td><td>Salah satu indikator ketergantungan; dapat komplikasi kejang</td></tr><tr><td>Putus zat dengan delirium</td><td>F1x.4</td><td>Contoh klasik: delirium tremens (alkohol)</td></tr><tr><td>Gangguan psikotik akibat zat</td><td>F1x.5</td><td>—</td></tr><tr><td>Digit “x” = zat</td><td>F10 alkohol · F11 opioid · F12 kanabinoid · F13 sedatif-hipnotik · F14 kokain · F15 stimulan lain (amfetamin) · F16 halusinogen · F17 tembakau · F19 multipel</td><td>Opioid = <span class="hl-lav">F11</span>, amfetamin = <span class="hl-lav">F15</span></td></tr><tr><td>ICD-11</td><td>Disorders due to substance use + <em>gambling disorder</em> &amp; <em>gaming disorder</em> (kelompok addictive behaviours)</td><td>Perilaku adiktif non-zat diakui sebagai diagnosis</td></tr></table></div>
+<div class="alert alert-peach"><span class="alert-icon">📎</span><div><strong>Catatan kejujuran:</strong> file PPDGJ-III &amp; ICD-11 yang kamu sebut belum ada di folder project (yang terbaca hanya PDF bank soal), jadi kode di atas diambil dari PPT dr. Budhi + pengetahuan umum. <strong>Tingkat kompetensi SKDI sengaja tidak kuisi</strong> agar tidak mengarang — cek langsung di dokumen SKDI.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⭐</span> High-Yield Topics (urut berdasarkan frekuensi di bank soal)</div><div class="table-wrap"><table><tr><th>#</th><th>Topik</th><th>Muncul di bank soal</th><th>Tag</th></tr><tr><td>1</td><td>Identifikasi zat (ganja, putaw/heroin, ecstasy, bahan baku)</td><td>≈ 7 soal</td><td><span class="tag t-mm">Must Memorize</span></td></tr><tr><td>2</td><td>Intoksikasi opioid: pin-point pupil &amp; naloksona</td><td>≈ 4–5 soal</td><td><span class="tag t-hy">High Yield</span></td></tr><tr><td>3</td><td>Ketergantungan / gejala putus zat</td><td>≈ 5 soal</td><td><span class="tag t-hy">High Yield</span></td></tr><tr><td>4</td><td>Metadon / PTRM</td><td>≈ 3 soal</td><td><span class="tag t-fa">Frequently Asked</span></td></tr><tr><td>5</td><td>Tingkat pemakaian (<em>situasional</em> muncul 2×)</td><td>2 soal</td><td><span class="tag t-ct">Common Trap</span></td></tr><tr><td>6</td><td>Prinsip terapi: <em>life-saving</em>; urutan tahap rehabilitasi</td><td>2 soal</td><td><span class="tag t-fa">Frequently Asked</span></td></tr><tr><td>7</td><td>Alkohol (dosen: baca Kaplan sendiri)</td><td>≈ 3 soal</td><td><span class="tag t-dr">Highlight Dosen</span></td></tr></table></div>
+<p class="ref">Frekuensi = hitungan manual dari 5 kompilasi soal (UB, Axon'20, Arthron'18, Aorta'19, Avicenna'17); angka perkiraan.</p></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎤</span> Top 5 yang ditekankan dosen</div><ul class="styled-list"><li><span class="tag t-dr">Dosen</span> Dokter itu <strong>kelompok risiko tinggi</strong> penyalahgunaan (punya akses obat).</li><li><span class="tag t-dr">Dosen</span> Penyalahguna hampir selalu <strong>polisubstansi</strong> — jangan puas dengan satu zat.</li><li><span class="tag t-dr">Dosen</span> Fokus intoksikasi &amp; putus zat = <strong>menyelamatkan nyawa + simtomatik</strong>.</li><li><span class="tag t-dr">Dosen</span> <strong>Alprazolam</strong> mudah disalahgunakan: hanya untuk panik, jangka pendek.</li><li><span class="tag t-dr">Dosen</span> Perokok: <strong>jangan pakai alasan kesehatan</strong> untuk memotivasi.</li></ul>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="overview" onclick="markDone('overview')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== KONSEP ======== -->
+<div id="sec-konsep" class="section">
+<h2 class="section-heading">Konsep Dasar & Tingkatan Pemakaian</h2>
+<p class="section-desc">Fondasi: apa itu penyalahgunaan, kenapa terjadi, dan bagaimana eskalasinya dari coba-coba sampai ketergantungan.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📖</span> Definisi NAPZA & Penyalahgunaan</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div>
+<p><strong>NAPZA</strong> = Narkotika, Alkohol, Psikotropika, dan Zat Adiktif lain: bahan kimia yang masuk ke tubuh dan <span class="hl-lav">memengaruhi susunan saraf pusat</span> → gejala fisik &amp; psikologis. Dampaknya: intoksikasi, putus zat, gangguan psikiatri lain, dan komorbid medik (HIV/AIDS, hepatitis).</p>
+<div class="divider"></div>
+<strong>Penyalahgunaan</strong> = pemakaian yang:
+<ul class="styled-list"><li>Bukan untuk tujuan pengobatan <em>dan/atau</em></li><li>Tanpa aturan/pengawasan dokter <em>dan/atau</em></li><li>Dipakai kadang-kadang, berkali-kali, atau terus-menerus</li><li>Sering menyebabkan ketagihan/ketergantungan fisik maupun mental</li></ul>
+<div class="dr-note">Apotek di beberapa kota masih memberikan psikotropika tanpa resep — itu salah satu pintu masuk penyalahgunaan yang sering ia temui.</div>
+<div class="alert alert-sky"><span class="alert-icon">🔍</span><div>Identifikasi zat bisa dari: <strong>laporan individu</strong>, analisis objektif <strong>urine/darah</strong>, atau <strong>bukti lain</strong> (sampel zat, tanda klinis, laporan pihak ketiga, peralatan). Bukti alat: <em>bong</em>, jarum suntik, bekas suntikan di lengan — pada <strong>perempuan periksa juga area inguinal</strong>.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔺</span> Penyebab: Segitiga Individu – Zat – Lingkungan</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span></div><div class="tri"><svg viewBox="0 0 420 230" preserveAspectRatio="none"><line x1="210" y1="40" x2="70" y2="190" stroke="var(--lavender)" stroke-width="3" stroke-dasharray="6 5"/><line x1="210" y1="40" x2="350" y2="190" stroke="var(--lavender)" stroke-width="3" stroke-dasharray="6 5"/><line x1="90" y1="205" x2="330" y2="205" stroke="var(--lavender)" stroke-width="3" stroke-dasharray="6 5"/></svg>
+<div class="n n1">INDIVIDU<small>psikososial · coping</small></div><div class="n n2">NAPZA / MEDIA<small>mudah didapat</small></div><div class="n n3">LINGKUNGAN<small>teman · akses · bandar</small></div></div><div class="table-wrap"><table><tr><th>Faktor</th><th>Contoh</th><th>Kata dosen</th></tr><tr><td>Individu</td><td>Masalah psikososial; coping maladaptif; “ingin selalu bersenang-senang” (predisposisi di soal)</td><td>Minum obat tidur untuk hadapi masalah → lama-lama kebal → dosis naik → ketergantungan</td></tr><tr><td>Zat / media</td><td>Mudah dan murah didapat; tersedia di warung/apotek</td><td>Ada “kode khusus” untuk membeli di warung rokok</td></tr><tr><td>Lingkungan</td><td>Teman sebaya, ketersediaan, strategi bandar</td><td>Bandar menyamar lewat permen &amp; minuman kemasan — waspada pada anak</td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-arthron">Arthron '18 No.42</span></div><div class="soal-dosen-content"><strong>❓ Predisposisi individu menjadi penyalahguna?</strong> ✅ <span class="hl-ok">Ingin selalu bersenang-senang</span>. Opsi lain (keluarga bahagia, berprestasi, fanatik agama) adalah faktor protektif — ⚠️ <span class="hl-warn">retardasi mental</span> adalah pengecoh yang menarik.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔼</span> 6 Tingkatan Pemakaian (bawah → atas)</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-ct">⚠️ Common Trap</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="pyr">
+<div style="background:#351F1E;width:34%">KETERGANTUNGAN</div>
+<div style="background:#5A312B;width:46%">PENYALAHGUNAAN</div>
+<div style="background:#C4603F;width:58%">PEMAKAIAN SITUASIONAL</div>
+<div style="background:#E8764A;width:70%">REKREASI / SOSIAL</div>
+<div style="background:#FF855A;width:82%;color:#351F1E">COBA-COBA</div>
+<div style="background:var(--sky);width:94%;color:#2C4D8A">KELOMPOK RISIKO TINGGI</div></div><div class="table-wrap"><table><tr><th>Tingkat</th><th>Ciri</th><th>Contoh dari dosen</th></tr><tr><td>Kelompok risiko tinggi</td><td>Punya akses / kerentanan</td><td><strong>Dokter</strong> (akses obat) — ampul diganti vit B1, dokter jaga mabuk</td></tr><tr><td>Coba-coba (<em>experimental</em>)</td><td>Ingin tahu, sekali dua kali</td><td>“Coba sekali, mau lagi”</td></tr><tr><td>Rekreasional / sosial</td><td>Saat kumpul, akhir pekan</td><td>Alkohol di acara sosial</td></tr><tr><td><span class="hl-peach">Situasional</span></td><td>Dipicu <strong>keadaan/perasaan tertentu</strong> (galau, tertekan, konflik)</td><td>Pusing, banyak pikiran → langsung minum/pakai</td></tr><tr><td>Penyalahgunaan</td><td>Tiap tidak nyaman langsung pakai; tanpa pakai merasa tidak nyaman</td><td>Perokok yang “tidak bisa berpikir” tanpa rokok</td></tr><tr><td>Ketergantungan</td><td><strong>Toleransi + gejala putus zat</strong></td><td>—</td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu — 2× muncul</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-ub">Bank UB No.49</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.40</span></div><div class="soal-dosen-content"><strong>❓ “Bekas suntikan setelah bertengkar dengan ayah” / “memakai bila galau”</strong> → ✅ <span class="hl-ok">Situasional</span> (<em>situational use</em>).<br>⚠️ <span class="hl-warn">Jangan tertukar</span> dengan <em>experimental</em> (sekadar ingin tahu) dan <em>social/recreational</em> (konteks kumpul-kumpul). Kunci = <strong>pemicu keadaan emosi</strong>.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚖️</span> Craving vs Ketergantungan</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="compare-wrap"><div class="compare-col left"><h4>🔥 Craving (ketagihan)</h4><div class="compare-row"><span>Arti:</span>Keinginan kuat untuk memakai lagi</div><div class="compare-row"><span>Bentuk:</span>Terus kepikiran; ingin buka HP, minum obat lagi</div><div class="compare-row"><span>Status:</span>Gejala subjektif</div></div><div class="compare-col right"><h4>⛓️ Ketergantungan</h4><div class="compare-row"><span>Komponen 1:</span><strong>Toleransi</strong> — dosis harus naik (10 mg → 20–30 mg)</div><div class="compare-row"><span>Komponen 2:</span><strong>Gejala putus zat</strong> (“sakau”: berkeringat, sakit, gelisah)</div><div class="compare-row"><span>Efek:</span>Perubahan otak → terapi psikologis saja tidak cukup</div></div></div>
+<div class="dr-note">Zat mengubah kerja otak — makanya terapi harus kombinasi: <strong>farmakologis + terapi perilaku</strong>, bukan psikologis saja.<span class="src">Transkrip menyebut “desensitisasi dan terapi perilaku”; yang pasti disebut: terapi perilaku.</span></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-ub">Bank UB No.24</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.90</span><span class="cohort-tag cohort-arthron">Arthron '18 No.99</span></div><div class="soal-dosen-content">Dosis lazim tak lagi berefek + tidak bisa tidur tanpa obat → <span class="hl-ok">ketergantungan benzodiazepin</span>. Berhenti 3 hari → gelisah, nyeri, insomnia → <span class="hl-ok">sindrom putus zat</span>. “Yang biasa ditemukan pada ketergantungan NAPZA” → <span class="hl-ok">gejala lepas zat</span>.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧪</span> Tabel Identifikasi Zat — jangan sampai tertukar</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span><span class="tag t-fa">🔁 Frequently Asked</span></div><div class="table-wrap"><table><tr><th>Zat</th><th>Golongan</th><th>Wujud / petunjuk soal</th><th>Fakta kunci</th></tr><tr><td><strong>Ganja / marijuana</strong> (“cimeng”)</td><td>Kanabinoid</td><td><strong>Daun kering</strong> dalam lintingan rokok (± 25 g)</td><td>Dihisap seperti rokok, dimasak/diseduh</td></tr><tr><td><strong>Putaw = heroin</strong></td><td>Opioid</td><td>Bubuk putih/cokelat; disuntik/dihirup/dihisap</td><td>Bahan baku <em>Papaver somniferum</em></td></tr><tr><td>Morfin</td><td>Opioid</td><td>Penggunaan menurun karena sulit didapat</td><td>—</td></tr><tr><td>Kokain</td><td>Stimulan</td><td>Bubuk/kristal putih halus dari daun koka</td><td><em>Erythroxylon coca</em></td></tr><tr><td><strong>Sabu</strong> (metamfetamin)</td><td>Stimulan amfetamin</td><td>Kristal; ditelan/dihisap (bong)/disuntik</td><td>Nafsu makan ↓ → BB turun</td></tr><tr><td><strong>Ecstasy / MDMA</strong></td><td>Turunan amfetamin</td><td>Pil/tablet pesta</td><td>Putus zat → <strong>depresi</strong></td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu — paling sering</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-axon">Axon '20 No.38, 48, 59</span><span class="cohort-tag cohort-aorta">Aorta '19 No.29, 30, 31, 50</span></div><div class="soal-dosen-content">“Lintingan rokok berisi daun” → <span class="hl-ok">ganja</span> · “Putaw adalah?” → <span class="hl-ok">heroin</span> · “Bahan baku putaw” → <span class="hl-ok">Papaver somniferum</span> · “Derivat amfetamin” → <span class="hl-ok">ecstasy</span> (bukan kafein/kokain).</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📱</span> Perilaku Adiktif (non-zat)</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span><span class="tag t-ex">➕ Tambahan di luar kuliah</span></div><p>Perilaku adiktif nyambung ke <strong>media</strong>. Medianya terus berkembang, polanya sama: disalahgunakan → ketergantungan.</p>
+<div class="chips"><span class="chip">Adiksi pornografi</span><span class="chip">Adiksi internet</span><span class="chip">Adiksi game</span><span class="chip">Judi (online)</span><span class="chip">Pinjaman online</span></div><div class="dr-note">“Bayangkan kalau kita tidak punya handphone…” — media yang memudahkan hidup justru yang paling mudah disalahgunakan. Dosen menyebut daftar terbaru: pornografi → internet → game online → judi online → <strong>pinjol</strong>.</div>
+<div class="alert alert-sky"><span class="alert-icon">📎</span><div>ICD-11 memasukkan <em>gambling disorder</em> dan <em>gaming disorder</em> sebagai gangguan akibat perilaku adiktif (kode dari pengetahuan umum, belum diverifikasi dengan file ICD-11).</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="konsep" onclick="markDone('konsep')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== INTOKS ======== -->
+<div id="sec-intoks" class="section">
+<h2 class="section-heading">Intoksikasi Akut</h2>
+<p class="section-desc">Apa yang terjadi saat zat masuk berlebihan — dan apa yang harus kamu lakukan pertama kali di IGD.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚡</span> Intoksikasi Akut Umum (F1x.0)</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><p>Kondisi peralihan akibat alkohol/zat psikoaktif → gangguan <strong>kesadaran, kognitif, persepsi, afek, perilaku</strong>.</p><div class="alert alert-peach"><span class="alert-icon">📌</span><div>Bila ada masalah lain, <strong>diagnosis yang didahulukan</strong>: penggunaan merugikan (F1x.1) → sindrom ketergantungan (F1x.2) → gangguan psikotik (F1x.5).</div></div>
+<div class="alert alert-rose"><span class="alert-icon">⚠️</span><div><strong>Pengecualian dosis:</strong> intoksikasi biasanya sebanding dosis, tetapi pada gagal ginjal/hati <strong>dosis kecil pun bisa memicu intoksikasi berat</strong>.</div></div>
+<div class="dr-note">Intoksikasi akut paling sering karena <strong>alkohol</strong>; lalu sabu/meth dan morfin. Overdosis umum; pada pasien ketergantungan atau gangguan ginjal bahkan dosis biasa bisa sudah “mabuk”.</div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💉</span> Intoksikasi Opioid (F11.0)</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-ct">⚠️ Common Trap</span></div>
+<p><strong>Kriteria:</strong> konstriksi pupil <em>(atau dilatasi akibat anoksia pada overdosis berat)</em> + ≥1: mengantuk, bicara cadel, hendaya atensi/memori.</p>
+<div class="grid-3"><div class="mini-card hl"><h4>🔴 Trias klasik</h4><ul><li>Pupil <strong>miosis (pin-point)</strong></li><li>Penurunan kesadaran</li><li>Depresi napas</li></ul></div>
+<div class="mini-card"><h4>Komplikasi</h4><ul><li>Trauma/cedera</li><li>Hematemesis, aspirasi muntah</li><li>Konvulsi, delirium, koma</li></ul></div>
+<div class="mini-card"><h4>Penunjang</h4><ul><li><strong>Naloxone challenge test</strong> (bila koma)</li><li>Darah lengkap, urinalisis</li><li>CT/EEG/Rontgen kepala bila perlu; HIV dengan konseling</li></ul></div></div>
+<p class="small">DD: intoksikasi zat psikoaktif lain atau campuran (polidrug!).</p><div class="cr-box"><div class="cr-label">🧠 Algoritme Penanganan IGD (sesuai PPT)</div><ol class="cr-steps"><li>Amankan <strong>jalan napas &amp; ventilasi</strong> + pantau tanda vital (life-saving).</li><li><strong>Naloksona 0,8 mg IV</strong> → tunggu 15 menit.</li><li>Tidak respons → <strong>1,6 mg IV</strong> → tunggu 15 menit.</li><li>Masih tidak respons → <strong>3,2 mg IV</strong> dan <strong>curigai penyebab lain</strong> (bukan opioid murni).</li><li>Bila respons → lanjut <strong>0,4 mg/jam IV</strong>.</li><li>Atasi penyulit; intoksikasi berat → <strong>rujuk ICU</strong>.</li></ol></div>
+<div class="alert alert-rose"><span class="alert-icon">🛑</span><div><strong>Common trap:</strong> Pupil midriasis <em>tidak</em> menyingkirkan opioid — pada overdosis berat, anoksia bisa melebarkan pupil. Jangan tolak naloksona hanya karena pupil tidak miosis bila konteks (bekas suntikan, napas melambat, koma) mendukung.</div></div>
+<div class="dr-note">Naloksona adalah <strong>penawar opioid</strong>. Diberikan tepat &amp; cepat → prognosis baik. Tapi <strong>tidak bisa dijadikan kebiasaan</strong>: kalau tiap minggu mabuk lalu diberi nalokson lagi, hasilnya makin sulit diatur. Di IGD, jangan abaikan pasien mual-muntah, kejang, atau koma.</div>
+<div class="alert alert-sky"><span class="alert-icon">📚</span><div><strong>Penyulit:</strong> AIDS &amp; infeksi oportunistik, hepatitis, kejang, edema paru, pneumonia aspirasi, hipotermi, edema serebri, kematian (apnea memanjang). <strong>Prognosis:</strong> baik bila nalokson cepat &amp; ventilasi terjaga; hipoksia bermakna + aspirasi → morbiditas/mortalitas.</div></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-aorta">Aorta '19 No.26</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.85</span><span class="cohort-tag cohort-ub">Bank UB No.53</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.91</span></div><div class="soal-dosen-content">“Gangguan akut akibat zat opioid” → <span class="hl-ok">pin-point pupil (miosis)</span> (bukan midriasis, tremor, hiperalgesia).<br>Tidak sadar + tensi rendah + pupil 1 mm / luka suntik + nadi turun → <span class="hl-ok">Nalokson</span> (bukan metadon, etanol, benzodiazepin, natrium tiosulfat).</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚡</span> Intoksikasi Amfetamin / Sabu (F15.0)</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div>
+<p><strong>Kriteria:</strong> ≥ <strong>2</strong> gejala segera setelah/selama pemakaian:</p>
+<div class="chips"><span class="chip">Takikardi/bradikardi</span><span class="chip">Midriasis</span><span class="chip">TD ↑/↓</span><span class="chip">Keringat/kedinginan</span><span class="chip">Mual/muntah</span><span class="chip">BB turun</span><span class="chip">Agitasi/retardasi motorik</span><span class="chip">Nyeri dada, aritmia</span><span class="chip">Bingung, kejang, diskinesia, distonia, koma</span></div>
+<p class="small">DD: intoksikasi kokain, PCP, halusinogen. Penunjang: urinalisis, EKG sesuai indikasi.</p><div class="table-wrap"><table><tr><th>Masalah</th><th>Terapi (PPT)</th></tr><tr><td>Umum</td><td>Tanda vital; <strong>simtomatik</strong>; bila oral: activated charcoal / kuras lambung</td></tr><tr><td>Agitasi / psikotik</td><td>Haloperidol 2–5 mg/kali atau klorpromazin 1 mg/kgBB oral tiap 4–6 jam</td></tr><tr><td>Hipertensi</td><td>Antihipertensi bila TD &gt; 140/100</td></tr><tr><td>Ansietas</td><td>Diazepam 3×5 mg atau klordiazepoksid 3×25 mg</td></tr><tr><td>Kejang</td><td>Diazepam 10–30 mg parenteral</td></tr><tr><td>Aritmia / palpitasi</td><td>Cardiac monitoring; propranolol 20–80 mg/hari (perhatikan kontraindikasi)</td></tr><tr><td>Hipertermia</td><td>Selimut dingin / klorpromazin</td></tr><tr><td>Disposisi</td><td><strong>Observasi IGD 1×24 jam</strong>; tenang → rawat jalan; buruk → ICU</td></tr></table></div>
+<div class="dr-note">Dulu amfetamin dijual bebas — mahasiswa pakai untuk begadang saat ujian. Obat “pelangsing” bisa benar menurunkan BB (nafsu makan ↓) tapi <strong>bisa menimbulkan ketergantungan</strong>. Untuk ansietas, dosen jarang memberi benzodiazepin berlebih di atas haloperidol karena dapat <em>menggeser ketergantungan</em>; kesulitan utama: <strong>polifarmasi</strong>. Penyulit: aritmia, polydrugs, koma.<span class="src">Catatan kritis: praktik modern sering memakai benzodiazepin sebagai lini pertama untuk agitasi stimulan; untuk ujian ikuti PPT/dosen.</span></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🪞</span> Intoksikasi Opioid vs Amfetamin — Cermin yang Berlawanan</div><div class="compare-wrap"><div class="compare-col left"><h4>💉 Opioid (depresan SSP)</h4><div class="compare-row"><span>Pupil:</span>Miosis</div><div class="compare-row"><span>Kesadaran:</span>Mengantuk → koma</div><div class="compare-row"><span>Napas:</span>Melambat</div><div class="compare-row"><span>TD/Nadi:</span>Turun</div><div class="compare-row"><span>Antidotum:</span><strong>Naloksona</strong></div></div><div class="compare-col right"><h4>⚡ Amfetamin (stimulan SSP)</h4><div class="compare-row"><span>Pupil:</span>Midriasis</div><div class="compare-row"><span>Kesadaran:</span>Agitasi, hiperaktif</div><div class="compare-row"><span>Napas:</span>Bisa depresi pada fase lanjut</div><div class="compare-row"><span>TD/Nadi:</span>Naik, takikardi</div><div class="compare-row"><span>Antidotum:</span><em>Tidak ada</em> — simtomatik</div></div></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 Mnemonic</div><div class="mnemonic-text">Opioid = “menciut &amp; mengantuk”; Stimulan = “melebar &amp; melonjak”</div><div class="mnemonic-sub">Miosis + sedasi + napas pelan → opioid. Midriasis + takikardi + agitasi + keringat → stimulan. Saat <strong>putus zat, gejalanya berbalik</strong> (lihat tab berikutnya).</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="intoks" onclick="markDone('intoks')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== PUTUS ======== -->
+<div id="sec-putus" class="section">
+<h2 class="section-heading">Putus Zat & Terapi</h2>
+<p class="section-desc">Putus zat adalah indikator ketergantungan. Hafalkan pola “kebalikan dari intoksikasi” lalu kuasai terapi substitusinya.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔄</span> Putus Zat Umum (F1x.3)</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><p>Gejala aneka bentuk &amp; keparahan akibat <strong>penghentian absolut atau relatif</strong> setelah pemakaian terus-menerus/dosis tinggi. Onset terbatas &amp; bergantung jenis dan dosis zat. <strong>Dapat disertai kejang.</strong></p><ul class="styled-list"><li>Putus zat = <strong>salah satu indikator sindrom ketergantungan</strong></li><li>Gejala fisik bervariasi sesuai zat; gejala psikologis hampir selalu ada</li></ul>
+<div class="dr-note">Pasien datang ke IGD dengan <strong>kejang → jangan langsung berpikir epilepsi</strong>. Ambil riwayat teliti: bisa saja gejala putus zat. Kejang adalah komplikasi putus zat.</div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🤧</span> Putus Opioid (F11.3)</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><p><strong>Kriteria:</strong> ≥ <strong>3</strong> gejala dalam menit–hari setelah menghentikan/mengurangi opioid:</p>
+<div class="chips"><span class="chip">Mood disforik</span><span class="chip">Mual–muntah</span><span class="chip">Nyeri otot</span><span class="chip">Lakrimasi / rinorea</span><span class="chip">Midriasis, piloereksi, berkeringat</span><span class="chip">Diare</span><span class="chip">Menguap</span><span class="chip">Demam</span><span class="chip">Insomnia</span></div>
+<p class="small">DD: <em>common cold</em>, gastroenteritis (mirip flu + GI!). Penunjang: darah lengkap, urinalisis, HIV dengan konseling.</p><div class="table-wrap"><table><tr><th>Zat</th><th>Onset gejala</th><th>Puncak</th><th>Mereda</th></tr><tr><td>Heroin (waktu paruh pendek)</td><td>6–12 jam setelah dosis terakhir</td><td>1–3 hari</td><td>5–7 hari</td></tr><tr><td>Metadon (kerja panjang)</td><td>2–4 hari</td><td>—</td><td>—</td></tr></table></div>
+<div class="table-wrap"><table><tr><th>Strategi terapi</th><th>Detail PPT</th></tr><tr><td>Simtomatik</td><td>Sesuai gejala klinis</td></tr><tr><td><strong>Substitusi opioid</strong></td><td><strong>Metadon</strong> / <strong>buprenorfin</strong>, tapering off; dapat <strong>rumatan jangka panjang</strong>. Bila tidak ada → kodein</td></tr><tr><td>Substitusi non-opioid</td><td><strong>Klonidin</strong> — pantau TD; <strong>HENTIKAN bila sistol &lt; 100 atau diastol &lt; 70 mmHg</strong></td></tr><tr><td>Tambahan</td><td>Sedatif-hipnotik / antipsikotik sesuai indikasi</td></tr><tr><td>Rawat inap</td><td><strong>Bukan keharusan</strong>; rawat bila putus zat sangat berat</td></tr></table></div>
+<div class="dr-note">Substitusi pakai <strong>buprenorfin atau metadon</strong>. Ada layanan terapi rumatan, tapi obat harus <strong>diminum di tempat</strong>. Bila dibawa pulang, pasien bisa menimbun lalu minum dosis besar → <strong>kematian</strong>. Metadon tersedia di Indonesia. Banyak pasien tidak membaik tanpa substitusi jangka panjang. Komplikasi: overdosis, AIDS &amp; infeksi oportunistik, hepatitis, komorbid psikiatri.</div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-ub">Bank UB No.37</span><span class="cohort-tag cohort-axon">Axon '20 No.21, 42</span></div><div class="soal-dosen-content">PTRM (Program Terapi Rumatan Metadon) → <span class="hl-ok">mencegah penggunaan opioid</span> · “Obat gangguan NAPZA” → <span class="hl-ok">metadon</span>.<br>⚠️ Axon'20 No.42 punya opsi ambigu (“withdrawal opioid” vs “kecanduan morfin”) &amp; kunci tidak tercantum — pilih yang menyebut <strong>opioid</strong> sebagai sasaran.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">😴</span> Putus Amfetamin (F15.3)</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span></div><p><strong>Kriteria:</strong> mood <strong>disforik</strong> + ≥2 perubahan dalam jam–hari setelah henti mendadak:</p>
+<div class="chips"><span class="chip">Fatigue</span><span class="chip">Mimpi buruk / halusinasi</span><span class="chip">Insomnia <em>atau</em> hipersomnia</span><span class="chip">Nafsu makan ↑</span><span class="chip">Retardasi / agitasi motorik</span></div>
+<p class="small">DD: intoksikasi amfetamin, putus kokain, <strong>episode manik/hipomanik</strong>.</p><div class="table-wrap"><table><tr><th>Aspek</th><th>Terapi / catatan PPT</th></tr><tr><td>Observasi</td><td>24 jam; nilai fisik &amp; psikiatrik</td></tr><tr><td>Rawat inap bila</td><td>Psikotik berat, depresi berat / ide bunuh diri, komplikasi fisik</td></tr><tr><td>Antipsikotik</td><td>Haloperidol 3×1,5–5 mg <em>atau</em> risperidon 2×1,5–3 mg</td></tr><tr><td>Antiansietas</td><td>Alprazolam 2×0,25–0,5 mg <em>atau</em> diazepam 3×5–10 mg <em>atau</em> klobazam 2×10 mg</td></tr><tr><td>Antidepresan</td><td>SSRI atau trisiklik/tetrasiklik sesuai klinis</td></tr><tr><td>Prognosis</td><td>Depresi berat bisa muncul tapi <strong>sembuh sendiri bila tidur normal</strong></td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-aorta">Aorta '19 No.69</span></div><div class="soal-dosen-content">Efek <em>withdrawal</em> ecstasy → <span class="hl-ok">depresi</span>.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🪞</span> Intoksikasi vs Putus Zat — Tabel Cermin</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span></div><div class="table-wrap"><table><tr><th>Zat</th><th>Saat INTOKSIKASI</th><th>Saat PUTUS ZAT</th></tr><tr><td>Opioid</td><td>Miosis, mengantuk, napas ↓, tenang &amp; bahagia</td><td>Midriasis, menguap, lakrimasi/rinorea, piloereksi, diare, nyeri otot, insomnia (mirip flu)</td></tr><tr><td>Amfetamin</td><td>Takikardi, midriasis, TD ↑, agitasi, BB ↓</td><td>Lelah, hipersomnia, <strong>nafsu makan ↑</strong>, disforik/depresi, mimpi buruk</td></tr><tr><td>Benzodiazepin / alkohol</td><td>Sedasi, bicara cadel, inkoordinasi</td><td>Ansietas, tremor, insomnia, <strong>kejang</strong>, (alkohol: delirium tremens)</td></tr></table></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 Aturan Cermin</div><div class="mnemonic-text">Putus zat = kebalikan efek zat</div><div class="mnemonic-sub">Zat yang menenangkan → putusnya membuat gelisah/hiperaktif. Zat yang membuat segar → putusnya membuat lemas/depresi.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💊</span> Benzodiazepin & Alprazolam</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span><span class="tag t-ct">⚠️ Common Trap</span></div><div class="tagrow"></div><div class="dr-note"><strong>Alprazolam</strong> adalah obat yang paling laris dan paling sering disalahgunakan; banyak pasien datang ke psikiater hanya demi mendapat alprazolam, bahkan mengamuk bila ditolak. Alprazolam hanya untuk <strong>panik</strong>; di RSJ dosen hanya memberi <strong>± 3 hari</strong>. Bila pasien sudah tergantung dan tidak bisa lepas, diberi tegas 1–2 mg. Pada lansia, daripada insomnia berkepanjangan, pakai alternatif lebih aman: <strong>diazepam</strong>, atau <strong>antidepresan</strong> sementara. Di RSJ, alprazolam diganti <strong>klobazam</strong> (sedasi lebih kuat).<span class="src">Poin klobazam disampaikan dosen sebagai praktik klinisnya.</span></div>
+<div class="alert alert-peach"><span class="alert-icon">🧐</span><div><strong>Catatan kritis:</strong> dosen menyebut klobazam “tidak bikin kecanduan”. Secara farmakologi klobazam tetap benzodiazepin: risiko toleransi/ketergantungannya <em>lebih rendah</em>, bukan nol. Untuk ujian kuliah ini, ikuti pernyataan dosen; untuk praktik, <strong>jangan hentikan benzodiazepin mendadak (risiko kejang)</strong> — lakukan tapering.</div></div>
+<div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Contoh kasus ketergantungan: dosis lazim tidak berefek, insomnia bila tidak minum, iritabel bila berlebih → <strong>ketergantungan benzodiazepin</strong>, bukan intoksikasi.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🍺</span> Alkohol — dosen minta baca sendiri</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span><span class="tag t-ex">➕ Tambahan di luar kuliah</span></div><p>Dosen <strong>tidak membahas alkohol</strong> di kuliah: <em>baca di Kaplan dan PPDGJ (penyalahgunaan zat)</em>. Tapi bank soal tetap menanyakannya, jadi ini ringkasan minimal.</p><div class="table-wrap"><table><tr><th>Kondisi</th><th>Gambaran</th><th>Tatalaksana umum</th></tr><tr><td>Intoksikasi akut</td><td>Bau alkohol, bicara cadel, bingung, inkoordinasi, bisa penurunan kesadaran</td><td>Suportif, jaga jalan napas, cari komplikasi (trauma, hipoglikemia)</td></tr><tr><td>Putus alkohol ringan–sedang</td><td>Tremor, berkeringat, gelisah, mual (6–24 jam)</td><td>Benzodiazepin (diazepam/lorazepam), tiamin</td></tr><tr><td>Delirium tremens</td><td>Gelisah, gemetar, demam tinggi, keringat, halusinasi, kejang (48–96 jam)</td><td>Benzodiazepin dosis adekuat, cairan, tiamin <em>sebelum</em> glukosa, rawat intensif</td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge-warn">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-avicenna">Avicenna '17 No.28, 42, 84</span></div><div class="soal-dosen-content">Pesta + bingung + bau alkohol → <span class="hl-ok">intoksikasi</span>. Pecandu berat berhenti 3 hari + demam + berkeringat + gemetar → <span class="hl-ok">putus alkohol</span> (⚠️ kunci bank tertulis B “kadar alkohol berlebih”, padahal konsepnya putus zat — periksa pembahasan). Pecandu alkohol ngamuk → <span class="hl-ok">antipsikotik</span> sesuai kunci.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧭</span> Alur Tatalaksana Ketergantungan</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span></div><div class="flow"><div class="s"><b>1. Diagnosis</b>Identifikasi zat &amp; pola</div><div class="s"><b>2. Detoksifikasi</b>Atasi intoksikasi/putus zat</div><div class="s"><b>3. Rehabilitasi</b>Medis → non-medis</div><div class="s"><b>4. Resosialisasi</b>Bina lanjut, kembali ke sekolah/kerja</div></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-avicenna">Avicenna '17 No.17</span><span class="cohort-tag cohort-arthron">Arthron '18 No.26</span></div><div class="soal-dosen-content">Urutan: <span class="hl-ok">diagnosis → detoksifikasi → rehabilitasi → resosialisasi</span>. Prinsip terapi intoksikasi: <span class="hl-ok">life-saving</span> (bukan life-long medicine / life-threatening).</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="putus" onclick="markDone('putus')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== NIKOTIN ======== -->
+<div id="sec-nikotin" class="section">
+<h2 class="section-heading">Nikotin & Perilaku Adiktif</h2>
+<p class="section-desc">Perokok adalah pasien paling sering kamu temui. Kuncinya: asesmen yang tepat dan motivasi yang bukan menakut-nakuti.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔁</span> Siklus Kerentanan Sosial & Dampak Kesehatan</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span></div><div class="flow"><div class="s"><b>Kesulitan sosial</b>pengangguran, isolasi, lingkungan tak aman</div><div class="s"><b>Rokok = coping</b>respons stres, rekreasi “murah”</div><div class="s"><b>Makin sulit berhenti</b>lebih banyak merokok, relaps ↑</div><div class="s"><b>Makin buruk</b>uang kurang, stres, sakit</div></div>
+<p><strong>Dampak:</strong> serangan jantung, stroke, kanker, emfisema, bronkitis, asma, ulkus, penuaan dini, impotensi, keguguran.</p></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔎</span> Asesmen Perokok</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span><span class="tag t-hy">⭐ High Yield</span></div><ul class="styled-list"><li>Tanya: <strong>“Setelah bangun tidur, berapa lama sampai rokok pertama?”</strong> — semakin cepat, semakin tergantung.</li><li><strong>Vape ≠ aman</strong>: “aku nggak merokok, tapi vape” → sama saja, bahkan lebih bahaya (zat lebih banyak; cairan mengandung zat sangat adiktif).</li><li>Tanyakan santai: “Masih merokok?” — dan siapkan diri menghadapi dalih: “kakek saya merokok sampai umur 93”.</li></ul>
+<div class="dr-note">Perokok <strong>selalu punya alasan</strong>. Bila kamu memakai argumen kesehatan, jawabannya selalu ekstrem (“tidak ada yang mati karena rokok, ada yang serangan jantung pas tenis”). Maka <strong>jangan pakai alasan kesehatan</strong> sebagai alat motivasi.</div>
+<div class="alert alert-sky"><span class="alert-icon">➕</span><div><span class="tag t-ex">Tambahan</span> “Waktu hingga rokok pertama” adalah salah satu butir instrumen ketergantungan nikotin (mis. Fagerström) — dosen tidak menyebut nama skalanya.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⏳</span> Gejala Putus Nikotin</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="flow"><div class="s"><b>0–24 jam</b>mulai; craving datang dalam gelombang singkat</div><div class="s"><b>24–48 jam</b>paling berat</div><div class="s"><b>± 2 minggu</b>perlahan mereda</div></div>
+<p>Craving + <strong>≥ 4</strong> gejala dalam 24 jam: pusing, batuk, kesemutan, nafsu makan ↑/BB naik, konstipasi, nadi turun, insomnia, mood depresif, mudah marah/frustrasi, ansietas, sulit konsentrasi, gelisah.</p><div class="dr-note">Setelah berhenti, <strong>gejala reda sendiri sekitar 2 minggu</strong>. Pasien bisa makan banyak, BB naik, frustrasi, marah, cemas — itu bagian dari proses, bukan alasan kembali merokok. <strong>Jangan pernah bilang “ya sudah, merokok saja”.</strong><br><br><strong>Batuk setelah berhenti merokok itu wajar:</strong> sel goblet &amp; lapisan saluran napas yang tadinya menebal akibat iritasi mulai pulih → lebih kering → batuk. Saran: <strong>banyak minum air</strong>.</div>
+<div class="alert alert-mint"><span class="alert-icon">🧠</span><div>Neurokimia nikotin (pelepasan dopamin, norepinefrin, serotonin) mirip efek antidepresan → sebagian perokok merasa rokok meredakan depresi, dan sebagian jadi depresi berat setelah berhenti.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💬</span> Motivasi: Apa yang Berhasil?</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span><span class="tag t-fa">🔁 Frequently Asked</span></div><div class="table-wrap"><table><tr><th>❌ Kurang efektif</th><th>✅ Lebih berhasil</th></tr><tr><td>Ancaman kesehatan</td><td><strong>Stigma</strong> sebagai perokok; berani menegur “saya tidak merokok”</td></tr><tr><td>Menyuruh “jangan lagi”</td><td><strong>Akses terbatas</strong> ke tempat/aktivitas</td></tr><tr><td>—</td><td><strong>Biaya</strong> merokok (kalau dihitung, mobil pun tak terbeli)</td></tr><tr><td>—</td><td>Bisa <strong>mengurangi obat</strong> yang dikonsumsi</td></tr><tr><td>—</td><td>Putus dari <strong>siklus adiksi</strong> (stres akibat neuroadaptasi, withdrawal, “topping up”)</td></tr></table></div>
+<div class="dr-note">Alasan paling sering dari pasien: “jadi lebih tenang, lebih bisa berpikir.” Tugasmu: jelaskan itu <strong>perilaku/siklus kecanduan</strong>, bukan manfaat rokok.</div>
+<div class="alert alert-sky"><span class="alert-icon">➕</span><div><span class="tag t-ex">Tambahan</span> Farmakoterapi berhenti merokok (NRT, bupropion, vareniklin) tidak dibahas di kuliah ini; pelajari di sumber standar bila diperlukan.</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="nikotin" onclick="markDone('nikotin')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== DOSEN ======== -->
+<div id="sec-dosen" class="section">
+<h2 class="section-heading">🎤 Highlight Dosen</h2>
+<p class="section-desc">Kumpulan penekanan dr. Budhi dari rekaman kuliah, diolah per tema.</p>
+<div class="alert alert-peach"><span class="alert-icon">🎧</span><div><strong>Kualitas transkrip:</strong> rekaman auto-transcribe dan banyak bagian berantakan. Poin di bawah hanya yang maknanya cukup jelas; yang meragukan kutandai ⚠️. Ucapan disusun ulang maknanya, bukan kutipan persis.</div></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗣️</span> Istilah & Sikap Klinis</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>“<strong>Narkoba ilegal itu tidak ada</strong>”; jangan pakai istilah “obat terlarang” (diulang dua kali).</li><li>Heroin = obat sangat kuat untuk nyeri; masalahnya salah pakai.</li><li>Penyalahguna umumnya memakai <strong>lebih dari satu</strong> zat.</li><li>Dokter termasuk <strong>kelompok risiko tinggi</strong> (cerita dokter jaga yang menyuntik, ampul diganti vit B1).</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚨</span> Intoksikasi & Putus Zat</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>Prioritas: <strong>menyelamatkan nyawa</strong> &amp; terapi <strong>simtomatik</strong>.</li><li>Naloksona = penawar opioid; tepat &amp; cepat → prognosis baik; <strong>jangan dijadikan pola berulang</strong>.</li><li>IGD: jangan abaikan pasien mual, muntah, kejang, koma.</li><li><strong>Kejang di IGD</strong> → telusuri putus zat sebelum label epilepsi.</li><li>Pada amfetamin: diazepam untuk cemas bisa menggeser ketergantungan; polifarmasi menyulitkan.</li><li>Substitusi opioid: buprenorfin/metadon; pembawaan pulang berisiko ditimbun → overdosis.</li><li>Pengamatan IGD ≥ 1×24 jam bila aritmia/demam.</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💊</span> Benzodiazepin</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>Alprazolam hanya untuk panik, ± 3 hari; sangat mudah didapat → sering disalahgunakan.</li><li>Alternatif lebih aman: diazepam / antidepresan; di RSJ: klobazam.</li><li>Pasien lansia insomnia: hati-hati agar tidak “mengantar” ke ketergantungan.</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚬</span> Rokok</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>Tanya waktu rokok pertama setelah bangun; vape sama atau lebih berbahaya.</li><li>Jangan pakai alasan kesehatan; pakai stigma, akses, biaya, mengurangi obat, siklus adiksi.</li><li>Gejala putus reda ± 2 minggu; batuk setelah berhenti normal → banyak minum.</li><li>Jangan pernah menyerah/menyarankan “merokok saja”.</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📖</span> Yang diminta dibaca sendiri</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li><strong>Alkohol</strong> → Kaplan.</li><li><strong>PPDGJ</strong> bagian penyalahgunaan zat.</li><li>Perilaku adiktif: pornografi, internet, game, judi online, pinjol (disebut sekilas).</li><li>⚠️ Dosen menyebut sudah mengirim dua folder materi tambahan tentang rokok — cek grup angkatanmu.</li></ul>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="dosen" onclick="markDone('dosen')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== SOAL ======== -->
+<div id="sec-soal" class="section">
+<h2 class="section-heading">📊 Analisis Soal Tahun Lalu</h2>
+<p class="section-desc">Pola pengulangan dari lima kompilasi (UB, Axon'20, Arthron'18, Aorta'19, Avicenna'17). Bagian prediksi adalah inferensiku, bukan jaminan.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📈</span> Peta Frekuensi Topik</div><div class="bar-row"><span class="l">Identifikasi zat</span><div class="b"><i style="width:100%"></i></div><b>≈ 7</b></div>
+<div class="bar-row"><span class="l">Intoksikasi opioid/nalokson</span><div class="b"><i style="width:68%"></i></div><b>≈ 5</b></div>
+<div class="bar-row"><span class="l">Putus zat/ketergantungan</span><div class="b"><i style="width:68%"></i></div><b>≈ 5</b></div>
+<div class="bar-row"><span class="l">Metadon / PTRM</span><div class="b"><i style="width:43%"></i></div><b>≈ 3</b></div>
+<div class="bar-row"><span class="l">Alkohol</span><div class="b"><i style="width:43%"></i></div><b>≈ 3</b></div>
+<div class="bar-row"><span class="l">Tingkat pemakaian</span><div class="b"><i style="width:29%"></i></div><b>2</b></div>
+<div class="bar-row"><span class="l">Prinsip/urutan terapi</span><div class="b"><i style="width:29%"></i></div><b>2</b></div></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔁</span> Pola yang Berulang</div><div class="table-wrap"><table><tr><th>Pola soal</th><th>Kunci berulang</th><th>Konsep</th></tr><tr><td>Daun/lintingan; putaw; derivat amfetamin</td><td>Ganja; heroin; ecstasy</td><td>Hafalan identifikasi zat</td></tr><tr><td>Pupil “pin-point” / 1 mm</td><td>Opioid → naloksona</td><td>Trias opioid + antidotum</td></tr><tr><td>Tingkat pemakaian saat galau/konflik</td><td>Situasional</td><td>Pemicu emosi</td></tr><tr><td>“Obat NAPZA / terapi rumatan”</td><td>Metadon; mencegah opioid</td><td>Substitusi</td></tr><tr><td>Prinsip terapi intoksikasi</td><td>Life-saving</td><td>Prioritas IGD</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔮</span> Prediksi Area Penting (inferensi)</div><div class="table-wrap"><table><tr><th>Area</th><th>Kemungkinan</th><th>Alasan</th></tr><tr><td>Identifikasi zat + turunannya</td><td><span class="hl-rose">Sangat tinggi</span></td><td>Muncul di hampir semua angkatan</td></tr><tr><td>Intoksikasi opioid + naloksona (+ dosis)</td><td><span class="hl-rose">Tinggi</span></td><td>Dosen menekankan antidotum; PPT merinci dosis</td></tr><tr><td>Putus opioid &amp; metadon/buprenorfin</td><td><span class="hl-peach">Tinggi</span></td><td>Ditekankan; PTRM sering</td></tr><tr><td>Putus amfetamin vs manik</td><td><span class="hl-peach">Sedang</span></td><td>DD eksplisit di PPT, belum banyak diuji</td></tr><tr><td>Alprazolam/benzodiazepin</td><td><span class="hl-peach">Sedang</span></td><td>Ditekankan dosen; soal UB No.24</td></tr><tr><td>Nikotin: putus &amp; motivasi</td><td><span class="hl-mint">Sedang–rendah</span></td><td>Hampir tak ada di bank lama, tapi 8 menit transkrip</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🕳️</span> Jebakan Bank Soal</div><ul class="styled-list"><li><strong>Situasional vs experimental vs sosial</strong> — cari pemicu emosi.</li><li><strong>Ecstasy</strong> turunan amfetamin (bukan kokain, bukan kafein).</li><li>Opioid <em>intoksikasi</em> = miosis; <em>putus</em> = midriasis. Jangan tertukar.</li><li>Avicenna No.42 (putus alkohol): kunci bank tidak konsisten dengan penjelasannya.</li><li>Axon'20 No.42 (metadon): opsi ambigu &amp; kunci tidak tercantum.</li></ul>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="soal" onclick="markDone('soal')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== REVIEW ======== -->
+<div id="sec-review" class="section">
+<h2 class="section-heading">⚡ Quick Review</h2>
+<p class="section-desc">Satu halaman sebelum ujian: ringkasan, mnemonic, dan flashcard.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📝</span> Ringkasan Satu Layar</div><div class="table-wrap"><table><tr><th>Tema</th><th>Kunci</th></tr><tr><td>Definisi</td><td>Bukan medis / tanpa pengawasan / berulang → ketagihan</td></tr><tr><td>Ketergantungan</td><td>Toleransi + gejala putus zat</td></tr><tr><td>6 tingkat</td><td>Risiko tinggi → coba-coba → sosial → <strong>situasional</strong> → penyalahgunaan → ketergantungan</td></tr><tr><td>Opioid intoksikasi</td><td>Miosis, sedasi, napas ↓ → <strong>naloksona</strong> 0,8 → 1,6 → 3,2 mg; lanjut 0,4 mg/jam</td></tr><tr><td>Amfetamin intoksikasi</td><td>≥2 gejala simpatomimetik; haloperidol; observasi 24 jam</td></tr><tr><td>Putus opioid</td><td>≥3 gejala; substitusi metadon/buprenorfin; klonidin (stop bila &lt;100/70)</td></tr><tr><td>Putus amfetamin</td><td>Disforik, lelah, hipersomnia, nafsu makan ↑; DD manik</td></tr><tr><td>Benzodiazepin</td><td>Alprazolam hanya panik, ± 3 hari</td></tr><tr><td>Nikotin</td><td>Reda ± 2 minggu; motivasi bukan dengan alasan kesehatan</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧩</span> Mnemonic</div><div class="mnemonic"><div class="mnemonic-label">🧩 Opioid vs Stimulan</div><div class="mnemonic-text">“Menciut &amp; Mengantuk” vs “Melebar &amp; Melonjak”</div><div class="mnemonic-sub">Pupil mengecil + sedasi (opioid) vs pupil melebar + takikardi (stimulan).</div></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 Alur terapi ketergantungan</div><div class="mnemonic-text">D-D-R-R</div><div class="mnemonic-sub"><strong>D</strong>iagnosis → <strong>D</strong>etoksifikasi → <strong>R</strong>ehabilitasi → <strong>R</strong>esosialisasi.</div></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 Putus zat</div><div class="mnemonic-text">Kebalikan dari efek zat</div><div class="mnemonic-sub">Putus opioid mirip flu + diare; putus amfetamin = lemas, tidur, nafsu makan naik.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🃏</span> Flashcards — klik untuk membalik</div><div class="fc-grid" id="fcGrid"></div><p class="fc-hint">Tebak dulu dalam hati sebelum membalik (active recall).</p></div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="review" onclick="markDone('review')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== QUIZ ======== -->
+<div id="sec-quiz" class="section">
+<h2 class="section-heading">🧠 Quiz — C1 sampai C4</h2>
+<p class="section-desc">Vignette berbasis kuliah &amp; pola soal tahun lalu. Pilihan jawaban diacak setiap kali dimuat. Setelah menjawab kamu mendapat pembahasan + clinical reasoning tiap opsi.</p>
+<div class="quiz-bar"><span class="small">Filter level:</span><button class="chip lvl-chip on" onclick="setLvl('ALL',this)">Semua</button><button class="chip lvl-chip" onclick="setLvl('C1',this)">C1</button><button class="chip lvl-chip" onclick="setLvl('C2',this)">C2</button><button class="chip lvl-chip" onclick="setLvl('C3',this)">C3</button><button class="chip lvl-chip" onclick="setLvl('C4',this)">C4</button></div><div class="quiz-progress" id="quizProg"></div><div id="quizBox"></div><div class="score-card" id="scoreCard"><div style="font-size:40px">🌸</div><div class="score-big" id="scoreNum">0</div><div id="scoreTot" style="font-size:18px;opacity:.8"></div><p class="score-msg" id="scoreMsg"></p><div class="lvl-stat" id="lvlStat"></div><button class="btn-restart" onclick="resetQuiz()">🔁 Acak &amp; Ulangi</button></div>
+</div>
+
+</div>
+<button class="toc-btn" onclick="toggleToc()">☰ Quick Jump</button>
+<div class="toc-panel" id="tocPanel"></div>
+<button class="float-btn" onclick="openModal()"><div class="float-pulse"></div>🔴 Soal Tahun Lalu</button>
+<div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-title">🔴 Soal Tahun Lalu — Sering Keluar</div>
+    <div class="modal-sub">Topik dari bank soal angkatan sebelumnya yang sama dengan materi ini. Tanda ⚠️ = kunci bank perlu dicek ulang.</div>
+    <div class="modal-item"><span class="modal-item-num">01 · PALING SERING</span><div class="modal-item-q">Identifikasi zat: lintingan daun / putaw / derivat amfetamin</div><div class="modal-item-a"><strong>Ganja</strong> · <strong>putaw = heroin</strong> (bahan baku <em>Papaver somniferum</em>) · <strong>ecstasy</strong> turunan amfetamin.</div><div class="modal-cohorts"><span class="cohort-tag cohort-axon">Axon '20 No.38,48,59</span><span class="cohort-tag cohort-aorta">Aorta No.29–31,50</span></div></div><div class="modal-item"><span class="modal-item-num">02 · OPIOID</span><div class="modal-item-q">Gangguan akut akibat opioid</div><div class="modal-item-a"><strong>Pin-point pupil (miosis)</strong>; gejala utama: rasa tenang &amp; bahagia.</div><div class="modal-cohorts"><span class="cohort-tag cohort-aorta">Aorta No.26,66</span><span class="cohort-tag cohort-avicenna">Avicenna No.85</span></div></div><div class="modal-item"><span class="modal-item-num">03 · TERAPI</span><div class="modal-item-q">Tidak sadar, pupil 1 mm / luka suntik</div><div class="modal-item-a"><strong>Nalokson</strong> (bukan metadon/etanol/benzodiazepin).</div><div class="modal-cohorts"><span class="cohort-tag cohort-ub">UB No.53</span><span class="cohort-tag cohort-avicenna">Avicenna No.91</span></div></div><div class="modal-item"><span class="modal-item-num">04 · TRICKY ⚠️</span><div class="modal-item-q">Tingkat pemakaian saat galau/konflik</div><div class="modal-item-a"><strong>Situasional</strong> (jangan pilih experimental).</div><div class="modal-cohorts"><span class="cohort-tag cohort-ub">UB No.49</span><span class="cohort-tag cohort-avicenna">Avicenna No.40</span></div></div><div class="modal-item"><span class="modal-item-num">05 · METADON</span><div class="modal-item-q">PTRM / terapi rumatan metadon</div><div class="modal-item-a"><strong>Mencegah penggunaan opioid</strong>; obat NAPZA = metadon.</div><div class="modal-cohorts"><span class="cohort-tag cohort-axon">Axon '20 No.21,42</span><span class="cohort-tag cohort-ub">UB No.37</span></div></div><div class="modal-item"><span class="modal-item-num">06 · PRINSIP</span><div class="modal-item-q">Prinsip terapi intoksikasi NAPZA</div><div class="modal-item-a"><strong>Life-saving</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.26</span></div></div><div class="modal-item"><span class="modal-item-num">07 · URUTAN</span><div class="modal-item-q">Tahapan penatalaksanaan ketergantungan</div><div class="modal-item-a"><strong>Diagnosis → detoksifikasi → rehabilitasi → resosialisasi</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-avicenna">Avicenna No.17</span></div></div><div class="modal-item"><span class="modal-item-num">08 · KONSEP</span><div class="modal-item-q">Predisposisi penyalahguna</div><div class="modal-item-a"><strong>Ingin selalu bersenang-senang</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.42</span></div></div><div class="modal-item"><span class="modal-item-num">09 · KONSEP</span><div class="modal-item-q">Yang biasa ditemukan pada ketergantungan NAPZA</div><div class="modal-item-a"><strong>Gejala lepas zat</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.99</span></div></div><div class="modal-item"><span class="modal-item-num">10 · BENZO</span><div class="modal-item-q">Dosis biasa tidak efek + tak bisa tidur tanpa obat</div><div class="modal-item-a"><strong>Ketergantungan benzodiazepin</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-ub">UB No.24</span></div></div><div class="modal-item"><span class="modal-item-num">11 · STIMULAN</span><div class="modal-item-q">Withdrawal ecstasy</div><div class="modal-item-a"><strong>Depresi</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-aorta">Aorta No.69</span></div></div><div class="modal-item"><span class="modal-item-num">12 · ALKOHOL ⚠️</span><div class="modal-item-q">Pecandu berhenti 3 hari + demam + gemetar</div><div class="modal-item-a">Konsep: <strong>putus alkohol</strong> (kunci bank tidak konsisten).</div><div class="modal-cohorts"><span class="cohort-tag cohort-avicenna">Avicenna No.28,42,84</span></div></div>
+    <button class="modal-nav-btn" onclick="closeModal();show('quiz')">🧠 Langsung ke Quiz</button>
+  </div>
+</div>
+<script>
+var KEY='napza';
+var QUIZ=[{"lvl": "C1", "topic": "TINGKAT PEMAKAIAN", "src": "UB No.49 · Avicenna No.40", "v": "Laki-laki 24 tahun dibawa ke IGD. Di lengannya ada bekas suntikan. Menurut ibunya, ia memakai zat itu hanya setelah bertengkar hebat dengan ayahnya atau saat merasa sangat galau; di luar itu tidak memakai.", "q": "Tingkat pemakaian pasien ini adalah…", "opts": [{"t": "Pemakaian situasional", "ok": true, "why": "Pemicunya jelas: keadaan emosi/konflik. Itulah definisi <em>situational use</em>."}, {"t": "Pemakaian coba-coba", "ok": false, "why": "Coba-coba didorong rasa ingin tahu, bukan pemicu emosi tertentu."}, {"t": "Pemakaian rekreasional/sosial", "ok": false, "why": "Sosial terjadi di konteks berkumpul/pesta, bukan saat konflik."}, {"t": "Penyalahgunaan", "ok": false, "why": "Penyalahgunaan = tiap rasa tidak nyaman langsung memakai; di sini pola pakai masih terikat pemicu spesifik."}, {"t": "Ketergantungan", "ok": false, "why": "Tidak ada data toleransi atau gejala putus zat."}], "concept": "Urutan tingkat: risiko tinggi → coba-coba → sosial → <strong>situasional</strong> → penyalahgunaan → ketergantungan. Kata kunci situasional = pemicu keadaan."}, {"lvl": "C1", "topic": "IDENTIFIKASI ZAT", "src": "Axon'20 No.48 · Aorta No.30", "v": "Petugas menemukan lintingan rokok berisi sekitar 25 gram daun kering cincang dari tas seorang mahasiswa.", "q": "Zat yang paling mungkin adalah…", "opts": [{"t": "Ganja (marijuana)", "ok": true, "why": "Daun kering dilinting seperti rokok adalah ciri khas ganja (“cimeng”)."}, {"t": "Putaw (heroin)", "ok": false, "why": "Putaw berbentuk bubuk putih/cokelat."}, {"t": "Kokain", "ok": false, "why": "Kokain berupa bubuk/kristal putih halus (dari daun koka, tapi sudah diolah)."}, {"t": "Sabu-sabu", "ok": false, "why": "Sabu berbentuk kristal, bukan daun."}, {"t": "Ecstasy", "ok": false, "why": "Ecstasy berupa pil/tablet."}], "concept": "Hafal wujud: ganja = daun kering; heroin = bubuk; sabu = kristal; ecstasy = tablet."}, {"lvl": "C2", "topic": "KETERGANTUNGAN", "src": "Avicenna No.90 · UB No.24", "v": "Perempuan 38 tahun dulu cukup minum ¼ tablet penenang untuk tidur; kini 3 tablet baru bisa tidur. Setelah berhenti 3 hari ia gelisah, nyeri badan, dan tidak bisa tidur.", "q": "Dua komponen yang membuktikan sindrom ketergantungan pada pasien ini adalah…", "opts": [{"t": "Toleransi dan gejala putus zat", "ok": true, "why": "Dosis naik agar efek sama = toleransi; gelisah/nyeri/insomnia setelah henti = putus zat."}, {"t": "Craving dan polifarmasi", "ok": false, "why": "Craving memang ada pada kecanduan, tetapi bukan komponen diagnostik dan polifarmasi tidak disebutkan."}, {"t": "Intoksikasi dan overdosis", "ok": false, "why": "Tidak ada gambaran keracunan akut."}, {"t": "Penggunaan merugikan dan komorbid HIV", "ok": false, "why": "Tidak ada data komorbid; ini kategori F1x.1."}, {"t": "Pemakaian sosial dan situasional", "ok": false, "why": "Itu tingkat pemakaian awal, bukan komponen ketergantungan."}], "concept": "Ketergantungan = <strong>toleransi + gejala putus zat</strong>. Craving = keinginan kuat (tidak sama)."}, {"lvl": "C2", "topic": "PRINSIP TERAPI", "src": "Arthron No.26", "v": "Seorang pria dibawa ke IGD setelah memakai zat dalam jumlah besar, kesadaran menurun, napas dangkal. Mahasiswa koas bertanya prinsip utama penanganannya.", "q": "Prinsip terapi intoksikasi NAPZA adalah…", "opts": [{"t": "Life-saving", "ok": true, "why": "Prioritas pertama menyelamatkan nyawa: jalan napas, ventilasi, tanda vital, antidotum bila ada."}, {"t": "Psikoterapi", "ok": false, "why": "Terlalu dini; dilakukan setelah stabil."}, {"t": "Terapi perilaku", "ok": false, "why": "Untuk rehabilitasi, bukan fase akut."}, {"t": "Life-long medicine", "ok": false, "why": "Berlaku untuk rumatan, bukan intoksikasi akut."}, {"t": "Life-threatening", "ok": false, "why": "Itu istilah kondisi, bukan prinsip terapi."}], "concept": "IGD: <strong>life-saving</strong> + simtomatik dulu, rehabilitasi belakangan."}, {"lvl": "C2", "topic": "OPIOID vs AMFETAMIN", "src": "", "v": "Dua pasien dibawa ke IGD. Pasien 1: tidur dalam, napas 8×/menit, bekas suntikan di lengan. Pasien 2: gelisah, nadi 130×/menit, TD 170/100 mmHg, berkeringat, BB turun drastis 2 bulan terakhir.", "q": "Temuan yang paling membedakan intoksikasi pasien 1 dari pasien 2 adalah…", "opts": [{"t": "Pupil miosis pada pasien 1 vs midriasis pada pasien 2", "ok": true, "why": "Opioid (depresan) → miosis, sedasi; amfetamin (stimulan) → midriasis, simpatomimetik."}, {"t": "Keduanya pasti midriasis", "ok": false, "why": "Hanya pada stimulan (atau opioid overdosis berat dengan anoksia)."}, {"t": "Pasien 1 pasti memerlukan antipsikotik", "ok": false, "why": "Antipsikotik untuk agitasi/psikosis stimulan, bukan untuk depresi napas opioid."}, {"t": "Pasien 2 memerlukan nalokson", "ok": false, "why": "Nalokson hanya untuk opioid."}, {"t": "Tidak ada perbedaan bermakna", "ok": false, "why": "Gambaran klinisnya berlawanan."}], "concept": "Opioid: miosis + sedasi + napas ↓. Stimulan: midriasis + takikardi + hipertensi + agitasi."}, {"lvl": "C3", "topic": "NALOKSON", "src": "Dosis dari PPT", "v": "Pria 28 tahun koma, RR 6×/menit, pupil 1 mm, ditemukan bersama jarum suntik. Diberi naloksona 0,8 mg IV; 15 menit kemudian tidak ada respons.", "q": "Langkah berikutnya sesuai pedoman PPT adalah…", "opts": [{"t": "Naloksona 1,6 mg IV, tunggu 15 menit", "ok": true, "why": "Dosis dititrasi bertahap: 0,8 → 1,6 → 3,2 mg."}, {"t": "Langsung drip 0,4 mg/jam", "ok": false, "why": "Drip dilanjutkan setelah pasien <em>berespons</em>."}, {"t": "Naloksona 3,2 mg IV langsung", "ok": false, "why": "Melompati langkah; 3,2 mg adalah dosis ketiga."}, {"t": "Metadon sebagai substitusi", "ok": false, "why": "Metadon memicu/memperpanjang efek opioid; bukan terapi darurat."}, {"t": "Flumazenil", "ok": false, "why": "Antidotum benzodiazepin, bukan opioid."}], "concept": "Naloksona 0,8 → 1,6 → 3,2 mg (tiap 15 menit); tak respons setelah 3,2 mg = curigai penyebab lain; respons → 0,4 mg/jam."}, {"lvl": "C3", "topic": "PUTUS OPIOID", "src": "", "v": "Pria 27 tahun pengguna heroin menahun, 12 jam setelah dosis terakhir: menguap, lakrimasi, rinorea, piloereksi, pupil lebar, diare, nyeri otot. TD 150/90, nadi 100×/menit, tidak ada demam.", "q": "Tatalaksana yang paling tepat adalah…", "opts": [{"t": "Substitusi opioid (metadon/buprenorfin) dengan tapering + simtomatik", "ok": true, "why": "Putus opioid ditangani dengan substitusi bertahap; rumatan dapat dilanjutkan bila perlu."}, {"t": "Naloksona 0,8 mg IV", "ok": false, "why": "Antagonis opioid akan <em>memicu</em> putus zat lebih berat."}, {"t": "Haloperidol 5 mg", "ok": false, "why": "Tidak ada psikosis; bukan terapi putus opioid."}, {"t": "Antibiotik untuk gastroenteritis", "ok": false, "why": "Jebakan DD: gejala mirip flu/gastroenteritis, tetapi pupil lebar + piloereksi + menguap menunjuk putus opioid."}, {"t": "Observasi tanpa terapi karena tidak berbahaya", "ok": false, "why": "Putus opioid sangat tidak nyaman dan bisa kambuh; terapi diperlukan."}], "concept": "Putus opioid ≥3 gejala; terapi = simtomatik + substitusi (metadon/buprenorfin) atau klonidin dengan pantau TD."}, {"lvl": "C3", "topic": "INTOKSIKASI AMFETAMIN", "src": "", "v": "Laki-laki 22 tahun, setelah memakai sabu 2 hari: agitasi, nadi 130×/menit, TD 160/100 mmHg, midriasis, berkeringat, bicara kacau; suhu 37,8 °C.", "q": "Penatalaksanaan awal yang paling sesuai adalah…", "opts": [{"t": "Pantau tanda vital, terapi simtomatik (haloperidol bila agitasi/psikotik; antihipertensi bila perlu), observasi IGD 24 jam", "ok": true, "why": "Sesuai PPT: tidak ada antidotum spesifik, penanganan simtomatik dan pemantauan."}, {"t": "Naloksona IV", "ok": false, "why": "Antidotum opioid, tidak berguna untuk stimulan."}, {"t": "Metadon", "ok": false, "why": "Substitusi opioid, tidak relevan."}, {"t": "Klonidin dosis tinggi tanpa pemantauan TD", "ok": false, "why": "Klonidin untuk substitusi non-opioid; hipotensi berbahaya jika tak dipantau."}, {"t": "Pulangkan dengan edukasi", "ok": false, "why": "Perlu observasi 24 jam karena risiko aritmia dan perburukan."}], "concept": "Stimulan: <strong>tidak ada antidotum</strong>. Simtomatik + monitor jantung + observasi 24 jam."}, {"lvl": "C3", "topic": "ALPRAZOLAM", "src": "Dosen", "v": "Perempuan 40 tahun meminta resep alprazolam “untuk tidur”. Ia sudah meminum 3 tablet/hari, dosis biasa tidak berefek, dan gelisah hebat bila terlambat minum. Riwayat gangguan panik tidak ada.", "q": "Langkah paling tepat adalah…", "opts": [{"t": "Diagnosis ketergantungan benzodiazepin; ganti ke agen lebih aman (mis. klobazam/diazepam) dengan tapering dan atasi penyebab insomnia", "ok": true, "why": "Alprazolam hanya untuk panik jangka pendek; pada ketergantungan lakukan substitusi + tapering, bukan menambah dosis."}, {"t": "Naikkan dosis alprazolam", "ok": false, "why": "Memperkuat toleransi dan ketergantungan."}, {"t": "Hentikan mendadak", "ok": false, "why": "Risiko kejang/rebound; harus bertahap."}, {"t": "Beri naloksona", "ok": false, "why": "Bukan penawar benzodiazepin."}, {"t": "Resepkan haloperidol", "ok": false, "why": "Tidak ada psikosis."}], "concept": "Alprazolam = panik, ± 3 hari. Ketergantungan = toleransi + putus zat → substitusi &amp; tapering."}, {"lvl": "C3", "topic": "KONSELING NIKOTIN", "src": "Dosen", "v": "Pria 45 tahun, hari ke-3 berhenti merokok: batuk berdahak, mudah marah, nafsu makan naik, sulit konsentrasi. Ia bertanya, “Dok, sebaiknya saya merokok lagi saja?”", "q": "Respons dokter yang paling tepat adalah…", "opts": [{"t": "Jelaskan bahwa ini gejala putus nikotin yang memuncak 24–48 jam dan mereda ± 2 minggu; batuk wajar karena saluran napas pulih; anjurkan banyak minum air dan beri dukungan", "ok": true, "why": "Sesuai PPT &amp; dosen: normalisasi gejala, jangan menyerah."}, {"t": "“Ya sudah, merokok saja dulu”", "ok": false, "why": "Dosen menegaskan jangan pernah menyarankan itu."}, {"t": "Berikan antibiotik untuk batuk", "ok": false, "why": "Batuk adalah proses pemulihan, bukan infeksi."}, {"t": "Ancam dengan risiko kanker paru", "ok": false, "why": "Alasan kesehatan sering tidak memotivasi dan memicu dalih."}, {"t": "Beri benzodiazepin rutin", "ok": false, "why": "Tidak ada indikasi; risiko ketergantungan baru."}], "concept": "Putus nikotin terburuk 24–48 jam, reda ± 2 minggu. Motivasi dengan stigma/biaya/akses, bukan hanya kesehatan."}, {"lvl": "C4", "topic": "KEJANG DI IGD", "src": "Avicenna No.42 + dosen", "v": "Pria 40 tahun peminum alkohol berat dibawa karena kejang umum di rumah. Tidak ada riwayat epilepsi. Ia berhenti minum 3 hari lalu; kini tremor, berkeringat, demam 38,5 °C, melihat serangga, disorientasi.", "q": "Interpretasi dan terapi paling tepat adalah…", "opts": [{"t": "Kejang akibat putus alkohol (menuju delirium tremens); benzodiazepin parenteral + tiamin", "ok": true, "why": "Waktu henti 3 hari + hiperaktivitas otonom + halusinasi = putus alkohol. Dosen: kejang di IGD, telusuri putus zat dulu."}, {"t": "Epilepsi idiopatik; mulai antiepilepsi jangka panjang", "ok": false, "why": "Tidak ada riwayat epilepsi dan konteks putus zat sangat kuat."}, {"t": "Intoksikasi alkohol akut", "ok": false, "why": "Intoksikasi terjadi saat kadar tinggi; di sini ia justru berhenti."}, {"t": "Sindrom neuroleptik maligna", "ok": false, "why": "Tidak ada pemakaian antipsikotik."}, {"t": "Intoksikasi opioid", "ok": false, "why": "Tidak ada miosis/depresi napas."}], "concept": "Putus zat (alkohol/benzodiazepin) dapat kejang; benzodiazepin = terapi. Jangan buru-buru memberi label epilepsi."}, {"lvl": "C4", "topic": "JEBAKAN PUPIL", "src": "PPT slide 9", "v": "Pasien koma dibawa teman. Ada bekas suntikan baru, RR 5×/menit, sianosis. Pupil 5 mm (lebar), tidak reaktif. Teman mengaku ia memakai putaw tadi malam.", "q": "Interpretasi paling tepat adalah…", "opts": [{"t": "Opioid overdosis berat dengan anoksia; pupil bisa melebar → lakukan ventilasi dan naloksona", "ok": true, "why": "PPT: konstriksi pupil “atau dilatasi akibat anoksia pada overdosis berat”. Konteks klinis menentukan."}, {"t": "Bukan opioid karena pupil tidak miosis", "ok": false, "why": "Jebakan; anoksia dapat melebarkan pupil."}, {"t": "Intoksikasi amfetamin", "ok": false, "why": "Napas melambat &amp; koma tidak khas stimulan."}, {"t": "Putus opioid", "ok": false, "why": "Pasien koma dengan depresi napas, bukan gejala putus zat."}, {"t": "Epilepsi postiktal", "ok": false, "why": "Tidak ada kejang, riwayat zat jelas."}], "concept": "Opioid intoksikasi = miosis <em>atau</em> midriasis bila anoksia berat. Jangan menolak naloksona hanya karena pupil."}, {"lvl": "C4", "topic": "PUTUS AMFETAMIN vs MANIK", "src": "PPT DD", "v": "Mahasiswa 24 tahun berhenti mendadak memakai sabu setelah 3 hari berpesta. Kini 2 hari: sangat lelah, tidur 14 jam/hari, nafsu makan meningkat, mood murung, mimpi buruk, gerak melambat.", "q": "Diagnosis yang paling tepat adalah…", "opts": [{"t": "Keadaan putus amfetamin (F15.3)", "ok": true, "why": "Disforik + lelah + hipersomnia + nafsu makan ↑ + retardasi psikomotor setelah henti mendadak."}, {"t": "Episode manik", "ok": false, "why": "Mania: energi ↑, tidur ↓; pasien ini sebaliknya."}, {"t": "Intoksikasi amfetamin", "ok": false, "why": "Tidak ada tanda simpatomimetik."}, {"t": "Putus opioid", "ok": false, "why": "Tidak ada tanda flu/diare; pasien memakai stimulan."}, {"t": "Gangguan depresi mayor primer", "ok": false, "why": "Onset jelas setelah henti zat, durasi singkat; zat harus disingkirkan dulu."}], "concept": "Putus stimulan = kebalikan intoksikasi (crash). DD manik: tidur &amp; energi berlawanan arah."}];
+var FLASH=[["Dua komponen ketergantungan?", "Toleransi + gejala putus zat"], ["Tingkat pemakaian saat galau/konflik?", "Situasional"], ["Pupil “pin-point” → zat? antidotum?", "Opioid → naloksona"], ["Urutan dosis naloksona (PPT)", "0,8 → 1,6 → 3,2 mg IV (tiap 15 menit); respons → 0,4 mg/jam"], ["Putaw = ? Bahan baku?", "Heroin; <em>Papaver somniferum</em>"], ["Derivat amfetamin yang sering ditanyakan", "Ecstasy (MDMA)"], ["Daun kering dilinting?", "Ganja"], ["Terapi rumatan metadon untuk?", "Mencegah penggunaan opioid"], ["Klonidin dihentikan bila…", "Sistol &lt; 100 atau diastol &lt; 70 mmHg"], ["Putus heroin: onset &amp; puncak?", "Onset 6–12 jam; puncak 1–3 hari; reda 5–7 hari"], ["Putus amfetamin?", "Disforik, lelah, hipersomnia, nafsu makan ↑, mimpi buruk"], ["Alprazolam hanya untuk?", "Panik, jangka pendek (± 3 hari)"], ["Gejala putus nikotin mereda berapa lama?", "± 2 minggu; terburuk 24–48 jam"], ["Prinsip terapi intoksikasi?", "Life-saving"]];
+
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.from((r||document).querySelectorAll(s))}
+var CUR='overview';
+function show(id,noScroll){
+  $$('.section').forEach(function(s){s.classList.remove('active')});
+  $$('.nav-btn').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-sec')===id)});
+  var el=document.getElementById('sec-'+id); if(!el) return;
+  el.classList.add('active'); CUR=id; buildToc();
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  if(!noScroll) window.scrollTo({top:0,behavior:'smooth'});
+  var b=$('.nav-btn.active'); if(b&&b.scrollIntoView) b.scrollIntoView({inline:'center',block:'nearest'});
+}
+function toggle(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open');}
+/* theme */
+function toggleTheme(){
+  var d=document.documentElement.getAttribute('data-theme')==='dark';
+  document.documentElement.setAttribute('data-theme',d?'light':'dark');
+  $('#themeBtn').textContent=d?'🌙 Dark':'☀️ Light';
+  try{localStorage.setItem(KEY+'-theme',d?'light':'dark')}catch(e){}
+}
+/* progress */
+var DONE={};
+function markDone(id,btn){
+  DONE[id]=!DONE[id]; refreshDone();
+  try{localStorage.setItem(KEY+'-done',JSON.stringify(DONE))}catch(e){}
+}
+function refreshDone(){
+  var ids=$$('.done-btn').map(function(b){return b.getAttribute('data-id')});
+  var n=0;
+  ids.forEach(function(id){
+    var on=!!DONE[id]; if(on)n++;
+    $$('.done-btn[data-id="'+id+'"]').forEach(function(b){b.classList.toggle('on',on);b.textContent=on?'✓ Sudah dipelajari':'Tandai sudah dipelajari'});
+    var nb=$('.nav-btn[data-sec="'+id+'"]'); if(nb) nb.classList.toggle('done',on);
+  });
+  var p=$('#progFill'); if(p) p.style.width=(ids.length?Math.round(n/ids.length*100):0)+'%';
+  var l=$('#progLbl'); if(l) l.textContent=n+' dari '+ids.length+' bagian ditandai selesai';
+}
+/* scroll bar */
+window.addEventListener('scroll',function(){
+  var h=document.documentElement; var m=h.scrollHeight-h.clientHeight;
+  $('#topbar').style.width=(m>0?(h.scrollTop/m*100):0)+'%';
+});
+/* search */
+var IDX=[];
+function buildIdx(){
+  IDX=[];
+  $$('.section').forEach(function(s){
+    var sid=s.id.replace('sec-','');
+    var sh=$('.section-heading',s); var sname=sh?sh.textContent:sid;
+    $$('.card',s).forEach(function(c,i){
+      if(sid==='quiz') return;
+      var t=$('.card-title',c)||$('.collapse-btn',c); var title=t?t.textContent.replace(/\s+/g,' ').trim():('Bagian '+(i+1));
+      if(!c.id) c.id='c-'+sid+'-'+i;
+      IDX.push({sid:sid,id:c.id,title:title,sec:sname,text:c.textContent.replace(/\s+/g,' ').toLowerCase()});
+    });
+  });
+}
+function doSearch(q){
+  var box=$('#searchRes'); q=(q||'').trim().toLowerCase();
+  if(q.length<2){box.classList.remove('open');return}
+  var res=IDX.filter(function(x){return x.text.indexOf(q)>-1||x.title.toLowerCase().indexOf(q)>-1}).slice(0,9);
+  if(!res.length){box.innerHTML='<div class="sr-empty">Tidak ada hasil untuk “'+q.replace(/</g,'')+'”.</div>';box.classList.add('open');return}
+  box.innerHTML=res.map(function(x){
+    var i=x.text.indexOf(q); var sn=i>-1?('…'+x.text.substr(Math.max(0,i-35),90)+'…'):'';
+    return '<div class="sr-item" data-s="'+x.sid+'" data-i="'+x.id+'"><b>'+x.title+'</b><small>'+x.sec+' · '+sn.replace(/</g,'')+'</small></div>';
+  }).join('');
+  box.classList.add('open');
+  $$('.sr-item',box).forEach(function(el){el.onclick=function(){jumpTo(el.getAttribute('data-s'),el.getAttribute('data-i'));box.classList.remove('open')}});
+}
+function jumpTo(sid,cid){
+  show(sid,true);
+  setTimeout(function(){
+    var c=document.getElementById(cid); if(!c) return;
+    var cb=$('.collapse-body',c); 
+    c.scrollIntoView({behavior:'smooth',block:'start'});
+    c.classList.remove('flash-hit'); void c.offsetWidth; c.classList.add('flash-hit');
+  },60);
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();$('#searchIn').focus()}
+  if(e.key==='Escape'){$('#searchRes').classList.remove('open');$('#tocPanel').classList.remove('open');closeModal&&closeModal()}
+});
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.search-wrap')) $('#searchRes').classList.remove('open');
+  if(!e.target.closest('.toc-panel')&&!e.target.closest('.toc-btn')) $('#tocPanel').classList.remove('open');
+});
+/* toc */
+function buildToc(){
+  var s=document.getElementById('sec-'+CUR); var h='<h5>Pindah bagian</h5>';
+  $$('.nav-btn').forEach(function(b){h+='<a onclick="show(\''+b.getAttribute('data-sec')+'\');toggleToc()">'+b.textContent.replace(' ✓','')+'</a>'});
+  h+='<h5>Di halaman ini</h5>';
+  $$('.card',s).forEach(function(c,i){
+    var t=$('.card-title',c)||$('.collapse-btn',c); if(!t) return;
+    if(!c.id) c.id='c-'+CUR+'-'+i;
+    h+='<a onclick="jumpTo(\''+CUR+'\',\''+c.id+'\');toggleToc()">'+t.textContent.replace(/\s+/g,' ').trim().slice(0,52)+'</a>';
+  });
+  $('#tocPanel').innerHTML=h;
+}
+function toggleToc(){$('#tocPanel').classList.toggle('open')}
+/* modal */
+function openModal(){$('#soalDosenModal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){var m=$('#soalDosenModal'); if(m){m.classList.remove('open');document.body.style.overflow=''}}
+function closeModalOuter(e){if(e.target===$('#soalDosenModal'))closeModal()}
+/* flashcards */
+function buildFlash(){
+  var g=$('#fcGrid'); if(!g||typeof FLASH==='undefined') return;
+  g.innerHTML=FLASH.map(function(f){return '<div><div class="fc" onclick="this.classList.toggle(\'flip\')"><div class="fc-in"><div class="fc-f">'+f[0]+'</div><div class="fc-b">'+f[1]+'</div></div></div></div>'}).join('');
+}
+/* quiz */
+var QSTATE={ans:{},score:0,lvl:{}};
+var LVL='ALL';
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function renderQuiz(){
+  QSTATE={ans:{},score:0,lvl:{}};
+  var qs=QUIZ.filter(function(q){return LVL==='ALL'||q.lvl===LVL});
+  var box=$('#quizBox'); var dots=$('#quizProg'); dots.innerHTML='';
+  qs.forEach(function(q,i){var d=document.createElement('div');d.className='pdot';d.id='dot'+i;dots.appendChild(d)});
+  var L='ABCDE';
+  box.innerHTML=qs.map(function(q,qi){
+    var o=shuf(q.opts);
+    return '<div class="quiz-q" id="q'+qi+'"><div class="q-num">SOAL '+String(qi+1).padStart(2,'0')+' / '+q.topic+'</div>'+
+    '<div style="margin:2px 0 10px"><span class="tag t-hy" style="background:var(--lavender)">'+q.lvl+' · '+({C1:'Mengingat',C2:'Memahami',C3:'Menerapkan',C4:'Menganalisis'}[q.lvl])+'</span>'+(q.src?'<span class="tag t-fa">'+q.src+'</span>':'')+'</div>'+
+    '<div class="q-vignette">'+q.v+'</div><p class="q-question">'+q.q+'</p><div class="q-opts">'+
+    o.map(function(x,k){return '<button class="q-opt" data-ok="'+(x.ok?1:0)+'" data-k="'+k+'" onclick="ansQ(this,'+qi+')"><span class="ol">'+L[k]+'</span><span>'+x.t+'</span></button>'}).join('')+
+    '</div><div class="q-exp" id="exp'+qi+'"></div></div>';
+  }).join('');
+  $('#scoreCard').classList.remove('show');
+  QSTATE.total=qs.length; QSTATE.qs=qs;
+}
+function ansQ(btn,qi){
+  if(QSTATE.ans[qi]!==undefined) return;
+  var q=QSTATE.qs[qi]; var card=document.getElementById('q'+qi);
+  var ok=btn.getAttribute('data-ok')==='1'; QSTATE.ans[qi]=ok;
+  var L='ABCDE';
+  $$('.q-opt',card).forEach(function(b){b.disabled=true; if(b.getAttribute('data-ok')==='1') b.classList.add('correct')});
+  if(ok){QSTATE.score++;$('#dot'+qi).classList.add('ok')}else{btn.classList.add('wrong');$('#dot'+qi).classList.add('no')}
+  QSTATE.lvl[q.lvl]=QSTATE.lvl[q.lvl]||[0,0]; QSTATE.lvl[q.lvl][1]++; if(ok)QSTATE.lvl[q.lvl][0]++;
+  var right=q.opts.filter(function(x){return x.ok})[0];
+  var h=(ok?'✅ <strong>Benar!</strong> ':'❌ <strong>Belum tepat.</strong> ')+'Jawaban: <strong>'+right.t+'</strong><br><br>'+right.why+'<div class="why"><strong>🔎 Clinical reasoning — kenapa opsi lain bukan jawabannya:</strong>';
+  q.opts.filter(function(x){return !x.ok}).forEach(function(x){h+='<div><b>'+x.t+'</b> → '+x.why+'</div>'});
+  h+='</div><div class="concept">💡 <strong>Konsep inti:</strong> '+q.concept+'</div>';
+  var e=$('#exp'+qi); e.innerHTML=h; e.classList.add('show');
+  if(Object.keys(QSTATE.ans).length===QSTATE.total) setTimeout(showScore,700);
+}
+function showScore(){
+  var sc=$('#scoreCard'); sc.classList.add('show');
+  $('#scoreNum').textContent=QSTATE.score; $('#scoreTot').textContent='/ '+QSTATE.total;
+  var r=QSTATE.score/QSTATE.total;
+  var msgs=['Yuk ulang materinya pelan-pelan, kamu pasti bisa! 💪','Lumayan! Fokus ke bagian “Konsep inti” soal yang salah 📖','Bagus! Tinggal rapikan jebakan-jebakannya 🌟','Hampir sempurna! Tajam banget 🔥','PERFECT! Dokter masa depan ✨'];
+  $('#scoreMsg').textContent=msgs[r<.35?0:r<.6?1:r<.8?2:r<1?3:4];
+  var h=''; ['C1','C2','C3','C4'].forEach(function(l){var v=QSTATE.lvl[l];h+='<div><b>'+(v?v[0]+'/'+v[1]:'–')+'</b>'+l+'</div>'});
+  $('#lvlStat').innerHTML=h; sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function setLvl(l,btn){LVL=l;$$('.lvl-chip').forEach(function(b){b.classList.toggle('on',b===btn)});renderQuiz()}
+function resetQuiz(){renderQuiz();window.scrollTo({top:$('#sec-quiz').offsetTop,behavior:'smooth'})}
+/* init */
+(function(){
+  try{var t=localStorage.getItem(KEY+'-theme'); if(t){document.documentElement.setAttribute('data-theme',t);$('#themeBtn').textContent=t==='dark'?'☀️ Light':'🌙 Dark'}}catch(e){}
+  try{DONE=JSON.parse(localStorage.getItem(KEY+'-done')||'{}')}catch(e){DONE={}}
+  buildIdx(); refreshDone(); buildFlash(); renderQuiz(); buildToc();
+  $('#searchIn').addEventListener('input',function(){doSearch(this.value)});
+  var h=(location.hash||'').replace('#',''); if(h&&document.getElementById('sec-'+h)) show(h,true);
+})();
+
+</script>
+</body>
+</html>

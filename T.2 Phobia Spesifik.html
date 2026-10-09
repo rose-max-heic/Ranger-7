@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🕊️ Hidup Melampaui Rasa Takut — Fobia Spesifik</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lavender: #E29AB4;
+  --lavender-light: #F0BBCE;
+  --lavender-pale: #FDF0F4;
+  --lavender-deep: #A84D6C;
+  --lavender-muted: #C97690;
+  --rose: #C9738F;
+  --rose-light: #DFA0B5;
+  --rose-pale: #FBEAEF;
+  --rose-deep: #8E3E5C;
+  --mint: #86C0A4;
+  --mint-pale: #E7F5EE;
+  --mint-deep: #3D8B6E;
+  --peach: #E8B37C;
+  --peach-pale: #FDF1E4;
+  --peach-deep: #B97A38;
+  --sky: #8FB4CF;
+  --sky-pale: #E9F2F7;
+  --sky-deep: #4A7A96;
+  --cream: #FFF8FA;
+  --white: #ffffff;
+  --text: #3A2430;
+  --text-muted: #8B6B78;
+  --border: #F3DCE4;
+  --shadow: rgba(168,77,108,0.14);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #5A2438 0%, #8E3E5C 35%, #C9738F 68%, #F0BBCE 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.08);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(232,179,124,0.16);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#FBE0E8; }
+.hero-sub { color:rgba(255,255,255,0.82);font-size:14.5px;font-weight:300;max-width:600px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.24);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#5A2438,#8E3E5C);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(90,36,56,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(255,224,232,0.62);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 18px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#FDF0F4;border-bottom-color:#F0BBCE;
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+.lo-badge {
+  display:inline-flex;align-items:center;gap:6px;background:var(--lavender-deep);
+  color:#FBE0E8;font-size:11px;font-weight:700;letter-spacing:1.2px;
+  padding:4px 13px;border-radius:12px;margin-bottom:10px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(168,77,108,0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* CASE-LINK NOTE (pengganti dr-note, menautkan ke kasus Nadia) */
+.case-note {
+  background:linear-gradient(135deg,var(--lavender-pale),#fff3fa);
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.case-note::before {
+  content:'🕊️ Keterkaitan Kasus Nadia: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--lavender-deep),var(--lavender-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#FFF8FA;}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(201,115,143,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:100px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--lavender-deep),var(--rose-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(201,115,143,0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#5A2438,#A84D6C,#E29AB4);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#FDF0F4;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--lavender-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* CASE VERBATIM */
+.verbatim {
+  background:var(--cream);border-radius:10px;padding:14px 18px;
+  font-style:italic;color:var(--lavender-deep);font-size:13.5px;
+  border-left:4px solid var(--rose);margin:10px 0;line-height:1.7;
+}
+
+/* AYAT CARD */
+.ayat-card {
+  background:linear-gradient(135deg,var(--peach-pale),var(--cream));
+  border:2px solid var(--peach);border-radius:16px;
+  padding:22px 24px;margin-bottom:16px;
+}
+.ayat-ref {display:inline-block;background:var(--peach-deep);color:#fff;font-size:11px;font-weight:700;letter-spacing:0.5px;padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+.ayat-arab {font-size:22px;text-align:right;line-height:2.1;color:var(--text);margin-bottom:10px;font-weight:600;direction:rtl;font-family:'Lora',serif;}
+.ayat-lat {font-style:italic;color:var(--text-muted);font-size:13px;margin-bottom:8px;line-height:1.7;}
+.ayat-id {font-size:14px;color:var(--text);font-weight:600;margin-bottom:10px;line-height:1.7;}
+.ayat-note {font-size:13px;color:var(--text-muted);line-height:1.7;border-top:1px dashed rgba(185,122,56,0.4);padding-top:10px;}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+  .ayat-arab{font-size:19px;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">🕊️ Blok Psikiatri &amp; Kesehatan Mental · Fobia Spesifik</div>
+  <h1>Hidup <em>Melampaui</em> Rasa Takut</h1>
+  <p class="hero-sub">Nadia, 25 tahun, staf pemasaran yang harus sering terbang antarpulau — tapi sejak turbulensi hebat setahun lalu, tubuhnya "membaca bahaya" setiap kali memikirkan naik pesawat. Yuk telusuri dari mekanisme fear di otak, sampai tata laksana berbasis bukti dan perspektif spiritual-Islami untuk membantunya.</p>
+  <div class="hero-pills">
+    <span class="pill">👤 Nadia, 25 th, marketing staff</span>
+    <span class="pill">✈️ Fobia spesifik tipe situasional</span>
+    <span class="pill">🎯 11 Learning Objectives</span>
+    <span class="pill">🧠 10 Soal Quiz</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="sticky-nav" id="mainNav">
+  <button class="nav-btn active" onclick="show('kasus')">📋 Kasus</button>
+  <button class="nav-btn" onclick="show('lo1')">LO1 Fear&amp;Anxiety</button>
+  <button class="nav-btn" onclick="show('lo2')">LO2 Epidemiologi</button>
+  <button class="nav-btn" onclick="show('lo3')">LO3 Neurobiologi</button>
+  <button class="nav-btn" onclick="show('lo4')">LO4 Diagnosis</button>
+  <button class="nav-btn" onclick="show('lo5')">LO5 Diff. Dx</button>
+  <button class="nav-btn" onclick="show('lo6')">LO6 Wawancara&amp;MSE</button>
+  <button class="nav-btn" onclick="show('lo7')">LO7 Avoidance</button>
+  <button class="nav-btn" onclick="show('lo8')">LO8 Tata Laksana</button>
+  <button class="nav-btn" onclick="show('lo9')">LO9 Komunikasi</button>
+  <button class="nav-btn" onclick="show('lo10')">LO10 Biopsikososial-Spiritual</button>
+  <button class="nav-btn" onclick="show('lo11')">LO11 Kedokteran Islam</button>
+  <button class="nav-btn" onclick="show('ref')">📚 Referensi</button>
+  <button class="nav-btn" onclick="show('quiz')">🧠 Quiz</button>
+</div>
+
+<div class="container">
+
+<!-- ======== KASUS ======== -->
+<div id="sec-kasus" class="section active">
+  <h2 class="section-heading">Nadia, 25 Tahun — "Tubuh Saya Bereaksi Seolah Sedang Bahaya"</h2>
+  <p class="section-desc">Satu skenario utuh yang akan kita bedah dari berbagai sudut sepanjang 11 LO di bawah.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👤</span> Identitas &amp; Konteks</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>Identitas</h4><p>Perempuan, 25 tahun, staf pemasaran perusahaan nasional yang sering bepergian antarpulau untuk pekerjaan</p></div>
+      <div class="mini-card"><h4>Keluhan Utama</h4><p>Kecemasan meningkat terkait perjalanan udara, mengganggu aktivitas &amp; pekerjaan sehari-hari</p></div>
+      <div class="mini-card"><h4>Pemicu Segera</h4><p>Penugasan mendadak menghadiri pertemuan penting di pulau lain yang <span class="hl-rose">mengharuskan naik pesawat dalam 2 minggu</span></p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">⚡</span> Index Event — Peristiwa Pencetus (±1 Tahun Lalu)</div>
+    <p>Saat penerbangan dinas, pesawat mengalami <span class="hl-rose">turbulensi parah</span>. Nadia merasa <strong>ketakutan hebat</strong>, jantung berdebar kencang, dan yakin sesuatu yang buruk akan terjadi. Pesawat mendarat dengan selamat, namun pengalaman itu <strong>membekas kuat</strong> dalam ingatannya.</p>
+    <div class="alert alert-rose"><span class="alert-icon">⚡</span><div>Ini adalah <strong>unconditioned stimulus</strong> (ancaman nyata) yang mengondisikan rasa takut terhadap stimulus netral sebelumnya (pesawat/bandara) — dasar mekanisme <em>classical conditioning</em> pada fobia (lihat LO3 &amp; LO7).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🔄</span> Perkembangan Sejak Index Event</div>
+    <ul class="styled-list">
+      <li>Semakin tidak nyaman dengan perjalanan udara sejak insiden</li>
+      <li>Sering memilih <strong>kereta api atau mobil</strong> meski perjalanan jauh lebih lama — bahkan ketika mengganggu jadwal kerja (pola <span class="hl-rose">avoidance behavior</span>, lihat LO7)</li>
+      <li>Sejak menerima penugasan terbaru: cemas meningkat &amp; <strong>kesulitan tidur</strong></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💬</span> Keluhan Subjektif Nadia</div>
+    <div class="verbatim">"Saya tahu bahwa terbang pada umumnya aman, tetapi ketika saya memikirkan untuk naik pesawat, tubuh saya bereaksi seolah-olah saya sedang menghadapi bahaya."</div>
+    <p style="margin-bottom:10px;">Gejala yang muncul setiap kali memikirkan terbang atau tiba di bandara:</p>
+    <div class="grid-4">
+      <div class="mini-card"><h4>❤️ Kardiovaskular</h4><p>Detak jantung cepat</p></div>
+      <div class="mini-card"><h4>💦 Otonom</h4><p>Berkeringat</p></div>
+      <div class="mini-card"><h4>🌀 Neurologis</h4><p>Pusing</p></div>
+      <div class="mini-card"><h4>🫁 Respirasi</h4><p>Dada terasa sesak</p></div>
+    </div>
+    <div class="alert alert-lavender"><span class="alert-icon">🏃</span><div>Disertai <strong>dorongan kuat untuk melarikan diri (urge to flee)</strong> setiap kali memikirkan terbang atau tiba di bandara — respons fight-or-flight klasik yang teraktivasi oleh stimulus yang sebenarnya tidak berbahaya secara objektif.</div></div>
+    <p style="margin-top:10px;">Nadia <strong>menyadari</strong> ketakutannya mungkin berlebihan, namun <strong>merasa tidak mampu mengendalikannya</strong> — insight baik, kontrol volisional terbatas (khas fobia spesifik, lihat LO4 &amp; LO6). Keluarganya menyadari ia semakin khawatir soal perjalanan dan cemas hal ini dapat memengaruhi pekerjaannya.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🩺</span> Temuan Pemeriksaan</div>
+    <div class="table-wrap"><table>
+      <tr><th>Domain</th><th>Temuan</th></tr>
+      <tr><td>Penampilan &amp; sikap</td><td>Kooperatif, berpakaian rapi, kontak mata baik</td></tr>
+      <tr><td>Bicara</td><td>Jelas dan runtut</td></tr>
+      <tr><td>Mood</td><td><span class="hl-lav">Cemas — situasional</span>, muncul saat membahas perjalanan udara, tenang pada topik lain</td></tr>
+      <tr><td>Afek</td><td>Sesuai (kongruen dengan mood saat itu)</td></tr>
+      <tr><td>Proses pikir</td><td>Logis</td></tr>
+      <tr><td>Tilikan (insight)</td><td>Baik — menyadari ketakutannya mungkin tidak sebanding dengan risiko sebenarnya</td></tr>
+      <tr><td>Pola kecemasan</td><td>Terbatas pada situasi terkait perjalanan udara; <strong>tidak</strong> ada kekhawatiran pervasif pada berbagai aspek kehidupan lain</td></tr>
+      <tr><td>Pemeriksaan fisik</td><td>Dalam batas normal</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">❓</span> Dua Pertanyaan Nadia yang Perlu Dijawab</div>
+    <div class="compare-wrap">
+      <div class="compare-col left"><h4>Pertanyaan 1</h4><p style="font-size:13px;color:var(--text);">"Mengapa tubuh saya bereaksi seperti ini padahal saya tahu bahwa terbang sebenarnya tidak berbahaya?" <br><em style="color:var(--text-muted);">→ dijawab tuntas di LO1, LO3 &amp; LO7</em></p></div>
+      <div class="compare-col right"><h4>Pertanyaan 2</h4><p style="font-size:13px;color:var(--text);">"Saya memiliki penerbangan penting dalam dua minggu ke depan. Apakah ada yang bisa saya lakukan untuk mengatasi ketakutan ini?" <br><em style="color:var(--text-muted);">→ dijawab tuntas di LO8, LO9, LO10 &amp; LO11</em></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== LO1 ======== -->
+<div id="sec-lo1" class="section">
+  <div class="lo-badge">LO 1</div>
+  <h2 class="section-heading">Konsep Fear, Anxiety, dan Kecemasan Patologis</h2>
+  <p class="section-desc">Menjawab pertanyaan pertama Nadia dimulai dari sini: kenapa tubuhnya "membaca bahaya" padahal pikirannya tahu itu aman?</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧭</span> Fear vs Anxiety — Dua Hal yang Sering Tertukar</div>
+    <div class="compare-wrap">
+      <div class="compare-col left"><h4>😨 Fear (Rasa Takut)</h4>
+        <div class="compare-row"><span>Stimulus</span>Nyata, spesifik, langsung ada</div>
+        <div class="compare-row"><span>Respons</span>Alarm otonom akut (fight-flight-freeze)</div>
+        <div class="compare-row"><span>Durasi</span>Berakhir saat ancaman hilang</div>
+        <div class="compare-row"><span>Fungsi</span>Adaptif — melindungi dari bahaya nyata</div>
+      </div>
+      <div class="compare-col right"><h4>😟 Anxiety (Kecemasan)</h4>
+        <div class="compare-row"><span>Stimulus</span>Antisipatif, kabur, belum/tidak terjadi</div>
+        <div class="compare-row"><span>Respons</span>Kewaspadaan berkepanjangan, tegang otot, khawatir</div>
+        <div class="compare-row"><span>Durasi</span>Dapat menetap tanpa stimulus jelas</div>
+        <div class="compare-row"><span>Fungsi</span>Bisa adaptif (persiapan) bila proporsional</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">⚖️</span> Kapan Kecemasan Menjadi Patologis?</div>
+    <div class="cr-box">
+      <div class="cr-label">Tiga penanda utama</div>
+      <ol class="cr-steps">
+        <li><strong>Tidak proporsional</strong> — intensitas respons jauh melebihi risiko aktual (turbulensi 1x setahun lalu ≠ risiko nyata penerbangan komersial yang sangat aman secara statistik)</li>
+        <li><strong>Mengganggu fungsi</strong> — Nadia sampai mengubah moda transportasi, memengaruhi jadwal &amp; produktivitas kerja</li>
+        <li><strong>Menetap/berulang</strong> — muncul konsisten setiap kali stimulus terkait terbang dipikirkan, sudah berlangsung ±1 tahun</li>
+      </ol>
+    </div>
+    <div class="alert alert-lavender"><span class="alert-icon">📊</span><div>Konsep ini sejalan dengan kurva <strong>Yerkes–Dodson</strong>: kecemasan ringan-sedang justru meningkatkan performa/kewaspadaan, tetapi melewati ambang tertentu, fungsi mulai menurun tajam — titik itulah yang menandai transisi dari cemas adaptif ke kecemasan patologis.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🔀</span> "Saya Tahu Ini Aman, Tapi Tubuh Saya Tidak Percaya"</div>
+    <p>Inilah ciri khas fobia: terjadi <strong>disosiasi antara penilaian kognitif (cortical, rasional) dan respons otonom (subkortikal, otomatis)</strong>. Jalur kognitif Nadia (korteks prefrontal) tahu risiko statistik penerbangan sangat rendah, tetapi jalur fear otomatis (amigdala) sudah <em>terkondisi</em> untuk merespons stimulus terkait pesawat sebagai ancaman — dan jalur ini bekerja jauh lebih cepat daripada penalaran sadar (lihat mekanisme lengkap di LO3).</p>
+    <div class="case-note">Pertanyaan pertama Nadia — "Mengapa tubuh saya bereaksi seperti ini padahal saya tahu terbang tidak berbahaya?" — <strong>inilah jawaban inti</strong>: insight kognitif yang baik tidak otomatis mematikan alarm otonom yang sudah terkondisi. Keduanya adalah sistem yang berbeda di otak.</div>
+  </div>
+</div>
+
+<!-- ======== LO2 ======== -->
+<div id="sec-lo2" class="section">
+  <div class="lo-badge">LO 2</div>
+  <h2 class="section-heading">Epidemiologi, Etiologi &amp; Faktor Risiko Fobia Spesifik</h2>
+  <p class="section-desc">Fobia spesifik bukan hal langka — dan riwayat Nadia mengikuti pola etiologi yang sangat klasik.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📈</span> Epidemiologi</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>Prevalensi</h4><p>Lifetime ±10&ndash;12% populasi umum; salah satu gangguan cemas paling sering dijumpai di layanan primer</p></div>
+      <div class="mini-card"><h4>Jenis Kelamin</h4><p>Perempuan ≈2× lebih sering dibanding laki-laki</p></div>
+      <div class="mini-card"><h4>Onset</h4><p>Bimodal: tipe hewan/lingkungan alam sejak masa kanak; tipe <strong>situasional</strong> (termasuk takut terbang) sering onset dewasa muda, kerap pasca-kejadian traumatik langsung — <span class="hl-lav">seperti Nadia</span></p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🌱</span> Model Etiologi — Bagaimana Fobia Terbentuk</div>
+    <div class="table-wrap"><table>
+      <tr><th>Jalur Pembentukan</th><th>Mekanisme</th><th>Pada Nadia?</th></tr>
+      <tr><td><strong>Direct conditioning</strong></td><td>Pengalaman traumatik langsung dengan stimulus</td><td class="hl-rose">✔️ turbulensi parah — jalur paling dominan pada kasus ini</td></tr>
+      <tr><td><strong>Observational learning</strong></td><td>Melihat orang lain menunjukkan ketakutan terhadap stimulus tersebut</td><td>Tidak dilaporkan</td></tr>
+      <tr><td><strong>Informational transmission</strong></td><td>Mendapat informasi/peringatan berulang tentang bahaya stimulus (mis. berita kecelakaan pesawat)</td><td>Dapat memperkuat, tidak disebutkan sebagai pemicu awal</td></tr>
+    </table></div>
+    <div class="alert alert-mint"><span class="alert-icon">🧬</span><div>Faktor predisposisi turut berperan: <strong>temperamen behavioral inhibition</strong> (kecenderungan bawaan lebih reaktif terhadap stimulus baru/tak terduga) dan <strong>riwayat keluarga gangguan cemas</strong> meningkatkan kerentanan seseorang mengembangkan fobia setelah terpapar index event yang sama.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🎯</span> Faktor Risiko Fobia Spesifik Tipe Situasional</div>
+    <ul class="styled-list">
+      <li>Riwayat pengalaman traumatik langsung dengan situasi tersebut (index event)</li>
+      <li>Jenis kelamin perempuan</li>
+      <li>Riwayat keluarga dengan gangguan kecemasan</li>
+      <li>Trait kepribadian neurotisisme tinggi / kecenderungan behavioral inhibition</li>
+      <li>Paparan berulang terhadap situasi yang tidak dapat sepenuhnya dihindari (pekerjaan Nadia menuntut perjalanan udara — faktor pemertahan sekaligus faktor risiko kekambuhan)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======== LO3 ======== -->
+<div id="sec-lo3" class="section">
+  <div class="lo-badge">LO 3</div>
+  <h2 class="section-heading">Patofisiologi dan Neurobiologi Gangguan Kecemasan</h2>
+  <p class="section-desc">Di sinilah jawaban ilmiah lengkap untuk pertanyaan pertama Nadia — apa yang sebenarnya terjadi di otaknya.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧠</span> Sirkuit Fear (Fear Circuit)</div>
+    <div class="table-wrap"><table>
+      <tr><th>Struktur</th><th>Peran dalam Fobia</th></tr>
+      <tr><td><strong>Amigdala</strong> (nukleus sentral &amp; basolateral)</td><td>Pusat pemrosesan &amp; <em>fear conditioning</em> — mendeteksi stimulus terkait pesawat sebagai ancaman &amp; memicu respons alarm dengan sangat cepat, mendahului kesadaran kognitif</td></tr>
+      <tr><td><strong>Hipotalamus</strong></td><td>Mengaktifkan aksis HPA &amp; sistem saraf simpatis → gejala somatik Nadia (jantung berdebar, berkeringat, dada sesak)</td></tr>
+      <tr><td><strong>Hipokampus</strong></td><td>Menyimpan memori kontekstual — mengapa rasa takut terikat spesifik pada konteks "pesawat/bandara", bukan situasi lain</td></tr>
+      <tr><td><strong>Korteks Prefrontal Ventromedial (vmPFC)</strong></td><td>Regulasi top-down &amp; <em>extinction learning</em> — pada fobia, area ini <span class="hl-rose">hipoaktif</span> sehingga gagal meredam alarm amigdala meski insight kognitif baik</td></tr>
+    </table></div>
+    <div class="alert alert-lavender"><span class="alert-icon">🔬</span><div>Inilah dasar neurobiologis mengapa Nadia "tahu tapi tidak bisa mengendalikan": terjadi <strong>hiperaktivitas amigdala + hipoaktivitas vmPFC</strong> — sirkuit rasional gagal meredam sirkuit alarm otomatis.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">⚗️</span> Neurotransmiter yang Terlibat</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>GABA</h4><p>Defisit inhibisi GABAergik → amigdala menjadi lebih mudah tereksitasi &amp; sulit "direm"</p></div>
+      <div class="mini-card"><h4>Norepinefrin</h4><p>Aktivasi locus coeruleus → gejala somatik akut: takikardia, berkeringat, tremor</p></div>
+      <div class="mini-card"><h4>Serotonin &amp; CRH/Kortisol</h4><p>Modulasi via nukleus raphe; aksis HPA kronik berperan pada kecemasan antisipatif yang menetap</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🔗</span> Fear Conditioning &amp; Extinction — Dasar Ilmiah Tata Laksana</div>
+    <div class="cr-box">
+      <div class="cr-label">Mekanisme pembentukan &amp; pemeliharaan fobia</div>
+      <ol class="cr-steps">
+        <li><strong>Unconditioned stimulus (UCS):</strong> turbulensi parah — ancaman nyata yang otomatis memicu ketakutan</li>
+        <li><strong>Conditioned stimulus (CS):</strong> pesawat, bandara, ide "terbang" — awalnya netral, kini terkondisi memicu fear yang sama</li>
+        <li><strong>Conditioned fear response:</strong> reaksi tubuh Nadia setiap memikirkan terbang, walau UCS (turbulensi) tidak sedang terjadi</li>
+        <li><strong>Extinction learning:</strong> paparan berulang CS tanpa UCS membentuk <em>memori inhibisi baru</em> (bukan menghapus memori asli) — inilah dasar ilmiah <em>exposure therapy</em> (LO8)</li>
+      </ol>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">⚠️</span><div>Karena extinction adalah pembelajaran baru yang <em>menumpuk di atas</em> memori fear asli (bukan menghapusnya), fobia berisiko kambuh bila individu kembali ke konteks lama tanpa pemeliharaan (<em>renewal effect</em>) — relevan untuk merancang tata laksana jangka panjang Nadia, bukan hanya solusi cepat 2 minggu (LO8).</div></div>
+  </div>
+</div>
+
+<!-- ======== LO4 ======== -->
+<div id="sec-lo4" class="section">
+  <div class="lo-badge">LO 4</div>
+  <h2 class="section-heading">Klasifikasi dan Diagnosis Fobia Spesifik</h2>
+  <p class="section-desc">Kriteria formal DSM-5-TR &amp; ICD-11, dicocokkan langsung dengan temuan pada Nadia.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📋</span> Kriteria DSM-5-TR — Fobia Spesifik (300.29)</div>
+    <div class="table-wrap"><table>
+      <tr><th>Kriteria</th><th>Isi</th><th>Pada Nadia?</th></tr>
+      <tr><td>A</td><td>Fear/anxiety yang ditandai (marked) terhadap objek/situasi spesifik</td><td class="hl-mint">✔️ terbang / pesawat</td></tr>
+      <tr><td>B</td><td>Objek/situasi hampir selalu segera memicu fear/anxiety</td><td class="hl-mint">✔️ setiap memikirkan terbang/tiba di bandara</td></tr>
+      <tr><td>C</td><td>Objek/situasi dihindari aktif, atau dihadapi dengan distres intens</td><td class="hl-mint">✔️ memilih kereta/mobil meski lebih lama</td></tr>
+      <tr><td>D</td><td>Fear tidak proporsional dengan bahaya aktual &amp; konteks sosiokultural</td><td class="hl-mint">✔️ diakui sendiri oleh Nadia ("mungkin berlebihan")</td></tr>
+      <tr><td>E</td><td>Menetap, biasanya ≥6 bulan</td><td class="hl-mint">✔️ ±1 tahun sejak index event</td></tr>
+      <tr><td>F</td><td>Menyebabkan distres/hendaya fungsi signifikan</td><td class="hl-mint">✔️ memengaruhi jadwal kerja, kualitas tidur</td></tr>
+      <tr><td>G</td><td>Tidak lebih baik dijelaskan gangguan mental lain</td><td class="hl-mint">✔️ lihat penyingkiran diagnosis banding di LO5</td></tr>
+    </table></div>
+    <div class="alert alert-mint"><span class="alert-icon">✅</span><div><strong>Seluruh kriteria A–G terpenuhi</strong> pada Nadia → diagnosis kerja: <strong>Fobia Spesifik, Tipe Situasional</strong> (takut terbang / <em>aerophobia</em>/<em>aviophobia</em>).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🌍</span> Perbandingan Singkat dengan ICD-11</div>
+    <p>ICD-11 (6B03 Specific Phobia) menggunakan kerangka serupa: fear/anxiety yang <strong>ditandai &amp; berlebihan</strong>, konsisten dipicu oleh satu atau lebih objek/situasi spesifik, objek/situasi cenderung dihindari secara aktif atau ditahan dengan distres intens, gejala bertahan cukup lama (biasanya beberapa bulan), dan menyebabkan hendaya fungsi yang bermakna. Perbedaan utama dengan DSM-5 lebih pada gaya penulisan kriteria (ICD-11 lebih deskriptif, tidak menetapkan angka durasi minimal sekaku DSM), bukan pada substansi klinis.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🗂️</span> Subtipe (Specifier) Fobia Spesifik</div>
+    <div class="grid-2">
+      <div class="mini-card"><h4>🐾 Hewan (Animal)</h4><p>Laba-laba, ular, anjing, dsb — onset umumnya masa kanak</p></div>
+      <div class="mini-card"><h4>🌩️ Lingkungan Alam (Natural Environment)</h4><p>Ketinggian, badai, air</p></div>
+      <div class="mini-card"><h4>🩸 Darah-Injeksi-Cedera (BII)</h4><p>Khas dengan respons vasovagal (bradikardia &amp; hipotensi, bukan takikardia)</p></div>
+      <div class="mini-card" style="border:2px solid var(--lavender);"><h4>✈️ Situasional <span class="hl-lav">← Nadia</span></h4><p>Transportasi umum, terowongan, jembatan, lift, <strong>terbang</strong> — onset dewasa lebih sering, sering pasca-trauma langsung</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== LO5 ======== -->
+<div id="sec-lo5" class="section">
+  <div class="lo-badge">LO 5</div>
+  <h2 class="section-heading">Diagnosis Banding Fobia Spesifik dengan Gangguan Kecemasan Lain</h2>
+  <p class="section-desc">Menyingkirkan diagnosis banding adalah langkah wajib sebelum kriteria G DSM-5-TR (LO4) benar-benar terpenuhi.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔀</span> Tabel Diagnosis Banding</div>
+    <div class="table-wrap"><table>
+      <tr><th>Diagnosis Banding</th><th>Pembeda Kunci</th><th>Pada Nadia</th></tr>
+      <tr><td><strong>Gangguan Panik</strong></td><td>Serangan panik <em>tidak terduga</em> (unexpected), tidak terikat stimulus spesifik</td><td class="hl-mint">Gejala Nadia selalu <em>situationally-bound</em> pada stimulus terbang → bukan gangguan panik murni</td></tr>
+      <tr><td><strong>Agorafobia</strong></td><td>Takut pada ≥2 kategori situasi (transportasi umum, ruang terbuka/tertutup, antrean/keramaian, sendirian di luar rumah) — takut karena sulit melarikan diri/mendapat bantuan</td><td class="hl-mint">Nadia hanya takut pada <strong>satu kategori</strong> (penerbangan), tidak ada masalah dengan kereta/mobil/ruang tertutup lain → bukan agorafobia</td></tr>
+      <tr><td><strong>Gangguan Cemas Menyeluruh (GAD)</strong></td><td>Kekhawatiran berlebihan &amp; meluas ke banyak aspek kehidupan, sulit dikendalikan</td><td class="hl-mint">Nadia eksplisit <strong>tidak</strong> menunjukkan kekhawatiran pervasif di aspek lain → bukan GAD</td></tr>
+      <tr><td><strong>PTSD</strong></td><td>Butuh paparan trauma sesuai kriteria A (ancaman kematian/cedera serius/kekerasan seksual) + re-experiencing, hyperarousal, alterasi kognisi-mood yang <em>meluas</em>, bukan hanya pada satu stimulus</td><td class="hl-mint">Tidak dilaporkan flashback, mimpi buruk, atau hiperarousal umum; ketakutan Nadia spesifik &amp; terbatas pada konteks terbang → lebih sesuai fobia spesifik</td></tr>
+      <tr><td><strong>Gangguan Cemas Sosial</strong></td><td>Takut evaluasi/penilaian negatif orang lain dalam situasi sosial</td><td class="hl-mint">Tidak relevan — ketakutan Nadia bukan tentang penilaian sosial</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🧩</span> Pertanyaan Skrining Praktis untuk Membedakan</div>
+    <ul class="styled-list">
+      <li>"Apakah kecemasan ini <em>hanya</em> muncul terkait terbang, atau juga di situasi lain (keramaian, ruang tertutup, transportasi lain)?" → menyingkirkan agorafobia</li>
+      <li>"Apakah pernah muncul serangan panik tiba-tiba tanpa alasan jelas, bahkan saat sedang santai?" → menyingkirkan gangguan panik</li>
+      <li>"Apakah Anda juga sering khawatir berlebihan soal hal-hal lain dalam hidup (keuangan, kesehatan, keluarga)?" → menyingkirkan GAD</li>
+      <li>"Apakah ada mimpi buruk berulang, teringat kejadian tiba-tiba (flashback), atau merasa waspada berlebihan di banyak situasi sejak insiden itu?" → menyingkirkan PTSD</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======== LO6 ======== -->
+<div id="sec-lo6" class="section">
+  <div class="lo-badge">LO 6</div>
+  <h2 class="section-heading">Wawancara Psikiatri &amp; Interpretasi MSE pada Gangguan Kecemasan</h2>
+  <p class="section-desc">Struktur wawancara yang tepat sekaligus menjadi alat untuk menyingkirkan diagnosis banding di LO5.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗂️</span> Struktur Wawancara Gangguan Kecemasan</div>
+    <div class="cr-box">
+      <div class="cr-label">Alur wawancara sistematis</div>
+      <ol class="cr-steps">
+        <li><strong>Identifikasi stimulus spesifik</strong> — objek/situasi apa persis yang memicu kecemasan?</li>
+        <li><strong>Riwayat index event</strong> — kapan &amp; bagaimana ketakutan ini pertama muncul? (turbulensi Nadia)</li>
+        <li><strong>Pola avoidance</strong> — apa yang dilakukan untuk menghindar? Apa dampaknya pada fungsi sehari-hari?</li>
+        <li><strong>Gejala fisik saat terpapar/membayangkan stimulus</strong> — kardiovaskular, respirasi, otonom lain (SIGECAPS ala anxiety)</li>
+        <li><strong>Tingkat insight</strong> — apakah pasien menyadari ketakutannya berlebihan?</li>
+        <li><strong>Skrining diferensial</strong> — pertanyaan LO5 untuk menyingkirkan panik/agorafobia/GAD/PTSD</li>
+        <li><strong>Dampak fungsional &amp; urgensi</strong> — deadline/tuntutan yang membuat pasien datang sekarang (penerbangan 2 minggu lagi)</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🔎</span> Interpretasi MSE Nadia — Domain per Domain</div>
+    <div class="table-wrap"><table>
+      <tr><th>Domain</th><th>Temuan</th><th>Interpretasi</th></tr>
+      <tr><td>Penampilan &amp; sikap</td><td>Kooperatif, rapi, kontak mata baik</td><td>Tidak ada tanda penarikan diri global atau disorganisasi</td></tr>
+      <tr><td>Bicara</td><td>Jelas &amp; runtut</td><td>Tidak ada gangguan bentuk pikir/bicara</td></tr>
+      <tr><td><strong>Mood</strong></td><td>Cemas <em>hanya</em> saat membahas terbang, tenang pada topik lain</td><td class="hl-lav">Mood cemas <strong>situasional</strong>, bukan pervasif → mendukung fobia spesifik, menyingkirkan GAD</td></tr>
+      <tr><td>Afek</td><td>Sesuai (congruent) dengan mood saat itu</td><td>Tidak ada inappropriate affect</td></tr>
+      <tr><td>Proses pikir</td><td>Logis</td><td>Tidak ada gangguan pikiran formal</td></tr>
+      <tr><td>Isi pikir</td><td>Tidak dilaporkan waham/obsesi egodistonik kompleks</td><td>Berbeda dengan OCD (yang punya obsesi intrusif kompleks)</td></tr>
+      <tr><td><strong>Tilikan (insight)</strong></td><td>Menyadari ketakutannya mungkin tidak sebanding risiko nyata, namun merasa tak mampu mengendalikan</td><td class="hl-lav">Insight baik + kontrol volisional terbatas = <strong>ciri khas fobia spesifik</strong> (berbeda dari fobia dengan insight buruk yang mengarah ke spektrum lain)</td></tr>
+      <tr><td>Judgment</td><td>Proaktif mencari bantuan medis sebelum penerbangan</td><td>Judgment baik — faktor prognostik positif</td></tr>
+    </table></div>
+    <div class="alert alert-lavender"><span class="alert-icon">🔑</span><div><strong>Kunci pembeda pada MSE:</strong> mood cemas yang <em>situasional/terikat stimulus</em> (fobia spesifik) versus mood cemas yang <em>pervasif/menetap</em> di berbagai situasi (GAD) atau muncul <em>tak terduga</em> tanpa pemicu jelas (gangguan panik).</div></div>
+  </div>
+</div>
+
+<!-- ======== LO7 ======== -->
+<div id="sec-lo7" class="section">
+  <div class="lo-badge">LO 7</div>
+  <h2 class="section-heading">Mekanisme Avoidance Behavior &amp; Negative Reinforcement</h2>
+  <p class="section-desc">Kenapa memilih naik kereta terasa "solutif" jangka pendek, tapi justru mengunci fobia jangka panjang?</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔁</span> Two-Factor Theory (Mowrer)</div>
+    <div class="cr-box">
+      <div class="cr-label">Dua tahap pembentukan &amp; pemeliharaan fobia</div>
+      <ol class="cr-steps">
+        <li><strong>Tahap 1 — Classical Conditioning:</strong> ketakutan terbentuk lewat pengalaman turbulensi (dibahas di LO3)</li>
+        <li><strong>Tahap 2 — Operant Conditioning (Negative Reinforcement):</strong> setiap kali Nadia memilih kereta/mobil, kecemasannya <strong>langsung reda</strong> → perilaku menghindar "diberi hadiah" berupa hilangnya rasa tidak nyaman secara instan → perilaku avoidance semakin sering diulang</li>
+      </ol>
+    </div>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div><strong>Negative reinforcement ≠ hukuman.</strong> Negative reinforcement berarti perilaku <em>meningkat frekuensinya</em> karena berhasil menghilangkan/mencegah sesuatu yang tidak menyenangkan — persis pola avoidance Nadia terhadap pesawat.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🔒</span> Mengapa Siklus Ini Justru Mengunci Fobia</div>
+    <p>Setiap kali menghindar, Nadia <strong>tidak pernah memiliki kesempatan</strong> untuk "membuktikan" pada otaknya bahwa naik pesawat sebenarnya aman dan rasa cemas akan mereda dengan sendirinya jika dihadapi. Tidak terjadi <em>extinction learning</em> (LO3) — sehingga rasa takut tidak pernah "diuji ulang" dan tetap utuh, bahkan bisa makin kuat karena setiap penghindaran justru mengonfirmasi keyakinan "terbang = bahaya".</p>
+    <div class="table-wrap"><table>
+      <tr><th>Siklus</th><th>Yang Terjadi pada Nadia</th></tr>
+      <tr><td>1. Stimulus muncul</td><td>Penugasan kerja mengharuskan naik pesawat</td></tr>
+      <tr><td>2. Kecemasan meningkat</td><td>Jantung berdebar, berkeringat, dorongan melarikan diri</td></tr>
+      <tr><td>3. Perilaku avoidance</td><td>Memilih kereta/mobil sebagai alternatif</td></tr>
+      <tr><td>4. Kecemasan reda seketika</td><td class="hl-rose">Negative reinforcement — perilaku menghindar "diperkuat"</td></tr>
+      <tr><td>5. Siklus terulang</td><td>Fobia dipertahankan &amp; berpotensi menguat pada paparan berikutnya</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🛡️</span> Safety Behaviors — Avoidance yang Lebih Halus</div>
+    <p>Selain penghindaran penuh, ada juga <strong>safety behaviors</strong> (mis. selalu menggenggam sesuatu, distraksi berlebihan, hanya mau duduk di kursi tertentu saat terbang) yang tampak seperti "coping" namun tetap mencegah <em>disconfirmation</em> rasa takut — sehingga tetap menghambat pemulihan penuh jika tidak diatasi bersamaan dengan tata laksana berbasis exposure (LO8).</p>
+    <div class="case-note">Situasi Nadia sekarang — penugasan yang memaksa ia terbang dalam 2 minggu — sebenarnya adalah <strong>momentum alami untuk memutus siklus negative reinforcement</strong> ini, asalkan dipersiapkan dengan pendekatan yang tepat (bukan sekadar "dipaksa" tanpa strategi, lihat LO8).</div>
+  </div>
+</div>
+
+<!-- ======== LO8 ======== -->
+<div id="sec-lo8" class="section">
+  <div class="lo-badge">LO 8</div>
+  <h2 class="section-heading">Tata Laksana Berbasis Bukti pada Fobia Spesifik</h2>
+  <p class="section-desc">Menjawab tuntas pertanyaan kedua Nadia: "Apa yang bisa saya lakukan sebelum penerbangan 2 minggu lagi?"</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🥇</span> Lini Pertama — Exposure-Based CBT</div>
+    <div class="table-wrap"><table>
+      <tr><th>Modalitas</th><th>Deskripsi</th><th>Level Bukti</th></tr>
+      <tr><td><strong>In-vivo exposure</strong></td><td>Paparan bertahap terhadap situasi nyata (hierarki dari yang paling ringan ke paling menakutkan)</td><td class="hl-mint">Gold standard, bukti terkuat</td></tr>
+      <tr><td><strong>Virtual Reality Exposure Therapy (VRET)</strong></td><td>Simulasi penerbangan via VR — sangat relevan untuk <em>fear of flying</em> karena exposure in-vivo berulang sulit dilakukan</td><td class="hl-mint">Bukti kuat khusus fobia terbang</td></tr>
+      <tr><td><strong>One-Session Treatment (Öst)</strong></td><td>Protokol exposure intensif tunggal 2&ndash;3 jam, efektif untuk fobia spesifik tunggal</td><td class="hl-mint">Bukti kuat, efisien waktu</td></tr>
+      <tr><td><strong>Cognitive restructuring</strong></td><td>Menantang distorsi kognitif — <em>probability overestimation</em> (melebih-lebihkan kemungkinan kecelakaan) &amp; <em>catastrophizing</em></td><td>Adjunct yang memperkuat exposure</td></tr>
+      <tr><td><strong>Systematic desensitization</strong></td><td>Exposure bertahap dikombinasi teknik relaksasi</td><td>Alternatif bila exposure langsung sulit ditoleransi</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">💊</span> Peran Farmakoterapi — Terbatas &amp; Situasional</div>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Berbeda dari gangguan cemas lain, farmakoterapi <strong>bukan lini pertama</strong> untuk fobia spesifik murni. Benzodiazepine PRN sebelum penerbangan memang meredakan gejala sesaat, namun berisiko: menimbulkan ketergantungan, dan secara paradoks dapat <strong>menghambat proses extinction learning</strong> (LO3) karena menjadi "safety behavior" farmakologis yang mencegah otak benar-benar belajar bahwa situasi tersebut aman tanpa bantuan obat.</div></div>
+    <div class="grid-2">
+      <div class="mini-card"><h4>Benzodiazepine (situasional)</h4><p>Dosis rendah, PRN, hanya jangka sangat pendek bila exposure/CBT belum sempat dijalani — bukan solusi jangka panjang</p></div>
+      <div class="mini-card"><h4>Beta-blocker (propranolol)</h4><p>Meredakan gejala otonom akut (jantung berdebar); bukti untuk fobia spesifik lebih terbatas dibanding performance anxiety</p></div>
+      <div class="mini-card"><h4>SSRI</h4><p>Dipertimbangkan bila terdapat komorbiditas gangguan cemas/depresi lain — bukan monoterapi fobia spesifik tunggal</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🗓️</span> Strategi Praktis untuk Nadia — 2 Minggu Menuju Penerbangan</div>
+    <div class="cr-box">
+      <div class="cr-label">Rencana bertahap yang realistis</div>
+      <ol class="cr-steps">
+        <li><strong>Psikoedukasi segera</strong> — jelaskan mekanisme fear response (LO1&amp;LO3) agar Nadia paham reaksinya bukan "kelemahan" atau "kegilaan"</li>
+        <li><strong>Cognitive restructuring singkat</strong> — bahas data keamanan statistik penerbangan komersial untuk melawan probability overestimation</li>
+        <li><strong>Exposure bertahap / VRET bila tersedia</strong> — mulai dari membayangkan, melihat video, mengunjungi bandara, hingga simulasi penerbangan sebelum hari-H</li>
+        <li><strong>Teknik relaksasi pernapasan &amp; grounding</strong> — dilatih rutin agar otomatis dapat diakses saat gejala somatik muncul di pesawat</li>
+        <li><strong>Rencana jangka panjang</strong> — mengingat pekerjaan Nadia sering menuntut perjalanan udara, CBT terstruktur pasca-penerbangan ini penting untuk mencegah kekambuhan (ingat <em>renewal effect</em>, LO3)</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ======== LO9 ======== -->
+<div id="sec-lo9" class="section">
+  <div class="lo-badge">LO 9</div>
+  <h2 class="section-heading">Komunikasi Terapeutik &amp; Pendekatan Kedokteran Keluarga</h2>
+  <p class="section-desc">Bagaimana menyampaikan semua hal di atas dengan cara yang menenangkan, bukan menambah beban Nadia.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💬</span> Prinsip Komunikasi Terapeutik pada Pasien Cemas</div>
+    <div class="grid-2">
+      <div class="mini-card"><h4>Validasi</h4><p>"Wajar tubuh Anda bereaksi seperti itu — ini respons alarm yang sudah terkondisi, bukan tanda Anda lemah atau berlebihan."</p></div>
+      <div class="mini-card"><h4>Psikoedukasi</h4><p>Jelaskan mekanisme fear response secara sederhana (LO1&amp;LO3) — mengurangi rasa bersalah/malu Nadia terhadap reaksinya sendiri</p></div>
+      <div class="mini-card"><h4>Normalisasi</h4><p>Fobia spesifik adalah kondisi umum &amp; dapat ditangani — bukan aib atau kelainan kepribadian</p></div>
+      <div class="mini-card"><h4>Kolaboratif &amp; realistis</h4><p>Sepakati target bertahap untuk 2 minggu — bukan janji "sembuh total", tapi "siap menghadapi dengan strategi konkret"</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🏥</span> Pendekatan Kedokteran Keluarga (Family Medicine)</div>
+    <ul class="styled-list">
+      <li><strong>Holistik:</strong> menilai Nadia dari sisi biologis, psikologis, sosial (pekerjaan), dan sistem dukungan keluarga secara terpadu</li>
+      <li><strong>Continuity of care:</strong> follow-up berkelanjutan, bukan konsultasi sekali jalan — penting karena tuntutan perjalanan dinas kemungkinan berulang</li>
+      <li><strong>Patient-centered:</strong> melibatkan keluarga Nadia yang sudah menunjukkan kekhawatiran sebagai bagian dari sistem dukungan pemulihan</li>
+      <li><strong>Community &amp; prevention-oriented:</strong> skrining dini gejala cemas pada populasi berisiko tinggi (karyawan dengan tuntutan perjalanan dinas rutin)</li>
+    </ul>
+    <div class="alert alert-mint"><span class="alert-icon">🤝</span><div>Kerangka <strong>PEARLS</strong> (Partnership, Empathy, Apology bila relevan, Respect, Legitimation, Support) dapat menjadi panduan praktis saat berkomunikasi dengan pasien cemas — memastikan pasien merasa didengar sekaligus diberdayakan, bukan hanya diberi instruksi.</div></div>
+  </div>
+</div>
+
+<!-- ======== LO10 ======== -->
+<div id="sec-lo10" class="section">
+  <div class="lo-badge">LO 10</div>
+  <h2 class="section-heading">Pendekatan Biopsikososial-Spiritual pada Gangguan Kecemasan</h2>
+  <p class="section-desc">Merangkum semua dimensi yang sudah dibahas menjadi satu formulasi kasus yang utuh untuk Nadia.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧩</span> Empat Dimensi yang Saling Terjalin</div>
+    <div class="grid-2">
+      <div class="mini-card"><h4>🧬 Bio</h4>
+        <ul><li>Disfungsi fear circuit: hiperaktivitas amigdala, hipoaktivitas vmPFC (LO3)</li><li>Kemungkinan predisposisi genetik/temperamen behavioral inhibition (LO2)</li></ul>
+      </div>
+      <div class="mini-card"><h4>🧠 Psiko</h4>
+        <ul><li>Distorsi kognitif: probability overestimation &amp; catastrophizing (LO8)</li><li>Riwayat belajar/kondisioning: classical + operant conditioning (LO3 &amp; LO7)</li><li>Trait kepribadian &amp; insight yang justru menimbulkan frustrasi ("tahu tapi tak bisa kontrol")</li></ul>
+      </div>
+      <div class="mini-card"><h4>🌍 Sosial</h4>
+        <ul><li>Tuntutan pekerjaan yang mengharuskan perjalanan udara rutin</li><li>Dukungan keluarga yang peduli namun juga khawatir (potensi menambah tekanan bila tidak dikelola)</li><li>Potensi stigma gangguan cemas di lingkungan kerja</li></ul>
+      </div>
+      <div class="mini-card"><h4>🕊️ Spiritual</h4>
+        <ul><li>Makna &amp; kerangka koping eksistensial terhadap rasa takut</li><li>Tawakal sebagai strategi koping adaptif pelengkap (LO11)</li><li>Praktik spiritual (dzikir/doa) sebagai teknik grounding tambahan</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🔗</span> Mengapa Keempat Dimensi Harus Terintegrasi</div>
+    <p>Formulasi biopsikososial-spiritual menegaskan bahwa keempat dimensi ini <strong>bukan pilihan terpisah</strong>, melainkan lapisan yang saling memengaruhi pada satu individu yang sama. Menangani Nadia hanya dengan farmakoterapi tanpa exposure/CBT akan menyisakan sirkuit fear yang belum ter-<em>extinguish</em>; menangani hanya dari sisi psikoterapi tanpa mempertimbangkan tuntutan sosial pekerjaannya berisiko membuat rencana terapi tidak realistis; dan mengabaikan dimensi spiritual pada pasien yang menghargainya dapat menghilangkan salah satu sumber kekuatan koping yang justru bisa memperkuat kepatuhan &amp; hasil terapi.</p>
+    <div class="alert alert-mint"><span class="alert-icon">✅</span><div>Pendekatan holistik inilah yang membedakan penanganan psikiatri modern dari sekadar "meredakan gejala" — tujuannya adalah <strong>pemulihan fungsi yang bermakna &amp; berkelanjutan</strong> bagi Nadia, sesuai konteks hidupnya secara utuh.</div></div>
+  </div>
+</div>
+
+<!-- ======== LO11 ======== -->
+<div id="sec-lo11" class="section">
+  <div class="lo-badge">LO 11</div>
+  <h2 class="section-heading">Perspektif Kedokteran Islam dalam Pelayanan Pasien Gangguan Kecemasan</h2>
+  <p class="section-desc">Dimensi spiritual bukan pengganti tata laksana berbasis bukti (LO8) — melainkan pelengkap yang sah &amp; bermakna, terutama bagi pasien Muslim.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🕌</span> Konsep Khawf (Rasa Takut) dalam Islam</div>
+    <p>Islam mengakui rasa takut sebagai bagian dari fitrah manusia, bahkan disebutkan sebagai salah satu bentuk ujian keimanan. Namun, ketakutan yang <strong>berlebihan hingga melumpuhkan fungsi</strong> bertentangan dengan prinsip <em>yusr</em> (kemudahan) dalam syariat dan maqashid syariah <em>hifz an-nafs</em> (menjaga jiwa, termasuk kesehatan mental) — sehingga mencari pertolongan &amp; pengobatan justru selaras dengan nilai-nilai Islam, bukan bertentangan dengannya.</p>
+  </div>
+
+  <div class="ayat-card">
+    <div class="ayat-ref">QS. Al-Baqarah (2): 155</div>
+    <div class="ayat-arab">وَلَنَبْلُوَنَّكُمْ بِشَيْءٍ مِّنَ الْخَوْفِ وَالْجُوعِ وَنَقْصٍ مِّنَ الْأَمْوَالِ وَالْأَنفُسِ وَالثَّمَرَاتِ ۗ وَبَشِّرِ الصَّابِرِينَ</div>
+    <div class="ayat-lat">"Wa lanabluwannakum bisyai'im minal-khaufi wal-ju'i wa naqṣim minal-amwāli wal-anfusi wats-tsamarāt, wa basysyiris-shābirīn"</div>
+    <div class="ayat-id">"Dan Kami pasti akan menguji kamu dengan sedikit ketakutan, kelaparan, kekurangan harta, jiwa, dan buah-buahan. Dan sampaikanlah kabar gembira kepada orang-orang yang sabar."</div>
+    <div class="ayat-note">Rasa takut (khawf) diakui Al-Qur'an sebagai bagian dari ujian kehidupan yang manusiawi — bukan aib. Ayat ini memberi kerangka makna bagi Nadia bahwa mengalami ketakutan bukan tanda kekurangan iman, melainkan bagian dari ujian yang dihadapi dengan kesabaran <em>dan</em> ikhtiar.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🐪</span> Tawakal: Ikhtiar Dahulu, Baru Berserah</div>
+    <div class="cr-box">
+      <div class="cr-label">Hadits Rujukan</div>
+      <p style="font-size:13.5px;line-height:1.75;">Seorang sahabat bertanya kepada Nabi ﷺ, "Apakah aku lepaskan untaku begitu saja lalu aku bertawakal, ataukah aku ikat dahulu lalu bertawakal?" Nabi ﷺ menjawab: <strong>"Ikatlah untamu, kemudian bertawakallah."</strong> (HR. Tirmidzi, dihasankan oleh Al-Albani)</p>
+    </div>
+    <div class="alert alert-mint"><span class="alert-icon">💡</span><div>Hadits ini menjadi dasar penting untuk meluruskan kesalahpahaman umum: <strong>tawakal bukan pengganti ikhtiar</strong>, melainkan pelengkapnya. Bagi Nadia, "mengikat unta" berarti benar-benar menjalani exposure therapy, cognitive restructuring, dan strategi persiapan medis yang dianjurkan (LO8) — <em>baru kemudian</em> berserah pada hasilnya kepada Allah. Memahamkan konsep ini penting agar pasien religius tidak keliru mengira "cukup berdoa tanpa usaha medis" sebagai bentuk tawakal yang benar.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">💊</span> Anjuran Berobat dalam Islam</div>
+    <div class="cr-box">
+      <div class="cr-label">Hadits Rujukan</div>
+      <p style="font-size:13.5px;line-height:1.75;">Dari Usamah bin Syarik radhiyallahu 'anhu, Nabi ﷺ bersabda: <strong>"Berobatlah, wahai hamba Allah! Karena sesungguhnya Allah tidak menciptakan penyakit, kecuali Dia juga menciptakan obatnya, kecuali satu penyakit, yaitu tua."</strong> (HR. Abu Dawud, Tirmidzi — hasan shahih, Ibnu Majah)</p>
+    </div>
+    <p>Hadits ini menjadi landasan legitimasi bagi umat Islam untuk mencari terapi psikiatri &amp; psikologi secara aktif terhadap gangguan kecemasan — bukan sekadar mengandalkan spiritual semata. Mencari pertolongan profesional (dokter, psikolog) adalah bagian dari menjalankan perintah untuk berobat.</p>
+  </div>
+
+  <div class="ayat-card">
+    <div class="ayat-ref">QS. Ar-Ra'd (13): 28</div>
+    <div class="ayat-arab">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</div>
+    <div class="ayat-lat">"Alā bidzikrillāhi taṭma'innul-qulūb"</div>
+    <div class="ayat-id">"Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram."</div>
+    <div class="ayat-note">Dzikir &amp; doa dapat menjadi <strong>teknik grounding tambahan</strong> yang selaras dengan keyakinan pasien — dilakukan berdampingan dengan teknik relaksasi pernapasan (LO8), bukan menggantikannya.</div>
+  </div>
+
+  <div class="ayat-card">
+    <div class="ayat-ref">QS. Az-Zukhruf (43): 13&ndash;14 — Doa Safar/Naik Kendaraan</div>
+    <div class="ayat-arab">سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ﴿١٣﴾ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ ﴿١٤﴾</div>
+    <div class="ayat-lat">"Subḥānalladzī sakhkhara lanā hādzā wa mā kunnā lahū muqrinīn. Wa innā ilā rabbinā lamunqalibūn"</div>
+    <div class="ayat-id">"Mahasuci (Allah) yang telah menundukkan semua ini bagi kami, padahal kami sebelumnya tidak mampu menguasainya. Dan sesungguhnya kami akan kembali kepada Tuhan kami."</div>
+    <div class="ayat-note">Ini adalah <strong>doa yang diajarkan Al-Qur'an saat menaiki kendaraan/melakukan perjalanan</strong> — sangat relevan secara praktis untuk Nadia. Mengamalkan doa ini sebelum &amp; selama penerbangan dapat memberi rasa kontrol dan ketenangan tambahan, melengkapi (bukan menggantikan) strategi CBT/exposure yang telah disiapkan.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🩺</span> Prinsip Holistik Kedokteran Islam</div>
+    <p>Kedokteran Islam menekankan penyembuhan <strong>syifa jasadi</strong> (jasmani) dan <strong>syifa nafsi/ruhani</strong> (jiwa &amp; ruh) secara terintegrasi — selaras dengan pendekatan biopsikososial-spiritual pada LO10. Dokter Muslim dianjurkan menggabungkan tata laksana berbasis bukti (exposure-based CBT, LO8) dengan dukungan spiritual sesuai keyakinan pasien, tanpa memaksakan satu dimensi dan mengabaikan dimensi lain — keduanya berjalan beriringan, bukan saling menggantikan.</p>
+    <div class="case-note">Bagi Nadia, kombinasi paling ideal: <strong>ikhtiar maksimal</strong> (exposure/CBT, cognitive restructuring, teknik relaksasi — LO8) <strong>+ tawakal &amp; dzikir</strong> sebagai penguat ketenangan batin — bukan salah satu saja.</div>
+  </div>
+</div>
+
+<!-- ======== REFERENSI ======== -->
+<div id="sec-ref" class="section">
+  <div class="lo-badge">REFERENSI</div>
+  <h2 class="section-heading">Daftar Pustaka</h2>
+  <p class="section-desc">Sumber yang digunakan dalam menyusun pembahasan ini.</p>
+  <div class="card">
+    <ul class="styled-list">
+      <li>American Psychiatric Association. <em>Diagnostic and Statistical Manual of Mental Disorders, 5th Edition, Text Revision (DSM-5-TR)</em>. Washington, DC: APA Publishing — kriteria Fobia Spesifik (300.29), Gangguan Panik, Agorafobia, GAD, PTSD.</li>
+      <li>World Health Organization. <em>ICD-11: International Classification of Diseases, 11th Edition</em>. Geneva: WHO, 2019 — kategori 6B03 Specific Phobia.</li>
+      <li>Casey P, Kelly B. <em>Fish's Clinical Psychopathology: Signs and Symptoms in Psychiatry</em>, 5th Edition. Cambridge University Press, 2024 — konsep fear vs anxiety, kurva Yerkes&ndash;Dodson, kriteria signifikansi klinis, gangguan cemas.</li>
+      <li>LeDoux JE. Coming to terms with fear. <em>Proceedings of the National Academy of Sciences</em> — sirkuit amigdala &amp; fear conditioning.</li>
+      <li>Milad MR, Quirk GJ. Fear extinction as a model for translational neuroscience. <em>Annual Review of Psychology</em> — mekanisme extinction learning &amp; peran vmPFC.</li>
+      <li>Öst LG. One-session treatment for specific phobias. <em>Behaviour Research and Therapy</em>.</li>
+      <li>Opriş D, et al. Virtual reality exposure therapy in anxiety disorders: a quantitative meta-analysis. <em>Depression and Anxiety</em> — bukti VRET untuk fobia spesifik termasuk fear of flying.</li>
+      <li>Wolitzky-Taylor KB, et al. Psychological approaches in the treatment of specific phobias: a meta-analysis. <em>Clinical Psychology Review</em>.</li>
+      <li>Bandelow B, et al. World Federation of Societies of Biological Psychiatry (WFSBP) guidelines for pharmacological treatment of anxiety, obsessive-compulsive and posttraumatic stress disorders.</li>
+      <li>Mowrer OH. Two-factor learning theory — dasar teori avoidance behavior &amp; negative reinforcement pada gangguan fobia.</li>
+      <li>Al-Qur'an dan Terjemahnya — Kementerian Agama Republik Indonesia; rujukan tafsir: Tafsir Al-Muyassar, Tafsir Jalalayn (tafsirweb.com, quran.nu.or.id, surahquran.com).</li>
+      <li>HR. Abu Dawud, Tirmidzi, Ibnu Majah — hadits anjuran berobat (dari Usamah bin Syarik); HR. Tirmidzi — hadits "ikatlah untamu lalu bertawakallah" (dihasankan Al-Albani).</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======== QUIZ ======== -->
+<div id="sec-quiz" class="section">
+  <div class="lo-badge">QUIZ</div>
+  <h2 class="section-heading">🧠 Quiz — Uji Pemahamanmu!</h2>
+  <p class="section-desc">10 soal vignette mencakup LO1&ndash;LO11. Semangat, Nadia menunggu jawabanmu! 🕊️</p>
+
+  <div class="quiz-progress" id="quizProg"></div>
+
+  <!-- Q1 -->
+  <div class="quiz-q" id="q1">
+    <div class="q-num">SOAL 01 / FEAR VS ANXIETY</div>
+    <div class="q-vignette">Nadia berkata, "Saya tahu bahwa terbang pada umumnya aman, tetapi ketika saya memikirkan untuk naik pesawat, tubuh saya bereaksi seolah-olah saya sedang menghadapi bahaya."</div>
+    <p class="q-question">Fenomena ini paling tepat dijelaskan sebagai...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">A</span>Kebohongan pasien karena sebenarnya ia sadar penuh akan bahaya nyata</button>
+      <button class="q-opt" onclick="ans(this,'q1',true)"><span class="ol">B</span>Disosiasi antara penilaian kognitif rasional (korteks prefrontal) dan respons fear otomatis yang sudah terkondisi (amigdala)</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">C</span>Tanda insight yang buruk terhadap kondisinya sendiri</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">D</span>Gejala psikotik berupa waham somatik</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">E</span>Malingering untuk menghindari tugas kerja</button>
+    </div>
+    <div class="q-exp" id="exp-q1">✅ <strong>B — Disosiasi kognitif-otonom</strong><br><br>Insight kognitif (tahu risiko rendah) diproses jalur rasional, sementara respons fear otomatis diproses amigdala yang sudah terkondisi lewat pengalaman turbulensi — dua sistem berbeda yang bekerja pada kecepatan berbeda. Inilah dasar ilmiah dari keluhan khas fobia: "tahu tapi tak bisa kendalikan".</div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-q" id="q2">
+    <div class="q-num">SOAL 02 / ETIOLOGI</div>
+    <div class="q-vignette">Ketakutan Nadia terhadap penerbangan bermula tepat setelah ia mengalami turbulensi hebat setahun lalu, di mana ia merasa sangat ketakutan dan yakin sesuatu buruk akan terjadi.</div>
+    <p class="q-question">Jalur pembentukan fobia yang paling dominan pada kasus ini adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">A</span>Observational learning — meniru ketakutan orang lain</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">B</span>Informational transmission — mendengar berita kecelakaan pesawat</button>
+      <button class="q-opt" onclick="ans(this,'q2',true)"><span class="ol">C</span>Direct (traumatic) conditioning — pengalaman traumatik langsung dengan stimulus</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">D</span>Faktor genetik murni tanpa peran pengalaman</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">E</span>Gangguan kepribadian dependen yang mendasari</button>
+    </div>
+    <div class="q-exp" id="exp-q2">✅ <strong>C — Direct (traumatic) conditioning</strong><br><br>Nadia mengalami sendiri peristiwa traumatik (turbulensi parah) yang secara langsung mengondisikan rasa takutnya terhadap stimulus terbang — ini adalah jalur etiologi paling klasik &amp; paling sering pada fobia spesifik tipe situasional yang onset dewasa.</div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-q" id="q3">
+    <div class="q-num">SOAL 03 / NEUROBIOLOGI</div>
+    <div class="q-vignette">Secara neurobiologis, pasien dengan fobia spesifik menunjukkan insight kognitif yang baik namun tetap tidak mampu meredam respons ketakutan ototomatis mereka.</div>
+    <p class="q-question">Pola aktivitas otak yang paling menjelaskan fenomena ini adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">A</span>Hipoaktivitas amigdala + hiperaktivitas hipokampus</button>
+      <button class="q-opt" onclick="ans(this,'q3',true)"><span class="ol">B</span>Hiperaktivitas amigdala + hipoaktivitas korteks prefrontal ventromedial (vmPFC)</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">C</span>Hipoaktivitas total sirkuit limbik</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">D</span>Hiperaktivitas serebelum sebagai penyebab utama</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">E</span>Disfungsi murni pada korteks visual primer</button>
+    </div>
+    <div class="q-exp" id="exp-q3">✅ <strong>B — Amigdala hiperaktif, vmPFC hipoaktif</strong><br><br>Amigdala yang hiperaktif menghasilkan alarm fear yang kuat, sementara vmPFC yang seharusnya melakukan regulasi top-down &amp; extinction learning justru hipoaktif — sehingga sirkuit rasional gagal meredam sirkuit alarm otomatis, walau insight kognitif pasien baik.</div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-q" id="q4">
+    <div class="q-num">SOAL 04 / DIAGNOSIS</div>
+    <div class="q-vignette">Nadia memenuhi seluruh kriteria A&ndash;G DSM-5-TR untuk fobia spesifik, dengan objek ketakutan berupa perjalanan udara/penerbangan.</div>
+    <p class="q-question">Subtipe (specifier) fobia spesifik yang paling tepat untuk Nadia adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">A</span>Tipe hewan (animal type)</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">B</span>Tipe lingkungan alam (natural environment type)</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">C</span>Tipe darah-injeksi-cedera (blood-injection-injury type)</button>
+      <button class="q-opt" onclick="ans(this,'q4',true)"><span class="ol">D</span>Tipe situasional (situational type)</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">E</span>Tipe lainnya (other type) tanpa kategori jelas</button>
+    </div>
+    <div class="q-exp" id="exp-q4">✅ <strong>D — Tipe Situasional</strong><br><br>Fobia terhadap transportasi (termasuk terbang), terowongan, jembatan, lift, dan ruang tertutup dikategorikan sebagai tipe situasional — subtipe ini juga paling sering memiliki onset dewasa muda pasca-trauma langsung, persis seperti riwayat Nadia.</div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-q" id="q5">
+    <div class="q-num">SOAL 05 / DIAGNOSIS BANDING</div>
+    <div class="q-vignette">Nadia hanya menunjukkan kecemasan terhadap perjalanan udara. Ia tidak memiliki masalah naik kereta, mobil, atau berada di ruang tertutup/keramaian lainnya, dan tidak ada kekhawatiran pervasif pada aspek kehidupan lain.</div>
+    <p class="q-question">Temuan ini paling tepat menyingkirkan diagnosis banding berupa...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">A</span>Fobia spesifik tipe situasional</button>
+      <button class="q-opt" onclick="ans(this,'q5',true)"><span class="ol">B</span>Agorafobia dan Gangguan Cemas Menyeluruh (GAD)</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">C</span>Gangguan penyesuaian</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">D</span>Fobia sosial</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">E</span>Semua gangguan cemas tanpa kecuali</button>
+    </div>
+    <div class="q-exp" id="exp-q5">✅ <strong>B — Agorafobia &amp; GAD tersingkirkan</strong><br><br>Agorafobia membutuhkan ketakutan pada ≥2 kategori situasi (bukan hanya satu objek spesifik), sedangkan GAD ditandai kekhawatiran pervasif di banyak aspek kehidupan. Karena kecemasan Nadia terbatas hanya pada satu kategori (penerbangan) dan tidak pervasif, kedua diagnosis banding ini dapat disingkirkan — mendukung diagnosis fobia spesifik.</div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-q" id="q6">
+    <div class="q-num">SOAL 06 / MSE</div>
+    <div class="q-vignette">Pada pemeriksaan status mental, mood Nadia tampak cemas hanya ketika membahas topik perjalanan udara, namun tenang sepenuhnya saat membahas topik lain.</div>
+    <p class="q-question">Pola mood ini pada MSE disebut sebagai...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">A</span>Mood pervasif — mendukung diagnosis GAD</button>
+      <button class="q-opt" onclick="ans(this,'q6',true)"><span class="ol">B</span>Mood cemas situasional — mendukung diagnosis fobia spesifik, menyingkirkan GAD</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">C</span>Afek datar (flat affect)</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">D</span>Mood inkongruen dengan afek</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">E</span>Labilitas afek</button>
+    </div>
+    <div class="q-exp" id="exp-q6">✅ <strong>B — Mood cemas situasional</strong><br><br>Kunci pembeda pada MSE: mood cemas yang terikat stimulus/situasi tertentu (situasional) khas fobia spesifik, berbeda dari mood cemas pervasif/menetap di berbagai situasi yang khas GAD, atau muncul tiba-tiba tanpa pemicu jelas yang khas gangguan panik.</div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-q" id="q7">
+    <div class="q-num">SOAL 07 / AVOIDANCE</div>
+    <div class="q-vignette">Setiap kali dihadapkan pada perjalanan dinas, Nadia memilih naik kereta atau mobil meski memakan waktu jauh lebih lama. Setelah memilih opsi ini, kecemasannya langsung mereda.</div>
+    <p class="q-question">Mekanisme yang mempertahankan pola perilaku ini adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">A</span>Positive reinforcement — mendapat pujian dari atasan</button>
+      <button class="q-opt" onclick="ans(this,'q7',true)"><span class="ol">B</span>Negative reinforcement — perilaku menghindar diperkuat karena berhasil menghilangkan kecemasan</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">C</span>Punishment — perilaku dihukum sehingga menurun frekuensinya</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">D</span>Extinction — rasa takut sudah hilang sepenuhnya</span></button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">E</span>Habituasi alami terhadap stimulus</button>
+    </div>
+    <div class="q-exp" id="exp-q7">✅ <strong>B — Negative reinforcement</strong><br><br>Setiap kali Nadia menghindar (naik kereta/mobil), kecemasannya langsung reda — penghilangan stimulus tidak menyenangkan inilah yang secara operant conditioning "memperkuat" (bukan menghukum) perilaku avoidance, sehingga siklus fobia terus dipertahankan tanpa pernah terjadi extinction learning.</div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-q" id="q8">
+    <div class="q-num">SOAL 08 / TATA LAKSANA</div>
+    <div class="q-vignette">Nadia memiliki penerbangan penting 2 minggu lagi dan bertanya apa yang bisa dilakukan untuk mengatasi ketakutannya.</div>
+    <p class="q-question">Tata laksana lini pertama berbasis bukti untuk fobia spesifik adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">A</span>Benzodiazepine dosis tinggi rutin harian sebagai terapi utama</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">B</span>SSRI monoterapi jangka panjang tanpa psikoterapi</button>
+      <button class="q-opt" onclick="ans(this,'q8',true)"><span class="ol">C</span>Exposure-based CBT (in-vivo exposure/VRET) ± cognitive restructuring</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">D</span>Electroconvulsive therapy (ECT)</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">E</span>Total menghindari penerbangan seumur hidup sebagai solusi permanen</button>
+    </div>
+    <div class="q-exp" id="exp-q8">✅ <strong>C — Exposure-based CBT</strong><br><br>Exposure therapy (in-vivo atau VRET untuk fear of flying) adalah gold standard berbasis bukti terkuat untuk fobia spesifik, bekerja lewat mekanisme extinction learning. Farmakoterapi bukan lini pertama untuk fobia spesifik murni — benzodiazepine PRN bahkan berisiko menghambat extinction learning bila dipakai sebagai "safety behavior" farmakologis.</div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-q" id="q9">
+    <div class="q-num">SOAL 09 / KOMUNIKASI &amp; BIOPSIKOSOSIAL</div>
+    <div class="q-vignette">Dokter ingin menyampaikan penjelasan kepada Nadia tentang kondisinya tanpa membuatnya merasa lemah atau "berlebihan".</div>
+    <p class="q-question">Pendekatan komunikasi terapeutik yang paling tepat adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">A</span>Menegaskan bahwa ketakutannya memang tidak masuk akal dan harus segera dihilangkan</button>
+      <button class="q-opt" onclick="ans(this,'q9',true)"><span class="ol">B</span>Validasi bahwa reaksi tubuhnya adalah respons alarm yang sudah terkondisi (bukan kelemahan), disertai psikoedukasi mekanisme fear response &amp; target bertahap yang realistis</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">C</span>Menjanjikan kesembuhan total dalam 2 minggu agar Nadia lebih tenang</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">D</span>Mengabaikan aspek psikososial karena fokus hanya pada farmakoterapi</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">E</span>Menyarankan Nadia untuk mengundurkan diri dari pekerjaannya</button>
+    </div>
+    <div class="q-exp" id="exp-q9">✅ <strong>B — Validasi + psikoedukasi + target realistis</strong><br><br>Prinsip komunikasi terapeutik pada pasien cemas: validasi, normalisasi, psikoedukasi mekanisme gejala, dan kolaborasi menetapkan target bertahap yang realistis — bukan janji berlebihan maupun menyalahkan pasien. Ini juga bagian dari pendekatan kedokteran keluarga yang holistik &amp; patient-centered.</div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-q" id="q10">
+    <div class="q-num">SOAL 10 / KEDOKTERAN ISLAM</div>
+    <div class="q-vignette">Nadia yang religius bertanya apakah cukup baginya untuk berdoa &amp; bertawakal saja tanpa perlu menjalani terapi/exposure yang disarankan dokter.</div>
+    <p class="q-question">Jawaban yang paling sesuai dengan prinsip kedokteran Islam adalah...</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">A</span>Benar, cukup berdoa dan bertawakal saja, karena usaha medis bertentangan dengan konsep tawakal</button>
+      <button class="q-opt" onclick="ans(this,'q10',true)"><span class="ol">B</span>Tawakal yang benar justru mensyaratkan ikhtiar maksimal terlebih dahulu (menjalani terapi/exposure yang dianjurkan), baru kemudian berserah hasilnya pada Allah — sejalan hadits "ikatlah untamu, lalu bertawakallah"</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">C</span>Terapi medis untuk gangguan cemas tidak dianjurkan dalam Islam</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">D</span>Dzikir dan doa tidak memiliki tempat dalam tata laksana medis modern</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">E</span>Rasa takut menandakan kurangnya keimanan Nadia</button>
+    </div>
+    <div class="q-exp" id="exp-q10">✅ <strong>B — Ikhtiar dahulu, baru tawakal</strong><br><br>Hadits "Ikatlah untamu, kemudian bertawakallah" (HR. Tirmidzi) menegaskan bahwa tawakal yang benar mensyaratkan usaha maksimal terlebih dahulu, bukan penggantinya. Hadits lain juga menganjurkan berobat: "Berobatlah wahai hamba Allah..." (HR. Abu Dawud, Tirmidzi). Pendekatan Islam yang tepat: ikhtiar penuh (exposure/CBT, LO8) + tawakal &amp; dzikir sebagai penguat ketenangan batin (LO11) — keduanya berjalan beriringan.</div>
+  </div>
+
+  <!-- Score -->
+  <div class="score-card" id="scoreCard">
+    <div style="font-size:40px;margin-bottom:8px;">🕊️</div>
+    <div class="score-big" id="scoreNum">0</div>
+    <div style="font-size:18px;opacity:0.8;margin-top:4px;">/ 10</div>
+    <p class="score-msg" id="scoreMsg"></p>
+    <button class="btn-restart" onclick="resetQuiz()">🔁 Ulangi Quiz</button>
+  </div>
+</div><!-- /quiz -->
+
+</div><!-- /container -->
+
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+let answered = {}, score = 0, total = 10;
+
+function initDots() {
+  const p = document.getElementById('quizProg');
+  p.innerHTML = '';
+  for (let i=1; i<=total; i++) {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = 'dot' + i;
+    p.appendChild(d);
+  }
+}
+
+function ans(btn, qid, correct) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  const qNum = parseInt(qid.replace('q',''));
+  const card = document.getElementById(qid);
+  card.querySelectorAll('.q-opt').forEach(b => { b.disabled = true; });
+  if (correct) {
+    btn.classList.add('correct'); score++;
+    document.getElementById('dot'+qNum).classList.add('ok');
+  } else {
+    btn.classList.add('wrong');
+    document.getElementById('dot'+qNum).classList.add('no');
+    card.querySelectorAll('.q-opt').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(',true)')) b.classList.add('correct');
+    });
+  }
+  const exp = document.getElementById('exp-' + qid);
+  if (exp) exp.classList.add('show');
+  if (Object.keys(answered).length === total) setTimeout(showScore, 700);
+}
+
+function showScore() {
+  const sc = document.getElementById('scoreCard');
+  sc.classList.add('show');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter masa depan! 🕊️✨'];
+  const idx = score <= 3 ? 0 : score <= 5 ? 1 : score <= 7 ? 2 : score <= 9 ? 3 : 4;
+  document.getElementById('scoreMsg').textContent = msgs[idx];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetQuiz() {
+  answered = {}; score = 0;
+  document.querySelectorAll('.q-opt').forEach(b => { b.disabled=false; b.classList.remove('correct','wrong'); });
+  document.querySelectorAll('.q-exp').forEach(e => e.classList.remove('show'));
+  document.getElementById('scoreCard').classList.remove('show');
+  initDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+initDots();
+</script>
+
+</body>
+</html>

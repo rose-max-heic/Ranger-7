@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎙️ Wawancara Psikiatri — dr. Erna Herawati, Sp.KJ</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --butter: #C9A227;
+  --butter-light: #E0C05A;
+  --butter-pale: #FBF1D3;
+  --butter-deep: #7A5C10;
+  --butter-muted: #A6821E;
+  --rose: #C4784A;
+  --rose-light: #DDA07A;
+  --rose-pale: #FBECE0;
+  --rose-deep: #8F4A26;
+  --mint: #7BAF7F;
+  --mint-pale: #E7F3E5;
+  --mint-deep: #3D7A45;
+  --peach: #E8A87C;
+  --peach-pale: #FDF0E6;
+  --peach-deep: #C07040;
+  --sky: #6E93A8;
+  --sky-pale: #E6EFF3;
+  --sky-deep: #375A6D;
+  --cream: #FFFCF2;
+  --white: #ffffff;
+  --text: #3A2E10;
+  --text-muted: #7A6A3C;
+  --border: #EFE3B4;
+  --shadow: rgba(201,162,39,0.16);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #4A3808 0%, #7A5C10 35%, #C9A227 70%, #E8C060 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.08);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(196,120,74,0.14);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.32);
+  color:rgba(255,255,255,0.92);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,52px);font-weight:900;
+  color:#fff;line-height:1.15;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#FFF0C4; }
+.hero-sub { color:rgba(255,255,255,0.85);font-size:14.5px;font-weight:300;max-width:600px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.25);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#4A3808,#7A5C10);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(74,56,8,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(255,240,196,0.65);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#FFF7DE;border-bottom-color:#E0C05A;
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--butter-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(201,162,39,0.22);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--butter-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-butter {background:var(--butter-pale);border-left:4px solid var(--butter);color:var(--butter-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--butter-pale),#fffaf0);
+  border:1.5px solid var(--butter-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎙️ dr. Erna menekankan: ';
+  font-weight:700;color:var(--butter-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--butter-deep),var(--butter-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#FFFCF2;}
+tr:hover td {background:var(--butter-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--butter-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--butter-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING / STEPS */
+.cr-box {
+  background:linear-gradient(135deg,var(--butter-pale),var(--rose-pale));
+  border:1.5px solid var(--butter-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--butter-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:9px 0 9px 40px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(201,162,39,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:26px;height:26px;
+  background:var(--butter-muted);color:#fff;
+  border-radius:50%;font-size:12px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--butter-pale),var(--rose-pale));
+  border:2px solid var(--butter-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--butter-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-but {background:var(--butter-pale);color:var(--butter-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--butter-pale);border-color:var(--butter-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--butter-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--butter-deep),var(--rose-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--butter-pale),var(--rose-pale));
+  border-left:4px solid var(--butter-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--butter-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--butter);background:var(--butter-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(201,162,39,0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#4A3808,#C9A227,#DDA07A);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#FFF7DE;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.9;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--butter-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, #3A2C05, #5E4508);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid #E0C05A;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(201,162,39,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E0C05A, #DDA07A, #E0C05A);
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap:wrap;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, #E0C05A, #A6821E);
+  color: #3A2C05;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+}
+.cohort-ub { background: rgba(201,162,39,0.4); }
+.cohort-axon { background: rgba(196,120,74,0.4); }
+.cohort-arthron { background: rgba(123,175,127,0.4); }
+.cohort-aorta { background: rgba(110,147,168,0.4); }
+.cohort-avicenna { background: rgba(232,168,124,0.4); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.94);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: #FFE9A0; }
+.soal-dosen-content .hl-warn {
+  background: rgba(196,120,74,0.3);
+  border: 1px solid rgba(196,120,74,0.5);
+  color: #FFD0B0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,175,127,0.3);
+  border: 1px solid rgba(123,175,127,0.5);
+  color: #C0FFCB;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #5E4508, #E0C05A);
+  color: #3A2C05;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(201,162,39,0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(201,162,39,0.6); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #8F4A26;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(35,25,3,0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, #2E2004, #4A3808);
+  border: 2px solid #E0C05A;
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(201,162,39,0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: #E0C05A; border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(224,192,90,0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: #FFE9A0;
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.6); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(224,192,90,0.3);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, #E0C05A, #A6821E);
+  color: #3A2C05; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: #FFE9A0; font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #C0FFCB; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #E0C05A, #A6821E);
+  color: #3A2C05;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">🎙️ Blok Psikiatri · dr. Erna Herawati, Sp.KJ</div>
+  <h1>Seni & Teknik <em>Wawancara Psikiatri</em></h1>
+  <p class="hero-sub">Dari definisi gejala–tanda–sindrom, tujuan pemeriksaan, empati, hingga teknik komunikasi per tipe pasien dan struktur riwayat psikiatrik lengkap — disusun dari kuliah & PPT dr. Erna Herawati, Sp.KJ.</p>
+  <div class="hero-pills">
+    <span class="pill">🔍 Definisi Dasar</span>
+    <span class="pill">🎯 Tujuan & Setting</span>
+    <span class="pill">🤝 Anamnesis & Empati</span>
+    <span class="pill">🗣️ Teknik Wawancara</span>
+    <span class="pill">👥 10 Tipe Pasien</span>
+    <span class="pill">📋 Riwayat Psikiatrik</span>
+    <span class="pill">🧠 10 Soal Quiz</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="sticky-nav" id="mainNav">
+  <button class="nav-btn active" onclick="show('overview')">🏠 Overview</button>
+  <button class="nav-btn" onclick="show('tujuan')">🎯 Tujuan & Setting</button>
+  <button class="nav-btn" onclick="show('anamnesis')">🤝 Anamnesis & Empati</button>
+  <button class="nav-btn" onclick="show('teknik')">🗣️ Teknik Wawancara</button>
+  <button class="nav-btn" onclick="show('tipe-pasien')">👥 Tipe Pasien</button>
+  <button class="nav-btn" onclick="show('riwayat')">📋 Riwayat Psikiatrik</button>
+  <button class="nav-btn" onclick="show('quiz')">🧠 Quiz</button>
+</div>
+
+<div class="container">
+
+<!-- ======== OVERVIEW ======== -->
+<div id="sec-overview" class="section active">
+  <h2 class="section-heading">Peta Konsep & Definisi Dasar</h2>
+  <p class="section-desc">Sebelum masuk teknik wawancara, pahami dulu istilah-istilah dasar yang membedakan gejala, tanda, sindrom, gangguan, dan penyakit dalam psikiatri.</p>
+
+  <div class="dr-note">Pemeriksaan Psikiatri = Pemeriksaan Status Mental = <em>Mental Status Examination (MSE)</em>. Tiga istilah ini sering bikin bingung mahasiswa, padahal maksudnya sama persis.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">⚖️</span> Simtom, Sign, Sindrom, Gangguan, dan Penyakit</div>
+    <p style="font-size:13.5px;color:var(--text-muted);margin-bottom:14px;">Dalam psikiatri, tingkatan konsep ini penting untuk tidak buru-buru menyimpulkan diagnosis hanya dari satu keluhan.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Istilah</th><th>Definisi</th><th>Sifat</th><th>Contoh</th></tr>
+        <tr><td><span class="hl-but">Simtom</span></td><td>Gejala yang <strong>dikeluhkan pasien</strong></td><td>Subjektif</td><td>"Saya pusing", "saya gatau kenapa"</td></tr>
+        <tr><td><span class="hl-peach">Sign</span></td><td>Tanda suatu kondisi, diketahui lewat <strong>pemeriksaan</strong></td><td>Objektif</td><td>Suhu tubuh terukur, tekanan darah</td></tr>
+        <tr><td><span class="hl-mint">Sindroma</span></td><td>Gabungan beberapa simtom & sign yang mengarah ke kondisi tertentu</td><td>Kumpulan tanda-gejala</td><td>Sindrom nefrotik, sindrom metabolik</td></tr>
+        <tr><td><span class="hl-rose">Gangguan (disorder)</span></td><td>Sindrom/pola perilaku psikologik bermakna klinis yang menimbulkan <strong>distress</strong> dan/atau <strong>hendaya (disability)</strong></td><td>Sudah mengganggu fungsi individu</td><td>Gangguan jiwa</td></tr>
+        <tr><td><span class="hl-but">Penyakit (disease/illness)</span></td><td>Gangguan dengan <strong>psikopatologi & etiologi yang jelas</strong></td><td>Paling jelas dasarnya</td><td>—</td></tr>
+      </table>
+    </div>
+    <div class="alert alert-butter"><span class="alert-icon">💡</span><div>Ingat: sifat <strong>simtom itu subjektif</strong> — pasien bisa bilang "gatau" atau merasakan sesuatu yang tidak selalu bisa kita verifikasi. Kita hanya bisa mengiakan atau tidak, tapi tetap dicatat sebagai gejala.</div></div>
+
+    <div class="soal-dosen">
+      <div class="soal-dosen-header">
+        <span class="soal-dosen-badge">🎙️ Poin Transkrip Kuliah</span>
+      </div>
+      <div class="soal-dosen-content">
+        Urutan dari <strong>gangguan/disorder → gangguan jiwa → penyakit</strong> makin ke bawah makin <span class="hl-ok">jelas psikopatologi dan etiologinya</span>. "Penyakit" adalah level paling spesifik karena sudah punya dasar patofisiologi & etiologi yang jelas, dibanding "gangguan" yang sifatnya masih berupa sindrom perilaku.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🔀</span> Dalam Psikiatri: Satu Gejala ≠ Satu Diagnosis</div>
+    <div class="compare-wrap">
+      <div class="compare-col left">
+        <h4>➡️⬅️ Satu gejala → banyak diagnosis</h4>
+        <div class="compare-row"><span>Contoh gejala:</span>Sulit tidur</div>
+        <div class="compare-row"><span>Bisa mengarah ke:</span>Insomnia, skizofrenia, depresi, gangguan bipolar</div>
+      </div>
+      <div class="compare-col right">
+        <h4>⬅️➡️ Satu diagnosis → banyak gejala</h4>
+        <div class="compare-row"><span>Contoh diagnosis:</span>PTSD</div>
+        <div class="compare-row"><span>Terdiri dari gejala:</span>Sulit tidur, iritabel, dan gejala lain yang overlap dengan diagnosis lain</div>
+      </div>
+    </div>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Karena hubungan gejala–diagnosis tidak 1:1, <strong>jangan langsung menyimpulkan satu diagnosis dari satu gejala tunggal</strong> — perlu penelusuran menyeluruh melalui riwayat psikiatrik lengkap.</div></div>
+  </div>
+</div>
+
+<!-- ======== TUJUAN & SETTING ======== -->
+<div id="sec-tujuan" class="section">
+  <h2 class="section-heading">Tujuan Pemeriksaan & Setting Ruang Praktik</h2>
+  <p class="section-desc">Kenapa kita melakukan pemeriksaan psikiatri, dan bagaimana ruang praktik seharusnya diatur demi keamanan & kenyamanan.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🎯</span> Tiga Tujuan Pemeriksaan Psikiatri</div>
+    <ul class="styled-list">
+      <li><strong>Menentukan diagnosis</strong>, tingkat gangguan, pengobatan, dan perkiraan prognosis.</li>
+      <li><strong>Menggambarkan struktur kepribadian</strong> yang mungkin dapat menerangkan riwayat dan perkembangan gangguan jiwa.</li>
+      <li><strong>Menilai kemampuan dan kemauan pasien</strong> untuk berpartisipasi secara wajar dalam pengobatan yang cocok baginya.</li>
+    </ul>
+    <div class="dr-note">Diagnosis, diagnosis, diagnosis — lalu masuk ke terapi. Penentuan tingkat gangguan, penobatannya seperti apa, dan perkiraan prognosisnya, semua berawal dari diagnosis yang tepat.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🚪</span> Spesifikasi Ruang Praktik Psikiatrik</div>
+    <div class="grid-2">
+      <div class="mini-card">
+        <h4>📏 Tempat duduk sama tinggi</h4>
+        <p>Menghindari kesan superior-inferior antara dokter dan pasien.</p>
+      </div>
+      <div class="mini-card">
+        <h4>📝 Selalu dicatat (rekam medis)</h4>
+        <p>Setiap temuan wawancara didokumentasikan.</p>
+      </div>
+      <div class="mini-card">
+        <h4>🛡️ Antisipasi keamanan</h4>
+        <p>Tempat duduk dokter dekat pintu; bila ada indikasi risiko, ada orang lain yang berjaga-jaga.</p>
+      </div>
+      <div class="mini-card">
+        <h4>🤝 Bersikap manusiawi & tegas</h4>
+        <p>Manusiawi, tegas, dan tanpa tawar-menawar — terutama saat berhadapan dengan situasi yang berpotensi berbahaya.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🧩</span> Komponen Lengkap Pemeriksaan Psikiatrik</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Komponen</th><th>Isi</th></tr>
+        <tr><td><strong>Anamnesis</strong></td><td>Autoanamnesis; Aloanamnesis (khususnya pada kasus psikotik)</td></tr>
+        <tr><td><strong>Pemeriksaan status mental</strong></td><td>Pemeriksaan fungsi kejiwaan</td></tr>
+        <tr><td><strong>Pemeriksaan fisik</strong></td><td>Status internus; status neurologik</td></tr>
+        <tr><td><strong>Pemeriksaan tambahan</strong></td><td>Tes psikologis, laboratorium darah, EEG, CT-Scan, MRI, kimia tubuh (mis. hormonal)</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ======== ANAMNESIS & EMPATI ======== -->
+<div id="sec-anamnesis" class="section">
+  <h2 class="section-heading">Anamnesis dan Empati</h2>
+  <p class="section-desc">Bagaimana mendapatkan informasi yang akurat lewat wawancara, dan mengapa empati — bukan simpati — adalah fondasinya.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🗂️</span> Autoanamnesis vs Aloanamnesis</div>
+    <div class="compare-wrap">
+      <div class="compare-col left">
+        <h4>🗣️ Autoanamnesis</h4>
+        <div class="compare-row"><span>Sumber:</span>Langsung dari pasien</div>
+        <div class="compare-row"><span>Prinsip:</span>Wawancara psikiatri ≠ wawancara medik biasa</div>
+        <div class="compare-row"><span>Syarat:</span>Hubungan dokter–pasien harus baik (bina rapor), dokter bersikap empati</div>
+        <div class="compare-row"><span>Efektif jika:</span>Berlangsung "alamiah" mirip percakapan biasa</div>
+      </div>
+      <div class="compare-col right">
+        <h4>👪 Aloanamnesis</h4>
+        <div class="compare-row"><span>Sumber:</span>Keluarga dekat yang mengetahui keseharian pasien</div>
+        <div class="compare-row"><span>Dipakai pada:</span>Kasus psikotik — saat pasien tidak kooperatif/insight terbatas</div>
+      </div>
+    </div>
+
+    <div class="soal-dosen">
+      <div class="soal-dosen-header">
+        <span class="soal-dosen-badge">🔴 Sering Muncul — Informed Consent Terkait Aloanamnesis</span>
+      </div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-ub">Bank UB Psikiatri No.2</span>
+        <span class="cohort-tag cohort-axon">Axon'20 No.47</span>
+        <span class="cohort-tag cohort-axon">Axon'20 No.68</span>
+      </div>
+      <div class="soal-dosen-content">
+        Aloanamnesis dipakai untuk <strong>menggali informasi</strong> pada kasus psikotik — tapi ini <span class="hl-warn">jangan disamakan</span> dengan siapa yang berhak menandatangani <strong>informed consent</strong>.<br><br>
+        ✅ Jika pasien <strong>masih sadar penuh & kompeten</strong> (meski punya riwayat gangguan jiwa, atau sedang dalam kondisi stabil), <span class="hl-ok">pasien sendiri</span> yang menandatangani informed consent atas tindakan medis terhadap dirinya.<br>
+        Keluarga baru menandatangani bila pasien tidak kompeten memberi persetujuan (misal kesadaran menurun / psikotik berat) saat itu.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🪜</span> Proses Wawancara — 3 Tahap</div>
+    <div class="cr-box">
+      <div class="cr-label">Urutan Bertahap</div>
+      <ol class="cr-steps">
+        <li><strong>Perkenalan dan memberi salam.</strong> Sebaiknya terapislah yang lebih dulu memberi salam & memperkenalkan diri. Gunakan bahasa yang mudah dimengerti pasien, tempo disesuaikan kondisi pasien, jangan terburu-buru.</li>
+        <li><strong>Bina hubungan saling mempercayai.</strong> Terapis tidak secara spontan dipercaya pasien — kepercayaan dibina melalui sikap & perilaku terapis yang berempati dan mengerti perasaan pasien.</li>
+        <li><strong>Menjadi pendengar yang efektif.</strong> Seringkali pasien mulai merasa lebih baik apabila diberi kesempatan bicara dan yakin bahwa mereka didengarkan.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">💗</span> Empati ≠ Simpati ≠ Antipati</div>
+    <p style="font-size:13.5px;margin-bottom:10px;">Empati adalah upaya dan kemampuan untuk mengerti, merasakan, dan meletakkan diri sendiri di tempat orang lain, sesuai dengan:</p>
+    <div class="grid-3">
+      <div class="mini-card">
+        <h4>🪪 Identitas</h4>
+        <p>Nama, umur, kondisi fisik, status kesehatan, perkawinan, ras, etnis, tingkat pendidikan, tradisi, budaya, agama/kepercayaan.</p>
+      </div>
+      <div class="mini-card">
+        <h4>💭 Perasaan & cara berpikir</h4>
+        <p>Perasaan, cara berpikir, harapan, nilai, dan perilaku seseorang.</p>
+      </div>
+      <div class="mini-card">
+        <h4>🚫 Tanpa mencampuradukkan</h4>
+        <p>Tanpa mencampuradukkan nilai-nilai pribadi atau bereaksi emosional apabila nilai orang yang diempati berbeda dari nilai pribadinya.</p>
+      </div>
+    </div>
+    <div class="mnemonic">
+      <div class="mnemonic-label">Prinsip Kunci</div>
+      <div class="mnemonic-text">Tidak boleh simpati, tidak boleh antipati.</div>
+      <div class="mnemonic-sub">Empati berarti memiliki sikap tidak menghakimi (<em>non judgemental</em>), tidak menyalahkan/membenarkan, menerima individu apa adanya, dan memahami nilai-nilai mereka. Dasar dari empati: kasih sayang (<em>brotherly love</em> / ukhuwah insaniyyah), <em>lillaahi ta'ala</em>.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">👂</span> Cara Menjadi Pendengar yang Efektif</div>
+    <ul class="styled-list">
+      <li>Duduk berhadapan dan membungkuk ke arah pasien</li>
+      <li>Membuat kontak mata</li>
+      <li>Rileks dan bersikap terbuka, hangat & empatik</li>
+      <li>Memberi perhatian sepenuhnya</li>
+      <li>Suara lembut, bersikap sabar</li>
+      <li>Tidak memotong pembicaraan, tidak menghakimi, tidak memberi penilaian</li>
+      <li>Menganggukkan kepala dan mengatakan "Ya, saya mengerti"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======== TEKNIK WAWANCARA ======== -->
+<div id="sec-teknik" class="section">
+  <h2 class="section-heading">Jenis Teknik & Kesalahan Wawancara</h2>
+  <p class="section-desc">Ragam teknik komunikasi terapeutik, dan daftar kesalahan yang justru sering dilakukan calon dokter saat wawancara.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🗣️</span> Jenis-Jenis Teknik Wawancara</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Teknik</th><th>Penjelasan / Contoh</th></tr>
+        <tr><td><strong>Pertanyaan terbuka</strong></td><td>"Apa yang anda rasakan?"</td></tr>
+        <tr><td><strong>Pertanyaan tertutup</strong></td><td>"Ibumu sudah lama meninggal bukan?"</td></tr>
+        <tr><td><strong>Pertanyaan spesifik</strong></td><td>"Apakah halusinasi auditorik?" "Visual?"</td></tr>
+        <tr><td><strong>Pengungkapan diri</strong></td><td>Dokter mengungkap kehidupan pribadinya (asal, status perkawinan, dsb) — kadang bermanfaat, tapi harus benar-benar bijaksana</td></tr>
+        <tr><td><strong>Refleksi</strong></td><td>Mengulangi dengan mensuport perkataan pasien: "Berarti anda merisaukan keluarga anda?"</td></tr>
+        <tr><td><strong>Fasilitasi</strong></td><td>Dokter mengizinkan melanjutkan pembicaraan (verbal/isyarat): "ya, lalu?"</td></tr>
+        <tr><td><strong>Keheningan</strong></td><td>Diperlukan agar pasien berkesempatan merenung, menangis, dll.</td></tr>
+        <tr><td><strong>Nasehat</strong></td><td>"Tolong jelaskan apa yang anda maksud... karena makin banyak yang saya ketahui, makin besar kemungkinan saya dapat menolong"</td></tr>
+        <tr><td><strong>Dorongan positif</strong></td><td>Agar pasien tidak canggung mengungkapkan keluhannya</td></tr>
+        <tr><td><strong>Penentraman hati</strong></td><td>Harus jujur & bijaksana. <span class="hl-rose">Salah:</span> "Sudah tentu, anda akan baik." <span class="hl-mint">Benar:</span> "Saya akan berusaha agar anda baik."</td></tr>
+        <tr><td><strong>Konfrontasi</strong></td><td>Mengoreksi dengan cara bijaksana: "Apa yg anda lakukan mungkin bukan bertujuan bunuh diri, tapi anda benar-benar sedang menghadapi masalah serius"</td></tr>
+        <tr><td><strong>Kejelasan</strong></td><td>"Anda merasa tertekan, sejak kapan itu?"</td></tr>
+        <tr><td><strong>Interpretasi</strong></td><td>Menawarkan pemaknaan atas pola yang dokter amati, lalu mengecek dengan pasien</td></tr>
+        <tr><td><strong>Transisi</strong></td><td>Membuka wawancara lagi dengan tema lain: "Informasi sudah sangat baik, apakah anda bisa menceritakan hal lain?"</td></tr>
+        <tr><td><strong>Penarikan kesimpulan</strong></td><td>Dibacakan di depan pasien; pasien masih diizinkan bertanya (termasuk soal obat); ucapkan terima kasih; sepakati pertemuan selanjutnya</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🚫</span> Kesalahan yang Sering Dilakukan saat Wawancara</div>
+    <div class="grid-4" style="margin-bottom:12px;">
+      <div class="mini-card"><h4>✍️ Mendengar sambil kerja lain</h4></div>
+      <div class="mini-card"><h4>👀 Pandangan menerawang</h4></div>
+      <div class="mini-card"><h4>👔 Fokus ke penampilan pasien</h4></div>
+      <div class="mini-card"><h4>⏱️ Tidak sabar, menyela</h4></div>
+    </div>
+    <div class="grid-4" style="margin-bottom:12px;">
+      <div class="mini-card"><h4>🗯️ Berargumentasi</h4></div>
+      <div class="mini-card"><h4>📢 Banyak bicara/menasihati</h4></div>
+      <div class="mini-card"><h4>🎭 Berbasa-basi</h4></div>
+      <div class="mini-card"><h4>⚡ Terlalu cepat menyimpulkan</h4></div>
+    </div>
+    <div class="grid-4">
+      <div class="mini-card"><h4>❓ Terlalu banyak pertanyaan langsung</h4></div>
+      <div class="mini-card"><h4>🔀 Ganti topik terlalu cepat</h4></div>
+      <div class="mini-card"><h4>💊 Saran terlalu dini</h4></div>
+      <div class="mini-card"><h4>🙌 Peneguhan palsu</h4></div>
+    </div>
+    <ul class="styled-list" style="margin-top:12px;">
+      <li>Berbuat tanpa penjelasan</li>
+      <li>Pertanyaan yang merendahkan pasien</li>
+      <li>Pernyataan tentang keburukan pasien</li>
+      <li>Menjebak pasien dengan kata-katanya sendiri</li>
+    </ul>
+
+    <div class="soal-dosen">
+      <div class="soal-dosen-header">
+        <span class="soal-dosen-badge">🎙️ Poin PPT</span>
+      </div>
+      <div class="soal-dosen-content">
+        Modalitas psikoterapi yang benar adalah <strong>komunikasi verbal & non verbal yang efektif</strong> — bukan sekadar simpati/empati saja, dan bukan hanya salah satu modalitas komunikasi.
+      </div>
+      <div class="soal-dosen-cohort" style="margin-top:8px;">
+        <span class="cohort-tag cohort-aorta">Aorta'19 No.8</span>
+        <span class="cohort-tag cohort-arthron">Arthron'18 No.8</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== TIPE PASIEN ======== -->
+<div id="sec-tipe-pasien" class="section">
+  <h2 class="section-heading">Teknik Wawancara Tergantung Spesifikasi Pasien</h2>
+  <p class="section-desc">Sepuluh tipe kepribadian pasien yang butuh pendekatan wawancara berbeda-beda.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">👥</span> 10 Tipe Pasien & Teknik Menghadapinya</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Tipe Pasien</th><th>Sifat Khas</th><th>Teknik Wawancara</th></tr>
+        <tr><td><strong>1. Psikotik</strong></td><td>Insight terbatas, persepsi terdistorsi, struktur psikologis rentan & rapuh, iritabel</td><td>Jangan mendebatkan wahamnya; jangan mentertawakan kekacauan materi psikologinya; pertahankan formalitas agar tidak merasa terancam; arahkan pada kehidupan konkret; pilih waktu wawancara yang tepat</td></tr>
+        <tr><td><strong>2. Histrionik</strong></td><td>Emosi berlebihan, bahkan sering menggoda dokternya (walau maksudnya bisa tidak demikian)</td><td>Harus tenang, tegas, tak main-main</td></tr>
+        <tr><td><strong>3. Dependen</strong></td><td>Membutuhkan perhatian & penentraman yang sangat besar</td><td>Lebih ditekankan pada penentraman tapi tetap jaga jarak</td></tr>
+        <tr><td><strong>4. Menuntut & Impulsif</strong></td><td>Mudah frustrasi, marah bahkan agresif, memerlukan aktualisasi diri yang tinggi</td><td>Tunjukkan kewibawaan dan tegas</td></tr>
+        <tr><td><strong>5. Narsisistik</strong></td><td>Merasa lebih tinggi dibanding yang lain, bisa berlaku tidak sopan, kasar, sombong</td><td>Harus profesional</td></tr>
+        <tr><td><strong>6. Obsesif & Mengatur</strong></td><td>Teliti berlebihan, tidak mau diawasi</td><td>Jelaskan apa yang sebenarnya terjadi dengan sangat bijaksana</td></tr>
+        <tr><td><strong>7. Paranoid</strong></td><td>Suka mencela, menyalahkan orang lain (termasuk dokternya)</td><td>Bersikap formal dengan rasa hormat</td></tr>
+        <tr><td><strong>8. Skizoid & Terisolasi</strong></td><td>Tidak membutuhkan kehangatan orang lain (termasuk dari dokter)</td><td>Hormat, dan jangan terlalu berharap pasien bisa ramah</td></tr>
+        <tr><td><strong>9. Pasif Agresif – Mengeluh</strong></td><td>Mudah kecewa, menyalahkan secara tidak langsung</td><td>Sabar dan toleran</td></tr>
+        <tr><td><strong>10. Sosiopatik & Berpura-pura</strong></td><td>Antisosial, kebohongan, dan manipulatif</td><td>Hormat dengan kewaspadaan tinggi</td></tr>
+      </table>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">🧭</span><div>Pola umum: pasien yang <strong>rentan/butuh dukungan</strong> (psikotik, dependen, pasif-agresif) → didekati dengan kesabaran & penentraman. Pasien yang <strong>berpotensi menantang batas</strong> (histrionik, narsisistik, paranoid, sosiopatik) → didekati dengan formalitas, ketegasan, dan kewaspadaan.</div></div>
+  </div>
+</div>
+
+<!-- ======== RIWAYAT PSIKIATRIK ======== -->
+<div id="sec-riwayat" class="section">
+  <h2 class="section-heading">Struktur Riwayat Psikiatrik</h2>
+  <p class="section-desc">Kerangka lengkap yang harus digali saat menyusun riwayat psikiatrik pasien.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🗺️</span> Kerangka Besar Riwayat Psikiatrik</div>
+    <ul class="styled-list">
+      <li><strong>Data pribadi / identitas</strong></li>
+      <li><strong>Keluhan utama</strong></li>
+      <li><strong>Riwayat gangguan sekarang</strong> (Riwayat Penyakit Sekarang)</li>
+      <li><strong>Penyakit/gangguan sebelumnya</strong> — psikiatrik, medik, penggunaan zat</li>
+      <li><strong>Riwayat hidup</strong> — prenatal & perinatal, masa kanak awal, masa kanak pertengahan, masa remaja, masa dewasa, riwayat psikoseksual, riwayat keluarga, impian/fantasi/nilai-nilai</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🪪</span> Data Diri / Identitas</div>
+    <div class="grid-4">
+      <div class="mini-card"><p>Nama</p></div>
+      <div class="mini-card"><p>Umur</p></div>
+      <div class="mini-card"><p>Jenis kelamin</p></div>
+      <div class="mini-card"><p>Status perkawinan</p></div>
+      <div class="mini-card"><p>Jumlah anak</p></div>
+      <div class="mini-card"><p>Pendidikan</p></div>
+      <div class="mini-card"><p>Pekerjaan</p></div>
+      <div class="mini-card"><p>Alamat</p></div>
+      <div class="mini-card"><p>Suku/bangsa</p></div>
+      <div class="mini-card"><p>Agama</p></div>
+      <div class="mini-card"><p>Tanggal & tempat pemeriksaan</p></div>
+      <div class="mini-card"><p>Datang sendiri / dibawa keluarga / konsulan</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">💬</span> Keluhan Utama</div>
+    <ul class="styled-list">
+      <li>Yaitu alasan utama pasien dibawa berobat</li>
+      <li>Lebih baik ditulis dengan <strong>kata-kata pasien sendiri</strong></li>
+      <li>Kalau pada pasien psikotik atau anak-anak, tulis: <em>"dikeluhkan..."</em> — misal: dikeluhkan pasien tidak mau makan dan tidak mau bicara</li>
+      <li>Apabila informasi didapat dari orang lain, <strong>siapa yang memberi informasi harus dicatat</strong></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">📖</span> Riwayat Penyakit Sekarang & Riwayat Penyakit Dahulu</div>
+    <div class="grid-2">
+      <div class="mini-card">
+        <h4>Riwayat Penyakit Sekarang</h4>
+        <ul>
+          <li>Awal & perkembangan penyakit</li>
+          <li>Riwayat keluhan secara kronologis & menyeluruh</li>
+          <li>Hal yang memperberat/memperingan</li>
+          <li>Gejala penyerta, alasan berobat</li>
+          <li>Juga dinilai: faktor lingkungan menjelang awitan gejala, perkembangan gejala, latar belakang kepribadian, presipitasi di masa lampau</li>
+        </ul>
+      </div>
+      <div class="mini-card">
+        <h4>Riwayat Penyakit Dahulu</h4>
+        <ul>
+          <li><strong>Psikiatrik:</strong> gejala, dirawat dimana, berapa lama, obat, keteraturan minum/kontrol, kondisi setelah perawatan</li>
+          <li><strong>Medis:</strong> riwayat opname, operasi, dll.</li>
+          <li><strong>Neurologis:</strong> sakit kepala, trauma kepala, tumor, kejang, hilang kesadaran, stroke</li>
+          <li><strong>Zat:</strong> narkotika, psikotropika, alkohol, nikotin — termasuk dampak & aspek legal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🌱</span> Riwayat Pribadi per Fase Kehidupan</div>
+    <button class="collapse-btn" onclick="toggle(this)">
+      <span style="font-family:'Lora',serif;font-size:14.5px;color:var(--butter-deep);font-weight:600;">Lihat rincian lengkap tiap fase ▾</span>
+      <span class="chev">▼</span>
+    </button>
+    <div class="collapse-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Fase</th><th>Yang Digali</th></tr>
+          <tr><td><strong>Prenatal & perinatal</strong></td><td>Riwayat prenatal, natal, post-natal; kesehatan fisik & mental ibu; apakah kelahiran diharapkan; cacat</td></tr>
+          <tr><td><strong>Masa anak awal (0–3 th)</strong></td><td>Kebiasaan pemberian makan; perkembangan neuropsikologik (bahasa, motorik, pola tidur, toilet training); tanda khas: gigit jari, tics, ketakutan, masturbasi, night terror, pemalu, resah, hiperaktif, reaksi terhadap saudara kandung</td></tr>
+          <tr><td><strong>Masa anak pertengahan (3–11 th)</strong></td><td>Riwayat sekolah (awal sekolah, terhadap teman); identifikasi gender, hubungan sosial, sikap terhadap teman sekolah; perkembangan alam perasaan</td></tr>
+          <tr><td><strong>Masa remaja</strong></td><td>Hubungan pertemanan (kehangatan, kepemimpinan, keluwesan); riwayat sekolah (guru, pelajaran favorit, hobi, prestasi); perkembangan motorik; penggunaan zat; perilaku (rendah diri, ngompol, mimpi buruk, fobia, melarikan diri); psikoseksual (masturbasi, reaksi haid, agresif, homoseks, pelacuran)</td></tr>
+          <tr><td><strong>Masa dewasa</strong></td><td>Riwayat pekerjaan (konflik, ambisi, sikap ke atasan); riwayat perkawinan (lama, konflik, perceraian); agama (ketaatan, aktivitas keagamaan); riwayat militer; aktivitas sosial; riwayat hukum</td></tr>
+          <tr><td><strong>Riwayat psikoseksual</strong></td><td>Awal pengetahuan tentang seks, sikap orang tua, riwayat pelecehan seksual, awitan pubertas & perasaannya, sikap terhadap seks, orientasi seksual, hubungan seks di luar nikah</td></tr>
+          <tr><td><strong>Situasi kehidupan sekarang</strong></td><td>Rumah tangga, tetangga, siapa yang tinggal serumah, privasi, sumber keuangan, siapa yang menjaga anak</td></tr>
+          <tr><td><strong>Mimpi, fantasi & nilai-nilai</strong></td><td>Mimpi buruk berulang, fantasi, khayalan tentang masa depan, nilai pribadi tentang moral</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">👪</span> Riwayat Keluarga & Pohon Keluarga</div>
+    <ul class="styled-list">
+      <li>Bagaimana hubungan pasien dengan anggota keluarga lain, tetangga</li>
+      <li>Riwayat keluarga yang punya penyakit serupa</li>
+      <li>Apakah tempat tinggal tergolong sesak/padat?</li>
+      <li>Sumber kesulitan keluarga: ekonomi, pekerjaan, biaya RS, siapa yang merawat anak-anak</li>
+    </ul>
+    <div class="alert alert-butter"><span class="alert-icon">🎯</span><div>Untuk menghindari informasi yang berlainan, diusahakan informasi diberikan oleh orang dengan kondisi <strong>suku, agama, dan tempat tinggal sama</strong> dengan pasien.</div></div>
+    <div class="dr-note">Pohon keluarga (genogram) dibuat dengan simbol standar: kotak (□) = laki-laki, lingkaran (○) = perempuan, dan simbol terisi penuh (●/■) = pasien (probandus).</div>
+  </div>
+</div>
+
+<!-- ======== QUIZ ======== -->
+<div id="sec-quiz" class="section">
+  <h2 class="section-heading">🧠 Quiz — Uji Pemahamanmu!</h2>
+  <p class="section-desc">10 soal vignette berbasis kuliah dr. Erna Herawati, Sp.KJ. Semangat!</p>
+
+  <div class="quiz-progress" id="quizProg"></div>
+
+  <!-- Q1 -->
+  <div class="quiz-q" id="q1">
+    <div class="q-num">SOAL 01 / DEFINISI DASAR</div>
+    <div class="q-vignette">Seorang pasien mengeluh "saya merasa pusing dan gatau kenapa", namun pada pemeriksaan tidak ditemukan kelainan objektif apapun.</div>
+    <p class="q-question">Keluhan "pusing" yang diucapkan pasien tersebut secara istilah disebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">A</span>Sign</button>
+      <button class="q-opt" onclick="ans(this,'q1',true)"><span class="ol">B</span>Simtom</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">C</span>Sindroma</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">D</span>Gangguan (disorder)</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">E</span>Penyakit (disease)</button>
+    </div>
+    <div class="q-exp" id="exp-q1">✅ <strong>B — Simtom</strong><br><br>Simtom adalah gejala yang dikeluhkan pasien, sifatnya <strong>subjektif</strong> — kita hanya tahu dari apa yang diceritakan pasien, tanpa bisa selalu memverifikasi secara objektif. Sign berbeda; sign didapat dari pemeriksaan (objektif).</div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-q" id="q2">
+    <div class="q-num">SOAL 02 / SIMTOM VS SIGN</div>
+    <div class="q-vignette">Pasien mengaku merasa kedinginan, namun saat diukur suhu tubuhnya tercatat 39°C.</div>
+    <p class="q-question">Suhu 39°C yang terukur tersebut merupakan contoh dari?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q2',true)"><span class="ol">A</span>Sign — objektif, diketahui melalui pemeriksaan</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">B</span>Simtom — subjektif, dikeluhkan pasien</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">C</span>Sindroma</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">D</span>Penyakit</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">E</span>Gangguan jiwa</button>
+    </div>
+    <div class="q-exp" id="exp-q2">✅ <strong>A — Sign</strong><br><br>Suhu tubuh yang terukur adalah tanda (sign) — objektif, diketahui melalui pemeriksaan, terlepas dari apa yang dirasakan/dilaporkan pasien. Perasaan "kedinginan" pasien adalah simtom (subjektif) yang bisa berbeda dari sign yang diukur.</div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-q" id="q3">
+    <div class="q-num">SOAL 03 / HIERARKI KONSEP</div>
+    <div class="q-vignette">Seorang dosen menjelaskan tingkatan konsep dari simtom, sign, sindroma, gangguan/disorder, gangguan jiwa, hingga penyakit (disease/illness).</div>
+    <p class="q-question">Ciri apa yang membedakan "penyakit (disease)" dari sekadar "gangguan (disorder)"?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">A</span>Penyakit selalu lebih ringan daripada gangguan</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">B</span>Penyakit tidak menimbulkan distress maupun disability</button>
+      <button class="q-opt" onclick="ans(this,'q3',true)"><span class="ol">C</span>Penyakit memiliki psikopatologi dan etiologi yang jelas</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">D</span>Penyakit hanya didapat dari keluhan subjektif pasien</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">E</span>Penyakit tidak memerlukan pemeriksaan status mental</button>
+    </div>
+    <div class="q-exp" id="exp-q3">✅ <strong>C — Psikopatologi dan etiologi yang jelas</strong><br><br>Gangguan (disorder) adalah sindrom/pola perilaku bermakna klinis yang menimbulkan distress dan/atau hendaya, tapi belum tentu diketahui penyebabnya secara pasti. Penyakit (disease/illness) adalah gangguan yang <strong>psikopatologi dan etiologinya sudah jelas</strong> — level konsep yang lebih spesifik.</div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-q" id="q4">
+    <div class="q-num">SOAL 04 / SATU GEJALA BANYAK DIAGNOSIS</div>
+    <div class="q-vignette">Seorang mahasiswa kedokteran menemukan pasien dengan keluhan "sulit tidur" selama 2 minggu, lalu langsung menyimpulkan diagnosis pasti tanpa penggalian lebih lanjut.</div>
+    <p class="q-question">Apa yang paling tepat mengenai pendekatan mahasiswa tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">A</span>Tepat, karena sulit tidur pasti berarti insomnia primer</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">B</span>Tepat, karena satu gejala selalu identik dengan satu diagnosis</button>
+      <button class="q-opt" onclick="ans(this,'q4',true)"><span class="ol">C</span>Kurang tepat, karena satu gejala (sulit tidur) dapat mengarah ke berbagai diagnosis seperti insomnia, skizofrenia, depresi, atau bipolar</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">D</span>Kurang tepat, karena sulit tidur bukan gejala psikiatri</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">E</span>Tepat, asalkan pemeriksaan fisik dilakukan</button>
+    </div>
+    <div class="q-exp" id="exp-q4">✅ <strong>C</strong><br><br>Dalam psikiatri, hubungan gejala-diagnosis bersifat <strong>banyak-ke-banyak</strong>: satu gejala bisa muncul di berbagai diagnosis, dan satu diagnosis (misalnya PTSD) tersusun dari beberapa gejala yang bisa overlap dengan diagnosis lain. Karena itu diperlukan riwayat psikiatrik yang menyeluruh sebelum menegakkan diagnosis.</div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-q" id="q5">
+    <div class="q-num">SOAL 05 / TUJUAN PEMERIKSAAN</div>
+    <div class="q-vignette">Selain menegakkan diagnosis, seorang dokter menggali secara mendalam bagaimana kepribadian pasien terbentuk sejak masa kecil, pola hubungan dengan keluarga, hingga peristiwa hidup yang membentuk caranya menghadapi masalah saat ini.</div>
+    <p class="q-question">Tujuan pemeriksaan psikiatri manakah yang paling sesuai dengan upaya dokter tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">A</span>Menentukan diagnosis dan prognosis</button>
+      <button class="q-opt" onclick="ans(this,'q5',true)"><span class="ol">B</span>Menggambarkan struktur kepribadian yang dapat menerangkan riwayat dan perkembangan gangguan jiwa</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">C</span>Menilai kemauan pasien berpartisipasi dalam pengobatan</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">D</span>Menentukan tingkat gangguan</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">E</span>Menentukan jenis obat yang diberikan</button>
+    </div>
+    <div class="q-exp" id="exp-q5">✅ <strong>B</strong><br><br>Tiga tujuan pemeriksaan psikiatri: (1) menentukan diagnosis, tingkat gangguan, pengobatan & prognosis, (2) <strong>menggambarkan struktur kepribadian</strong> yang mungkin menerangkan riwayat & perkembangan gangguan jiwa, (3) menilai kemampuan & kemauan pasien berpartisipasi dalam pengobatan. Penelusuran riwayat hidup/kepribadian sejak kecil termasuk tujuan kedua.</div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-q" id="q6">
+    <div class="q-num">SOAL 06 / ALLO VS AUTOANAMNESIS</div>
+    <div class="q-vignette">Seorang pasien laki-laki dibawa ke IGD dalam kondisi gaduh gelisah, berbicara kacau, dengan waham kejar yang jelas. Pasien tidak kooperatif saat ditanya langsung.</div>
+    <p class="q-question">Sumber anamnesis utama yang paling tepat digunakan pada situasi ini adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">A</span>Autoanamnesis, karena wajib selalu dari pasien</button>
+      <button class="q-opt" onclick="ans(this,'q6',true)"><span class="ol">B</span>Aloanamnesis dari keluarga dekat yang mengetahui keseharian pasien</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">C</span>Tidak perlu anamnesis, langsung periksa status mental</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">D</span>Autoanamnesis, karena lebih cepat</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">E</span>Cukup dari rekam medis lama saja</button>
+    </div>
+    <div class="q-exp" id="exp-q6">✅ <strong>B</strong><br><br>Aloanamnesis — dari keluarga dekat yang mengetahui keseharian pasien — digunakan terutama pada <strong>kasus psikotik</strong>, saat pasien tidak kooperatif atau insight-nya terbatas sehingga autoanamnesis tidak dapat diandalkan sepenuhnya.</div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-q" id="q7">
+    <div class="q-num">SOAL 07 / EMPATI</div>
+    <div class="q-vignette">Seorang dokter sedang mewawancarai pasien yang menceritakan keyakinan agama dan nilai hidup yang sangat berbeda dari nilai pribadi dokter tersebut.</div>
+    <p class="q-question">Sikap yang tepat sesuai prinsip empati dalam wawancara psikiatri adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">A</span>Menunjukkan simpati dengan ikut merasa sedih atas nilai pasien</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">B</span>Bereaksi menegur karena berbeda dengan nilai pribadi dokter</button>
+      <button class="q-opt" onclick="ans(this,'q7',true)"><span class="ol">C</span>Mengerti dan menerima nilai pasien apa adanya tanpa mencampuradukkan nilai pribadi, dan tanpa bereaksi emosional</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">D</span>Mengabaikan topik tersebut sepenuhnya</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">E</span>Antipati agar wawancara tetap objektif</button>
+    </div>
+    <div class="q-exp" id="exp-q7">✅ <strong>C</strong><br><br>Empati = <strong>tidak boleh simpati, tidak boleh antipati</strong>. Dokter harus mengerti, merasakan, dan meletakkan diri di posisi pasien sesuai identitas & nilai-nilainya, TANPA mencampuradukkan nilai pribadi atau bereaksi emosional saat nilai pasien berbeda dari nilai dokter.</div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-q" id="q8">
+    <div class="q-num">SOAL 08 / PROSES WAWANCARA</div>
+    <div class="q-vignette">Seorang dokter muda baru pertama kali bertemu pasien di poliklinik jiwa.</div>
+    <p class="q-question">Urutan proses wawancara psikiatri yang benar menurut tahapannya adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">A</span>Menjadi pendengar efektif → bina kepercayaan → perkenalan</button>
+      <button class="q-opt" onclick="ans(this,'q8',true)"><span class="ol">B</span>Perkenalan & memberi salam → bina hubungan saling mempercayai → menjadi pendengar yang efektif</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">C</span>Langsung menegakkan diagnosis → baru berkenalan</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">D</span>Bina kepercayaan → penarikan kesimpulan → perkenalan</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">E</span>Konfrontasi → perkenalan → mendengarkan</button>
+    </div>
+    <div class="q-exp" id="exp-q8">✅ <strong>B</strong><br><br>Urutan yang benar: <strong>(1) Perkenalan dan memberi salam → (2) Bina hubungan saling mempercayai → (3) Menjadi pendengar yang efektif.</strong> Terapis sebaiknya yang lebih dulu memberi salam, lalu kepercayaan dibina melalui sikap empatik, baru kemudian pasien diberi ruang untuk didengarkan sepenuhnya.</div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-q" id="q9">
+    <div class="q-num">SOAL 09 / TEKNIK SESUAI TIPE PASIEN</div>
+    <div class="q-vignette">Seorang pasien perempuan bersikap sangat emosional selama wawancara, bahkan terkesan menggoda dokter yang memeriksanya walaupun mungkin tidak dimaksudkan demikian.</div>
+    <p class="q-question">Teknik wawancara yang paling sesuai untuk tipe pasien ini adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">A</span>Lebih ditekankan pada penentraman tapi tetap jaga jarak (tipe dependen)</button>
+      <button class="q-opt" onclick="ans(this,'q9',true)"><span class="ol">B</span>Harus tenang, tegas, tak main-main (tipe histrionik)</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">C</span>Jangan mendebatkan wahamnya (tipe psikotik)</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">D</span>Bersikap formal dengan rasa hormat (tipe paranoid)</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">E</span>Hormat dengan kewaspadaan tinggi (tipe sosiopatik)</button>
+    </div>
+    <div class="q-exp" id="exp-q9">✅ <strong>B</strong><br><br>Sifat "emosi berlebihan, sering menggoda dokternya" adalah ciri khas <strong>pasien histrionik</strong>. Teknik wawancaranya: harus tenang, tegas, tak main-main — bukan penentraman berjarak (dependen) atau formalitas hormat (paranoid/sosiopatik) yang cocok untuk tipe lain.</div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-q" id="q10">
+    <div class="q-num">SOAL 10 / INFORMED CONSENT</div>
+    <div class="q-vignette">Seorang pasien laki-laki dengan riwayat gangguan jiwa mengalami kecelakaan ringan. Saat dibawa ke IGD, pasien masih sadar penuh, orientasi baik, dan mampu berkomunikasi dengan jelas mengenai kondisinya.</div>
+    <p class="q-question">Siapakah yang paling tepat menandatangani informed consent untuk tindakan medis pada pasien ini?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">A</span>Keluarga terdekat, karena pasien punya riwayat gangguan jiwa</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">B</span>Ketua RT setempat</button>
+      <button class="q-opt" onclick="ans(this,'q10',true)"><span class="ol">C</span>Pasien sendiri, karena masih sadar penuh dan kompeten memberi persetujuan</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">D</span>Dokter yang memeriksa, tanpa perlu persetujuan siapapun</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">E</span>Orang yang mengantar ke IGD, siapapun itu</button>
+    </div>
+    <div class="q-exp" id="exp-q10">✅ <strong>C</strong><br><br>Riwayat gangguan jiwa <strong>tidak otomatis</strong> membuat seseorang tidak kompeten memberi persetujuan. Selama pasien sadar penuh, orientasi baik, dan mampu memahami informasi yang diberikan, <strong>pasien sendiri</strong> yang berhak menandatangani informed consent. Keluarga baru mengambil alih bila pasien benar-benar tidak kompeten (misalnya kesadaran menurun atau psikotik berat) saat itu.</div>
+  </div>
+
+  <!-- Score -->
+  <div class="score-card" id="scoreCard">
+    <div style="font-size:40px;margin-bottom:8px;">🌾</div>
+    <div class="score-big" id="scoreNum">0</div>
+    <div style="font-size:18px;opacity:0.85;margin-top:4px;">/ 10</div>
+    <p class="score-msg" id="scoreMsg"></p>
+    <button class="btn-restart" onclick="resetQuiz()">🔁 Ulangi Quiz</button>
+  </div>
+</div><!-- /quiz -->
+
+</div><!-- /container -->
+
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+let answered = {}, score = 0, total = 10;
+
+function initDots() {
+  const p = document.getElementById('quizProg');
+  p.innerHTML = '';
+  for (let i=1; i<=total; i++) {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = 'dot' + i;
+    p.appendChild(d);
+  }
+}
+
+function ans(btn, qid, correct) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  const qNum = parseInt(qid.replace('q',''));
+  const card = document.getElementById(qid);
+  card.querySelectorAll('.q-opt').forEach(b => { b.disabled = true; });
+  if (correct) {
+    btn.classList.add('correct'); score++;
+    document.getElementById('dot'+qNum).classList.add('ok');
+  } else {
+    btn.classList.add('wrong');
+    document.getElementById('dot'+qNum).classList.add('no');
+    card.querySelectorAll('.q-opt').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(',true)')) b.classList.add('correct');
+    });
+  }
+  const exp = document.getElementById('exp-' + qid);
+  if (exp) exp.classList.add('show');
+  if (Object.keys(answered).length === total) setTimeout(showScore, 700);
+}
+
+function showScore() {
+  const sc = document.getElementById('scoreCard');
+  sc.classList.add('show');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter masa depan! 🌾✨'];
+  const idx = score <= 3 ? 0 : score <= 5 ? 1 : score <= 7 ? 2 : score <= 9 ? 3 : 4;
+  document.getElementById('scoreMsg').textContent = msgs[idx];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetQuiz() {
+  answered = {}; score = 0;
+  document.querySelectorAll('.q-opt').forEach(b => { b.disabled=false; b.classList.remove('correct','wrong'); });
+  document.querySelectorAll('.q-exp').forEach(e => e.classList.remove('show'));
+  document.getElementById('scoreCard').classList.remove('show');
+  initDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+initDots();
+</script>
+
+<!-- ====== FLOATING SOAL DOSEN BUTTON ====== -->
+<button class="float-btn" onclick="openModal()">
+  <div class="float-pulse"></div>
+  🔴 Soal Dosen
+</button>
+
+<!-- ====== MODAL RANGKUMAN SOAL DOSEN ====== -->
+<div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">🔴 Rangkuman Soal Dosen</div>
+    <p class="modal-sub">Poin dari kuliah dr. Erna Herawati, Sp.KJ + titik-temu dengan bank soal UB Psikiatri</p>
+
+    <div class="modal-item">
+      <div class="modal-item-num">01 · DEFINISI DASAR</div>
+      <div class="modal-item-q">Apa beda Simtom, Sign, Sindroma, Gangguan, dan Penyakit?</div>
+      <div class="modal-item-a">
+        <strong>Simtom</strong> = gejala subjektif (dikeluhkan pasien). <strong>Sign</strong> = tanda objektif (dari pemeriksaan). <strong>Sindroma</strong> = gabungan simtom+sign. <strong>Gangguan</strong> = sindrom bermakna klinis + distress/disability. <strong>Penyakit</strong> = gangguan dengan psikopatologi & etiologi yang <strong>jelas</strong>.
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">02 · HIGH-YIELD</div>
+      <div class="modal-item-q">Kenapa satu gejala tidak boleh langsung disimpulkan jadi satu diagnosis?</div>
+      <div class="modal-item-a">
+        Karena hubungannya <strong>banyak-ke-banyak</strong>: satu gejala (mis. sulit tidur) → bisa insomnia, skizofrenia, depresi, bipolar. Satu diagnosis (mis. PTSD) → terdiri dari banyak gejala yang overlap dengan diagnosis lain.
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">03 · TUJUAN PEMERIKSAAN</div>
+      <div class="modal-item-q">Sebutkan 3 tujuan pemeriksaan psikiatri!</div>
+      <div class="modal-item-a">
+        (1) Menentukan <strong>diagnosis, tingkat gangguan, pengobatan & prognosis</strong>. (2) Menggambarkan <strong>struktur kepribadian</strong> yang menerangkan riwayat & perkembangan gangguan jiwa. (3) Menilai <strong>kemampuan & kemauan pasien berpartisipasi</strong> dalam pengobatan.
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">04 · EMPATI</div>
+      <div class="modal-item-q">Apa prinsip inti empati dalam wawancara psikiatri?</div>
+      <div class="modal-item-a">
+        <strong>Tidak boleh simpati, tidak boleh antipati.</strong> Empati = mengerti & meletakkan diri di posisi pasien sesuai identitas & nilainya, TANPA mencampuradukkan nilai pribadi.
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">05 · TRICKY ⚠️</div>
+      <div class="modal-item-q">Kapan aloanamnesis dipakai, dan siapa berhak tanda tangan informed consent?</div>
+      <div class="modal-item-a">
+        Aloanamnesis dari keluarga dekat digunakan pada <strong>kasus psikotik</strong> yang tidak kooperatif. TAPI ini beda konsep dengan informed consent: selama pasien <strong>sadar penuh & kompeten</strong> (walau punya riwayat gangguan jiwa), <strong>pasien sendiri</strong> yang berhak tanda tangan.
+      </div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-ub">Bank UB Psikiatri No.2</span>
+        <span class="cohort-tag cohort-axon">Axon'20 No.47</span>
+        <span class="cohort-tag cohort-axon">Axon'20 No.68</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna'17 No.20</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">06 · MODALITAS PSIKOTERAPI</div>
+      <div class="modal-item-q">Apa yang dimaksud modalitas psikoterapi dalam wawancara?</div>
+      <div class="modal-item-a">
+        <strong>Komunikasi verbal & non verbal yang efektif</strong> — bukan sekadar salah satu jenis komunikasi saja.
+      </div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-aorta">Aorta'19 No.8</span>
+        <span class="cohort-tag cohort-arthron">Arthron'18 No.8</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">07 · STATUS MENTAL</div>
+      <div class="modal-item-q">Dokter menanyakan "sekarang dimana? pagi/siang/malam? siapa dirinya menurut pasien?" — ini pemeriksaan apa?</div>
+      <div class="modal-item-a">
+        <strong>Orientasi</strong> (waktu, tempat, orang) — bagian dari pemeriksaan status mental, bukan pemeriksaan isi pikir atau memori.
+      </div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-axon">Axon'20 No.24</span>
+        <span class="cohort-tag cohort-arthron">Arthron'18 No.9</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">08 · TEKNIK PER TIPE PASIEN</div>
+      <div class="modal-item-q">Bedakan teknik wawancara untuk pasien histrionik vs dependen vs paranoid!</div>
+      <div class="modal-item-a">
+        <strong>Histrionik:</strong> tenang, tegas, tak main-main. <strong>Dependen:</strong> penentraman, tapi tetap jaga jarak. <strong>Paranoid:</strong> formal dengan rasa hormat.
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">09 · PENENTRAMAN HATI</div>
+      <div class="modal-item-q">Kenapa "Sudah tentu, anda akan baik" itu SALAH sebagai kalimat penentraman?</div>
+      <div class="modal-item-a">
+        Karena tidak jujur — dokter tidak bisa menjamin kepastian hasil. Kalimat yang benar: <strong>"Saya akan berusaha agar anda baik"</strong> — jujur namun tetap menenangkan.
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">10 · RIWAYAT KELUARGA</div>
+      <div class="modal-item-q">Mengapa informan riwayat keluarga sebaiknya punya suku/agama/tempat tinggal sama dengan pasien?</div>
+      <div class="modal-item-a">
+        Untuk <strong>menghindari informasi yang berlainan/bias</strong> akibat perbedaan latar belakang budaya dalam memaknai perilaku pasien.
+      </div>
+    </div>
+
+    <button class="modal-nav-btn" onclick="closeModal(); show('quiz')">🧠 Langsung ke Quiz →</button>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('soalDosenModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('soalDosenModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOuter(e) {
+  if (e.target === document.getElementById('soalDosenModal')) closeModal();
+}
+</script>
+
+</body>
+</html>

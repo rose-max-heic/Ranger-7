@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When a Habit Takes Control — Rangkuman Tutorial Ketergantungan Nikotin</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #F45B8E;
+  --pink-dark: #C43A6B;
+  --pink-pale: #FFE3ED;
+  --blue: #3E7BFA;
+  --blue-dark: #2755C7;
+  --blue-pale: #E3ECFF;
+  --lav: #8B7FE8;
+  --lav-pale: #ECE8FD;
+  --cream: #FBF8FA;
+  --cream-dark: #f0e9ec;
+  --text: #23213A;
+  --muted: #6b6478;
+  --white: #ffffff;
+  --border: #e4dce8;
+  --navy: #232048;
+  --red: #E5484D;
+  --red-pale: #FDE7E8;
+  --green: #35A97C;
+  --green-pale: #E1F5EC;
+  --shadow: 0 4px 22px rgba(35,32,72,0.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);font-size:14.5px;line-height:1.75;}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(135deg,#201d46 0%,#28306b 55%,#1f4d8f 100%);padding:56px 48px 46px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-50px;right:-40px;width:340px;height:340px;border-radius:50%;background:rgba(62,123,250,0.20);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-90px;left:5%;width:240px;height:240px;border-radius:50%;background:rgba(139,127,232,0.22);pointer-events:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(62,123,250,0.22);border:1px solid rgba(62,123,250,0.45);color:#a9c8ff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:18px;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,4.6vw,52px);font-weight:800;color:#fff;line-height:1.08;margin-bottom:12px;}
+.hero h1 em{color:#ff9ec0;font-style:normal;}
+.hero-sub{color:rgba(255,255,255,0.68);font-size:14px;max-width:600px;line-height:1.75;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;}
+.pill{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.16);color:rgba(255,255,255,0.85);padding:5px 14px;border-radius:20px;font-size:12px;}
+
+/* ===== NAV ===== */
+.nav-wrap{position:sticky;top:0;z-index:200;background:var(--navy);display:flex;overflow-x:auto;scrollbar-width:none;box-shadow:0 3px 18px rgba(20,15,40,0.25);}
+.nav-wrap::-webkit-scrollbar{display:none;}
+.nb{background:none;border:none;color:rgba(255,255,255,0.5);font-family:'Plus Jakarta Sans',sans-serif;font-size:11.3px;font-weight:600;letter-spacing:0.4px;padding:13px 16px;white-space:nowrap;cursor:pointer;border-bottom:2.5px solid transparent;transition:all 0.2s;}
+.nb:hover,.nb.on{color:#8fb2ff;border-bottom-color:#8fb2ff;}
+
+/* ===== CONTAINER ===== */
+.wrap{max-width:960px;margin:0 auto;padding:42px 24px;}
+.section{display:none;animation:fadeUp 0.3s ease;}
+.section.on{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+/* ===== HEADINGS ===== */
+.sh{margin-bottom:28px;}
+.sh h2{font-family:'Fraunces',serif;font-size:29px;font-weight:800;color:var(--navy);margin-bottom:6px;}
+.sh p{color:var(--muted);font-size:13px;padding-bottom:16px;border-bottom:2px solid var(--border);}
+.lo-tag{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#a9c8ff;font-size:11px;font-weight:700;letter-spacing:1.2px;padding:4px 13px;border-radius:12px;margin-bottom:12px;}
+
+/* ===== CARDS ===== */
+.card{background:var(--white);border-radius:16px;padding:22px 26px;margin-bottom:18px;border:1.5px solid var(--border);box-shadow:var(--shadow);transition:box-shadow 0.2s,transform 0.2s;}
+.card:hover{box-shadow:0 8px 30px rgba(60,20,60,0.12);transform:translateY(-2px);}
+.card-title{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:9px;}
+.ci{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+
+/* ===== ALERTS ===== */
+.alert{padding:12px 16px;border-radius:10px;margin:10px 0;font-size:13.5px;display:flex;gap:10px;line-height:1.65;}
+.a-pink{background:var(--pink-pale);border-left:4px solid var(--pink);color:#8a1d47;}
+.a-blue{background:var(--blue-pale);border-left:4px solid var(--blue);color:#183b8a;}
+.a-lav{background:var(--lav-pale);border-left:4px solid var(--lav);color:#3d2f80;}
+.a-red{background:var(--red-pale);border-left:4px solid var(--red);color:#7a1010;}
+.a-green{background:var(--green-pale);border-left:4px solid var(--green);color:#1a4a2e;}
+.a-navy{background:#eef0f8;border-left:4px solid var(--navy);color:var(--navy);}
+.ai{flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* ===== TABLES ===== */
+.tw{overflow-x:auto;border-radius:12px;border:1.5px solid var(--border);margin:12px 0;}
+table{width:100%;border-collapse:collapse;font-size:12.8px;}
+th{background:var(--navy);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:11.8px;letter-spacing:0.3px;}
+td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6;}
+tr:last-child td{border-bottom:none;}
+tr:nth-child(even) td{background:#fdf9fb;}
+tr:hover td{background:var(--pink-pale);transition:background 0.15s;}
+
+/* ===== GRIDS ===== */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+@media(max-width:650px){.g2,.g3{grid-template-columns:1fr;}}
+
+/* ===== MINI CARDS ===== */
+.mc{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:15px 18px;}
+.mc h4{font-family:'Fraunces',serif;font-size:14.5px;color:var(--navy);margin-bottom:8px;}
+.mc ul{padding-left:17px;}
+.mc li{font-size:13px;color:var(--muted);margin-bottom:4px;line-height:1.6;}
+.mc p{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ===== STYLED LIST ===== */
+.sl{list-style:none;padding:0;}
+.sl li{padding:6px 0 6px 22px;border-bottom:1px solid var(--border);font-size:13.5px;position:relative;line-height:1.65;}
+.sl li::before{content:'▸';position:absolute;left:0;color:var(--pink);font-size:11px;top:9px;}
+.sl li:last-child{border-bottom:none;}
+
+/* ===== STEP BOXES ===== */
+.steps{counter-reset:st;}
+.step{counter-increment:st;padding:14px 14px 14px 52px;position:relative;border-left:3px solid var(--blue);background:var(--white);border-radius:0 10px 10px 0;margin-bottom:8px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);border-right:1.5px solid var(--border);}
+.step::before{content:counter(st);position:absolute;left:-16px;top:50%;transform:translateY(-50%);width:30px;height:30px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;}
+.step strong{display:block;color:var(--navy);font-size:14px;margin-bottom:3px;}
+.step p,.step span{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* ===== MNEMONIC ===== */
+.mnemo{background:linear-gradient(135deg,var(--pink-pale),var(--cream));border:2px solid var(--pink);border-radius:14px;padding:18px 22px;margin:12px 0;}
+.mnemo-lbl{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--pink-dark);margin-bottom:6px;}
+.mnemo-txt{font-family:'Fraunces',serif;font-size:20px;color:var(--navy);font-weight:800;}
+.mnemo-sub{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.65;}
+
+/* ===== CLINICAL PEARL ===== */
+.pearl{background:linear-gradient(135deg,var(--blue-pale),#f5f8ff);border:2px solid var(--blue);border-radius:13px;padding:16px 20px;margin:12px 0;}
+.pearl-lbl{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue-dark);margin-bottom:6px;}
+.pearl p{font-size:13.5px;color:var(--navy);line-height:1.7;}
+
+/* ===== SKENARIO LINK ===== */
+.sk-box{background:linear-gradient(135deg,#201d46,#28306b);border:1.5px solid rgba(62,123,250,0.45);border-radius:13px;padding:15px 19px;margin:18px 0;}
+.sk-box::before{content:'🔗 Keterkaitan Skenario';font-weight:700;color:#a9c8ff;font-size:11px;letter-spacing:0.5px;display:block;margin-bottom:6px;}
+.sk-box p{color:rgba(255,255,255,0.85);font-size:13px;line-height:1.7;}
+
+/* ===== COMPARE ===== */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;}
+.cmp-l{background:var(--blue-pale);border:2px solid var(--blue);border-radius:12px;padding:16px;}
+.cmp-r{background:var(--pink-pale);border:2px solid var(--pink);border-radius:12px;padding:16px;}
+.cmp-l h4{color:var(--blue-dark);font-family:'Fraunces',serif;margin-bottom:10px;}
+.cmp-r h4{color:var(--pink-dark);font-family:'Fraunces',serif;margin-bottom:10px;}
+.crow{display:flex;font-size:12.5px;padding:4px 0;border-bottom:1px solid rgba(0,0,0,0.07);gap:8px;line-height:1.6;}
+.crow:last-child{border-bottom:none;}
+.crow span:first-child{width:90px;flex-shrink:0;opacity:0.6;font-size:12px;}
+@media(max-width:600px){.cmp{grid-template-columns:1fr;}}
+
+/* ===== DIVIDER ===== */
+.div{height:1px;background:var(--border);margin:20px 0;}
+
+/* ===== HIGHLIGHTS ===== */
+.hl{background:var(--pink-pale);color:var(--pink-dark);padding:1px 7px;border-radius:5px;font-weight:700;font-size:13px;}
+.hb{background:var(--blue-pale);color:var(--blue-dark);padding:1px 7px;border-radius:5px;font-weight:700;font-size:13px;}
+.hr{background:var(--red-pale);color:var(--red);padding:1px 7px;border-radius:5px;font-weight:700;font-size:13px;}
+.hg{background:var(--green-pale);color:var(--green);padding:1px 7px;border-radius:5px;font-weight:700;font-size:13px;}
+
+/* ===== COLLAPSIBLE ===== */
+.col-btn{background:none;border:none;width:100%;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:0;font-family:inherit;}
+.col-btn .chev{transition:transform 0.25s;font-size:12px;color:var(--muted);}
+.col-btn.open .chev{transform:rotate(180deg);}
+.col-body{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.col-body.open{display:block;animation:fadeUp 0.25s ease;}
+
+/* ===== FLOW / STEP-BADGE ===== */
+.proto-wrap{background:var(--white);border-radius:14px;padding:20px;border:1.5px solid var(--border);}
+.proto-step{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px dashed var(--border);}
+.proto-step:last-child{border-bottom:none;}
+.ps-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;border:2px solid;}
+.ps-a{background:var(--pink-pale);border-color:var(--pink);color:var(--pink-dark);}
+.ps-b{background:var(--blue-pale);border-color:var(--blue);color:var(--blue-dark);}
+.ps-c{background:var(--lav-pale);border-color:var(--lav);color:#4d3a99;}
+.ps-d{background:var(--red-pale);border-color:var(--red);color:var(--red);}
+.ps-e{background:var(--green-pale);border-color:var(--green);color:var(--green);}
+.ps-content strong{display:block;font-size:14px;color:var(--navy);margin-bottom:4px;}
+.ps-content span{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ===== INFOGRAFIS SUPLEMEN ===== */
+.infografis{margin:14px 0;border-radius:14px;overflow:hidden;border:1.5px solid var(--border);box-shadow:var(--shadow);}
+.infografis img{width:100%;display:block;}
+.infografis-cap{background:var(--navy);color:rgba(255,255,255,0.75);font-size:11.5px;padding:8px 16px;letter-spacing:0.3px;}
+
+/* ===== SKENARIO VERBATIM ===== */
+.verbatim{background:var(--cream-dark);border-radius:10px;padding:14px 18px;font-style:italic;color:var(--navy);font-size:13.5px;border-left:4px solid var(--lav);margin:10px 0;line-height:1.7;}
+
+/* ===== QUIZ ===== */
+.q-wrap{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px;margin-bottom:22px;position:relative;overflow:hidden;}
+.q-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--pink),var(--blue));}
+.q-num{position:absolute;top:14px;right:20px;background:var(--navy);color:#a9c8ff;font-size:10.5px;font-weight:700;letter-spacing:1px;padding:3px 12px;border-radius:10px;}
+.q-badge{display:inline-block;background:var(--pink-pale);color:var(--pink-dark);font-size:10px;font-weight:700;letter-spacing:1px;padding:2px 9px;border-radius:8px;margin-bottom:10px;}
+.q-vig{background:var(--cream);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;padding:12px 16px;font-size:13.5px;line-height:1.7;margin-bottom:14px;color:#1a2a4a;}
+.q-q{font-weight:700;font-size:14px;margin-bottom:14px;color:var(--navy);}
+.q-opts{display:flex;flex-direction:column;gap:7px;}
+.q-opt{background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:11px 15px;font-size:13.5px;cursor:pointer;text-align:left;font-family:inherit;display:flex;gap:10px;align-items:flex-start;transition:all 0.18s;color:var(--text);}
+.q-opt:hover:not(:disabled){border-color:var(--pink);background:var(--pink-pale);}
+.ol{font-weight:700;font-size:11.5px;min-width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.q-opt.correct{background:var(--green-pale)!important;border-color:var(--green)!important;color:var(--green);}
+.q-opt.correct .ol{background:var(--green);color:#fff;}
+.q-opt.wrong{background:var(--red-pale)!important;border-color:var(--red)!important;color:var(--red);}
+.q-opt.wrong .ol{background:var(--red);color:#fff;}
+.q-opt:disabled{cursor:default;}
+.q-exp{display:none;margin-top:14px;background:var(--blue-pale);border-radius:10px;padding:14px 17px;font-size:13.5px;line-height:1.75;color:#15305e;border-left:3px solid var(--blue);}
+.q-exp.show{display:block;animation:fadeUp 0.3s ease;}
+.q-exp strong{color:var(--navy);}
+.q-prog{display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;align-items:center;}
+.pdot{width:10px;height:10px;border-radius:50%;background:rgba(42,38,80,0.14);transition:background 0.3s;}
+.pdot.ok{background:var(--green);}
+.pdot.no{background:var(--red);}
+.q-prog-lbl{font-size:12px;color:var(--muted);margin-left:4px;}
+.score-box{background:linear-gradient(135deg,var(--navy),#28306b);color:#fff;border-radius:18px;padding:36px;text-align:center;display:none;margin-top:24px;}
+.score-box.show{display:block;animation:fadeUp 0.4s ease;}
+.sc-big{font-family:'Fraunces',serif;font-size:72px;font-weight:800;color:#8fb2ff;line-height:1;}
+.sc-msg{font-size:14px;opacity:0.78;margin-top:8px;}
+.btn-restart{margin-top:18px;background:var(--blue);color:#fff;border:none;border-radius:25px;padding:12px 28px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:transform 0.2s;}
+.btn-restart:hover{transform:translateY(-2px);}
+
+/* ===== SKENARIO CASE CARDS ===== */
+.case-card{background:var(--white);border-radius:16px;border:1.5px solid var(--border);box-shadow:var(--shadow);margin-bottom:18px;overflow:hidden;}
+.case-head{background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;padding:12px 20px;font-family:'Fraunces',serif;font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.case-body{padding:18px 22px;font-size:13.5px;line-height:1.8;color:var(--text);}
+.case-body .hl{font-size:13px;}
+
+/* ===== AYAT CARD ===== */
+.ayat-card{background:linear-gradient(135deg,var(--lav-pale),var(--cream));border:2px solid var(--lav);border-radius:16px;padding:22px 24px;margin-bottom:16px;}
+.ayat-ref{display:inline-block;background:var(--lav);color:#fff;font-size:11px;font-weight:700;letter-spacing:0.5px;padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+.ayat-arab{font-size:22px;text-align:right;line-height:2.1;color:var(--navy);margin-bottom:10px;font-weight:600;direction:rtl;}
+.ayat-lat{font-style:italic;color:var(--muted);font-size:13px;margin-bottom:8px;line-height:1.7;}
+.ayat-id{font-size:14px;color:var(--navy);font-weight:600;margin-bottom:10px;line-height:1.7;}
+.ayat-note{font-size:13px;color:var(--muted);line-height:1.7;border-top:1px dashed rgba(139,127,232,0.4);padding-top:10px;}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 30px;}
+  .wrap{padding:26px 16px;}
+  .card{padding:17px 18px;}
+  .ayat-arab{font-size:19px;}
+}
+
+/* ===== TAMBAHAN: DASHBOARD ===== */
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px;}
+.stat{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);}
+.stat .n{font-family:'Fraunces',serif;font-size:28px;font-weight:800;color:var(--navy);line-height:1.1;}
+.stat .l{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.5;}
+.stat.p{border-top:4px solid var(--pink);}.stat.b{border-top:4px solid var(--blue);}.stat.v{border-top:4px solid var(--lav);}.stat.g{border-top:4px solid var(--green);}
+@media(max-width:700px){.dash{grid-template-columns:1fr 1fr;}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.chip{background:var(--lav-pale);color:#3d2f80;border:1px solid rgba(139,127,232,.35);padding:4px 12px;border-radius:16px;font-size:12px;font-weight:600;}
+.chip.r{background:var(--red-pale);color:var(--red);border-color:rgba(229,72,77,.3);}
+.chip.b{background:var(--blue-pale);color:var(--blue-dark);border-color:rgba(62,123,250,.3);}
+.lo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.lo-link{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:9px 13px;font-size:12.8px;cursor:pointer;text-align:left;font-family:inherit;color:var(--text);transition:all .18s;display:flex;gap:9px;align-items:flex-start;line-height:1.5;}
+.lo-link:hover{border-color:var(--blue);background:var(--blue-pale);}
+.lo-link b{background:var(--navy);color:#a9c8ff;border-radius:8px;font-size:10.5px;padding:2px 8px;flex-shrink:0;margin-top:1px;}
+@media(max-width:700px){.lo-grid{grid-template-columns:1fr;}}
+.acc-btn{width:100%;text-align:left;background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:16px 20px;font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow);}
+.acc-btn .chev{font-size:12px;color:var(--muted);transition:transform .25s;}
+.acc-btn.open .chev{transform:rotate(180deg);}
+.acc-body{display:none;margin-top:14px;}.acc-body.open{display:block;}
+.bar{height:10px;border-radius:6px;background:var(--cream-dark);overflow:hidden;margin-top:6px;}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--pink));}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">🚬 Blok Psikiatri &amp; Kesehatan Mental · Step 5 · 7-Jump</div>
+  <h1>When a Habit <em>Takes Control</em><br>— Rangkuman Tutorial Ketergantungan Nikotin</h1>
+  <p class="hero-sub">Ardi, mahasiswa 21 tahun, merokok sejak usia 16 tahun dan kini satu bungkus per hari. Ia sudah berkali-kali mencoba berhenti dan selalu gagal. Rangkuman ini membahas bagaimana kebiasaan berubah menjadi ketergantungan, cara menegakkan diagnosis, sampai strategi berhenti merokok berbasis bukti di layanan primer.</p>
+  <div class="hero-pills">
+    <span class="pill">👤 Ardi, 21 th, mahasiswa</span>
+    <span class="pill">🚬 ± 1 bungkus/hari, sejak usia 16 th</span>
+    <span class="pill">🎯 15 Learning Objectives</span>
+    <span class="pill">📝 Kuis vignette di akhir</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <button class="nb on" onclick="show('kasus')">📋 Kasus &amp; Dashboard</button>
+  <button class="nb" onclick="show('lo1')">LO1 · Habit → Adiksi</button>
+  <button class="nb" onclick="show('lo2')">LO2 · Tembakau &amp; TUD</button>
+  <button class="nb" onclick="show('lo3')">LO3 · Definisi &amp; Klasifikasi</button>
+  <button class="nb" onclick="show('lo4')">LO4 · Etiologi</button>
+  <button class="nb" onclick="show('lo5')">LO5 · Epidemiologi</button>
+  <button class="nb" onclick="show('lo6')">LO6 · Neurobiologi</button>
+  <button class="nb" onclick="show('lo7')">LO7 · Craving &amp; Withdrawal</button>
+  <button class="nb" onclick="show('lo8')">LO8 · Manifestasi</button>
+  <button class="nb" onclick="show('lo9')">LO9 · Diagnosis</button>
+  <button class="nb" onclick="show('lo10')">LO10 · MSE</button>
+  <button class="nb" onclick="show('lo11')">LO11 · Psikologis</button>
+  <button class="nb" onclick="show('lo12')">LO12 · Dampak Kesehatan</button>
+  <button class="nb" onclick="show('lo13')">LO13 · Diagnosis Banding</button>
+  <button class="nb" onclick="show('lo14')">LO14 · Terapi Berhenti</button>
+  <button class="nb" onclick="show('lo15')">LO15 · Peran Nakes</button>
+  <button class="nb" onclick="show('ref')">📚 Referensi</button>
+  <button class="nb" onclick="show('quiz')">📝 Kuis</button>
+</div>
+
+<div class="wrap">
+
+<!-- ========== KASUS & DASHBOARD ========== -->
+<div id="sec-kasus" class="section on">
+  <div class="sh"><div class="lo-tag">RINGKASAN KASUS &amp; DASHBOARD</div><h2>Ardi, 21 Tahun — "Ketika Sebuah Kebiasaan Mengambil Kendali"</h2><p>Satu skenario, tiga lapis masalah: gejala fisik (batuk, lelah), pola ketergantungan (craving, withdrawal, gagal berhenti), dan konteks psikososial (stres, teman, ayah perokok).</p></div>
+
+  <div class="dash">
+    <div class="stat p"><div class="n">21 th</div><div class="l">Usia pasien, mahasiswa</div></div>
+    <div class="stat b"><div class="n">16 th</div><div class="l">Usia mulai merokok (± 5 tahun lalu)</div></div>
+    <div class="stat v"><div class="n">± 20/hari</div><div class="l">1 bungkus per hari → perkiraan ± 5 pack-year</div></div>
+    <div class="stat g"><div class="n">15 LO</div><div class="l">Learning objective Step 5</div></div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-head">📖 Keluhan &amp; Konteks</div>
+    <div class="case-body">
+      Ardi datang ke klinik layanan primer dengan <span class="hl">batuk sering 3 bulan</span>, <span class="hl">stamina menurun</span>, dan <span class="hl">mudah lelah</span>. Ia <span class="hb">menghindari olahraga</span> yang dulu ia sukai, <span class="hb">menyendiri sepulang kuliah</span>, dan merasa <span class="hb">stres karena tuntutan akademik</span>. Gaya hidup: <span class="hb">tidur larut</span>, <span class="hb">melewatkan waktu makan</span>.
+      <div class="verbatim">"Saya tahu beberapa kebiasaan saya tidak sehat, tetapi saya merasa kebiasaan tersebut membantu saya menghadapi stres."</div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-head">🚬 Riwayat Merokok &amp; Pola Ketergantungan</div>
+    <div class="case-body">
+      Merokok <span class="hl">sejak usia 16 tahun</span> karena <span class="hl">teman-teman perokok</span>. Awalnya <span class="hb">sesekali saat aktivitas sosial</span>, lalu <span class="hr">jumlah naik bertahap</span> hingga <span class="hr">± 1 bungkus/hari</span>, terutama <span class="hb">setelah makan</span>, <span class="hb">saat belajar</span>, dan <span class="hb">saat tertekan</span>. Ia <span class="hr">beberapa kali mencoba berhenti dan gagal</span>. Saat mengurangi/berhenti muncul <span class="hr">iritabilitas, gelisah, sulit konsentrasi, dan craving</span>.
+      <div class="verbatim">"Awalnya, saya merokok karena teman-teman saya melakukannya. Sekarang, saya merasa membutuhkan rokok agar bisa merasa normal."</div>
+      <div class="verbatim">"Terkadang saya merasa bahwa saya memilih untuk merokok, tetapi terkadang rasanya justru merokoklah yang mengendalikan saya."</div>
+      <div class="alert a-green"><span class="ai">🌱</span><div><strong>Faktor positif:</strong> Ardi <em>menginginkan bantuan profesional</em> dan bertanya apa yang bisa ia lakukan. Ini tanda kesiapan berubah (fase <em>preparation/action</em>), modal terbaik untuk konseling. <strong>Hambatan:</strong> ayah merokok di rumah. <strong>Negatif penting:</strong> tidak ada halusinasi, waham, maupun pikiran menyakiti diri.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🧭</span> Peta Temuan Kasus → Konsep → LO</div>
+    <div class="tw"><table>
+      <tr><th>Temuan di skenario</th><th>Konsep yang diwakili</th><th>LO</th></tr>
+      <tr><td>Mulai karena teman → butuh rokok "agar normal"</td><td>Peralihan <strong>positive → negative reinforcement</strong>; habit → adiksi</td><td><span class="hb">LO1, LO6</span></td></tr>
+      <tr><td>Jumlah naik bertahap sampai 1 bungkus/hari</td><td><strong>Toleransi</strong>, Indeks Brinkman, pack-year</td><td><span class="hb">LO2, LO7</span></td></tr>
+      <tr><td>Gagal berhenti berulang + craving + iritabel, gelisah, sulit konsentrasi</td><td><strong>Craving</strong> &amp; <strong>sindrom putus nikotin</strong>, kehilangan kontrol</td><td><span class="hb">LO7, LO9</span></td></tr>
+      <tr><td>Merokok setelah makan, saat belajar, saat stres</td><td><strong>Cue/trigger</strong>, coping mechanism (self-medication)</td><td><span class="hb">LO11</span></td></tr>
+      <tr><td>Teman perokok, ayah merokok di rumah</td><td>Faktor sosial/lingkungan; <strong>modeling</strong>, paparan asap rokok</td><td><span class="hb">LO4, LO15</span></td></tr>
+      <tr><td>Batuk 3 bulan, mudah lelah, stamina turun</td><td>Dampak respirasi; <strong>diagnosis banding batuk kronik (TB!)</strong></td><td><span class="hb">LO12, LO13</span></td></tr>
+      <tr><td>Tidak ada halusinasi/waham/ide menyakiti diri</td><td>Pemeriksaan status mental, skrining komorbid</td><td><span class="hb">LO10</span></td></tr>
+      <tr><td>Ardi minta bantuan berhenti</td><td>5A/5R, motivational interviewing, NRT/varenicline/bupropion</td><td><span class="hb">LO14, LO15</span></td></tr>
+    </table></div>
+  </div>
+
+  <button class="acc-btn" onclick="toggleAcc(this)"><span>🎯 Quick Overview: SKDI, Learning Outcomes &amp; Keyword</span><span class="chev">▼</span></button>
+  <div class="acc-body open">
+    <div class="card" style="margin-top:14px;">
+      <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🏅</span> Tingkat Kemampuan SKDI</div>
+      <div class="alert a-blue"><span class="ai">📌</span><div><strong>Cek SKDI 2026 (file project):</strong> <em>ketergantungan nikotin/gangguan penggunaan zat</em> <strong>tidak tercantum sebagai entri penyakit tersendiri</strong> pada daftar psikiatri. Daftar psikiatri SKDI 2026 hanya memuat: <em>tuntas</em> (psikotik akut, skizofrenia tanpa penyulit/dengan EPS, depresi ringan–sedang) dan <em>tata laksana awal &amp; rujuk</em> (demensia, bipolar, depresi berat, panik, GAD, dll.).</div></div>
+      <p style="font-size:13.5px;margin-bottom:10px;">Yang <strong>eksplisit</strong> ada di SKDI 2026 dan relevan dengan skenario ini adalah kompetensi <strong>edukasi &amp; konseling perilaku sehat</strong>:</p>
+      <ul class="sl">
+        <li>Edukasi perilaku hidup sehat, termasuk <strong>berhenti merokok</strong>, manajemen stres, kebersihan tidur, pembatasan alkohol/kafein.</li>
+        <li>Konseling individu terkait perilaku sehat (<strong>berhenti merokok</strong>, gaya hidup, dsb.) dengan <strong>dokumentasi di rekam medis</strong> dan pendekatan <strong>motivational interviewing</strong>.</li>
+      </ul>
+      <div class="alert a-pink"><span class="ai">⚠️</span><div><strong>Asumsi belajar yang aman:</strong> kuasai alur <em>diagnosis klinis + konseling 5A + terapi awal di layanan primer</em> secara mandiri, dan tahu <strong>kapan merujuk</strong> (komorbid psikiatri berat, gagal terapi berulang, kehamilan/penyakit kardiovaskular tidak stabil). Level pasti per entri: konfirmasi ke dosen pengampu/modul blok.</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="ci" style="background:var(--blue-pale)">📘</span> Learning Outcomes (15 LO, klik untuk loncat)</div>
+      <div class="lo-grid">
+        <button class="lo-link" onclick="show('lo1')"><b>LO1</b>Konsep ketergantungan zat: habit → perilaku adiktif</button>
+        <button class="lo-link" onclick="show('lo2')"><b>LO2</b>Penggunaan tembakau berisiko, ketergantungan nikotin, TUD</button>
+        <button class="lo-link" onclick="show('lo3')"><b>LO3</b>Definisi &amp; klasifikasi ketergantungan nikotin/zat</button>
+        <button class="lo-link" onclick="show('lo4')"><b>LO4</b>Etiologi &amp; faktor risiko</button>
+        <button class="lo-link" onclick="show('lo5')"><b>LO5</b>Epidemiologi</button>
+        <button class="lo-link" onclick="show('lo6')"><b>LO6</b>Neurobiologi: reward &amp; dopamin</button>
+        <button class="lo-link" onclick="show('lo7')"><b>LO7</b>Toleransi, craving, withdrawal</button>
+        <button class="lo-link" onclick="show('lo8')"><b>LO8</b>Manifestasi klinis</button>
+        <button class="lo-link" onclick="show('lo9')"><b>LO9</b>Diagnosis: kriteria &amp; kuesioner</button>
+        <button class="lo-link" onclick="show('lo10')"><b>LO10</b>Pemeriksaan status mental</button>
+        <button class="lo-link" onclick="show('lo11')"><b>LO11</b>Faktor psikologis perilaku merokok</button>
+        <button class="lo-link" onclick="show('lo12')"><b>LO12</b>Dampak kesehatan tembakau</button>
+        <button class="lo-link" onclick="show('lo13')"><b>LO13</b>Diagnosis banding</button>
+        <button class="lo-link" onclick="show('lo14')"><b>LO14</b>Strategi berhenti: perilaku &amp; farmakologis</button>
+        <button class="lo-link" onclick="show('lo15')"><b>LO15</b>Peran tenaga kesehatan</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🔑</span> Keyword &amp; Red Flag</div>
+      <div class="chips">
+        <span class="chip">Tobacco use disorder</span><span class="chip">Nicotine dependence</span><span class="chip">Craving</span><span class="chip">Withdrawal</span><span class="chip">Toleransi</span><span class="chip">nAChR α4β2</span><span class="chip">Mesolimbik · VTA → NAc</span><span class="chip">Dopamin</span><span class="chip">Negative reinforcement</span><span class="chip">Fagerström (FTND)</span><span class="chip">Indeks Brinkman</span><span class="chip">5A · 5R</span><span class="chip">NRT</span><span class="chip">Varenicline</span><span class="chip">Bupropion</span><span class="chip">Motivational interviewing</span>
+      </div>
+      <p style="margin:12px 0 6px;font-size:12.5px;font-weight:700;color:var(--red);">🚩 RED FLAG pada perokok yang harus dikejar</p>
+      <div class="chips">
+        <span class="chip r">Batuk &gt; 2 minggu (skrining TB)</span><span class="chip r">Hemoptisis</span><span class="chip r">BB turun tanpa sebab</span><span class="chip r">Nyeri dada / sesak</span><span class="chip r">Suara serak &gt; 3 minggu</span><span class="chip r">Ide bunuh diri / depresi (komorbid &amp; efek varenicline/bupropion)</span><span class="chip r">Riwayat kejang (kontraindikasi bupropion)</span>
+      </div>
+      <p style="margin:12px 0 6px;font-size:12.5px;font-weight:700;color:var(--blue-dark);">🧩 Trias Ketergantungan (inti kasus Ardi)</p>
+      <div class="chips"><span class="chip b">Craving</span><span class="chip b">Kehilangan kontrol (gagal berhenti)</span><span class="chip b">Withdrawal saat berhenti</span></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;">
+    <button class="col-btn" onclick="toggleCol(this)"><span class="card-title" style="margin-bottom:0;"><span class="ci" style="background:var(--blue-pale)">🧱</span> Jejak 7-Jump Step 1–4 (opsional)</span><span class="chev">▼</span></button>
+    <div class="col-body">
+      <div class="proto-wrap">
+        <div class="proto-step"><div class="ps-num ps-a">1</div><div class="ps-content"><strong>Klarifikasi istilah</strong><span>Craving · withdrawal/putus nikotin · toleransi · iritabilitas · coping mechanism · layanan kesehatan primer · halusinasi · waham · kebiasaan (habit) · ketergantungan.</span></div></div>
+        <div class="proto-step"><div class="ps-num ps-b">2</div><div class="ps-content"><strong>Rumusan masalah</strong><span>Mengapa kebiasaan merokok Ardi berkembang menjadi ketergantungan? Apa diagnosisnya, apa kaitannya dengan batuk &amp; stamina menurun, dan apa tata laksana berhenti merokok yang tepat?</span></div></div>
+        <div class="proto-step"><div class="ps-num ps-c">3</div><div class="ps-content"><strong>Brainstorming hipotesis</strong><span><em>Utama:</em> ketergantungan nikotin/tobacco use disorder, kemungkinan derajat sedang–berat. <em>Terkait batuk:</em> bronkitis akibat rokok, <strong>TB paru (batuk 3 bulan!)</strong>, asma. <em>Komorbid:</em> depresi/ansietas, gangguan penyesuaian karena stres akademik, zat lain (alkohol/kanabis/vape).</span></div></div>
+        <div class="proto-step"><div class="ps-num ps-d">4</div><div class="ps-content"><strong>Mapping konsep</strong><span>Faktor risiko (teman, ayah, stres, usia 16) → paparan nikotin → neuroadaptasi (reward, toleransi) → ketergantungan (craving, withdrawal, gagal berhenti) → dampak kesehatan → intervensi (konseling + farmakoterapi) → peran nakes.</span></div></div>
+        <div class="proto-step"><div class="ps-num ps-e">5</div><div class="ps-content"><strong>Learning objective</strong><span>15 LO pada halaman ini.</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== LO 1 ========== -->
+<div id="sec-lo1" class="section">
+  <div class="sh"><div class="lo-tag">LO 1</div><h2>Konsep Ketergantungan Zat: dari Kebiasaan ke Perilaku Adiktif</h2><p>Pertanyaan inti: kapan perilaku yang awalnya pilihan sadar berubah menjadi sesuatu yang "mengendalikan" pelakunya?</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">📈</span> Kontinum Penggunaan Zat</div>
+    <div class="tw"><table>
+      <tr><th>Tahap</th><th>Ciri</th><th>Pada Ardi</th></tr>
+      <tr><td><strong>1. Inisiasi / eksperimen</strong></td><td>Mencoba karena rasa ingin tahu atau tekanan teman; kontrol penuh</td><td>Usia 16 th, ikut teman</td></tr>
+      <tr><td><strong>2. Penggunaan sosial / sesekali</strong></td><td>Terikat konteks sosial, tanpa craving rutin</td><td>"Hanya saat aktivitas sosial"</td></tr>
+      <tr><td><strong>3. Penggunaan reguler / berisiko</strong></td><td>Frekuensi &amp; jumlah naik, mulai terkait cue pribadi (stres, setelah makan)</td><td>Jumlah naik bertahap, rokok setelah makan &amp; saat belajar</td></tr>
+      <tr><td><strong>4. Penggunaan merugikan (harmful use)</strong></td><td>Sudah ada akibat fisik/psikologis, tetapi belum ada sindrom ketergantungan penuh</td><td>Batuk, lelah, olahraga dihindari</td></tr>
+      <tr><td><strong>5. Ketergantungan (dependence)</strong></td><td>Craving, kehilangan kontrol, toleransi, withdrawal, lanjut meski tahu merugikan</td><td class="hr">Gagal berhenti berulang, "butuh rokok agar normal"</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">⚖️</span> Habit vs Perilaku Adiktif</div>
+    <div class="cmp">
+      <div class="cmp-l"><h4>🔁 Kebiasaan (Habit)</h4>
+        <div class="crow"><span>Kontrol</span><span>Masih bisa dihentikan bila diputuskan</span></div>
+        <div class="crow"><span>Pemicu</span><span>Cue → rutinitas otomatis</span></div>
+        <div class="crow"><span>Berhenti</span><span>Tidak disertai distres bermakna</span></div>
+        <div class="crow"><span>Akibat</span><span>Berhenti bila merugikan</span></div>
+      </div>
+      <div class="cmp-r"><h4>⛓️ Perilaku Adiktif</h4>
+        <div class="crow"><span>Kontrol</span><span>Hilang: niat berhenti kalah oleh dorongan</span></div>
+        <div class="crow"><span>Pemicu</span><span>Cue + craving kuat + penghindaran withdrawal</span></div>
+        <div class="crow"><span>Berhenti</span><span>Memicu withdrawal (iritabel, gelisah, sulit konsentrasi)</span></div>
+        <div class="crow"><span>Akibat</span><span>Lanjut walau sadar merugikan</span></div>
+      </div>
+    </div>
+    <div class="alert a-blue"><span class="ai">💡</span><div>Kalimat Ardi: <em>"kadang saya memilih merokok, kadang rokok yang mengendalikan saya."</em> Ini gambaran klasik <strong>peralihan dari perilaku volunter (goal-directed) ke kompulsif (habitual)</strong>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🔄</span> Bagaimana Habit Berkembang Menjadi Adiksi</div>
+    <div class="steps">
+      <div class="step"><strong>Positive reinforcement</strong><span>Nikotin memberi sensasi menyenangkan/rileks dan meningkatkan fokus, sehingga perilaku diulang (reward).</span></div>
+      <div class="step"><strong>Pengondisian cue</strong><span>Situasi (setelah makan, belajar, tekanan, ngumpul teman) dipasangkan dengan rokok, sehingga cue saja memicu craving.</span></div>
+      <div class="step"><strong>Neuroadaptasi → toleransi</strong><span>Otak menyesuaikan diri terhadap nikotin kronik; dosis harus naik untuk efek yang sama.</span></div>
+      <div class="step"><strong>Negative reinforcement</strong><span>Merokok kini terutama untuk <em>menghindari</em> withdrawal dan "merasa normal", bukan lagi mencari senang.</span></div>
+      <div class="step"><strong>Habit otomatis → kompulsif</strong><span>Kontrol bergeser dari korteks prefrontal ke striatum dorsal; perilaku berlanjut meski konsekuensinya merugikan.</span></div>
+    </div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai</div><div class="mnemo-txt">"Senang → Hindar Sakit → Otomatis → Terpaksa"</div><div class="mnemo-sub">Positive reinforcement → negative reinforcement → habit → kompulsif. Ardi kini di tahap <strong>"hindar sakit"</strong>: merokok agar tidak withdrawal.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🌀</span> Model Siklus Adiksi (Koob)</div>
+    <div class="tw"><table>
+      <tr><th>Fase</th><th>Sirkuit utama</th><th>Isi</th></tr>
+      <tr><td><strong>Binge / Intoksikasi</strong></td><td>Ganglia basalis (nukleus akumbens, striatum dorsal)</td><td>Efek reward &amp; pembentukan habit</td></tr>
+      <tr><td><strong>Withdrawal / Afek negatif</strong></td><td>Amigdala diperluas</td><td>Iritabilitas, cemas, disforia → motivasi menghindari rasa tidak enak</td></tr>
+      <tr><td><strong>Preokupasi / Antisipasi (craving)</strong></td><td>Korteks prefrontal</td><td>Fungsi eksekutif turun, craving, relaps</td></tr>
+    </table></div>
+  </div>
+
+  <div class="sk-box"><p><strong>Terapkan ke Ardi:</strong> Mulai karena teman (positive reinforcement sosial) → rokok dipakai setelah makan/belajar (cue) → jumlah naik (toleransi) → kini merokok "agar normal" (negative reinforcement) → gagal berhenti walau tahu bahayanya (kehilangan kontrol). Itu pola <strong>perilaku adiktif</strong>, bukan lagi sekadar kebiasaan.</p></div>
+</div>
+
+<!-- ========== LO 2 ========== -->
+<div id="sec-lo2" class="section">
+  <div class="sh"><div class="lo-tag">LO 2</div><h2>Penggunaan Tembakau Berisiko, Ketergantungan Nikotin &amp; Tobacco Use Disorder</h2><p>Tiga istilah yang sering tertukar: <em>penggunaan tembakau</em> (perilaku), <em>ketergantungan nikotin</em> (sindrom), <em>tobacco use disorder</em> (diagnosis DSM-5).</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧪</span> Produk Tembakau &amp; Nikotin</div>
+    <div class="g2">
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>Dibakar (combustible)</h4><ul><li>Rokok putih/filter, <strong>kretek</strong>, rokok linting</li><li>Cerutu, pipa, <strong>shisha/waterpipe</strong></li><li>Asap = ribuan senyawa kimia, termasuk ≥ 70 karsinogen (mis. tar, benzopiren, nitrosamin) dan CO</li></ul></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>Tanpa dibakar &amp; produk baru</h4><ul><li><strong>Smokeless</strong>: tembakau kunyah, snus, susur</li><li><strong>Rokok elektronik/vape (ENDS)</strong>: hantaran nikotin cair, tetap adiktif</li><li><em>Heated tobacco products</em></li></ul></div>
+    </div>
+    <div class="alert a-pink"><span class="ai">🔥</span><div><strong>Nikotin</strong> penyebab <em>ketergantungan</em>; <strong>tar, CO, dan karsinogen</strong> penyebab sebagian besar <em>penyakit</em> (kanker, PPOK, PJK). Itulah mengapa terapi pengganti nikotin (NRT) lebih aman daripada merokok.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">📏</span> Menilai Beban Merokok</div>
+    <div class="tw"><table>
+      <tr><th>Ukuran</th><th>Rumus / Kategori</th><th>Ardi</th></tr>
+      <tr><td><strong>Indeks Brinkman (IB)</strong></td><td>Batang/hari × lama merokok (tahun)<br><span class="hg">Ringan 0–199</span> · <span class="hl">Sedang 200–599</span> · <span class="hr">Berat ≥ 600</span></td><td>20 × 5 = <strong>± 100</strong> → <span class="hg">ringan</span> (tetapi sudah ketergantungan!)</td></tr>
+      <tr><td><strong>Pack-year</strong></td><td>Bungkus/hari × tahun merokok</td><td>1 × 5 = <strong>± 5 pack-year</strong></td></tr>
+      <tr><td><strong>Status</strong></td><td>Perokok aktif · mantan · bukan perokok · perokok pasif (secondhand) · thirdhand</td><td>Aktif; juga terpapar asap ayah di rumah</td></tr>
+    </table></div>
+    <div class="alert a-lav"><span class="ai">🔍</span><div><strong>Pelajaran klinis:</strong> IB rendah ≠ bebas ketergantungan. Ketergantungan ditentukan oleh <em>pola &amp; gejala</em> (craving, withdrawal, gagal berhenti), bukan semata jumlah kumulatif.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🧩</span> Tiga Istilah yang Harus Dibedakan</div>
+    <div class="tw"><table>
+      <tr><th>Istilah</th><th>Makna</th><th>Contoh</th></tr>
+      <tr><td><strong>Penggunaan tembakau berisiko</strong></td><td>Pola merokok yang meningkatkan risiko bahaya kesehatan (setiap penggunaan, tidak ada batas aman)</td><td>Merokok sesekali di acara sosial tetap berisiko</td></tr>
+      <tr><td><strong>Ketergantungan nikotin</strong></td><td>Sindrom perilaku, kognitif, fisiologis akibat paparan nikotin berulang: craving, toleransi, withdrawal, kehilangan kontrol</td><td>Ardi sekarang</td></tr>
+      <tr><td><strong>Tobacco use disorder (TUD)</strong></td><td>Diagnosis DSM-5-TR: pola penggunaan tembakau bermasalah dengan ≥ 2 dari 11 kriteria dalam 12 bulan; derajat ringan/sedang/berat</td><td>Ardi: ≥ 5 kriteria → sedang–berat</td></tr>
+    </table></div>
+    <div class="pearl"><div class="pearl-lbl">🌟 Poin Kunci</div><p>Hampir semua perokok harian memenuhi kriteria ketergantungan pada derajat tertentu; <strong>tidak ada batas aman penggunaan tembakau</strong>. Tidak perlu menunggu "kecanduan berat" untuk menawarkan bantuan berhenti.</p></div>
+  </div>
+</div>
+
+<!-- ========== LO 3 ========== -->
+<div id="sec-lo3" class="section">
+  <div class="sh"><div class="lo-tag">LO 3</div><h2>Definisi &amp; Klasifikasi Ketergantungan Nikotin/Zat</h2><p>Indonesia memakai <strong>PPDGJ-III (mengacu ICD-10)</strong> untuk diagnosis klinis; DSM-5-TR menjadi rujukan akademik utama.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">📖</span> Definisi</div>
+    <p style="margin-bottom:10px;"><strong>Ketergantungan zat (ICD-10: sindrom ketergantungan)</strong> adalah kumpulan fenomena <em>perilaku, kognitif, dan fisiologis</em> yang berkembang setelah penggunaan berulang, ditandai dorongan kuat menggunakan zat, kesulitan mengendalikan penggunaan, tetap menggunakan meski ada akibat merugikan, prioritas penggunaan zat di atas aktivitas lain, toleransi, dan kadang keadaan putus zat.</p>
+    <div class="alert a-blue"><span class="ai">📌</span><div>Pada <strong>nikotin</strong>, ketergantungan terutama bersifat <em>psikologis-perilaku</em> (craving, cue) <strong>dan</strong> fisik (withdrawal). Putus nikotin jarang mengancam nyawa, tetapi sangat memengaruhi keberhasilan berhenti.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🗂️</span> Klasifikasi ICD-10 / PPDGJ-III: F17 (gangguan akibat penggunaan tembakau)</div>
+    <div class="tw"><table>
+      <tr><th>Kode</th><th>Kategori</th><th>Catatan</th></tr>
+      <tr><td>F17.0</td><td>Intoksikasi akut</td><td>Mual, pusing, berkeringat, takikardia (pada pengguna naif/dosis tinggi)</td></tr>
+      <tr><td>F17.1</td><td>Penggunaan yang merugikan (harmful use)</td><td>Ada akibat kesehatan, belum memenuhi sindrom ketergantungan</td></tr>
+      <tr><td class="hr"><strong>F17.2</strong></td><td class="hr"><strong>Sindrom ketergantungan</strong></td><td class="hr"><strong>Kategori Ardi</strong></td></tr>
+      <tr><td>F17.3</td><td>Sindrom putus zat (withdrawal)</td><td>Muncul saat penghentian/pengurangan</td></tr>
+      <tr><td>F17.4–F17.9</td><td>Putus zat dengan delirium, psikotik, amnestik, residual, lainnya, tak tergolongkan</td><td>Jarang untuk nikotin</td></tr>
+    </table></div>
+    <p style="font-size:12.5px;color:var(--muted);">ICD-11: gangguan akibat penggunaan nikotin (blok 6C4A), mencakup pola penggunaan merugikan, ketergantungan, intoksikasi, dan putus nikotin.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">📚</span> Klasifikasi DSM-5-TR: Tobacco Use Disorder</div>
+    <div class="tw"><table>
+      <tr><th>Derajat</th><th>Jumlah kriteria (dari 11)</th><th>Kode DSM-5-TR</th></tr>
+      <tr><td class="hg">Ringan</td><td>2–3</td><td>Z72.0</td></tr>
+      <tr><td class="hl">Sedang</td><td>4–5</td><td>F17.200</td></tr>
+      <tr><td class="hr">Berat</td><td>≥ 6</td><td>F17.200</td></tr>
+    </table></div>
+    <p style="font-size:13px;margin-top:8px;"><strong>Tobacco withdrawal</strong> = F17.203. Spesifikator: <em>in early remission</em> (≥ 3 bulan tanpa memenuhi kriteria, kecuali craving) dan <em>in sustained remission</em> (≥ 12 bulan).</p>
+    <div class="alert a-lav"><span class="ai">🧠</span><div>DSM-5 <strong>menggabungkan</strong> "abuse" dan "dependence" DSM-IV menjadi <em>satu kontinum</em> gangguan penggunaan zat dengan derajat keparahan, dan <strong>menambah craving</strong> sebagai kriteria.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧮</span> Kelas Zat DSM-5 (10 kelas)</div>
+    <div class="chips"><span class="chip">Alkohol</span><span class="chip">Kafein</span><span class="chip">Kanabis</span><span class="chip">Halusinogen</span><span class="chip">Inhalan</span><span class="chip">Opioid</span><span class="chip">Sedatif–hipnotik–anxiolitik</span><span class="chip">Stimulan</span><span class="chip b">Tembakau</span><span class="chip">Zat lain/tak diketahui</span></div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Pola umum pada semua kelas: gangguan penggunaan, intoksikasi, putus zat (kecuali halusinogen, inhalan), dan gangguan akibat zat/obat lain.</p>
+  </div>
+</div>
+
+<!-- ========== LO 4 ========== -->
+<div id="sec-lo4" class="section">
+  <div class="sh"><div class="lo-tag">LO 4</div><h2>Etiologi &amp; Faktor Risiko Ketergantungan Nikotin</h2><p>Model biopsikososial: tidak ada satu penyebab, tetapi interaksi kerentanan individu, psikologis, sosial, dan lingkungan.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧬</span> Faktor Risiko per Domain</div>
+    <div class="tw"><table>
+      <tr><th>Domain</th><th>Faktor</th><th>Ardi</th></tr>
+      <tr><td><strong>Individu / biologis</strong></td><td>Heritabilitas ketergantungan nikotin ± 50–60%; polimorfisme reseptor nikotinik (CHRNA5-A3-B4); metabolisme nikotin cepat (CYP2A6 cepat → lebih banyak merokok); usia inisiasi dini; jenis kelamin laki-laki (di Indonesia)</td><td>Mulai usia 16 th; laki-laki</td></tr>
+      <tr><td><strong>Psikologis</strong></td><td>Stres, cemas/depresi, ADHD, impulsif &amp; sensation seeking, harapan positif ("rokok menenangkan"), efikasi diri rendah, coping maladaptif</td><td>Stres akademik; "rokok membantu menghadapi stres"</td></tr>
+      <tr><td><strong>Sosial</strong></td><td>Teman sebaya perokok, <strong>orang tua/keluarga perokok</strong> (modeling), norma sosial yang menerima merokok, status sosial-ekonomi rendah</td><td>Teman perokok, <strong>ayah merokok di rumah</strong></td></tr>
+      <tr><td><strong>Lingkungan / pasar</strong></td><td>Harga murah &amp; <strong>rokok ketengan (batangan)</strong>, iklan/promosi/sponsor, kawasan tanpa rokok lemah, peringatan kesehatan kurang efektif, rokok elektronik beraroma</td><td>Akses mudah di sekitar kampus</td></tr>
+    </table></div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai: 4P</div><div class="mnemo-txt">Pergaulan · Panutan · Pelarian · Pasar</div><div class="mnemo-sub"><strong>Pergaulan</strong> = teman sebaya · <strong>Panutan</strong> = ayah/orang tua · <strong>Pelarian</strong> = stres &amp; coping · <strong>Pasar</strong> = harga, iklan, akses. Tambah satu <strong>G</strong> (gen) untuk kerentanan biologis.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🛤️</span> Faktor Menurut Fase</div>
+    <div class="proto-wrap">
+      <div class="proto-step"><div class="ps-num ps-a">1</div><div class="ps-content"><strong>Inisiasi</strong><span>Dominan: teman sebaya, keluarga perokok, rasa ingin tahu, iklan, akses mudah.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-b">2</div><div class="ps-content"><strong>Peningkatan / regular</strong><span>Dominan: efek reward, cue sosial &amp; emosional, penggunaan sebagai coping stres.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-c">3</div><div class="ps-content"><strong>Ketergantungan &amp; maintenance</strong><span>Dominan: faktor biologis (neuroadaptasi, genetik), withdrawal, craving, cue terkondisi.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-d">4</div><div class="ps-content"><strong>Relaps</strong><span>Dominan: stres, craving, cue, lingkungan perokok (rumah!), kesalahan "satu batang saja".</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🧠</span> Teori Penjelas</div>
+    <div class="g2">
+      <div class="mc"><h4>Teori belajar sosial (Bandura)</h4><p>Perilaku dipelajari dari model (ayah, teman) dan diperkuat oleh hasil yang dirasakan.</p></div>
+      <div class="mc"><h4>Hipotesis self-medication</h4><p>Merokok dipakai untuk mengobati distres (cemas, depresi, stres), sehingga komorbid psikiatri meningkatkan risiko.</p></div>
+      <div class="mc"><h4>Model stres–kerentanan</h4><p>Individu rentan (gen, temperamen) + stresor → penggunaan zat.</p></div>
+      <div class="mc"><h4>Pengondisian klasik &amp; operan</h4><p>Cue dipasangkan dengan nikotin (klasik); reward &amp; penghindaran withdrawal memperkuat perilaku (operan).</p></div>
+    </div>
+  </div>
+
+  <div class="sk-box"><p><strong>Terapkan ke Ardi:</strong> semua domain terpenuhi: <em>G</em> (inisiasi usia 16), <em>Pergaulan</em> (teman), <em>Panutan</em> (ayah merokok di rumah), <em>Pelarian</em> (stres akademik), <em>Pasar</em> (akses mudah). Untuk relaps, <strong>lingkungan rumah perokok</strong> adalah target intervensi yang sering terlewat.</p></div>
+</div>
+
+<!-- ========== LO 5 ========== -->
+<div id="sec-lo5" class="section">
+  <div class="sh"><div class="lo-tag">LO 5</div><h2>Epidemiologi Ketergantungan Nikotin &amp; Penggunaan Tembakau</h2><p>Angka-angka high-yield yang sering muncul sebagai konteks soal. Sumber: WHO &amp; GATS Indonesia 2021.</p></div>
+
+  <div class="dash">
+    <div class="stat p"><div class="n">1,2 M</div><div class="l">Pengguna tembakau di dunia (WHO)</div></div>
+    <div class="stat b"><div class="n">&gt; 7 juta</div><div class="l">Kematian/tahun akibat tembakau (WHO)</div></div>
+    <div class="stat v"><div class="n">34,5%</div><div class="l">Dewasa Indonesia pengguna tembakau, ± 70,2 juta (GATS 2021)</div></div>
+    <div class="stat g"><div class="n">65,5% vs 3,3%</div><div class="l">Laki-laki vs perempuan (GATS 2021)</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🌍</span> Global</div>
+    <ul class="sl">
+      <li>Sekitar <strong>1,2 miliar</strong> pengguna tembakau; ± <strong>80%</strong> tinggal di negara berpenghasilan rendah-menengah.</li>
+      <li>Tembakau membunuh <strong>&gt; 7 juta orang per tahun</strong>, di antaranya <strong>&gt; 1,6 juta non-perokok</strong> yang terpapar asap rokok orang lain.</li>
+      <li><strong>Tidak ada batas aman</strong> paparan asap rokok orang lain maupun penggunaan tembakau.</li>
+      <li>Nikotin pada remaja/dewasa muda memengaruhi perkembangan otak (atensi, belajar) dan meningkatkan risiko ketergantungan jangka panjang.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🇮🇩</span> Indonesia (GATS 2021)</div>
+    <div class="tw"><table>
+      <tr><th>Indikator</th><th>Angka</th></tr>
+      <tr><td>Pengguna tembakau dewasa</td><td><strong>34,5%</strong> (± 70,2 juta orang)</td></tr>
+      <tr><td>Laki-laki / perempuan</td><td><strong>65,5%</strong> / <strong>3,3%</strong></td></tr>
+      <tr><td>Penggunaan rokok elektronik</td><td><strong>3%</strong> (naik dari 0,3% pada 2011, ± 10 kali lipat)</td></tr>
+      <tr><td>Paparan asap rokok di tempat makan / tempat kerja</td><td><strong>74,2%</strong> / <strong>44,8%</strong></td></tr>
+      <tr><td>Pengguna tembakau yang diberi saran berhenti oleh tenaga kesehatan</td><td><strong>38,9%</strong> (naik dari 34,6%)</td></tr>
+    </table></div>
+    <div class="alert a-pink"><span class="ai">📊</span><div><strong>Remaja:</strong> Riskesdas 2018 mencatat prevalensi merokok usia 10–18 tahun ± <strong>9,1%</strong> (naik dari 7,2% pada 2013). Cek angka terbaru di modul/kuliah bila dosen memakai SKI 2023.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🧷</span> Pola Epidemiologis Penting</div>
+    <ul class="sl">
+      <li><strong>Mayoritas perokok mulai saat remaja</strong> (di AS, sekitar 9 dari 10 perokok dewasa memulai sebelum usia 18). Ardi (16 th) mengikuti pola ini.</li>
+      <li>Nikotin termasuk zat dengan <strong>risiko ketergantungan tinggi</strong>: sekitar sepertiga yang pernah mencoba menjadi tergantung (Anthony 1994: tembakau ± 32%, heroin ± 23%, kokain ± 17%, alkohol ± 15%).</li>
+      <li>Banyak perokok ingin berhenti, tetapi <strong>upaya tanpa bantuan</strong> hanya berhasil ± 3–5% pada 6–12 bulan. Dengan konseling + farmakoterapi, angka keberhasilan naik beberapa kali lipat (lihat LO14).</li>
+      <li>Perokok pasif: anak &amp; anggota rumah tangga perokok (seperti keluarga Ardi) adalah kelompok terdampak.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== LO 6 ========== -->
+<div id="sec-lo6" class="section">
+  <div class="sh"><div class="lo-tag">LO 6</div><h2>Mekanisme Neurobiologi: Sistem Reward &amp; Peran Dopamin</h2><p>Nikotin "membajak" sistem reward alami otak melalui reseptor asetilkolin nikotinik (nAChR).</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">⚡</span> Jalur Singkat: dari Asap ke Dopamin</div>
+    <div class="steps">
+      <div class="step"><strong>Inhalasi → paru → darah → otak (± 10–20 detik)</strong><span>Absorpsi paru sangat cepat, sehingga rokok memberi "hantaran" seperti injeksi bolus. Kecepatan inilah yang membuat rokok sangat adiktif.</span></div>
+      <div class="step"><strong>Nikotin berikatan dengan nAChR</strong><span>nAChR adalah kanal ion (ligand-gated) yang secara fisiologis dibuka oleh asetilkolin. Subtipe <strong>α4β2</strong> (afinitas tinggi) paling berperan pada adiksi; <strong>α7</strong> berperan pada kognisi; <strong>α6β2</strong> pada ujung saraf dopaminergik.</span></div>
+      <div class="step"><strong>Aktivasi neuron dopaminergik VTA</strong><span>Nikotin mengaktifkan neuron dopamin di <em>ventral tegmental area</em> secara langsung dan lewat peningkatan glutamat serta berkurangnya inhibisi GABA.</span></div>
+      <div class="step"><strong>↑ Dopamin di nukleus akumbens (jalur mesolimbik)</strong><span>Dopamin di <em>nucleus accumbens</em> (striatum ventral) menghasilkan rasa senang dan "wanting", sehingga perilaku diulang.</span></div>
+      <div class="step"><strong>Efek sekunder</strong><span>Pelepasan noradrenalin (waspada, fokus), asetilkolin, serotonin, β-endorfin, dan GABA yang berkontribusi pada efek rileks, penekanan nafsu makan, dan perbaikan atensi.</span></div>
+    </div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai</div><div class="mnemo-txt">"VTA kirim, NAc nikmat"</div><div class="mnemo-sub">Jalur <strong>mesolimbik</strong>: VTA → NAc = <em>reward</em>. Jalur <strong>mesokortikal</strong>: VTA → korteks prefrontal = fokus/atensi &amp; kontrol (melemah pada adiksi).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🗺️</span> Struktur Otak &amp; Perannya</div>
+    <div class="tw"><table>
+      <tr><th>Struktur</th><th>Peran dalam adiksi nikotin</th></tr>
+      <tr><td><strong>VTA → Nukleus akumbens</strong></td><td>Reward, motivasi, "wanting"</td></tr>
+      <tr><td><strong>Striatum dorsal</strong></td><td>Pembentukan <strong>habit</strong> (stimulus → respons otomatis)</td></tr>
+      <tr><td><strong>Korteks prefrontal</strong></td><td>Kontrol inhibisi, pengambilan keputusan; melemah → sulit menahan craving</td></tr>
+      <tr><td><strong>Amigdala &amp; amigdala diperluas</strong></td><td>Emosi negatif saat withdrawal (stres, cemas, iritabel); CRF meningkat</td></tr>
+      <tr><td><strong>Hipokampus</strong></td><td>Memori kontekstual: cue lingkungan memicu craving</td></tr>
+      <tr><td><strong>Insula</strong></td><td>Kesadaran akan craving; kerusakan insula dilaporkan membuat perokok mudah berhenti</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🔬</span> Neuroadaptasi Kronik</div>
+    <ul class="sl">
+      <li><strong>Desensitisasi</strong> nAChR α4β2 oleh nikotin terus-menerus, <strong>disertai upregulasi</strong> jumlah reseptor (kompensasi). Ini landasan <strong>toleransi</strong>.</li>
+      <li>Semalam tanpa rokok, sebagian reseptor pulih dari desensitisasi sehingga <strong>rokok pertama pagi hari</strong> paling terasa, dan craving pagi paling kuat.</li>
+      <li><strong>Asap rokok</strong> (bukan nikotin sendiri) menghambat <strong>MAO-A/B</strong>, sehingga degradasi dopamin berkurang. Ini memperkuat reward dan ikut menjelaskan keterkaitan merokok dengan depresi.</li>
+      <li>Saat berhenti: aktivitas dopamin basal turun (hipodopaminergik), <strong>CRF</strong> di amigdala diperluas naik, dan reseptor yang berlebih tidak lagi "diisi" nikotin → <strong>withdrawal &amp; craving</strong>.</li>
+      <li>Cue yang berulang dipasangkan dengan rokok membuat <strong>dopamin dilepas saat cue muncul</strong> (prediksi reward), sehingga craving timbul sebelum rokok dinyalakan.</li>
+    </ul>
+    <div class="alert a-blue"><span class="ai">💊</span><div><strong>Kaitan farmakologi:</strong> <em>Varenicline</em> = agonis parsial α4β2 (mengurangi withdrawal &amp; memblokir reward rokok). <em>Bupropion</em> = inhibitor reuptake dopamin/noradrenalin + antagonis nAChR. <em>NRT</em> = nikotin tanpa asap dengan kinetik lambat. Lihat LO14.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧪</span> Farmakokinetik Singkat</div>
+    <div class="g2">
+      <div class="mc"><h4>Metabolisme</h4><p>Hepar oleh <strong>CYP2A6</strong> → <strong>kotinin</strong>. Waktu paruh nikotin ± 2 jam.</p></div>
+      <div class="mc"><h4>Kotinin</h4><p>Metabolit utama, waktu paruh ± 16–20 jam. Dipakai sebagai <strong>penanda biokimia</strong> (urin/saliva/serum).</p></div>
+    </div>
+  </div>
+
+  <div class="sk-box"><p><strong>Terapkan ke Ardi:</strong> Merokok setelah makan/belajar/stres = <em>cue</em> yang sudah memicu dopamin antisipatif. Sekarang ia merokok untuk mengembalikan keadaan "normal" (menutup defisit dopamin &amp; membungkam withdrawal). Itulah makna kalimatnya: <em>"membutuhkan rokok agar bisa merasa normal."</em></p></div>
+</div>
+
+<!-- ========== LO 7 ========== -->
+<div id="sec-lo7" class="section">
+  <div class="sh"><div class="lo-tag">LO 7</div><h2>Toleransi, Craving &amp; Gejala Putus Nikotin (Withdrawal)</h2><p>Ketiganya adalah inti sindrom ketergantungan dan penyebab utama gagalnya upaya berhenti.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🔍</span> Tiga Konsep Utama</div>
+    <div class="tw"><table>
+      <tr><th>Konsep</th><th>Definisi</th><th>Mekanisme</th><th>Pada Ardi</th></tr>
+      <tr><td><strong>Toleransi</strong></td><td>Efek berkurang pada dosis sama, atau dosis harus naik untuk efek serupa</td><td>Desensitisasi nAChR + neuroadaptasi. <em>Akut</em>: efek rokok pertama hari itu paling kuat, makin berkurang sepanjang hari. <em>Kronik</em>: jumlah rokok naik</td><td>Dari "sesekali" ke 1 bungkus/hari</td></tr>
+      <tr><td><strong>Craving</strong></td><td>Dorongan/keinginan sangat kuat untuk merokok</td><td>Cue terkondisi + penurunan dopamin + aktivasi insula/amigdala + lemahnya kontrol prefrontal</td><td>Setelah makan, belajar, tertekan; saat mencoba berhenti</td></tr>
+      <tr><td><strong>Withdrawal</strong></td><td>Sindrom saat penghentian/pengurangan mendadak</td><td>Hipodopaminergik, CRF ↑, reseptor upregulasi tanpa agonis</td><td>Iritabel, gelisah, sulit konsentrasi, craving</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">📋</span> Kriteria Withdrawal Tembakau (DSM-5-TR)</div>
+    <p style="margin-bottom:10px;font-size:13.5px;">Penghentian/pengurangan penggunaan tembakau harian selama ≥ beberapa minggu, <strong>dalam 24 jam</strong> muncul <strong>≥ 4 dari 7</strong> gejala berikut dan menimbulkan distres/hendaya bermakna (bukan karena kondisi medis/gangguan mental lain):</p>
+    <div class="g3">
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>R · Restlessness</h4><p>Gelisah</p></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>I · Irritability</h4><p>Iritabel, frustrasi, marah</p></div>
+      <div class="mc" style="border-top:3px solid var(--lav);"><h4>C · Concentration ↓</h4><p>Sulit berkonsentrasi</p></div>
+      <div class="mc" style="border-top:3px solid var(--green);"><h4>H · Hunger ↑</h4><p>Nafsu makan meningkat / BB naik</p></div>
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>A · Anxiety</h4><p>Cemas</p></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>R · Rendah mood</h4><p>Depressed mood</p></div>
+      <div class="mc" style="border-top:3px solid var(--lav);"><h4>D · Disturbed sleep</h4><p>Insomnia</p></div>
+    </div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai</div><div class="mnemo-txt">"RICHARD" menghilang dari asap</div><div class="mnemo-sub"><strong>R</strong>estlessness · <strong>I</strong>rritability · <strong>C</strong>oncentration↓ · <strong>H</strong>unger↑ · <strong>A</strong>nxiety · <strong>R</strong>endah mood · <strong>D</strong>isturbed sleep. Butuh <strong>≥ 4</strong>.</div></div>
+    <div class="alert a-pink"><span class="ai">⚠️</span><div><strong>Jebakan soal:</strong> <em>craving</em> adalah kriteria TUD (kriteria 4) dan ciri ICD-10, tetapi <strong>bukan salah satu dari 7 gejala withdrawal DSM-5</strong>. Ardi menunjukkan 3 gejala DSM (iritabel, gelisah, sulit konsentrasi) + craving → perlu menggali nafsu makan, tidur, dan mood untuk mencapai ≥ 4.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">⏳</span> Perjalanan Waktu Withdrawal</div>
+    <div class="proto-wrap">
+      <div class="proto-step"><div class="ps-num ps-a">1</div><div class="ps-content"><strong>4–24 jam</strong><span>Onset gejala; craving muncul.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-d">2</div><div class="ps-content"><strong>Hari 1–3 (puncak)</strong><span>Iritabilitas, cemas, sulit konsentrasi paling berat; risiko relaps tertinggi.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-b">3</div><div class="ps-content"><strong>Minggu 1–4</strong><span>Sebagian besar gejala berkurang; nafsu makan &amp; berat badan naik (rerata beberapa kg).</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-e">4</div><div class="ps-content"><strong>Bulan–tahun</strong><span>Craving episodik oleh cue masih bisa muncul; satu episode craving umumnya mereda dalam beberapa menit.</span></div></div>
+    </div>
+    <div class="alert a-green"><span class="ai">🛟</span><div>Withdrawal nikotin <strong>tidak mengancam nyawa</strong> dan jarang memerlukan detoksifikasi medis, tetapi harus <em>diantisipasi &amp; ditangani</em> (NRT, varenicline) karena menjadi penyebab utama relaps.</div></div>
+  </div>
+</div>
+
+<!-- ========== LO 8 ========== -->
+<div id="sec-lo8" class="section">
+  <div class="sh"><div class="lo-tag">LO 8</div><h2>Manifestasi Klinis Ketergantungan Nikotin</h2><p>Gambaran klinis datang dari tiga arah: perilaku merokoknya, dampak fisik, dan dampak psikososial.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧭</span> Manifestasi per Domain</div>
+    <div class="tw"><table>
+      <tr><th>Domain</th><th>Manifestasi</th><th>Pada Ardi</th></tr>
+      <tr><td><strong>Perilaku merokok</strong></td><td>Rokok segera setelah bangun, chain smoking, merokok di tempat terlarang, keluar ruangan/menyela aktivitas untuk merokok, merokok saat sakit, gagal berhenti berulang, ritual (setelah makan, kopi, belajar)</td><td>Rokok setelah makan, saat belajar &amp; stres; gagal berhenti berulang</td></tr>
+      <tr><td><strong>Gejala fisik</strong></td><td>Batuk kronik (khas pagi, produktif), dahak, mengi, sesak, stamina/toleransi latihan turun, mudah lelah, infeksi napas berulang, nyeri dada, palpitasi, dispepsia, insomnia</td><td>Batuk 3 bulan, stamina turun, mudah lelah</td></tr>
+      <tr><td><strong>Tanda pemeriksaan fisik</strong></td><td>Takikardia &amp; TD naik (efek simpatomimetik), napas berbunyi (mengi/ronki), jari &amp; gigi kuning, halitosis, gingivitis, kulit kusam; sering <em>normal</em> pada usia muda</td><td>Perlu diperiksa (TTV, paru, mulut)</td></tr>
+      <tr><td><strong>Psikologis</strong></td><td>Craving, ambivalensi ("tahu bahayanya tapi tidak mampu"), rasa bersalah, iritabel/cemas saat tidak merokok, sulit konsentrasi, mood naik-turun mengikuti rokok</td><td>Iritabel, gelisah, sulit konsentrasi; ambivalensi kuat</td></tr>
+      <tr><td><strong>Sosial / fungsional</strong></td><td>Menghindari aktivitas fisik, menarik diri, konflik keluarga, beban biaya, dikeluhkan lingkungan</td><td>Menghindari olahraga, lebih banyak sendirian</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">⏰</span> "Tanda Berat" Ketergantungan</div>
+    <div class="g2">
+      <div class="mc"><h4>Merokok ≤ 30 menit setelah bangun</h4><p>Penanda kuat ketergantungan tinggi (item FTND #1).</p></div>
+      <div class="mc"><h4>≥ 20 batang/hari</h4><p>Dosis nikotin harian tinggi.</p></div>
+      <div class="mc"><h4>Tetap merokok saat sakit</h4><p>Dorongan melampaui kenyamanan fisik.</p></div>
+      <div class="mc"><h4>Withdrawal jelas pada upaya berhenti</h4><p>Memprediksi relaps bila tidak dibantu obat.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🧪</span> Stage of Change (Transteoretikal)</div>
+    <div class="tw"><table>
+      <tr><th>Tahap</th><th>Ciri</th><th>Strategi</th></tr>
+      <tr><td>Prekontemplasi</td><td>Belum berpikir berhenti</td><td>Informasi, 5R</td></tr>
+      <tr><td>Kontemplasi</td><td>Ambivalen, pertimbangkan berhenti</td><td>MI, eksplorasi untung-rugi</td></tr>
+      <tr><td class="hg">Persiapan</td><td>Berniat berhenti dalam waktu dekat</td><td>Rencana, tanggal berhenti, obat</td></tr>
+      <tr><td>Aksi</td><td>Sudah berhenti &lt; 6 bulan</td><td>Dukungan, atasi withdrawal</td></tr>
+      <tr><td>Pemeliharaan</td><td>Berhenti ≥ 6 bulan</td><td>Cegah relaps</td></tr>
+      <tr><td>Relaps</td><td>Kembali merokok</td><td>Normalkan, belajar dari pemicu, mulai lagi</td></tr>
+    </table></div>
+    <div class="sk-box"><p><strong>Ardi:</strong> meminta bantuan profesional → <strong>fase persiapan</strong>. Fokus pada penetapan tanggal berhenti, rencana pemicu, dan farmakoterapi.</p></div>
+  </div>
+</div>
+
+<!-- ========== LO 9 ========== -->
+<div id="sec-lo9" class="section">
+  <div class="sh"><div class="lo-tag">LO 9</div><h2>Penegakan Diagnosis: Kriteria Diagnostik &amp; Alat Skrining</h2><p>Diagnosis ditegakkan secara klinis (anamnesis + kriteria), alat skrining membantu menilai derajat dan kesiapan.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🗒️</span> Alur Diagnostik di Layanan Primer</div>
+    <div class="steps">
+      <div class="step"><strong>Anamnesis perilaku merokok</strong><span>Usia mulai, jenis (kretek/filter/vape), jumlah/hari, waktu rokok pertama, upaya berhenti &amp; hasilnya, gejala withdrawal, pemicu, kesiapan, dukungan, perokok di rumah.</span></div>
+      <div class="step"><strong>Anamnesis medis &amp; psikiatri</strong><span>Keluhan respirasi/kardiovaskular, riwayat penyakit, obat, depresi/cemas/psikosis, ide bunuh diri, alkohol/zat lain, kehamilan (pada perempuan).</span></div>
+      <div class="step"><strong>Pemeriksaan fisik &amp; status mental</strong><span>TTV, paru, jantung, rongga mulut; MSE (LO10).</span></div>
+      <div class="step"><strong>Terapkan kriteria diagnostik</strong><span>DSM-5-TR (11 kriteria) / ICD-10 PPDGJ-III (6 kriteria).</span></div>
+      <div class="step"><strong>Nilai derajat &amp; kesiapan</strong><span>FTND/HSI, readiness ruler, stage of change.</span></div>
+      <div class="step"><strong>Penunjang sesuai indikasi</strong><span>Foto toraks, sputum BTA/TCM, spirometri, EKG; CO ekspirasi/kotinin untuk konfirmasi.</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">✅</span> DSM-5-TR: 11 Kriteria Tobacco Use Disorder (≥ 2 dalam 12 bulan)</div>
+    <div class="tw"><table>
+      <tr><th>#</th><th>Klaster</th><th>Kriteria</th><th>Ardi</th></tr>
+      <tr><td>1</td><td>Kontrol</td><td>Memakai lebih banyak/lebih lama dari niat</td><td>⚠️ Jumlah naik; perlu digali</td></tr>
+      <tr><td>2</td><td>Kontrol</td><td>Ingin berhenti/mengurangi tetapi gagal</td><td class="hg">✔ Beberapa kali gagal</td></tr>
+      <tr><td>3</td><td>Kontrol</td><td>Banyak waktu untuk mendapatkan/memakai (chain smoking)</td><td>❓ Belum jelas</td></tr>
+      <tr><td>4</td><td>Kontrol</td><td><strong>Craving</strong></td><td class="hg">✔ Dorongan kuat</td></tr>
+      <tr><td>5</td><td>Sosial</td><td>Gagal memenuhi kewajiban peran (kuliah, kerja, rumah)</td><td>❓ Belum jelas</td></tr>
+      <tr><td>6</td><td>Sosial</td><td>Lanjut meski ada masalah sosial/interpersonal</td><td>❓ Belum jelas</td></tr>
+      <tr><td>7</td><td>Sosial</td><td>Aktivitas penting dikurangi/ditinggalkan karena rokok</td><td>⚠️ Menghindari olahraga (akibat lelah)</td></tr>
+      <tr><td>8</td><td>Risiko</td><td>Dipakai pada situasi berbahaya fisik</td><td>❓ Belum jelas</td></tr>
+      <tr><td>9</td><td>Risiko</td><td>Lanjut meski tahu masalah fisik/psikologis akibat rokok</td><td class="hg">✔ "Tahu tidak sehat"</td></tr>
+      <tr><td>10</td><td>Farmakologis</td><td><strong>Toleransi</strong></td><td class="hg">✔ Jumlah naik bertahap</td></tr>
+      <tr><td>11</td><td>Farmakologis</td><td><strong>Withdrawal</strong></td><td class="hg">✔ Iritabel, gelisah, sulit konsentrasi</td></tr>
+    </table></div>
+    <div class="alert a-lav"><span class="ai">🧮</span><div><strong>Hitung Ardi:</strong> pasti terpenuhi <strong>5</strong> (kriteria 2, 4, 9, 10, 11) → minimal <strong>TUD derajat sedang</strong> (4–5). Bila kriteria 1 dan/atau 7 terkonfirmasi → ≥ 6 → <strong>derajat berat</strong>. Tidak ada kriteria masalah hukum pada DSM-5.</div></div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai: 4 Klaster DSM-5</div><div class="mnemo-txt">K · S · R · F = "Kalau Sudah Rutin, Fatal"</div><div class="mnemo-sub"><strong>K</strong>ontrol (1–4) · <strong>S</strong>osial (5–7) · <strong>R</strong>isiko (8–9) · <strong>F</strong>armakologis (10–11).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">📜</span> ICD-10 / PPDGJ-III: Sindrom Ketergantungan (F17.2)</div>
+    <p style="font-size:13.5px;margin-bottom:8px;"><strong>≥ 3</strong> dari 6 kriteria dalam <strong>12 bulan</strong>:</p>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai</div><div class="mnemo-txt">"Cuma Lagi, Walau Tahu Nanti Parah"</div><div class="mnemo-sub"><strong>C</strong>raving (keinginan kuat) · <strong>L</strong>oss of control (sulit mengendalikan) · <strong>W</strong>ithdrawal · <strong>T</strong>oleransi · <strong>N</strong>eglect (mengabaikan minat lain) · <strong>P</strong>ersist (terus meski jelas merugikan).</div></div>
+    <div class="alert a-green"><span class="ai">✔</span><div><strong>Ardi:</strong> C, L, W, T, P terpenuhi (≥ 3) → <strong>F17.2 sindrom ketergantungan nikotin</strong>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">📝</span> Kuesioner &amp; Alat Skrining</div>
+    <div class="tw"><table>
+      <tr><th>Alat</th><th>Fungsi</th><th>Skor / Catatan</th></tr>
+      <tr><td><strong>FTND</strong> (Fagerström Test for Nicotine Dependence)</td><td>Derajat ketergantungan fisik; 6 item, skor 0–10</td><td>0–2 sangat rendah · 3–4 rendah · <strong>5 sedang</strong> · 6–7 tinggi · 8–10 sangat tinggi</td></tr>
+      <tr><td><strong>HSI</strong> (Heaviness of Smoking Index)</td><td>Versi ringkas: hanya item 1 (waktu rokok pertama) + item 4 (jumlah/hari), skor 0–6</td><td>≥ 4 = ketergantungan tinggi</td></tr>
+      <tr><td><strong>ASSIST</strong> (WHO)</td><td>Skrining tembakau, alkohol &amp; zat lain di layanan primer</td><td>Membantu menemukan penggunaan zat ganda</td></tr>
+      <tr><td><strong>Readiness ruler</strong></td><td>Kesiapan berhenti (skala 0–10)</td><td>Tentukan stage of change</td></tr>
+      <tr><td><strong>MNWS / QSU</strong></td><td>Menilai keparahan withdrawal / urge merokok</td><td>Untuk monitor selama terapi</td></tr>
+      <tr><td><strong>PHQ-9 / GAD-7</strong></td><td>Skrining komorbid depresi &amp; cemas</td><td>Mood buruk memperberat relaps</td></tr>
+      <tr><td><strong>CO ekspirasi / kotinin</strong></td><td>Konfirmasi objektif status merokok</td><td>CO ekspirasi umumnya ≥ 7–10 ppm pada perokok aktif</td></tr>
+    </table></div>
+    <button class="col-btn" onclick="toggleCol(this)" style="margin-top:6px;"><span style="font-weight:700;font-size:13.5px;color:var(--navy);">📋 Item FTND &amp; Skor (klik)</span><span class="chev">▼</span></button>
+    <div class="col-body">
+      <div class="tw"><table>
+        <tr><th>Item</th><th>Jawaban → Skor</th></tr>
+        <tr><td>1. Berapa lama setelah bangun Anda merokok pertama?</td><td>≤ 5 mnt = 3 · 6–30 mnt = 2 · 31–60 mnt = 1 · &gt; 60 mnt = 0</td></tr>
+        <tr><td>2. Sulit menahan diri merokok di tempat terlarang?</td><td>Ya = 1 · Tidak = 0</td></tr>
+        <tr><td>3. Rokok mana yang paling sulit dilepaskan?</td><td>Pertama di pagi hari = 1 · lainnya = 0</td></tr>
+        <tr><td>4. Jumlah rokok per hari</td><td>≤ 10 = 0 · 11–20 = 1 · 21–30 = 2 · &gt; 30 = 3</td></tr>
+        <tr><td>5. Lebih sering merokok pada pagi hari?</td><td>Ya = 1 · Tidak = 0</td></tr>
+        <tr><td>6. Tetap merokok meski sedang sakit sampai berbaring?</td><td>Ya = 1 · Tidak = 0</td></tr>
+      </table></div>
+      <p style="font-size:12.5px;color:var(--muted);">Ardi: item 4 = 1 (± 20 batang). Item lain belum ada datanya di skenario, jadi skor FTND-nya <strong>belum dapat dihitung lengkap</strong>. Klasifikasi cut-off bisa sedikit berbeda antar sumber; ikuti yang dipakai dosen.</p>
+    </div>
+  </div>
+
+  <div class="sk-box"><p><strong>Kesimpulan diagnosis Ardi:</strong> Tobacco use disorder derajat sedang–berat (DSM-5-TR) / F17.2 sindrom ketergantungan nikotin (ICD-10), dengan sindrom putus nikotin saat berhenti, fase <em>persiapan</em>. Keluhan batuk 3 bulan dan stamina turun <strong>belum bisa langsung dilabeli akibat rokok</strong>: harus dievaluasi sebagai batuk kronik (LO13).</p></div>
+</div>
+
+<!-- ========== LO 10 ========== -->
+<div id="sec-lo10" class="section">
+  <div class="sh"><div class="lo-tag">LO 10</div><h2>Pemeriksaan Status Mental pada Ketergantungan Nikotin</h2><p>Tujuan MSE pada perokok: menilai efek withdrawal, <strong>menyingkirkan komorbid psikiatri</strong> (depresi, cemas, psikosis, risiko bunuh diri), dan menilai tilikan/motivasi.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧠</span> MSE Sistematis dengan Fokus Kasus Ardi</div>
+    <div class="tw"><table>
+      <tr><th>Aspek MSE</th><th>Yang dinilai</th><th>Temuan Ardi (dari skenario) &amp; yang perlu digali</th></tr>
+      <tr><td><strong>Penampilan &amp; perilaku</strong></td><td>Kesan umum, perawatan diri, kontak mata, psikomotor, kooperatif</td><td>Perlu dinilai: gelisah (restlessness) dan kooperatif; ia aktif meminta bantuan</td></tr>
+      <tr><td><strong>Bicara</strong></td><td>Kuantitas, kecepatan, volume</td><td>Perlu dinilai; iritabilitas bisa memengaruhi nada bicara</td></tr>
+      <tr><td><strong>Mood &amp; afek</strong></td><td>Mood (subjektif), afek (objektif; luas/sesuai/terbatas), keserasian</td><td>Stres &amp; iritabel; <strong>skrining depresi/cemas</strong> (PHQ-9/GAD-7) karena menyendiri &amp; stres</td></tr>
+      <tr><td><strong>Proses pikir</strong></td><td>Bentuk &amp; alur pikir</td><td>Perlu dinilai: koheren, relevan; tidak ada gangguan proses pikir dilaporkan</td></tr>
+      <tr><td><strong>Isi pikir</strong></td><td>Preokupasi, waham, obsesi, ide bunuh diri</td><td><span class="hg">Tidak ada waham &amp; pikiran menyakiti diri</span>; preokupasi pada rokok/craving</td></tr>
+      <tr><td><strong>Persepsi</strong></td><td>Halusinasi, ilusi</td><td><span class="hg">Tidak ada halusinasi</span></td></tr>
+      <tr><td><strong>Kognisi</strong></td><td>Kesadaran, orientasi, atensi/konsentrasi, memori</td><td>Sulit konsentrasi (efek withdrawal); orientasi &amp; memori diharapkan baik</td></tr>
+      <tr><td><strong>Insight / tilikan</strong></td><td>Kesadaran akan masalah &amp; kebutuhan terapi</td><td>Mengarah ke tilikan intelektual (≈ derajat 5): tahu merugikan, ingin bantuan; ambivalensi ("rokok membantu stres")</td></tr>
+      <tr><td><strong>Judgment &amp; reliabilitas</strong></td><td>Penilaian realita, dapat dipercaya</td><td>Baik: mencari bantuan sendiri, informasi kooperatif</td></tr>
+    </table></div>
+    <div class="alert a-lav"><span class="ai">🔎</span><div>Kolom "perlu digali" adalah <em>interpretasi untuk belajar</em>, bukan data skenario. Yang <strong>tegas disebutkan</strong> di skenario: tidak ada halusinasi, waham, dan pikiran menyakiti diri.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🚩</span> Mengapa Komorbid Psikiatri Penting?</div>
+    <ul class="sl">
+      <li>Gangguan depresi, ansietas, ADHD, skizofrenia, dan gangguan penggunaan zat lain <strong>lebih sering pada perokok</strong> dan membuat berhenti lebih sulit.</li>
+      <li>Penghentian rokok dapat <strong>mencetuskan gejala mood/cemas</strong> sementara; pantau pasien dengan riwayat depresi.</li>
+      <li>Pada skizofrenia, berhenti merokok dapat <strong>menaikkan kadar</strong> obat tertentu (mis. klozapin, olanzapin) karena induksi CYP1A2 oleh asap rokok hilang; konsultasi psikiater.</li>
+      <li>Skrining ide bunuh diri pada gejala depresi atau saat memakai bupropion/varenicline sesuai kebijakan lokal.</li>
+    </ul>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai: urutan MSE</div><div class="mnemo-txt">"PBMA-PIP-KIJ"</div><div class="mnemo-sub"><strong>P</strong>enampilan/perilaku · <strong>B</strong>icara · <strong>M</strong>ood-<strong>A</strong>fek · <strong>P</strong>roses pikir · <strong>I</strong>si pikir · <strong>P</strong>ersepsi · <strong>K</strong>ognisi · <strong>I</strong>nsight · <strong>J</strong>udgment.</div></div>
+  </div>
+</div>
+
+<!-- ========== LO 11 ========== -->
+<div id="sec-lo11" class="section">
+  <div class="sh"><div class="lo-tag">LO 11</div><h2>Faktor Psikologis yang Memengaruhi Perilaku Merokok</h2><p>Stres, coping, keyakinan, dan lingkungan sosial membentuk <em>mengapa</em> seseorang mulai, lanjut, dan relaps.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🔁</span> Siklus Stres → Rokok → Stres</div>
+    <div class="steps">
+      <div class="step"><strong>Stresor / emosi negatif</strong><span>Tuntutan akademik, tidur kurang, kelewatan makan.</span></div>
+      <div class="step"><strong>Dorongan merokok (coping)</strong><span>Rokok dipilih sebagai cara cepat "menenangkan diri" (emotion-focused / avoidant coping).</span></div>
+      <div class="step"><strong>Pereda semu</strong><span>Rokok mengakhiri <em>withdrawal-related tension</em>, bukan menyelesaikan stresor. Terasa rileks karena gejala putus nikotin hilang.</span></div>
+      <div class="step"><strong>Penguatan (negative reinforcement)</strong><span>Perilaku makin otomatis dan kebutuhan nikotin meningkat; stres harian (dari withdrawal) ikut naik.</span></div>
+    </div>
+    <div class="alert a-pink"><span class="ai">🧠</span><div><strong>Poin high-yield:</strong> keyakinan "rokok membantu stres" adalah <em>ilusi</em> yang dipertahankan oleh siklus withdrawal. Berhenti merokok dikaitkan dengan <strong>penurunan kecemasan, depresi, dan stres</strong> serta perbaikan mood dibanding terus merokok (meta-analisis Taylor, BMJ 2014).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🧰</span> Teori Psikologis &amp; Penerapannya</div>
+    <div class="tw"><table>
+      <tr><th>Konsep / teori</th><th>Inti</th><th>Contoh pada Ardi</th></tr>
+      <tr><td><strong>Pengondisian klasik</strong></td><td>Cue netral dipasangkan dengan nikotin → cue memicu craving</td><td>Setelah makan, saat belajar</td></tr>
+      <tr><td><strong>Pengondisian operan</strong></td><td>Reward (positif) dan penghindaran withdrawal (negatif) menguatkan perilaku</td><td>"Agar bisa merasa normal"</td></tr>
+      <tr><td><strong>Teori belajar sosial</strong></td><td>Meniru model &amp; norma kelompok</td><td>Teman perokok, ayah merokok di rumah</td></tr>
+      <tr><td><strong>Coping mechanism</strong></td><td>Cara menghadapi stres; <em>problem-focused</em> (adaptif) vs <em>emotion-focused/avoidant</em> (rokok)</td><td>Rokok = pelarian dari tuntutan akademik</td></tr>
+      <tr><td><strong>Disonansi kognitif</strong></td><td>Konflik "tahu merugikan" vs "tetap merokok" diredakan dengan rasionalisasi</td><td>"Kebiasaan ini membantu saya menghadapi stres"</td></tr>
+      <tr><td><strong>Self-efficacy (Bandura)</strong></td><td>Keyakinan mampu berhenti; rendah setelah gagal berulang</td><td>"Rokoklah yang mengendalikan saya"</td></tr>
+      <tr><td><strong>Health Belief Model</strong></td><td>Perilaku dipengaruhi persepsi kerentanan, keparahan, manfaat, hambatan, isyarat bertindak</td><td>Batuk &amp; lelah = cue to action</td></tr>
+      <tr><td><strong>Model transteoretikal</strong></td><td>Berhenti merokok sebagai proses bertahap</td><td>Fase persiapan</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">👥</span> Pengaruh Lingkungan Sosial</div>
+    <div class="g2">
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>Teman sebaya</h4><ul><li>Faktor utama inisiasi remaja</li><li>Rokok = ritual sosial &amp; identitas kelompok</li><li>Menolak berarti risiko "dikucilkan"</li></ul></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>Keluarga</h4><ul><li>Orang tua perokok → norma &amp; akses</li><li>Rumah perokok = cue &amp; hambatan berhenti</li><li>Dukungan keluarga memprediksi keberhasilan</li></ul></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🛠️</span> Strategi Psikologis: Mengatasi Craving (4D)</div>
+    <div class="g2">
+      <div class="mc"><h4>1. Delay</h4><p>Tunda 10 menit; craving umumnya mereda.</p></div>
+      <div class="mc"><h4>2. Deep breathing</h4><p>Napas dalam perlahan.</p></div>
+      <div class="mc"><h4>3. Drink water</h4><p>Minum air perlahan, kunyah permen tanpa gula/wortel.</p></div>
+      <div class="mc"><h4>4. Do something else</h4><p>Alihkan aktivitas: jalan, olahraga, hubungi teman.</p></div>
+    </div>
+    <div class="alert a-green"><span class="ai">🌿</span><div>Ganti coping stres: olahraga ringan, teknik relaksasi/mindfulness, kebersihan tidur, makan teratur, <em>time management</em> akademik. Rokok tidak dihilangkan tanpa pengganti coping.</div></div>
+  </div>
+</div>
+
+<!-- ========== LO 12 ========== -->
+<div id="sec-lo12" class="section">
+  <div class="sh"><div class="lo-tag">LO 12</div><h2>Dampak Kesehatan Penggunaan Tembakau &amp; Nikotin</h2><p>Tembakau merusak hampir setiap organ. Di UKMPPD, pola yang sering muncul: PPOK, kanker paru, PJK/stroke, dan dampak pada kehamilan.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🫁</span> Dampak per Sistem Organ</div>
+    <div class="tw"><table>
+      <tr><th>Sistem</th><th>Dampak</th><th>Catatan</th></tr>
+      <tr><td><strong>Respirasi</strong></td><td>PPOK (bronkitis kronik, emfisema), eksaserbasi asma, penurunan fungsi paru, infeksi saluran napas berulang, TB lebih berat</td><td>Penyebab utama PPOK; bronkitis kronik = batuk produktif ≥ 3 bulan/tahun selama ≥ 2 tahun berturut-turut</td></tr>
+      <tr><td><strong>Kanker</strong></td><td>Paru, rongga mulut, faring, laring, esofagus, pankreas, kandung kemih, ginjal, lambung, serviks, AML, dll.</td><td>Tembakau terkait &gt; 20 jenis kanker; mayoritas kanker paru berkaitan dengan merokok</td></tr>
+      <tr><td><strong>Kardiovaskular</strong></td><td>PJK/infark miokard, stroke, penyakit arteri perifer, aneurisma aorta abdominal, hipertensi</td><td>Nikotin: simpatomimetik; CO: ↓ oksigenasi; stres oksidatif &amp; disfungsi endotel; hiperkoagulasi</td></tr>
+      <tr><td><strong>Reproduksi &amp; kehamilan</strong></td><td>Infertilitas, abortus, BBLR, persalinan prematur, plasenta previa/solusio, SIDS; disfungsi ereksi</td><td>Berhenti sebelum/saat hamil menurunkan risiko</td></tr>
+      <tr><td><strong>Lainnya</strong></td><td>Ulkus peptikum, osteoporosis/fraktur, periodontitis, katarak, degenerasi makula, diabetes tipe 2, penyembuhan luka buruk</td><td>Penyakit gigi &amp; mulut sering menjadi pintu masuk konseling</td></tr>
+      <tr><td><strong>Neuropsikiatri</strong></td><td>Ketergantungan, ansietas/depresi lebih tinggi, efek pada otak remaja yang masih berkembang</td><td>Nikotin pada remaja memengaruhi atensi &amp; belajar</td></tr>
+    </table></div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai: 4K</div><div class="mnemo-txt">Kanker · Kardiovaskular · Kronik napas · Kehamilan</div><div class="mnemo-sub">Empat kelompok dampak yang paling sering muncul di soal. Tambahkan <strong>"kuman"</strong> (TB &amp; ISPA lebih berat) bila perlu.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🏠</span> Paparan Asap Rokok Orang Lain (Secondhand/Thirdhand)</div>
+    <div class="g2">
+      <div class="mc"><h4>Anak</h4><ul><li>ISPA berulang, otitis media, asma</li><li>SIDS</li><li>Gangguan pertumbuhan paru</li></ul></div>
+      <div class="mc"><h4>Dewasa non-perokok</h4><ul><li>Penyakit jantung koroner</li><li>Kanker paru</li><li>Stroke</li></ul></div>
+    </div>
+    <div class="alert a-pink"><span class="ai">🏚️</span><div><strong>Thirdhand smoke</strong> = residu racun pada dinding, perabot, pakaian. Merokok di dalam rumah (seperti ayah Ardi) membahayakan seluruh keluarga <em>dan</em> menjadi pemicu craving bagi Ardi.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">📉</span> Bukti Ilmiah: Manfaat Berhenti Merokok</div>
+    <div class="proto-wrap">
+      <div class="proto-step"><div class="ps-num ps-a">⏱</div><div class="ps-content"><strong>20 menit – 12 jam</strong><span>Denyut jantung &amp; tekanan darah turun; kadar CO darah normal.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-b">⏱</div><div class="ps-content"><strong>2 minggu – 3 bulan</strong><span>Sirkulasi &amp; fungsi paru membaik.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-c">⏱</div><div class="ps-content"><strong>1 – 9 bulan</strong><span>Batuk &amp; sesak berkurang, silia pulih.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-d">⏱</div><div class="ps-content"><strong>1 tahun</strong><span>Risiko PJK sekitar setengah dari perokok.</span></div></div>
+      <div class="proto-step"><div class="ps-num ps-e">⏱</div><div class="ps-content"><strong>5 – 15 tahun</strong><span>Risiko stroke mendekati bukan perokok; risiko kanker paru turun kira-kira setengah pada 10 tahun; risiko PJK mendekati bukan perokok pada 15 tahun.</span></div></div>
+    </div>
+    <div class="alert a-blue"><span class="ai">📚</span><div>Kohort Doll (BMJ 2004): perokok seumur hidup rata-rata kehilangan <strong>± 10 tahun</strong> harapan hidup. Berhenti pada usia 30 tahun memulihkan hampir seluruhnya; pada usia 40 ± 9 tahun, 50 ± 6 tahun, 60 ± 3 tahun. <strong>Berhenti kapan pun bermanfaat</strong>, dan Ardi (21 th) berada pada titik terbaik.</div></div>
+  </div>
+
+  <div class="sk-box"><p><strong>Terapkan ke Ardi:</strong> Batuk 3 bulan &amp; mudah lelah bisa merupakan efek rokok (bronkitis/penurunan kapasitas paru), tetapi <strong>pada usia 21 th dengan ± 5 pack-year, rokok belum cukup menjelaskan sendirian</strong> → harus menyingkirkan penyebab lain, terutama TB (LO13). Sampaikan dampak personal &amp; relevan ("stamina Anda turun", "olahraga Anda terganggu") karena lebih memotivasi daripada ancaman kanker puluhan tahun lagi.</p></div>
+</div>
+
+<!-- ========== LO 13 ========== -->
+<div id="sec-lo13" class="section">
+  <div class="sh"><div class="lo-tag">LO 13</div><h2>Diagnosis Banding</h2><p>Dua pertanyaan: (A) apakah ini benar ketergantungan nikotin atau kondisi lain yang mirip, dan (B) apa penyebab batuk kronik &amp; mudah lelah pada Ardi?</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🅰️</span> A. Diagnosis Banding Ketergantungan Nikotin</div>
+    <div class="tw"><table>
+      <tr><th>Diagnosis banding</th><th>Pembeda dari ketergantungan nikotin</th></tr>
+      <tr><td><strong>Penggunaan tembakau sosial/eksperimental</strong></td><td>Tidak ada craving rutin, withdrawal, atau gagal berhenti; mampu berhenti tanpa distres</td></tr>
+      <tr><td><strong>Penggunaan merugikan (F17.1)</strong></td><td>Ada akibat kesehatan, tetapi belum memenuhi kriteria ketergantungan (≥ 3 kriteria ICD-10)</td></tr>
+      <tr><td><strong>Gangguan depresi mayor / ansietas</strong></td><td>Gejala (iritabel, gelisah, sulit konsentrasi) <em>mendahului</em> berhenti atau menetap &gt; 4 minggu setelah berhenti; ada mood rendah/anhedonia/kecemasan menetap</td></tr>
+      <tr><td><strong>Gangguan penyesuaian</strong></td><td>Terkait stresor jelas (tuntutan akademik) tanpa sindrom ketergantungan; dapat koeksis</td></tr>
+      <tr><td><strong>ADHD</strong></td><td>Sulit konsentrasi/impulsif sejak masa kanak-kanak; merokok sebagai self-medication; lebih sering relaps</td></tr>
+      <tr><td><strong>Gangguan penggunaan zat lain (alkohol, kanabis, stimulan, kafein)</strong></td><td>Skrining ASSIST; withdrawal zat lain memiliki profil berbeda; polisubstansi umum</td></tr>
+      <tr><td><strong>Hipertiroid</strong></td><td>Gelisah, mudah lelah, turun BB, palpitasi; pemeriksaan TSH</td></tr>
+      <tr><td><strong>Intoksikasi nikotin</strong></td><td>Mual, pusing, berkeringat, takikardia setelah paparan berlebih; bukan sindrom putus zat</td></tr>
+    </table></div>
+    <div class="alert a-lav"><span class="ai">⏱️</span><div><strong>Kunci pembeda withdrawal vs gangguan mood/cemas:</strong> <em>timeline</em>. Withdrawal muncul dalam 24 jam setelah berhenti dan memuncak hari 1–3, lalu membaik dalam 3–4 minggu. Bila gejala menetap/berat/ada ide bunuh diri → curiga gangguan mood.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🅱️</span> B. Diagnosis Banding Batuk Kronik + Mudah Lelah pada Ardi</div>
+    <div class="tw"><table>
+      <tr><th>Kemungkinan</th><th>Petunjuk</th><th>Langkah awal</th></tr>
+      <tr><td><strong>TB paru</strong> 🚩</td><td>Batuk ≥ 2 minggu; di Indonesia (endemis) <strong>wajib disingkirkan</strong>; cari keringat malam, demam, BB turun, hemoptisis, kontak TB</td><td>Pemeriksaan dahak (TCM/BTA), foto toraks</td></tr>
+      <tr><td><strong>Bronkitis kronik / PPOK dini</strong></td><td>Perokok, batuk produktif pagi; pada usia 21 th &amp; 5 pack-year kurang mungkin sebagai PPOK murni</td><td>Spirometri bila tersedia</td></tr>
+      <tr><td><strong>Asma</strong></td><td>Mengi, sesak episodik, atopi, dipicu pemicu; rokok memperberat</td><td>Anamnesis, peak flow/spirometri</td></tr>
+      <tr><td><strong>GERD</strong></td><td>Rasa terbakar/regurgitasi; Ardi telat makan &amp; stres</td><td>Anamnesis, uji terapi</td></tr>
+      <tr><td><strong>Upper airway cough syndrome (post-nasal drip)</strong></td><td>Hidung tersumbat, rasa lendir di tenggorok</td><td>Pemeriksaan THT</td></tr>
+      <tr><td><strong>Pasca-infeksi / pertusis</strong></td><td>Batuk menetap setelah ISPA</td><td>Riwayat infeksi</td></tr>
+      <tr><td><strong>Penyebab "lelah"</strong></td><td>Anemia, hipotiroid, depresi, kurang tidur &amp; makan</td><td>Hb, TSH, skrining PHQ-9</td></tr>
+    </table></div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai: Batuk Kronik</div><div class="mnemo-txt">"BAGU + TB" = "Bagus, singkirkan TB dulu!"</div><div class="mnemo-sub"><strong>B</strong>ronkitis/PPOK · <strong>A</strong>sma · <strong>G</strong>ERD · <strong>U</strong>CAS (post-nasal drip) · <strong>TB</strong>. Di Indonesia, batuk ≥ 2 minggu = suspek TB sampai terbukti bukan.</div></div>
+    <div class="alert a-pink"><span class="ai">⚠️</span><div><strong>Jebakan soal:</strong> jangan langsung menganggap semua keluhan Ardi "akibat rokok". Tegakkan diagnosis ketergantungan nikotin <em>dan</em> evaluasi batuk kronik secara paralel.</div></div>
+  </div>
+</div>
+
+<!-- ========== LO 14 ========== -->
+<div id="sec-lo14" class="section">
+  <div class="sh"><div class="lo-tag">LO 14</div><h2>Strategi Berhenti Merokok Berbasis Bukti</h2><p>Prinsip utama: <strong>konseling perilaku + farmakoterapi</strong> bersama-sama lebih efektif daripada salah satunya. Setiap perokok sebaiknya ditawari bantuan di setiap kunjungan.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🧭</span> Kerangka 5A (pasien MAU berhenti) &amp; 5R (pasien BELUM mau)</div>
+    <div class="cmp">
+      <div class="cmp-l"><h4>✅ 5A: bersedia berhenti</h4>
+        <div class="crow"><span>Ask</span><span>Tanyakan status merokok setiap kunjungan</span></div>
+        <div class="crow"><span>Advise</span><span>Anjurkan berhenti, jelas, kuat, personal</span></div>
+        <div class="crow"><span>Assess</span><span>Nilai kesiapan &amp; ketergantungan</span></div>
+        <div class="crow"><span>Assist</span><span>Bantu: rencana, konseling, obat, dukungan</span></div>
+        <div class="crow"><span>Arrange</span><span>Atur tindak lanjut (follow-up)</span></div>
+      </div>
+      <div class="cmp-r"><h4>🔸 5R: belum bersedia</h4>
+        <div class="crow"><span>Relevance</span><span>Kaitkan dengan kondisi pribadi</span></div>
+        <div class="crow"><span>Risks</span><span>Risiko jangka pendek &amp; panjang</span></div>
+        <div class="crow"><span>Rewards</span><span>Manfaat yang diharapkan pasien</span></div>
+        <div class="crow"><span>Roadblocks</span><span>Hambatan yang dirasakan</span></div>
+        <div class="crow"><span>Repetition</span><span>Ulangi pada setiap kunjungan</span></div>
+      </div>
+    </div>
+    <div class="mnemo"><div class="mnemo-lbl">🧠 Jembatan Keledai</div><div class="mnemo-txt">"Mau = A, Belum = R"</div><div class="mnemo-sub">Waktu terbatas? Gunakan <strong>Very Brief Advice</strong>: <em>Ask – Advise – Act</em> (tawarkan bantuan), ± 30 detik – 3 menit.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🗣️</span> Intervensi Perilaku</div>
+    <div class="g2">
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>Motivational Interviewing</h4><ul><li><strong>OARS</strong>: Open questions, Affirmation, Reflective listening, Summarizing</li><li>Roh MI <strong>PACE</strong>: Partnership, Acceptance, Compassion, Evocation</li><li>Eksplorasi ambivalensi, bukan menceramahi</li></ul></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>CBT / keterampilan coping</h4><ul><li>Identifikasi pemicu &amp; ganti respons</li><li>Latihan 4D (LO11)</li><li>Manajemen stres, tidur, makan, olahraga</li></ul></div>
+      <div class="mc" style="border-top:3px solid var(--lav);"><h4>Dukungan sosial &amp; lingkungan</h4><ul><li>Rumah bebas rokok, libatkan keluarga/teman</li><li>Konseling kelompok, quitline, klinik UBM, aplikasi/SMS</li></ul></div>
+      <div class="mc" style="border-top:3px solid var(--green);"><h4>Rencana berhenti (START)</h4><ul><li><strong>S</strong>et tanggal berhenti (1–2 minggu ke depan)</li><li><strong>T</strong>ell keluarga &amp; teman</li><li><strong>A</strong>nticipate pemicu &amp; relaps</li><li><strong>R</strong>emove rokok, korek, asbak</li><li><strong>T</strong>alk to doctor: obat</li></ul></div>
+    </div>
+    <div class="alert a-blue"><span class="ai">📌</span><div>Berhenti <strong>mendadak (abrupt)</strong> dengan tanggal berhenti yang jelas setidaknya sama efektif (bahkan lebih) dibanding mengurangi bertahap, bila disertai dukungan/obat.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">💊</span> Farmakoterapi Lini Pertama</div>
+    <div class="tw"><table>
+      <tr><th>Obat</th><th>Mekanisme</th><th>Regimen umum</th><th>Efek samping</th><th>Perhatian / kontraindikasi</th></tr>
+      <tr><td><strong>NRT</strong> (patch, permen karet, lozenge, inhaler, nasal spray)</td><td>Memberi nikotin bersih → mengurangi withdrawal &amp; craving</td><td>Patch 21 mg/24 jam × 6 mgg → 14 mg × 2 mgg → 7 mg × 2 mgg (≥ 10 batang/hari). Gum/lozenge 2 mg (rokok pertama &gt; 30 mnt setelah bangun) atau 4 mg (≤ 30 mnt). <strong>Kombinasi patch + short-acting</strong> lebih efektif dari tunggal</td><td>Iritasi kulit, mimpi aneh/insomnia (patch), iritasi mulut/dispepsia (gum)</td><td>Hati-hati pada PJK akut/tidak stabil, kehamilan (bila gagal non-farmakologis)</td></tr>
+      <tr><td><strong>Varenicline</strong></td><td>Agonis parsial nAChR α4β2: ↓ withdrawal &amp; memblokir efek reward rokok</td><td>Mulai 1 minggu sebelum tanggal berhenti: 0,5 mg 1×/hari (hari 1–3) → 0,5 mg 2×/hari (hari 4–7) → 1 mg 2×/hari, total ± 12 minggu</td><td><strong>Mual</strong> (tersering), insomnia, mimpi jelas</td><td>Dosis kurangi pada gangguan ginjal berat; pantau mood. Studi EAGLES: tidak ada peningkatan bermakna kejadian neuropsikiatri berat vs plasebo</td></tr>
+      <tr><td><strong>Bupropion SR</strong></td><td>Inhibitor reuptake dopamin &amp; noradrenalin + antagonis nAChR</td><td>Mulai 1–2 minggu sebelum berhenti: 150 mg/hari × 3 hari → 150 mg 2×/hari, 7–12 minggu</td><td>Insomnia, mulut kering, ↑ risiko kejang</td><td><strong>Kontraindikasi</strong>: riwayat kejang, gangguan makan (bulimia/anoreksia), putus alkohol/benzodiazepin mendadak, pemakaian MAOI</td></tr>
+    </table></div>
+    <div class="alert a-lav"><span class="ai">📊</span><div><strong>Efektivitas relatif (Cochrane, kira-kira, vs plasebo):</strong> NRT tunggal RR ± 1,5 · bupropion ± 1,6 · <strong>varenicline ± 2,3</strong> · kombinasi NRT lebih baik dari tunggal. Konseling + obat &gt; salah satunya saja. Lini kedua: nortriptilin, klonidin.</div></div>
+    <div class="alert a-pink"><span class="ai">🚫</span><div><strong>Rokok elektronik</strong> tidak direkomendasikan sebagai terapi lini pertama berhenti merokok (bukan alat terapi yang disetujui di banyak pedoman; risiko jangka panjang belum jelas; risiko dual use). Ketersediaan obat dapat berbeda antar fasilitas; sesuaikan dengan yang tersedia.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🔄</span> Tindak Lanjut &amp; Pencegahan Relaps</div>
+    <ul class="sl">
+      <li>Follow-up pertama <strong>dalam 1 minggu</strong> setelah tanggal berhenti, lalu sekitar 1 bulan; nilai withdrawal, efek samping obat, kepatuhan.</li>
+      <li><strong>Relaps adalah bagian dari proses</strong>, bukan kegagalan. Satu batang ("slip") ≠ kembali ke awal; telusuri pemicu dan lanjutkan.</li>
+      <li>Antisipasi kenaikan berat badan (rerata beberapa kg): olahraga &amp; pola makan teratur.</li>
+      <li>Pasien yang gagal beberapa kali, komorbid psikiatri berat, atau kondisi khusus → <strong>rujuk</strong> (klinik UBM, psikiater, spesialis paru/jantung).</li>
+      <li>Populasi khusus: <strong>hamil</strong> (konseling dulu; obat bila perlu dengan pertimbangan risiko-manfaat), <strong>remaja &lt; 18 th</strong> (konseling; bukti obat terbatas).</li>
+    </ul>
+  </div>
+
+  <div class="sk-box"><p><strong>Rencana untuk Ardi:</strong> fase persiapan + ketergantungan sedang–berat + withdrawal nyata → konseling MI/CBT + <strong>varenicline</strong> atau <strong>kombinasi NRT</strong> (sesuai ketersediaan &amp; riwayat), tanggal berhenti ditetapkan, ayah diajak jadikan rumah bebas rokok, kelola stres &amp; tidur, follow-up 1 minggu.</p></div>
+</div>
+
+<!-- ========== LO 15 ========== -->
+<div id="sec-lo15" class="section">
+  <div class="sh"><div class="lo-tag">LO 15</div><h2>Peran Tenaga Kesehatan dalam Pencegahan &amp; Tata Laksana</h2><p>Dokter berperan di empat level: individu, keluarga, komunitas, dan kebijakan.</p></div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">🏥</span> Peran per Level Pencegahan</div>
+    <div class="tw"><table>
+      <tr><th>Level</th><th>Sasaran</th><th>Contoh tindakan dokter</th></tr>
+      <tr><td><strong>Primordial</strong></td><td>Mencegah munculnya faktor risiko</td><td>Advokasi kawasan tanpa rokok, edukasi norma "tidak merokok", dukungan regulasi</td></tr>
+      <tr><td><strong>Primer</strong></td><td>Mencegah inisiasi</td><td>Edukasi remaja/kampus, peer educator, konseling orang tua</td></tr>
+      <tr><td><strong>Sekunder</strong></td><td>Deteksi dini &amp; berhenti</td><td>Tanya status merokok tiap kunjungan, 5A/5R, MI, farmakoterapi, skrining penyakit terkait</td></tr>
+      <tr><td><strong>Tersier</strong></td><td>Cegah komplikasi/relaps</td><td>Tata laksana PPOK/PJK, rehabilitasi, pencegahan relaps, rujukan</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--blue-pale)">🩺</span> Peran Dokter Layanan Primer</div>
+    <ul class="sl">
+      <li><strong>Identifikasi</strong>: jadikan status merokok sebagai "tanda vital" ke-6 dan <strong>dokumentasikan di rekam medis</strong> (juga tuntutan kompetensi SKDI 2026).</li>
+      <li><strong>Edukasi &amp; konseling</strong> dengan pendekatan motivational interviewing: non-judgmental, empatik, menghargai otonomi pasien.</li>
+      <li><strong>Terapi</strong>: konseling + farmakoterapi; evaluasi komorbid &amp; penyakit terkait rokok.</li>
+      <li><strong>Rujukan</strong> bila perlu (psikiater, pulmonolog, kardiolog, klinik UBM).</li>
+      <li><strong>Melibatkan keluarga</strong>: rumah bebas asap rokok, dukungan dari ayah (atau ayah ikut berhenti).</li>
+      <li><strong>Role model</strong>: dokter &amp; mahasiswa kedokteran sebaiknya tidak merokok.</li>
+      <li><strong>Komunitas &amp; kebijakan</strong>: promosi kesehatan, penyuluhan sekolah/kampus, dukungan KTR, pelaporan.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--lav-pale)">🌐</span> Kebijakan: WHO MPOWER</div>
+    <div class="g3">
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>M · Monitor</h4><p>Pantau penggunaan tembakau &amp; kebijakan</p></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>P · Protect</h4><p>Lindungi dari asap rokok (KTR)</p></div>
+      <div class="mc" style="border-top:3px solid var(--lav);"><h4>O · Offer</h4><p>Tawarkan bantuan berhenti</p></div>
+      <div class="mc" style="border-top:3px solid var(--green);"><h4>W · Warn</h4><p>Peringatkan bahaya (peringatan kesehatan bergambar)</p></div>
+      <div class="mc" style="border-top:3px solid var(--pink);"><h4>E · Enforce</h4><p>Larang iklan, promosi, sponsor</p></div>
+      <div class="mc" style="border-top:3px solid var(--blue);"><h4>R · Raise</h4><p>Naikkan pajak/cukai &amp; harga</p></div>
+    </div>
+    <div class="alert a-blue"><span class="ai">📜</span><div>Landasan hukum di Indonesia: <strong>UU 17/2023 tentang Kesehatan</strong> dan <strong>PP 28/2024</strong> (pengamanan zat adiktif/produk tembakau, kawasan tanpa rokok). Detail pasal &amp; status ratifikasi FCTC: ikuti materi dosen/sumber terbaru.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ci" style="background:var(--pink-pale)">📌</span> Rencana Tata Laksana Komprehensif Ardi</div>
+    <div class="tw"><table>
+      <tr><th>Aspek</th><th>Rencana</th></tr>
+      <tr><td><strong>Diagnosis</strong></td><td>Tobacco use disorder sedang–berat / F17.2; evaluasi batuk kronik (singkirkan TB)</td></tr>
+      <tr><td><strong>Pemeriksaan</strong></td><td>TTV, paru-jantung-mulut, MSE, FTND, PHQ-9/GAD-7, sputum TCM/BTA, foto toraks, spirometri bila perlu</td></tr>
+      <tr><td><strong>Non-farmakologis</strong></td><td>MI &amp; CBT; tanggal berhenti; identifikasi pemicu (setelah makan, belajar, stres); 4D; manajemen stres, tidur, pola makan, olahraga</td></tr>
+      <tr><td><strong>Farmakologis</strong></td><td>Varenicline atau kombinasi NRT (patch + permen karet/lozenge) sesuai ketersediaan &amp; riwayat; pertimbangkan kontraindikasi bupropion</td></tr>
+      <tr><td><strong>Keluarga/lingkungan</strong></td><td>Rumah bebas rokok; libatkan ayah (anjurkan tidak merokok di dalam rumah/berhenti); jauhi lingkaran perokok saat awal</td></tr>
+      <tr><td><strong>Follow-up</strong></td><td>1 minggu pasca tanggal berhenti, lalu 1 bulan; evaluasi withdrawal, efek samping, relaps</td></tr>
+      <tr><td><strong>Rujuk bila</strong></td><td>Komorbid psikiatri berat/ide bunuh diri, gagal terapi berulang, kondisi medis khusus (kardiovaskular tidak stabil)</td></tr>
+    </table></div>
+  </div>
+</div>
+
+<!-- ========== REFERENSI ========== -->
+<div id="sec-ref" class="section">
+  <div class="sh"><div class="lo-tag">REFERENSI</div><h2>Daftar Pustaka &amp; Catatan Sumber</h2><p>Sumber utama yang dipakai menyusun rangkuman ini.</p></div>
+  <div class="card">
+    <ul class="sl">
+      <li>American Psychiatric Association. <em>Diagnostic and Statistical Manual of Mental Disorders, 5th Edition, Text Revision (DSM-5-TR)</em>. Washington, DC: APA Publishing; 2022. (Substance-related and addictive disorders: tobacco use disorder, tobacco withdrawal)</li>
+      <li>World Health Organization. <em>ICD-10: Mental and Behavioural Disorders due to Psychoactive Substance Use (F10–F19)</em>; Kementerian Kesehatan RI. <em>PPDGJ-III</em>. ICD-11 blok 6C4A (gangguan akibat penggunaan nikotin).</li>
+      <li>Konsil Kesehatan Indonesia. <em>Keputusan Ketua KKI No. HK.01.02/KKI/1291/2026 tentang Standar Kompetensi Dokter</em> (SKDI 2026): kompetensi edukasi &amp; konseling perilaku sehat (berhenti merokok, motivational interviewing).</li>
+      <li>World Health Organization. <em>Tobacco: Fact Sheet</em> (data global pengguna &amp; kematian akibat tembakau).</li>
+      <li>Kementerian Kesehatan RI &amp; WHO. <em>Global Adult Tobacco Survey (GATS) Indonesia 2021</em>. Jakarta; 2024. · Kementerian Kesehatan RI. <em>Riskesdas 2018</em>.</li>
+      <li>Benowitz NL. Nicotine addiction. <em>N Engl J Med</em>. 2010;362:2295–303.</li>
+      <li>Koob GF, Volkow ND. Neurobiology of addiction: a neurocircuitry analysis. <em>Lancet Psychiatry</em>. 2016;3:760–73.</li>
+      <li>Heatherton TF, et al. The Fagerström Test for Nicotine Dependence: a revision of the Fagerström Tolerance Questionnaire. <em>Br J Addict</em>. 1991;86:1119–27.</li>
+      <li>Fiore MC, et al. <em>Treating Tobacco Use and Dependence: 2008 Update</em>. Clinical Practice Guideline. US Department of Health and Human Services (5A/5R). · Cochrane Tobacco Addiction Group: tinjauan sistematis tentang NRT, varenicline, bupropion, dan konseling.</li>
+      <li>Anthenelli RM, et al. Neuropsychiatric safety and efficacy of varenicline, bupropion, and nicotine patch in smokers with and without psychiatric disorders (EAGLES). <em>Lancet</em>. 2016;387:2507–20.</li>
+      <li>Taylor G, et al. Change in mental health after smoking cessation: systematic review and meta-analysis. <em>BMJ</em>. 2014;348:g1151.</li>
+      <li>Doll R, Peto R, Boreham J, Sutherland I. Mortality in relation to smoking: 50 years' observations on male British doctors. <em>BMJ</em>. 2004;328:1519.</li>
+      <li>Anthony JC, Warner LA, Kessler RC. Comparative epidemiology of dependence on tobacco, alcohol, controlled substances, and inhalants. <em>Exp Clin Psychopharmacol</em>. 1994;2:244–68.</li>
+    </ul>
+    <div class="alert a-blue" style="margin-top:14px;"><span class="ai">ℹ️</span><div><strong>Catatan:</strong> angka epidemiologi Indonesia/global dari GATS 2021 &amp; WHO. Sumber lain (kriteria diagnostik, dosis obat, mekanisme) berasal dari pustaka standar di atas; cut-off FTND &amp; dosis dapat sedikit berbeda antar pedoman, jadi sesuaikan dengan materi dosen. Buku <em>Fish's Clinical Psychopathology</em> di project tidak membahas nikotin, sehingga tidak dipakai di rangkuman ini.</div></div>
+  </div>
+</div>
+
+
+<!-- ========== QUIZ ========== -->
+<div id="sec-quiz" class="section">
+  <div class="sh"><div class="lo-tag">KUIS</div><h2>Latihan Soal — Cek Pemahamanmu</h2><p>15 soal vignette mencakup LO1&ndash;LO15. Jawab semua untuk melihat skor akhir!</p></div>
+  <div class="q-prog"><span class="pdot" id="pd0"></span><span class="pdot" id="pd1"></span><span class="pdot" id="pd2"></span><span class="pdot" id="pd3"></span><span class="pdot" id="pd4"></span><span class="pdot" id="pd5"></span><span class="pdot" id="pd6"></span><span class="pdot" id="pd7"></span><span class="pdot" id="pd8"></span><span class="pdot" id="pd9"></span><span class="pdot" id="pd10"></span><span class="pdot" id="pd11"></span><span class="pdot" id="pd12"></span><span class="pdot" id="pd13"></span><span class="pdot" id="pd14"></span><span class="q-prog-lbl" id="prog-lbl">0/15 dijawab</span></div>
+  <div class="q-wrap" id="q0">
+    <div class="q-num">Q1</div>
+    <div class="q-badge">LO1 · Habit → Adiksi</div>
+    <div class="q-vig">Seorang mahasiswa 19 tahun mulai merokok setahun lalu saat berkumpul dengan teman karena merasa senang dan rileks. Kini ia merokok segera setelah bangun tidur agar tidak gelisah dan mudah marah, dan tetap merokok walau sudah batuk-batuk.</div>
+    <div class="q-q">Proses yang paling menjelaskan perubahan motivasi merokoknya adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(0,0,1)"><span class="ol">a</span> Positive reinforcement semata dari sensasi menyenangkan</button>
+      <button class="q-opt" onclick="ans(0,1,1)"><span class="ol">b</span> Negative reinforcement: merokok untuk menghindari gejala putus nikotin</button>
+      <button class="q-opt" onclick="ans(0,2,1)"><span class="ol">c</span> Extinction perilaku merokok</button>
+      <button class="q-opt" onclick="ans(0,3,1)"><span class="ol">d</span> Learned helplessness</button>
+      <button class="q-opt" onclick="ans(0,4,1)"><span class="ol">e</span> Habituasi terhadap iklan rokok</button>
+    </div>
+    <div class="q-exp" id="exp0"><strong>✅ Jawaban: Negative reinforcement.</strong><br>Motivasi bergeser dari <em>mencari senang</em> (positive reinforcement) menjadi <em>menghindari rasa tidak enak saat putus nikotin</em> (negative reinforcement), disertai pembentukan habit dan kehilangan kontrol (LO1).</div>
+  </div>
+  <div class="q-wrap" id="q1">
+    <div class="q-num">Q2</div>
+    <div class="q-badge">LO2 · Tembakau & TUD</div>
+    <div class="q-vig">Seorang laki-laki 45 tahun merokok 20 batang per hari selama 25 tahun.</div>
+    <div class="q-q">Berapa Indeks Brinkman dan kategorinya?</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(1,0,2)"><span class="ol">a</span> 125 → ringan</button>
+      <button class="q-opt" onclick="ans(1,1,2)"><span class="ol">b</span> 250 → sedang</button>
+      <button class="q-opt" onclick="ans(1,2,2)"><span class="ol">c</span> 500 → sedang</button>
+      <button class="q-opt" onclick="ans(1,3,2)"><span class="ol">d</span> 500 → berat</button>
+      <button class="q-opt" onclick="ans(1,4,2)"><span class="ol">e</span> 625 → berat</button>
+    </div>
+    <div class="q-exp" id="exp1"><strong>✅ Jawaban: 500 → sedang.</strong><br>Indeks Brinkman = batang/hari × lama merokok (tahun) = 20 × 25 = <strong>500</strong>. Kategori: ringan 0–199, <strong>sedang 200–599</strong>, berat ≥ 600 (LO2).</div>
+  </div>
+  <div class="q-wrap" id="q2">
+    <div class="q-num">Q3</div>
+    <div class="q-badge">LO3 · Definisi & Klasifikasi</div>
+    <div class="q-vig">Seorang perempuan 30 tahun selama 12 bulan terakhir memiliki dorongan kuat untuk merokok, sulit mengendalikan jumlahnya, dan membutuhkan jumlah yang makin banyak untuk efek yang sama. Tidak ada gejala psikotik.</div>
+    <div class="q-q">Kode ICD-10 (PPDGJ-III) yang paling tepat adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(2,0,3)"><span class="ol">a</span> F17.1 — penggunaan yang merugikan</button>
+      <button class="q-opt" onclick="ans(2,1,3)"><span class="ol">b</span> F17.3 — keadaan putus zat</button>
+      <button class="q-opt" onclick="ans(2,2,3)"><span class="ol">c</span> F17.0 — intoksikasi akut</button>
+      <button class="q-opt" onclick="ans(2,3,3)"><span class="ol">d</span> F17.2 — sindrom ketergantungan</button>
+      <button class="q-opt" onclick="ans(2,4,3)"><span class="ol">e</span> F17.4 — putus zat dengan delirium</button>
+    </div>
+    <div class="q-exp" id="exp2"><strong>✅ Jawaban: F17.2.</strong><br>Ketergantungan ditegakkan bila ≥ 3 dari 6 kriteria (craving, kehilangan kontrol, toleransi, withdrawal, mengabaikan minat lain, terus merokok meski merugikan) dalam 12 bulan. Pasien memenuhi craving, kehilangan kontrol, dan toleransi (LO3, LO9).</div>
+  </div>
+  <div class="q-wrap" id="q3">
+    <div class="q-num">Q4</div>
+    <div class="q-badge">LO4 · Etiologi</div>
+    <div class="q-vig">Seorang siswa SMA 15 tahun mulai mencoba merokok. Ayah dan kakaknya perokok, dan sebagian besar teman sekelompoknya merokok.</div>
+    <div class="q-q">Faktor risiko inisiasi merokok yang paling sesuai dengan vignette adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(3,0,4)"><span class="ol">a</span> Metabolisme nikotin lambat (CYP2A6 lambat)</button>
+      <button class="q-opt" onclick="ans(3,1,4)"><span class="ol">b</span> Tidak adanya paparan iklan rokok</button>
+      <button class="q-opt" onclick="ans(3,2,4)"><span class="ol">c</span> Skor kecemasan yang sangat rendah</button>
+      <button class="q-opt" onclick="ans(3,3,4)"><span class="ol">d</span> Usia di atas 30 tahun</button>
+      <button class="q-opt" onclick="ans(3,4,4)"><span class="ol">e</span> Teman sebaya dan anggota keluarga perokok (pengaruh sosial/modeling)</button>
+    </div>
+    <div class="q-exp" id="exp3"><strong>✅ Jawaban: pengaruh teman sebaya &amp; keluarga perokok.</strong><br>Inisiasi pada remaja terutama dipengaruhi faktor sosial (peer, modeling orang tua/saudara), selain stres &amp; akses mudah. CYP2A6 lambat justru melindungi (merokok lebih sedikit) (LO4).</div>
+  </div>
+  <div class="q-wrap" id="q4">
+    <div class="q-num">Q5</div>
+    <div class="q-badge">LO5 · Epidemiologi</div>
+    <div class="q-vig">Seorang dokter Puskesmas menyiapkan penyuluhan tentang pola merokok di Indonesia berdasarkan Global Adult Tobacco Survey (GATS) 2021.</div>
+    <div class="q-q">Pernyataan yang paling tepat adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(4,0,0)"><span class="ol">a</span> Sekitar sepertiga dewasa menggunakan tembakau, dan prevalensi pada laki-laki jauh lebih tinggi daripada perempuan</button>
+      <button class="q-opt" onclick="ans(4,1,0)"><span class="ol">b</span> Prevalensi pada perempuan lebih tinggi daripada laki-laki</button>
+      <button class="q-opt" onclick="ans(4,2,0)"><span class="ol">c</span> Penggunaan rokok elektronik menurun dibanding 2011</button>
+      <button class="q-opt" onclick="ans(4,3,0)"><span class="ol">d</span> Hanya sekitar 5% dewasa menggunakan tembakau</button>
+      <button class="q-opt" onclick="ans(4,4,0)"><span class="ol">e</span> Paparan asap rokok di tempat makan sangat jarang</button>
+    </div>
+    <div class="q-exp" id="exp4"><strong>✅ Jawaban: ± sepertiga dewasa, dominan laki-laki.</strong><br>GATS 2021: pengguna tembakau ± 34,5% (± 70,2 juta); laki-laki 65,5% vs perempuan 3,3%. Rokok elektronik naik dari 0,3% (2011) menjadi 3%; paparan asap di tempat makan 74,2% (LO5).</div>
+  </div>
+  <div class="q-wrap" id="q5">
+    <div class="q-num">Q6</div>
+    <div class="q-badge">LO6 · Neurobiologi</div>
+    <div class="q-vig">Seorang peneliti menjelaskan mengapa rokok memberi rasa senang dalam hitungan detik setelah dihisap.</div>
+    <div class="q-q">Mekanisme neurobiologis utama efek rewarding nikotin adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(5,0,2)"><span class="ol">a</span> Blokade reseptor D2 di korteks prefrontal</button>
+      <button class="q-opt" onclick="ans(5,1,2)"><span class="ol">b</span> Peningkatan GABA di nukleus akumbens</button>
+      <button class="q-opt" onclick="ans(5,2,2)"><span class="ol">c</span> Pengikatan nikotin pada nAChR α4β2 di VTA sehingga dopamin meningkat di nukleus akumbens</button>
+      <button class="q-opt" onclick="ans(5,3,2)"><span class="ol">d</span> Penghambatan reseptor mu-opioid di VTA</button>
+      <button class="q-opt" onclick="ans(5,4,2)"><span class="ol">e</span> Penurunan pelepasan asetilkolin di hipokampus</button>
+    </div>
+    <div class="q-exp" id="exp5"><strong>✅ Jawaban: nAChR α4β2 di VTA → ↑ dopamin di nukleus akumbens.</strong><br>Jalur mesolimbik (VTA → NAc) adalah inti sistem reward. Nikotin mengaktifkan neuron dopamin VTA langsung dan lewat ↑ glutamat/↓ inhibisi GABA (LO6).</div>
+  </div>
+  <div class="q-wrap" id="q6">
+    <div class="q-num">Q7</div>
+    <div class="q-badge">LO7 · Craving & Withdrawal</div>
+    <div class="q-vig">Seorang laki-laki 28 tahun berhenti merokok mendadak 3 hari lalu dan mengeluh iritabel, cemas, sulit konsentrasi, nafsu makan meningkat, dan sulit tidur, serta sangat ingin merokok.</div>
+    <div class="q-q">Manakah yang BUKAN termasuk kriteria withdrawal tembakau menurut DSM-5?</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(6,0,3)"><span class="ol">a</span> Iritabilitas</button>
+      <button class="q-opt" onclick="ans(6,1,3)"><span class="ol">b</span> Sulit berkonsentrasi</button>
+      <button class="q-opt" onclick="ans(6,2,3)"><span class="ol">c</span> Peningkatan nafsu makan</button>
+      <button class="q-opt" onclick="ans(6,3,3)"><span class="ol">d</span> Craving (keinginan kuat merokok)</button>
+      <button class="q-opt" onclick="ans(6,4,3)"><span class="ol">e</span> Insomnia</button>
+    </div>
+    <div class="q-exp" id="exp6"><strong>✅ Jawaban: craving.</strong><br>Tujuh gejala withdrawal DSM-5: iritabilitas, cemas, sulit konsentrasi, nafsu makan ↑, gelisah, mood depresif, insomnia (butuh ≥ 4). Craving adalah kriteria TUD (kriteria 4) tetapi bukan salah satu dari 7 gejala withdrawal (LO7, LO9).</div>
+  </div>
+  <div class="q-wrap" id="q7">
+    <div class="q-num">Q8</div>
+    <div class="q-badge">LO8 · Manifestasi Klinis</div>
+    <div class="q-vig">Empat pasien perokok datang ke poliklinik.</div>
+    <div class="q-q">Pasien mana yang paling menunjukkan ketergantungan nikotin berat?</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(7,0,1)"><span class="ol">a</span> Merokok hanya saat berkumpul dengan teman di akhir pekan</button>
+      <button class="q-opt" onclick="ans(7,1,1)"><span class="ol">b</span> Merokok dalam 5 menit setelah bangun dan tetap merokok walau sedang sakit</button>
+      <button class="q-opt" onclick="ans(7,2,1)"><span class="ol">c</span> Merokok 2 batang per hari tanpa dorongan khusus</button>
+      <button class="q-opt" onclick="ans(7,3,1)"><span class="ol">d</span> Batuk saat flu tetapi tidak merokok sama sekali</button>
+      <button class="q-opt" onclick="ans(7,4,1)"><span class="ol">e</span> Membeli rokok batangan karena uang terbatas</button>
+    </div>
+    <div class="q-exp" id="exp7"><strong>✅ Jawaban: rokok pertama ≤ 5 menit setelah bangun + tetap merokok saat sakit.</strong><br>Keduanya adalah item FTND yang menandai ketergantungan fisik tinggi (waktu rokok pertama dan merokok meski sakit) (LO8, LO9).</div>
+  </div>
+  <div class="q-wrap" id="q8">
+    <div class="q-num">Q9</div>
+    <div class="q-badge">LO9 · Diagnosis</div>
+    <div class="q-vig">Seorang laki-laki 21 tahun memenuhi lima kriteria DSM-5: craving, toleransi, withdrawal, gagal berulang mengurangi rokok, dan tetap merokok meski tahu merusak kesehatannya.</div>
+    <div class="q-q">Derajat tobacco use disorder yang paling tepat adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(8,0,1)"><span class="ol">a</span> Ringan</button>
+      <button class="q-opt" onclick="ans(8,1,1)"><span class="ol">b</span> Sedang</button>
+      <button class="q-opt" onclick="ans(8,2,1)"><span class="ol">c</span> Berat</button>
+      <button class="q-opt" onclick="ans(8,3,1)"><span class="ol">d</span> Remisi dini</button>
+      <button class="q-opt" onclick="ans(8,4,1)"><span class="ol">e</span> Remisi menetap</button>
+    </div>
+    <div class="q-exp" id="exp8"><strong>✅ Jawaban: sedang.</strong><br>DSM-5-TR: ringan 2–3 kriteria, <strong>sedang 4–5</strong>, berat ≥ 6 (LO3, LO9).</div>
+  </div>
+  <div class="q-wrap" id="q9">
+    <div class="q-num">Q10</div>
+    <div class="q-badge">LO10 · MSE</div>
+    <div class="q-vig">Seorang mahasiswa perokok mengatakan tidak pernah mendengar suara-suara tanpa wujud dan tidak memiliki keyakinan yang aneh. Ia mengetahui rokok merusak kesehatannya dan meminta bantuan berhenti. Proses pikirnya koheren.</div>
+    <div class="q-q">Kesimpulan MSE yang paling tepat adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(9,0,0)"><span class="ol">a</span> Persepsi dan isi pikir tidak terganggu; tilikan baik</button>
+      <button class="q-opt" onclick="ans(9,1,0)"><span class="ol">b</span> Gangguan psikotik dengan halusinasi auditorik</button>
+      <button class="q-opt" onclick="ans(9,2,0)"><span class="ol">c</span> Tilikan derajat 1 (menyangkal total)</button>
+      <button class="q-opt" onclick="ans(9,3,0)"><span class="ol">d</span> Waham kejar menetap</button>
+      <button class="q-opt" onclick="ans(9,4,0)"><span class="ol">e</span> Afek tumpul dengan proses pikir inkoheren</button>
+    </div>
+    <div class="q-exp" id="exp9"><strong>✅ Jawaban: persepsi &amp; isi pikir normal, tilikan baik.</strong><br>Tidak ada halusinasi/waham, proses pikir koheren, dan pasien sadar masalah serta ingin berubah (tilikan intelektual-baik). MSE penting untuk menyingkirkan komorbid psikiatri (LO10).</div>
+  </div>
+  <div class="q-wrap" id="q10">
+    <div class="q-num">Q11</div>
+    <div class="q-badge">LO11 · Faktor Psikologis</div>
+    <div class="q-vig">Seorang mahasiswa berkata, "Rokok menenangkan saya saat ujian." Ia merasa gelisah bila sudah beberapa jam tidak merokok.</div>
+    <div class="q-q">Penjelasan psikologis yang paling tepat adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(10,0,2)"><span class="ol">a</span> Nikotin menurunkan stres baseline secara permanen</button>
+      <button class="q-opt" onclick="ans(10,1,2)"><span class="ol">b</span> Rokok menyelesaikan stresor akademik</button>
+      <button class="q-opt" onclick="ans(10,2,2)"><span class="ol">c</span> Rokok meredakan gejala putus nikotin sehingga terasa menenangkan (negative reinforcement)</button>
+      <button class="q-opt" onclick="ans(10,3,2)"><span class="ol">d</span> Efek plasebo murni tanpa mekanisme neurobiologis</button>
+      <button class="q-opt" onclick="ans(10,4,2)"><span class="ol">e</span> Rokok menurunkan kortisol kronik</button>
+    </div>
+    <div class="q-exp" id="exp10"><strong>✅ Jawaban: negative reinforcement.</strong><br>Rasa tenang terutama karena gejala putus nikotin hilang; stres baseline perokok umumnya lebih tinggi, dan berhenti merokok terkait penurunan cemas/depresi/stres (LO11).</div>
+  </div>
+  <div class="q-wrap" id="q11">
+    <div class="q-num">Q12</div>
+    <div class="q-badge">LO12 · Dampak Kesehatan</div>
+    <div class="q-vig">Seorang perempuan 26 tahun hamil 12 minggu masih merokok 10 batang/hari dan bertanya tentang risiko bagi bayinya.</div>
+    <div class="q-q">Risiko yang paling berkaitan dengan merokok selama kehamilan adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(11,0,1)"><span class="ol">a</span> Bayi makrosomia</button>
+      <button class="q-opt" onclick="ans(11,1,1)"><span class="ol">b</span> Berat badan lahir rendah dan persalinan prematur</button>
+      <button class="q-opt" onclick="ans(11,2,1)"><span class="ol">c</span> Atresia ani</button>
+      <button class="q-opt" onclick="ans(11,3,1)"><span class="ol">d</span> Kehamilan lewat bulan (post-term)</button>
+      <button class="q-opt" onclick="ans(11,4,1)"><span class="ol">e</span> Penutupan duktus arteriosus dini</button>
+    </div>
+    <div class="q-exp" id="exp11"><strong>✅ Jawaban: BBLR dan persalinan prematur.</strong><br>Merokok saat hamil meningkatkan risiko abortus, BBLR, persalinan prematur, plasenta previa/solusio, dan SIDS (LO12).</div>
+  </div>
+  <div class="q-wrap" id="q12">
+    <div class="q-num">Q13</div>
+    <div class="q-badge">LO13 · Diagnosis Banding</div>
+    <div class="q-vig">Seorang laki-laki 21 tahun perokok ± 5 pack-year datang dengan batuk 3 bulan, berat badan turun 3 kg, keringat malam, dan mudah lelah.</div>
+    <div class="q-q">Langkah paling tepat sebelum menyimpulkan keluhan ini akibat rokok adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(12,0,2)"><span class="ol">a</span> Beri terapi pengganti nikotin dan pulang</button>
+      <button class="q-opt" onclick="ans(12,1,2)"><span class="ol">b</span> Beri antitusif dan observasi 1 bulan</button>
+      <button class="q-opt" onclick="ans(12,2,2)"><span class="ol">c</span> Pemeriksaan dahak (TCM/BTA) dan foto toraks untuk menyingkirkan TB</button>
+      <button class="q-opt" onclick="ans(12,3,2)"><span class="ol">d</span> Spirometri saja</button>
+      <button class="q-opt" onclick="ans(12,4,2)"><span class="ol">e</span> Rujuk psikiater</button>
+    </div>
+    <div class="q-exp" id="exp12"><strong>✅ Jawaban: dahak TCM/BTA + foto toraks.</strong><br>Batuk ≥ 2 minggu dengan gejala konstitusional (BB turun, keringat malam) = suspek TB di Indonesia. Usia 21 th dengan 5 pack-year tidak cukup menjelaskan PPOK. Singkirkan TB dulu, kerjakan konseling berhenti merokok paralel (LO13).</div>
+  </div>
+  <div class="q-wrap" id="q13">
+    <div class="q-num">Q14</div>
+    <div class="q-badge">LO14 · Terapi Berhenti</div>
+    <div class="q-vig">Seorang laki-laki 30 tahun ingin berhenti merokok. Dua tahun lalu ia pernah mengalami satu kali kejang tanpa demam.</div>
+    <div class="q-q">Obat yang dikontraindikasikan pada pasien ini adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(13,0,3)"><span class="ol">a</span> Patch nikotin</button>
+      <button class="q-opt" onclick="ans(13,1,3)"><span class="ol">b</span> Varenicline</button>
+      <button class="q-opt" onclick="ans(13,2,3)"><span class="ol">c</span> Permen karet nikotin</button>
+      <button class="q-opt" onclick="ans(13,3,3)"><span class="ol">d</span> Bupropion</button>
+      <button class="q-opt" onclick="ans(13,4,3)"><span class="ol">e</span> Konseling motivasional</button>
+    </div>
+    <div class="q-exp" id="exp13"><strong>✅ Jawaban: bupropion.</strong><br>Bupropion menurunkan ambang kejang, sehingga dikontraindikasikan pada riwayat kejang, gangguan makan, putus alkohol/benzodiazepin mendadak, dan pemakaian MAOI. NRT dan varenicline dapat dipertimbangkan (LO14).</div>
+  </div>
+  <div class="q-wrap" id="q14">
+    <div class="q-num">Q15</div>
+    <div class="q-badge">LO15 · Peran Tenaga Kesehatan</div>
+    <div class="q-vig">Seorang dokter layanan primer menemui perokok yang mengatakan belum ingin berhenti merokok.</div>
+    <div class="q-q">Pendekatan yang paling tepat adalah...</div>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(14,0,4)"><span class="ol">a</span> Abaikan agar tidak menyinggung pasien</button>
+      <button class="q-opt" onclick="ans(14,1,4)"><span class="ol">b</span> Langsung resepkan varenicline</button>
+      <button class="q-opt" onclick="ans(14,2,4)"><span class="ol">c</span> Tolak mengobati keluhan lain sampai ia berhenti</button>
+      <button class="q-opt" onclick="ans(14,3,4)"><span class="ol">d</span> Berikan 5A lengkap dengan tanggal berhenti</button>
+      <button class="q-opt" onclick="ans(14,4,4)"><span class="ol">e</span> Terapkan 5R dan ulangi pada setiap kunjungan</button>
+    </div>
+    <div class="q-exp" id="exp14"><strong>✅ Jawaban: 5R (Relevance, Risks, Rewards, Roadblocks, Repetition).</strong><br>5A untuk pasien yang bersedia berhenti; 5R untuk yang belum. Pendekatan non-judgmental (MI) dan pengulangan di setiap kunjungan meningkatkan peluang motivasi (LO14, LO15).</div>
+  </div>
+  <div class="score-box" id="scorebox">
+    <div>Nilai Kamu 🎉</div>
+    <div class="sc-big" id="score-num">0/15</div>
+    <div class="sc-msg" id="score-msg"></div>
+    <button class="btn-restart" onclick="restartQuiz()">🔄 Ulangi Latihan</button>
+  </div>
+</div>
+
+</div><!-- end wrap -->
+
+<script>
+// ========= NAVIGATION =========
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+  document.getElementById('sec-' + id).classList.add('on');
+  document.querySelectorAll('.nb').forEach(b => {
+    const oc = b.getAttribute('onclick');
+    if (oc && oc.includes("'" + id + "'")) {
+      b.classList.add('on');
+      b.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+    }
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ========= COLLAPSIBLE & ACCORDION =========
+function toggleCol(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+function toggleAcc(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.acc-btn').forEach(b => {
+    if (b.nextElementSibling && b.nextElementSibling.classList.contains('open')) b.classList.add('open');
+  });
+});
+
+// ========= QUIZ =========
+const TOTAL_Q = 15;
+let answered = new Array(TOTAL_Q).fill(false);
+let totalAnswered = 0;
+let totalCorrect = 0;
+
+function ans(qIdx, optIdx, correctIdx) {
+  if (answered[qIdx]) return;
+  answered[qIdx] = true;
+  totalAnswered++;
+  const opts = document.getElementById('q' + qIdx).querySelectorAll('.q-opt');
+  opts.forEach(o => o.disabled = true);
+  if (optIdx === correctIdx) {
+    opts[optIdx].classList.add('correct');
+    totalCorrect++;
+    document.getElementById('pd' + qIdx).classList.add('ok');
+  } else {
+    opts[optIdx].classList.add('wrong');
+    opts[correctIdx].classList.add('correct');
+    document.getElementById('pd' + qIdx).classList.add('no');
+  }
+  document.getElementById('exp' + qIdx).classList.add('show');
+  document.getElementById('prog-lbl').textContent = totalAnswered + '/' + TOTAL_Q + ' dijawab';
+  if (totalAnswered === TOTAL_Q) showScore();
+}
+
+function showScore() {
+  const box = document.getElementById('scorebox');
+  box.classList.add('show');
+  document.getElementById('score-num').textContent = totalCorrect + '/' + TOTAL_Q;
+  const pct = Math.round((totalCorrect / TOTAL_Q) * 100);
+  let msg;
+  if (pct >= 90) msg = '🏆 Luar biasa! Kamu siap ujian!';
+  else if (pct >= 75) msg = '💪 Bagus! Tinggal poles yang masih salah.';
+  else if (pct >= 60) msg = '📚 Cukup baik, review LO yang masih salah ya!';
+  else msg = '🔄 Yuk baca ulang materi LO-nya dan coba lagi!';
+  document.getElementById('score-msg').textContent = msg + ' (' + pct + '%)';
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+
+function restartQuiz() {
+  answered = new Array(TOTAL_Q).fill(false);
+  totalAnswered = 0;
+  totalCorrect = 0;
+  document.getElementById('prog-lbl').textContent = '0/' + TOTAL_Q + ' dijawab';
+  document.getElementById('scorebox').classList.remove('show');
+  for (let i = 0; i < TOTAL_Q; i++) {
+    document.getElementById('pd' + i).className = 'pdot';
+    document.getElementById('q' + i).querySelectorAll('.q-opt').forEach(o => { o.disabled = false; o.className = 'q-opt'; });
+    document.getElementById('exp' + i).classList.remove('show');
+  }
+  window.scrollTo({ top: document.getElementById('sec-quiz').offsetTop - 80, behavior: 'smooth' });
+}
+
+</script>
+</body>
+</html>

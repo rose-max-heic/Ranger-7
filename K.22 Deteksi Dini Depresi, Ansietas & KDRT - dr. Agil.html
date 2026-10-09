@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>🧠 Deteksi Depresi, Ansietas & KDRT — dr. Agil Priambodo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lavender: #8DB4E2;
+  --lavender-light: #B3CFEE;
+  --lavender-pale: #E8F1FB;
+  --lavender-deep: #3C5F8F;
+  --lavender-muted: #5C82B5;
+  --rose: #D4788A;
+  --rose-light: #E89BAA;
+  --rose-pale: #FDE8EC;
+  --rose-deep: #A84D60;
+  --mint: #7BBFA8;
+  --mint-pale: #E4F5F0;
+  --mint-deep: #3D8B73;
+  --peach: #D4AF6A;
+  --peach-pale: #FBF4E3;
+  --peach-deep: #8E6B1F;
+  --sky: #7AAFCF;
+  --sky-pale: #E4F1FA;
+  --sky-deep: #3A7A9A;
+  --cream: #F7FAFE;
+  --white: #ffffff;
+  --text: #1F2D40;
+  --text-muted: #5A6B80;
+  --border: #D5E2F2;
+  --shadow: rgba(141,180,226,0.15);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #2C4A75 0%, #5C82B5 45%, #9DBCE3 75%, #D9BC7E 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.06);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(212,175,106,0.18);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#F3E3B8; }
+.hero-sub { color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:300;max-width:580px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#2C4A75,#4A6E9F);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(44,74,117,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(215,230,250,0.75);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#E8F1FB;border-bottom-color:#D4AF6A;
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(141,180,226,0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(141,180,226,0.15);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--lavender-pale),#FFF9EC);
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Agil menekankan: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--lavender-deep),var(--lavender-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#F7FAFE;}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--peach-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(141,180,226,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--peach-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--peach-pale);border-color:var(--peach);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--peach-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:#2C4A75;color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(141,180,226,0.25);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--lavender-deep),var(--peach-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--peach-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(141,180,226,0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#2C4A75,#5C82B5,#D4AF6A);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#E8F1FB;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--lavender-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, #2A0A3E, #4A1060);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid #C070E8;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(180,60,220,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #C070E8, #E89BAA, #C070E8);
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, #C070E8, #9B40C8);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-badge-warn {
+  background: linear-gradient(90deg, #E84060, #C02040);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+}
+.cohort-axon { background: rgba(141,180,226,0.35); }
+.cohort-arthron { background: rgba(212,120,138,0.35); }
+.cohort-aorta { background: rgba(123,191,168,0.35); }
+.cohort-anthelix { background: rgba(232,168,124,0.35); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.92);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: #E8D0FF; }
+.soal-dosen-content .hl-warn {
+  background: rgba(232,60,96,0.25);
+  border: 1px solid rgba(232,60,96,0.5);
+  color: #FFB0C0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,191,168,0.25);
+  border: 1px solid rgba(123,191,168,0.4);
+  color: #A0FFD8;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-keyword {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(192,112,232,0.2);
+  border: 1px solid rgba(192,112,232,0.4);
+  color: #E8C8FF;
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #4A1060, #C070E8);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(180,60,220,0.45);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(180,60,220,0.55); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #FFB0C0;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20,5,35,0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, #1A0A2E, #2E1050);
+  border: 2px solid #C070E8;
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(180,60,220,0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: #C070E8; border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(192,112,232,0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: #E8D0FF;
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.55); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(192,112,232,0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, #C070E8, #9B40C8);
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: #E8C8FF; font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #A0FFD8; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #C070E8, #9B40C8);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-eyebrow">🧠 Kedokteran Keluarga · Blok Psikiatri & Mental Health</div><h1>Deteksi Dini <em>Depresi, Ansietas</em> & KDRT oleh Keluarga</h1><p class="hero-sub">Pendekatan biopsikosial: keluarga sebagai observer utama, support system, sekaligus sumber stresor. Dari PPT & kuliah dr. Agil.</p><div class="hero-pills"><span class="pill">dr. Agil Priambodo, M.Biomed., Sp.KKLP</span><span class="pill">FK UMS</span><span class="pill">Layanan primer / FKTP</span></div></div><div class="sticky-nav" id="mainNav"><button class="nav-btn active" onclick="show('overview')">🧭 Overview</button><button class="nav-btn" onclick="show('dep')">🧠 Depresi & Ansietas</button><button class="nav-btn" onclick="show('asm')">📋 Asesmen & Tatalaksana</button><button class="nav-btn" onclick="show('kdrt')">🛡️ KDRT</button><button class="nav-btn" onclick="show('kom')">🗣️ Komunikasi & Caregiver</button><button class="nav-btn" onclick="show('quiz')">🧠 Quiz</button></div><div class="container"><div id="sec-overview" class="section active"><h2 class="section-heading">Overview</h2><p class="section-desc">Konsep dasar: mengapa keluarga penting.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧭</span>Pergeseran paradigma</div><div class="table-wrap"><table><tr><th></th><th>Paradigma lama</th><th>Kedokteran keluarga</th></tr><tr><td>Fokus</td><td>Penyakit / organ</td><td>Pasien utuh + sistem keluarga</td></tr><tr><td>Pendekatan</td><td>Kuratif, individual</td><td><b>Biopsikososial</b>, berbasis keluarga</td></tr><tr><td>Peran keluarga</td><td>Latar belakang</td><td><b>Observer</b>, support system, <i>sekaligus</i> sumber stresor</td></tr></table></div><div class="dr-note">Pasien dilihat sebagai manusia utuh (model <b>mandala</b>: individu di pusat, dipengaruhi faktor internal → lingkungan). Jangan terjebak di spesialisasi: <i>“the patient is the teacher”</i>. Layanan primer = fondasi sistem kesehatan (transformasi kesehatan Kemenkes).</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔍</span>Mengapa keluarga = detektor awal terbaik?</div><div class="grid-3"><div class="mini-card"><h4>Observasi longitudinal</h4><p>Punya <b>baseline</b> perilaku normal bertahun-tahun; perubahan kecil terlihat.</p></div><div class="mini-card"><h4>Akses konteks privat</h4><p>Insomnia, menangis sembunyi, menarik diri hanya tampak di rumah.</p></div><div class="mini-card"><h4>Kelompok rentan</h4><p>Caregiver penyakit kronis, lansia, ibu nifas.</p></div></div><div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Keluarga juga bisa jadi <b>sumber stresor / pelaku kekerasan</b> → verifikasi dengan wawancara pasien <b>terpisah & rahasia</b>.</div></div><div class="alert alert-sky"><span class="alert-icon">💡</span><div>Di kasus psikiatri pasien sering merasa “saya baik-baik saja” (insight kurang) → <b>aloanamnesis keluarga wajib untuk cross-check</b>.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎯</span>Tujuan pembelajaran</div><ul class="styled-list"><li>Menjelaskan peran keluarga dalam deteksi dini depresi, ansietas & KDRT di layanan primer</li><li>Memilih instrumen skrining tervalidasi di FKTP (PHQ-9, GAD-7, APGAR, HITS/WAST/SAFE)</li><li>Menerapkan prinsip anamnesis keluarga dalam praktik sehari-hari</li></ul></div></div><div id="sec-dep" class="section"><h2 class="section-heading">Deteksi Depresi & Ansietas</h2><p class="section-desc">Fase 1–2: pra-klinis di keluarga & kontak awal di FKTP.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👁️</span>Perbandingan laporan keluarga: Ansietas vs Depresi</div><div class="table-wrap"><table><tr><th>Aspek diamati</th><th>Ansietas</th><th>Depresi</th></tr><tr><td>Ekspresi emosi</td><td>Gelisah, tegang, mudah terkejut, tampak takut tanpa pencetus jelas</td><td>Murung, mudah menangis, <b>anhedonia</b> (hobi lama tak dinikmati)</td></tr><tr><td>Keluhan fisik</td><td>Berdebar, sesak, berkeringat, sering ke IGD (somatisasi)</td><td>Lelah kronis, nyeri menyeluruh, gangguan tidur & nafsu makan</td></tr><tr><td>Fungsi peran</td><td>Sulit konsentrasi, perfeksionis, menghindar</td><td>Menurun drastis: abai rumah, kerja, penampilan</td></tr><tr><td>Kelompok berisiko</td><td>Ibu hamil/nifas, remaja, caregiver beban tinggi</td><td>Caregiver kronis, lansia, <b>pasien penyakit kronis</b></td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚧</span>Mengapa deteksi di keluarga sering terlambat?</div><ul class="styled-list"><li><b>Stigma moral:</b> dianggap “kurang iman / kurang bersyukur”</li><li><b>Normalisasi:</b> “memang sifatnya”, “semua orang juga stres”, “namanya juga tua”</li><li><b>Caregiver burden:</b> keluarga abai kesehatan mental sendiri</li><li><b>Takut dicap gila</b> → memilih pengobatan alternatif</li></ul><div class="dr-note">Pasien kronis (DM, hipertensi, jantung, stroke, <b>terutama kanker</b>) berisiko depresi tinggi — pemicunya pikiran sendiri: “sembuh nggak ya? sampai kapan minum obat? ginjal/hati saya bagaimana?”. Awalnya sering terlewat karena dianggap wajar. <b>Peluang kita:</b> pasien yang takut ke psikiater mungkin tidak takut ke dokter keluarganya.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎭</span>Dua skenario kontak di FKTP</div><div class="compare-wrap"><div class="compare-col left"><h4>A · Keluarga membawa pasien</h4><div class="compare-row"><span>Keluhan</span><span>Somatik: nyeri kepala, dispepsia, insomnia</span></div><div class="compare-row"><span>Fisik/penunjang</span><span>Tidak sebanding kelainan organik</span></div><div class="compare-row"><span>Keluarga</span><span>Lapor perubahan perilaku di rumah</span></div></div><div class="compare-col right"><h4>B · Caregiver berobat sendiri</h4><div class="compare-row"><span>Keluhan</span><span>Keluhan fisik dirinya</span></div><div class="compare-row"><span>Anamnesis</span><span>Terungkap beban merawat kerabat sakit</span></div><div class="compare-row"><span>Diagnosis</span><span>Ia sendiri depresi/ansietas</span></div></div></div><div class="alert alert-peach"><span class="alert-icon">🧩</span><div>Contoh kuliah: pasien stroke berteriak tiap hari → <b>keluarga caregiver yang kewalahan</b> datang konsul. Keluarga = <b>satu sistem</b>; caregiver yang tertekan membuat pasien makin bermasalah.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🌙</span>Pola gejala tersembunyi</div><div class="alert alert-lavender"><span class="alert-icon">🔁</span><div>Remaja ceria tiba-tiba murung & mengurung diri; “susah tidur” ternyata ada pola (misal kecanduan film horor). <b>Gali lebih dalam</b>, jangan berhenti di keluhan permukaan.</div></div></div></div><div id="sec-asm" class="section"><h2 class="section-heading">Asesmen & Tatalaksana</h2><p class="section-desc">Fase 3–5: diagnosis, tatalaksana, rujukan.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧪</span>Singkirkan penyebab organik dulu</div><div class="grid-2"><div class="mini-card"><h4>Kondisi</h4><ul><li>Hiper/hipotiroid</li><li>Anemia berat</li><li>Gangguan elektrolit</li><li>Hipoglikemia / DM tak terkontrol</li><li>Penyakit jantung (aritmia, PJK)</li><li>Efek obat (steroid, interferon, stimulan)</li><li>Neurologis (stroke, epilepsi)</li></ul></div><div class="mini-card"><h4>Penunjang</h4><ul><li>Hb lengkap</li><li>TSH / fT4</li><li>Glukosa darah puasa</li><li>Elektrolit & fungsi ginjal</li><li>EKG bila keluhan jantung</li><li>Skrining zat/obat</li><li>Tes kehamilan (WUS)</li></ul></div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📋</span>Instrumen wajib di layanan primer</div><div class="compare-wrap"><div class="compare-col left"><h4>PHQ-9 · Depresi</h4><div class="compare-row"><span>Butir</span><span>9, skor 0–3</span></div><div class="compare-row"><span>Total</span><span>0–27, isi sendiri</span></div><div class="compare-row"><span>Cut-off</span><span><b>≥10</b> sedang–berat</span></div><div class="compare-row"><span>Butir 9</span><span>Ide bunuh diri → tanya langsung</span></div></div><div class="compare-col right"><h4>GAD-7 · Ansietas</h4><div class="compare-row"><span>Butir</span><span>7, skor 0–3</span></div><div class="compare-row"><span>Total</span><span>0–21</span></div><div class="compare-row"><span>Cut-off</span><span><b>≥10</b> bermakna klinis</span></div><div class="compare-row"><span>Ulang</span><span>Tiap 2–4 minggu</span></div></div></div><div class="dr-note">Simpan PHQ-9 & GAD-7 (versi Indonesia sudah tervalidasi) di HP, coba pada pasien rutin saat koas — hasilnya sering mengejutkan.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👪</span>Family APGAR & Genogram</div><div class="table-wrap"><table><tr><th>Huruf</th><th>Domain</th><th>Makna</th></tr><tr><td>A</td><td>Adaptation</td><td>Kemampuan keluarga menghadapi masalah</td></tr><tr><td>P</td><td>Partnership</td><td>Pembagian peran & keputusan</td></tr><tr><td>G</td><td>Growth</td><td>Ruang tumbuh anggota</td></tr><tr><td>A</td><td>Affection</td><td>Ekspresi kasih sayang</td></tr><tr><td>R</td><td>Resolve</td><td>Cara menyelesaikan konflik</td></tr></table></div><div class="alert alert-sky"><span class="alert-icon">🧬</span><div><b>Genogram ≥3 generasi:</b> struktur keluarga, penyakit menurun (riwayat depresi ibu → risiko anak ↑), hubungan emosional, peristiwa penting. APGAR rendah / genogram konflik = keluarga jadi <b>sumber stresor</b>.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💊</span>4 pilar tatalaksana (ringan–sedang, tanpa kedaruratan)</div><div class="table-wrap"><table><tr><th>Pilar</th><th>Isi</th></tr><tr><td>1 Psikoedukasi keluarga</td><td>Kondisi medis, bukan kelemahan moral; libatkan keluarga sebagai PMO</td></tr><tr><td>2 Non-farmakologis</td><td>Konseling dasar (CBT sederhana, behavioral activation), napas 4-7-8, relaksasi otot, sleep hygiene, aerobik 30 mnt 3–5×/mgg</td></tr><tr><td>3 Farmakologis</td><td><b>SSRI</b> (fluoksetin, sertralin) lini 1, mulai dosis rendah, efek penuh 4–6 mgg. Benzodiazepin <b>maks 2–4 mgg</b>, hindari pada lansia</td></tr><tr><td>4 Pencegahan keluarga</td><td>Remaja & dewasa muda</td></tr></table></div><div class="alert alert-peach"><span class="alert-icon">👀</span><div>Pantau: mual, insomnia awal, libido, <b>risiko bunuh diri di awal terapi remaja–dewasa muda</b>, interaksi obat.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚩</span>6 Red flags → rujuk psikiater</div><div class="cr-box"><div class="cr-label">Rujuk bila ada salah satu</div><ol class="cr-steps"><li><b>Risiko bunuh diri</b> (ideasi/rencana/percobaan) — kegawatdaruratan</li><li>Gejala <b>psikotik</b> (halusinasi/waham)</li><li>Derajat berat: menolak makan/minum, tak bisa self-care</li><li>Resisten terapi: tak membaik setelah <b>4–8 minggu</b> terapi optimal</li><li>Bipolar / komorbiditas kompleks</li><li>Bahaya bagi orang lain / agresi tak terkendali</li></ol></div><div class="alert alert-mint"><span class="alert-icon">🔄</span><div>Setelah merujuk tetap lakukan <b>rujuk balik</b>. Jangan lepas tangan.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗺️</span>Alur ringkas</div><div class="cr-box"><div class="cr-label">Depresi & ansietas</div><ol class="cr-steps"><li>Deteksi keluarga (observasi perilaku)</li><li>Kontak FKTP (aloanamnesis, empati, kerahasiaan)</li><li>Asesmen: singkirkan organik → PHQ-9, GAD-7, APGAR</li><li>Tatalaksana: psikoedukasi, non-farmako, farmako</li><li>Red flags → psikiater → rujuk balik</li></ol></div></div></div><div id="sec-kdrt" class="section"><h2 class="section-heading">Deteksi KDRT</h2><p class="section-desc">Lima fase dari deteksi hingga kolaborasi multisektoral.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👀</span>Tanda yang sering teramati & hambatannya</div><div class="grid-2"><div class="mini-card"><h4>Tanda</h4><ul><li>Cedera tak terjelaskan / alasan tak masuk akal</li><li>Menarik diri, pendiam, sangat takut</li><li>Dibatasi interaksi sosial oleh pasangan</li><li>Pasangan selalu mendampingi & mendominasi bicara</li><li>Gemetar/takut saat nama pasangan disebut</li></ul></div><div class="mini-card"><h4>Hambatan</h4><ul><li>Relasi kuasa tak seimbang</li><li>Takut ancaman (diri & anak)</li><li>Stigma “aib keluarga”</li><li>Ketergantungan ekonomi</li><li>Normalisasi</li></ul></div></div><div class="dr-note">Korban sering <b>menyembunyikan</b> — termasuk korban laki-laki (malu, takut dicap “suami takut istri”). Keluhan “hanya sakit kepala” + pipi tampak lebam tertutup bedak → dokter harus jeli seperti <b>detektif</b>: tanya pelan, arahkan, bila perlu pertanyaan mengarah. Jangan blak-blakan “Ibu dipukul?”.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🛡️</span>Tiga instrumen skrining (saat pasien <b>sendirian</b>)</div><div class="table-wrap"><table><tr><th>Alat</th><th>Isi</th><th>Catatan</th></tr><tr><td><b>HITS</b></td><td>Hurt · Insult · Threaten · Scream (4 butir, skor 0–12)</td><td>Positif ≥10 <span class="hl-peach">(banyak sumber: &gt;10)</span></td></tr><tr><td><b>WAST</b></td><td>Woman Abuse Screening Tool, 8 butir</td><td>Ketegangan relasi & kesulitan menyelesaikan masalah</td></tr><tr><td><b>SAFE</b></td><td>Stress/Safety · Afraid/Abused · Friends/Family · Emergency plan</td><td>4 domain, termasuk dukungan & rencana darurat</td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🏥</span>Tiga pilar tatalaksana awal</div><div class="grid-3"><div class="mini-card"><h4>1 · Intervensi medis</h4><p>Cegah cedera lebih parah: stabilisasi, rawat luka, analgesik, rujuk bila perlu.</p></div><div class="mini-card"><h4>2 · Dokumentasi objektif</h4><ul><li><b>Kutipan langsung</b> pasien</li><li><b>Body map</b> (lokasi, ukuran, jenis)</li><li>Foto + skala (informed consent)</li><li>Tanggal, jam, kronologi</li><li>Tanpa menghakimi; akses terbatas</li></ul></div><div class="mini-card"><h4>3 · Safety planning</h4><ul><li>Tempat berlindung, kontak darurat (Unit PPA)</li><li>Salinan KTP, akta nikah/lahir, rekening</li><li>Kode sinyal ke tetangga</li><li>Rencana anak; uang tunai & obat siap</li></ul></div></div><div class="alert alert-sky"><span class="alert-icon">🩺</span><div>Dokumentasi baik = bukti hukum kuat bila kelak ada permintaan medikolegal.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🏨</span>Kapan rujuk ke RS (FKRTL)?</div><div class="table-wrap"><table><tr><th>Indikasi</th><th>Alasan</th></tr><tr><td>Trauma berat: fraktur, cedera kepala, perdarahan dalam, syok</td><td>IGD RS, ambulans bila perlu</td></tr><tr><td>Kasus kompleks & <b>dugaan kekerasan seksual</b></td><td>Kapasitas forensik klinik, obgyn, psikiatri — <b>jangan tunda</b></td></tr><tr><td>Dampak psikologis berat: ide bunuh diri, reaksi stres akut, disosiasi</td><td>Asesmen psikiatri segera</td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚖️</span>Pelaporan & kolaborasi multisektoral</div><div class="alert alert-lavender"><span class="alert-icon">📄</span><div><b>Visum et Repertum</b> hanya dibuat atas <b>surat permintaan tertulis penyidik</b>. Dokter mengedukasi hak hukum, hormati otonomi; korban dewasa tidak dipaksa. Kasus <b>anak / ancaman nyawa</b>: dokter dapat melapor sesuai kewajiban perlindungan.</div></div><div class="grid-4"><div class="mini-card"><h4>Pekerja sosial</h4><p>Konseling, shelter, rehabilitasi</p></div><div class="mini-card"><h4>Polisi Unit PPA</h4><p>Pengamanan, penyidikan, VeR</p></div><div class="mini-card"><h4>LBH</h4><p>Pendampingan peradilan</p></div><div class="mini-card"><h4>RS & psikiater</h4><p>Forensik klinik, obgyn, psikiatri</p></div></div><div class="dr-note">Dokter keluarga = <b>jembatan</b>; NGO perlindungan korban bisa bantu safety planning.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗺️</span>Alur ringkas KDRT</div><div class="cr-box"><div class="cr-label">Lima fase</div><ol class="cr-steps"><li>Deteksi awal (keluarga & kader)</li><li>Skrining: HITS, WAST, SAFE</li><li>Tatalaksana: rawat luka, dokumentasi, safety planning</li><li>Rujuk RS (trauma berat / seksual)</li><li>Lapor & kolaborasi: VeR atas permintaan penyidik, PPA, LBH</li></ol></div></div></div><div id="sec-kom" class="section"><h2 class="section-heading">Komunikasi & Caregiver</h2><p class="section-desc">Poin lisan dr. Agil & teknik wawancara.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗣️</span>Teknik wawancara</div><div class="cr-box"><div class="cr-label">Aloanamnesis terarah</div><ol class="cr-steps"><li><b>Pisahkan</b> keluarga & pasien: mulai dengan keluarga (observasi), lalu minta keluarga keluar untuk info sensitif</li><li>Pertanyaan <b>terbuka & empatik</b>: “Apa yang membuat Ibu khawatir pada Bapak akhir-akhir ini?” — bukan “Apakah Bapak depresi?”</li><li>Jaga <b>kerahasiaan</b>; jelaskan batasnya (bahaya diri/orang lain dapat dilaporkan)</li><li>Pada dugaan KDRT: <b>jangan konfrontasi pelaku</b> di hadapannya</li></ol></div><div class="dr-note">Bila diwawancara bersamaan, pasien jadi defensif (“ah suami saya cuma capek”) dan penilaian kita ikut terpengaruh — itu alasan memisahkan.</div><div class="alert alert-rose"><span class="alert-icon">🚫</span><div>Jangan tanya “Mau dilaporkan atau tidak?” — jawabannya hampir pasti “jangan”. Bangun kepercayaan dulu, baru tanyakan langkah selanjutnya & siapa yang akan dihubungi/didampingi.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🤝</span>Caregiver: kapan perlu bantuan?</div><ul class="styled-list"><li>Nilai dulu apakah caregiver <b>mampu</b> (ada alatnya); keluarga idealnya konsul dokter keluarga <b>sebelum</b> menunjuk caregiver</li><li>Bekali: jadwal obat, makan & porsi, aktivitas, <b>tanda bahaya</b> & langkah A-B-C-D termasuk menghubungi dokter</li><li>“Asal ada yang menemani” ≠ caregiver; pengasuh bayaran tetap perlu diedukasi</li><li>Komentar medsos “wajar, namanya juga tua” = normalisasi; percayai <b>sumber ahli di bidangnya</b></li></ul><div class="alert alert-mint"><span class="alert-icon">💬</span><div>Pesan ke keluarga pasien kronis: bila ada tanda depresi / enggan berobat, <b>segera lapor dokter keluarga</b>. Minta pasien kronis datang <b>ditemani keluarga</b>; selipkan pesan walau hanya 5–10 menit.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">✅</span>Take-home messages</div><ul class="styled-list"><li>Deteksi = melindungi & memutus rantai penderitaan keluarga, bukan sekadar mencari diagnosis</li><li>Pasien bagian dari sistem keluarga: pendukung <i>atau</i> sumber stresor</li><li>Instrumen tepat, empatik tanpa menghakimi, utamakan keamanan, jembatani kolaborasi multisektoral</li><li>Lansia depresi butuh pendamping → selalu identifikasi siapa yang dipercaya pasien</li></ul></div></div><div id="sec-quiz" class="section"><h2 class="section-heading">🧠 Quiz</h2><p class="section-desc">10 soal — jawab untuk umpan balik instan.</p><div class="quiz-progress" id="quizProg"></div><div class="quiz-q" id="q1"><div class="q-num">SOAL 1</div><div class="q-question">Pria 45 th, DM 2 tahun, bosan minum obat, GDS tetap tinggi, murung, lelah, kehilangan minat bekerja. Istri bilang “sudah beda sejak setahun ini”. Langkah tepat?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">A</span>Beri kata-kata semangat lalu pulang</button><button class="q-opt" onclick="ans(this,'q1',true)"><span class="ol">B</span>Skrining PHQ-9 & libatkan istri (aloanamnesis)</button><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">C</span>Langsung rujuk psikiater</button><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">D</span>Resepkan benzodiazepin jangka panjang</button></div><div class="q-exp" id="exp-q1">✅ Pasien kronis berisiko depresi tinggi; skrining <b>PHQ-9</b> + aloanamnesis keluarga. Rujuk hanya bila red flag.</div></div><div class="quiz-q" id="q2"><div class="q-num">SOAL 2</div><div class="q-question">Skor PHQ-9 berapa yang menandakan depresi sedang–berat (cut-off)?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">A</span>≥5</button><button class="q-opt" onclick="ans(this,'q2',true)"><span class="ol">B</span>≥10</button><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">C</span>≥15</button><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">D</span>≥20</button></div><div class="q-exp" id="exp-q2">✅ Cut-off PHQ-9 dan GAD-7 sama-sama <b>≥10</b>.</div></div><div class="quiz-q" id="q3"><div class="q-num">SOAL 3</div><div class="q-question">Pada pengisian PHQ-9, butir yang wajib ditanyakan langsung karena bernilai kegawatan?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">A</span>Butir 1 (anhedonia)</button><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">B</span>Butir 3 (tidur)</button><button class="q-opt" onclick="ans(this,'q3',true)"><span class="ol">C</span>Butir 9 (ide bunuh diri)</button><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">D</span>Butir 7 (konsentrasi)</button></div><div class="q-exp" id="exp-q3">✅ Butir 9 = ide bunuh diri → red flag, rujuk psikiater.</div></div><div class="quiz-q" id="q4"><div class="q-num">SOAL 4</div><div class="q-question">Wanita 38 th ke puskesmas dengan nyeri kepala, tampak bedak tebal di pipi dengan lebam samar. Suami menunggu di ruang periksa. Sikap terbaik?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">A</span>Tanya langsung di depan suami “Ibu dipukul?”</button><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">B</span>Konfrontasi suami</button><button class="q-opt" onclick="ans(this,'q4',true)"><span class="ol">C</span>Wawancarai pasien <b>sendirian</b> dengan pertanyaan halus & empatik</button><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">D</span>Abaikan karena keluhan hanya nyeri kepala</button></div><div class="q-exp" id="exp-q4">✅ Skrining KDRT dilakukan saat pasien sendirian, tidak konfrontatif.</div></div><div class="quiz-q" id="q5"><div class="q-num">SOAL 5</div><div class="q-question">Alat skrining KDRT dengan komponen Hurt, Insult, Threaten, Scream?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">A</span>WAST</button><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">B</span>SAFE</button><button class="q-opt" onclick="ans(this,'q5',true)"><span class="ol">C</span>HITS</button><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">D</span>APGAR</button></div><div class="q-exp" id="exp-q5">✅ <b>HITS</b>: 4 pertanyaan, skor 0–12.</div></div><div class="quiz-q" id="q6"><div class="q-num">SOAL 6</div><div class="q-question">Dokumentasi luka KDRT yang benar?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">A</span>Menulis interpretasi dokter “diduga dipukul suami”</button><button class="q-opt" onclick="ans(this,'q6',true)"><span class="ol">B</span>Body map, kutipan langsung pasien, foto dengan informed consent</button><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">C</span>Tidak perlu dicatat jika pasien belum melapor</button><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">D</span>Foto tanpa izin demi bukti</button></div><div class="q-exp" id="exp-q6">✅ Dokumentasi objektif = fondasi bukti hukum.</div></div><div class="quiz-q" id="q7"><div class="q-num">SOAL 7</div><div class="q-question">Visum et Repertum hanya dapat dibuat berdasarkan…</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">A</span>Permintaan korban</button><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">B</span>Permintaan keluarga</button><button class="q-opt" onclick="ans(this,'q7',true)"><span class="ol">C</span>Surat permintaan tertulis penyidik kepolisian</button><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">D</span>Keputusan dokter</button></div><div class="q-exp" id="exp-q7">✅ VeR atas permintaan resmi penyidik.</div></div><div class="quiz-q" id="q8"><div class="q-num">SOAL 8</div><div class="q-question">Pasien depresi tidak membaik setelah terapi optimal di FKTP selama…</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">A</span>1 minggu</button><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">B</span>2 minggu</button><button class="q-opt" onclick="ans(this,'q8',true)"><span class="ol">C</span>4–8 minggu → rujuk</button><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">D</span>12 bulan</button></div><div class="q-exp" id="exp-q8">✅ Resisten terapi 4–8 minggu adalah salah satu red flag rujukan.</div></div><div class="quiz-q" id="q9"><div class="q-num">SOAL 9</div><div class="q-question">Korban KDRT berkata “jangan bilang siapa-siapa, biar saya saja yang menderita”. Respons dokter?</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">A</span>Patuhi sepenuhnya, tidak ada tindakan</button><button class="q-opt" onclick="ans(this,'q9',true)"><span class="ol">B</span>Edukasi risiko, bangun kepercayaan, susun safety plan & tentukan pihak yang dihubungi</button><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">C</span>Langsung lapor polisi tanpa bicara</button><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">D</span>Panggil pelaku untuk klarifikasi</button></div><div class="q-exp" id="exp-q9">✅ Korban butuh bantuan pihak lain; hormati otonomi namun jangan pasif — safety planning.</div></div><div class="quiz-q" id="q10"><div class="q-num">SOAL 10</div><div class="q-question">Caregiver pasien stroke datang dengan insomnia dan lelah kronis. Ini termasuk skenario…</div><div class="q-opts"><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">A</span>A: keluarga membawa pasien</button><button class="q-opt" onclick="ans(this,'q10',true)"><span class="ol">B</span>B: anggota keluarga berobat untuk dirinya sendiri (caregiver)</button><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">C</span>Malingering</button><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">D</span>Tidak relevan dengan keluarga</button></div><div class="q-exp" id="exp-q10">✅ Skenario B: caregiver sendiri mengalami depresi/ansietas.</div></div><div class="score-card" id="scoreCard"><div>Skor kamu</div><div class="score-big"><span id="scoreNum">0</span>/10</div><div class="score-msg" id="scoreMsg"></div><button class="btn-restart" onclick="resetQuiz()">↻ Ulangi</button></div></div></div>
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+let answered = {}, score = 0, total = 10;
+
+function initDots() {
+  const p = document.getElementById('quizProg');
+  p.innerHTML = '';
+  for (let i=1; i<=total; i++) {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = 'dot' + i;
+    p.appendChild(d);
+  }
+}
+
+function ans(btn, qid, correct) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  const qNum = parseInt(qid.replace('q',''));
+  const card = document.getElementById(qid);
+  card.querySelectorAll('.q-opt').forEach(b => { b.disabled = true; });
+  if (correct) {
+    btn.classList.add('correct'); score++;
+    document.getElementById('dot'+qNum).classList.add('ok');
+  } else {
+    btn.classList.add('wrong');
+    document.getElementById('dot'+qNum).classList.add('no');
+    card.querySelectorAll('.q-opt').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(',true)')) b.classList.add('correct');
+    });
+  }
+  const exp = document.getElementById('exp-' + qid);
+  if (exp) exp.classList.add('show');
+  if (Object.keys(answered).length === total) setTimeout(showScore, 700);
+}
+
+function showScore() {
+  const sc = document.getElementById('scoreCard');
+  sc.classList.add('show');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter keluarga masa depan! 🌸✨'];
+  const idx = score <= 3 ? 0 : score <= 5 ? 1 : score <= 7 ? 2 : score <= 9 ? 3 : 4;
+  document.getElementById('scoreMsg').textContent = msgs[idx];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetQuiz() {
+  answered = {}; score = 0;
+  document.querySelectorAll('.q-opt').forEach(b => { b.disabled=false; b.classList.remove('correct','wrong'); });
+  document.querySelectorAll('.q-exp').forEach(e => e.classList.remove('show'));
+  document.getElementById('scoreCard').classList.remove('show');
+  initDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+initDots();
+</script>
+</body></html>

@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>🚨 Kedaruratan Psikiatri, Self-Harm & Bunuh Diri — dr. Adriesti Herdaetha</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --coral: #E8837A;
+  --coral-light: #F2A59D;
+  --coral-pale: #FDEAE7;
+  --coral-deep: #B5524A;
+  --coral-muted: #CF6B62;
+  --butter: #EFC95A;
+  --butter-light: #F6DC8C;
+  --butter-pale: #FFF6D6;
+  --butter-deep: #8F6A0F;
+  --rose: #D96B6B;
+  --rose-light: #E89A9A;
+  --rose-pale: #FCE3E3;
+  --rose-deep: #A33A3A;
+  --mint: #7BBFA8;
+  --mint-pale: #E4F5F0;
+  --mint-deep: #3D8B73;
+  --peach: #E8A87C;
+  --peach-pale: #FDF0E6;
+  --peach-deep: #C07040;
+  --sky: #7AAFCF;
+  --sky-pale: #E4F1FA;
+  --sky-deep: #3A7A9A;
+  --cream: #FFFAF3;
+  --white: #ffffff;
+  --text: #3A2420;
+  --text-muted: #7D6259;
+  --border: #F3DCCF;
+  --shadow: rgba(232,131,122,0.16);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 56px); }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #8E3B35 0%, #C9645B 38%, #E8957A 68%, #F2CE74 100%);
+  padding: 64px 52px 56px; position: relative; overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.08);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;width:350px;height:350px;border-radius:50%;
+  background:rgba(255,236,160,0.16);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);
+  color:rgba(255,255,255,0.95);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;position:relative;z-index:1;
+}
+.hero h1 em { font-style:italic; color:#FFF0B3; }
+.hero-sub { color:rgba(255,255,255,0.85);font-size:14.5px;font-weight:300;max-width:600px;line-height:1.7;position:relative;z-index:1; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;position:relative;z-index:1; }
+.pill {
+  background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:env(safe-area-inset-top, 0px);z-index:200;
+  background:linear-gradient(90deg,#8E3B35,#B8574E);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(142,59,53,0.35);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;color:rgba(255,230,220,0.7);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active { color:#FFF6D6;border-bottom-color:#F6DC8C; }
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+.section-heading { font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--coral-deep);margin-bottom:6px; }
+.section-desc { color:var(--text-muted);font-size:13.5px;padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px; }
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;margin-bottom:20px;
+  border:1px solid var(--border);box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(232,131,122,0.22);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;color:var(--coral-deep);
+  margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.card-icon { width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0; }
+
+/* ALERTS */
+.alert { padding:13px 17px;border-radius:11px;margin:13px 0;font-size:13.5px;display:flex;gap:10px;line-height:1.65; }
+.alert-coral {background:var(--coral-pale);border-left:4px solid var(--coral);color:var(--coral-deep);}
+.alert-butter {background:var(--butter-pale);border-left:4px solid var(--butter);color:var(--butter-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--butter-pale),var(--coral-pale));
+  border:1.5px solid var(--butter-light);border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before { content:'🎤 Dosen kuliah keluarga menekankan: ';font-weight:700;color:var(--coral-deep); }
+.src-note {
+  background:var(--sky-pale);border:1.5px dashed var(--sky);border-radius:13px;padding:12px 16px;margin:14px 0;
+  font-size:13px;color:var(--sky-deep);line-height:1.65;
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--coral-deep),var(--coral-muted));color:#fff;
+  padding:11px 14px;text-align:left;font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#FFF8F1;}
+tr:hover td {background:var(--butter-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--coral-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+.mini-card.yel {background:var(--butter-pale);border-color:var(--butter-light);}
+.mini-card.yel h4 {color:var(--butter-deep);}
+.mini-card.red {background:var(--coral-pale);border-color:var(--coral-light);}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {padding:7px 0 7px 24px;border-bottom:1px solid var(--border);font-size:13.5px;position:relative;line-height:1.65;}
+.styled-list li::before {content:'◆';position:absolute;left:0;color:var(--butter);font-size:9px;top:11px;}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--coral-pale),var(--butter-pale));
+  border:1.5px solid var(--coral-light);border-radius:14px;padding:18px 22px;margin:14px 0;
+}
+.cr-label { font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:10px; }
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;font-size:13.5px;
+  border-bottom:1px solid rgba(232,131,122,0.22);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;width:24px;height:24px;
+  background:var(--coral-muted);color:#fff;border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--butter-pale),var(--coral-pale));
+  border:2px solid var(--butter-light);border-radius:15px;padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-coral {background:var(--coral-pale);color:var(--coral-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-butter {background:var(--butter-pale);color:var(--butter-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-sky {background:var(--sky-pale);color:var(--sky-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;padding:0;font-family:inherit;color:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--butter-pale);border-color:var(--butter-light);}
+.compare-col.right {background:var(--coral-pale);border-color:var(--coral-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--butter-deep);}
+.compare-col.right h4 {color:var(--coral-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.65;width:92px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* RISK BADGES */
+.derajat {display:inline-flex;align-items:center;padding:3px 10px;border-radius:8px;font-size:11px;font-weight:700;margin:2px;}
+.d-hi{background:var(--rose-pale);color:var(--rose-deep);}
+.d-lo{background:var(--mint-pale);color:var(--mint-deep);}
+.d-mid{background:var(--butter-pale);color:var(--butter-deep);}
+
+/* FLOW (continuum) */
+.flow {display:flex;align-items:stretch;gap:0;margin:16px 0;overflow-x:auto;padding-bottom:6px;}
+.flow-step {
+  flex:1;min-width:118px;padding:14px 12px;text-align:center;font-size:12.5px;font-weight:600;
+  color:var(--text);position:relative;line-height:1.4;
+  clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%);
+  margin-right:-6px;
+}
+.flow-step:first-child {clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%);}
+.flow-step small {display:block;font-weight:400;font-size:11px;opacity:0.8;margin-top:3px;}
+.fs1{background:#FFF1BF;} .fs2{background:#FBDD8A;} .fs3{background:#F6C677;} .fs4{background:#F0A58A;} .fs5{background:#E8837A;color:#fff;}
+
+/* BAR (HR chart) */
+.bar-row {display:flex;align-items:center;gap:10px;margin:8px 0;font-size:13px;}
+.bar-label {width:150px;flex-shrink:0;font-weight:500;}
+.bar-track {flex:1;background:var(--coral-pale);border-radius:8px;height:22px;overflow:hidden;position:relative;}
+.bar-fill {height:100%;border-radius:8px;background:linear-gradient(90deg,var(--butter),var(--coral));display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:11.5px;font-weight:700;}
+.bar-fill.ns {background:linear-gradient(90deg,#E5D9D2,#CDBFB6);color:#6a5a52;}
+@media(max-width:560px){.bar-label{width:104px;font-size:12px;}}
+
+/* QUIZ */
+.quiz-q {background:var(--white);border:1.5px solid var(--border);border-radius:18px;padding:28px;margin-bottom:24px;position:relative;}
+.q-num {
+  position:absolute;top:-12px;left:22px;background:linear-gradient(90deg,var(--coral-deep),var(--butter-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--butter-pale),var(--coral-pale));
+  border-left:4px solid var(--butter);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;color:var(--coral-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);border-radius:11px;padding:11px 15px;
+  font-size:13.5px;cursor:pointer;text-align:left;font-family:inherit;display:flex;gap:10px;
+  align-items:flex-start;transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--coral);background:var(--coral-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);border-radius:11px;padding:14px 17px;
+  font-size:13.5px;line-height:1.7;color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(232,131,122,0.22);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#8E3B35,#E8837A,#F2CE74);color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#FFF6D6;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.92;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--coral-deep);border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN / BANK SOAL ====== */
+.soal-dosen {
+  background:linear-gradient(135deg,#4A1F1B,#6E2F29);border-radius:16px;padding:18px 22px;margin:16px 0;
+  border:2px solid #F0CF6E;position:relative;
+  box-shadow:0 4px 20px rgba(142,59,53,0.28),inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#F0CF6E,#E8837A,#F0CF6E);border-radius:16px 16px 0 0;
+}
+.soal-dosen-header {display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.soal-dosen-badge {
+  background:linear-gradient(90deg,#F6DC8C,#EFC95A);color:#4A1F1B;font-size:10px;font-weight:800;
+  letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;white-space:nowrap;
+}
+.soal-dosen-badge-warn {
+  background:linear-gradient(90deg,#E84060,#C02040);color:#fff;font-size:10px;font-weight:800;
+  letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;white-space:nowrap;
+}
+.soal-dosen-cohort {display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;}
+.cohort-tag {font-size:10px;font-weight:700;padding:2px 9px;border-radius:6px;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.9);}
+.cohort-axon { background:rgba(232,131,122,0.42); }
+.cohort-arthron { background:rgba(239,201,90,0.38); }
+.cohort-aorta { background:rgba(123,191,168,0.38); }
+.cohort-avicenna { background:rgba(122,175,207,0.38); }
+.cohort-blok { background:rgba(255,255,255,0.18); }
+.soal-dosen-content {color:rgba(255,255,255,0.93);font-size:13.5px;line-height:1.7;}
+.soal-dosen-content strong {color:#FFE9A8;}
+.soal-dosen-content .hl-warn {
+  background:rgba(232,60,96,0.28);border:1px solid rgba(232,60,96,0.55);color:#FFC0CA;
+  padding:1px 7px;border-radius:5px;font-weight:700;
+}
+.soal-dosen-content .hl-ok {
+  background:rgba(123,191,168,0.25);border:1px solid rgba(123,191,168,0.45);color:#B5FFE0;
+  padding:1px 7px;border-radius:5px;font-weight:700;
+}
+.soal-dosen-keyword {
+  display:inline-flex;align-items:center;gap:5px;background:rgba(240,207,110,0.2);
+  border:1px solid rgba(240,207,110,0.45);color:#FFE9A8;padding:2px 10px;border-radius:8px;
+  font-size:12px;font-weight:600;margin:2px;
+}
+
+/* ====== FLOATING BUTTON ====== */
+.float-btn {
+  position:fixed;bottom:calc(28px + env(safe-area-inset-bottom, 0px));right:28px;z-index:9999;
+  background:linear-gradient(135deg,#8E3B35,#E8837A);color:#fff;border:none;border-radius:50px;padding:12px 20px;
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;
+  box-shadow:0 6px 24px rgba(142,59,53,0.42);display:flex;align-items:center;gap:8px;
+  transition:transform 0.2s,box-shadow 0.2s;letter-spacing:0.3px;
+}
+.float-btn:hover {transform:translateY(-3px);box-shadow:0 10px 30px rgba(142,59,53,0.52);}
+.float-pulse {width:10px;height:10px;border-radius:50%;background:#FFE08A;animation:pulse 1.5s infinite;flex-shrink:0;}
+@keyframes pulse {0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.4);opacity:0.7;}}
+
+/* ====== MODAL ====== */
+.modal-overlay {
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(40,12,10,0.86);z-index:99999;
+  align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);
+}
+.modal-overlay.open {display:flex;animation:fadeUp 0.3s ease;}
+.modal-box {
+  background:linear-gradient(160deg,#3A1512,#5E2620);border:2px solid #F0CF6E;border-radius:24px;
+  max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:32px;position:relative;
+  box-shadow:0 20px 60px rgba(142,59,53,0.45);
+}
+.modal-box::-webkit-scrollbar {width:6px;}
+.modal-box::-webkit-scrollbar-track {background:rgba(255,255,255,0.05);border-radius:3px;}
+.modal-box::-webkit-scrollbar-thumb {background:#F0CF6E;border-radius:3px;}
+.modal-close {
+  position:absolute;top:16px;right:18px;background:rgba(255,255,255,0.12);border:none;color:#fff;font-size:18px;
+  width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;
+}
+.modal-close:hover {background:rgba(240,207,110,0.4);}
+.modal-title {font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#FFE9A8;margin-bottom:6px;}
+.modal-sub {color:rgba(255,255,255,0.6);font-size:12.5px;margin-bottom:24px;}
+.modal-item {
+  background:rgba(255,255,255,0.06);border:1px solid rgba(240,207,110,0.28);border-radius:12px;
+  padding:14px 16px;margin-bottom:14px;position:relative;
+}
+.modal-item-num {
+  position:absolute;top:-8px;left:14px;background:linear-gradient(90deg,#F6DC8C,#EFC95A);color:#4A1F1B;
+  font-size:10px;font-weight:800;padding:2px 10px;border-radius:10px;letter-spacing:0.1em;
+}
+.modal-item-q {color:#FFE9A8;font-weight:600;font-size:13.5px;margin-bottom:6px;padding-top:4px;}
+.modal-item-a {color:rgba(255,255,255,0.85);font-size:13px;line-height:1.65;}
+.modal-item-a strong {color:#B5FFE0;}
+.modal-cohorts {display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;}
+.modal-nav-btn {
+  display:block;width:100%;background:linear-gradient(135deg,#F6DC8C,#EFC95A);color:#4A1F1B;border:none;
+  border-radius:12px;padding:13px;font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:700;
+  cursor:pointer;margin-top:16px;transition:opacity 0.2s;
+}
+.modal-nav-btn:hover {opacity:0.88;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">🚨 Blok Psikiatri &amp; Mental Health · Dr. dr. Adriesti Herdaetha, Sp.KJ., M.H</div>
+  <h1>Kedaruratan Psikiatri,<br><em>Self-Harm</em> &amp; Bunuh Diri</h1>
+  <p class="hero-sub">Dari slide kuliah dr. Adriesti, dihubungkan dengan lensa psikopatologi (Fish), bank soal Axon/Arthron/Aorta/Avicenna, dan rekaman kuliah pendekatan keluarga. Prinsip utamanya satu: <strong>safety first</strong>.</p>
+  <div class="hero-pills">
+    <span class="pill">🔥 Agitasi Akut</span>
+    <span class="pill">💊 Intoksikasi &amp; Withdrawal</span>
+    <span class="pill">⚡ SNM</span>
+    <span class="pill">🩹 NSSI</span>
+    <span class="pill">🕊️ Risiko Bunuh Diri</span>
+    <span class="pill">🏡 Keluarga &amp; KDRT</span>
+    <span class="pill">🧠 10 Soal Quiz</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="sticky-nav" id="mainNav">
+  <button class="nav-btn active" data-t="overview" onclick="show('overview')">🏠 Overview</button>
+  <button class="nav-btn" data-t="agitasi" onclick="show('agitasi')">🔥 Agitasi Akut</button>
+  <button class="nav-btn" data-t="zat" onclick="show('zat')">💊 Zat &amp; SNM</button>
+  <button class="nav-btn" data-t="selfharm" onclick="show('selfharm')">🩹 Self-Harm</button>
+  <button class="nav-btn" data-t="bunuhdiri" onclick="show('bunuhdiri')">🕊️ Bunuh Diri</button>
+  <button class="nav-btn" data-t="keluarga" onclick="show('keluarga')">🏡 Keluarga &amp; KDRT</button>
+  <button class="nav-btn" data-t="quiz" onclick="show('quiz')">🧠 Quiz</button>
+</div>
+
+<div class="container">
+<!-- ======== OVERVIEW ======== -->
+<div id="sec-overview" class="section active">
+  <h2 class="section-heading">Peta Konsep &amp; Definisi Dasar</h2>
+  <p class="section-desc">Tiga pilar kuliah dr. Adriesti: kedaruratan psikiatri → self-harm (NSSI) → bunuh diri. Benang merahnya: <em>nilai risiko, amankan dulu, baru terapi.</em></p>
+
+  <div class="src-note">📌 <strong>Cara baca guide ini:</strong> isi inti diambil dari slide dr. Adriesti. Bagian bertanda <span class="hl-sky">🔹 tambahan</span> berasal dari bank soal, Fish's Clinical Psychopathology, atau referensi klinis umum (bukan dari slide) — dosis obat tetap cek ke PNPK/formularium. Tab <strong>Keluarga &amp; KDRT</strong> berasal dari rekaman kuliah pendekatan keluarga (family medicine), terpisah dari kuliah dr. Adriesti.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🚨</span> Definisi Kedaruratan Psikiatri</div>
+    <div class="alert alert-coral"><span class="alert-icon">📖</span><div>Gangguan <strong>perilaku, pikiran, atau perasaan</strong> yang bersifat <strong>akut</strong> dan membutuhkan <strong>intervensi segera</strong> untuk mencegah bahaya kematian atau cedera parah pada pasien sendiri maupun orang lain.</div></div>
+    <div class="alert alert-butter"><span class="alert-icon">🛡️</span><div><strong>Prinsip utama = Safety First</strong> — untuk <strong>pasien, staf medis, dan lingkungan sekitar</strong>. Bukan hanya pasien!</div></div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Bank Soal — Sering Keluar</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.89</span>
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.37</span>
+      </div>
+      <div class="soal-dosen-content">
+        <strong>❓ "Apa perhatian utama penatalaksanaan kedaruratan psikiatri di faskes?"</strong><br>
+        ✅ <span class="hl-ok">Keselamatan pasien DAN petugas</span> — bukan "membuat pasien tidur", bukan "menenangkan pasien", bukan "pasien dan keluarganya".
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🗺️</span> Spektrum Kondisi Kedaruratan Psikiatri</div>
+    <div class="grid-2">
+      <div class="mini-card red"><h4>01 · Gaduh gelisah / agitasi akut</h4><p>Skizofrenia akut, psikotik akut, episode manik, delirium. → Tab <strong>Agitasi Akut</strong></p></div>
+      <div class="mini-card yel"><h4>02 · Perilaku bunuh diri</h4><p>Dari self-harm sampai percobaan bunuh diri. → Tab <strong>Self-Harm</strong> &amp; <strong>Bunuh Diri</strong></p></div>
+      <div class="mini-card yel"><h4>03 · Intoksikasi / withdrawal zat</h4><p>Alkohol, opioid, stimulan; ABCDE → dekontaminasi → antidotum. → Tab <strong>Zat &amp; SNM</strong></p></div>
+      <div class="mini-card red"><h4>04 · Sindrom Neuroleptik Maligna (SNM)</h4><p>Efek samping antipsikotik yang jarang tetapi fatal. → Tab <strong>Zat &amp; SNM</strong></p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🧭</span> Pola Pikir Triase Kedaruratan <span class="hl-sky">🔹 tambahan</span></div>
+    <div class="cr-box">
+      <div class="cr-label">🧠 Clinical reasoning — pasien datang gaduh / ingin mati / tidak sadar</div>
+      <ol class="cr-steps">
+        <li><strong>Amankan lokasi</strong> — diri sendiri, tim, pasien, benda berbahaya, jalur keluar.</li>
+        <li><strong>Stabilisasi ABCDE &amp; tanda vital</strong> — jangan lewatkan penyebab medis (hipoglikemia, hipoksia, infeksi, trauma kepala).</li>
+        <li><strong>Cari penyebab</strong> — organik/delirium? zat (intoksikasi/withdrawal)? obat (SNM, EPS)? psikiatrik primer (psikosis, mania, depresi)?</li>
+        <li><strong>Intervensi sesuai penyebab</strong> — deeskalasi/medikasi, antidotum, atau terapi spesifik.</li>
+        <li><strong>Nilai risiko bunuh diri/kekerasan</strong> pada <em>setiap</em> pasien psikiatri darurat.</li>
+        <li><strong>Disposisi</strong> — rawat inap, rujuk, atau pulang dengan rencana keselamatan + pendamping.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">⚡</span> Review Cepat Sebelum Ujian</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Kondisi</th><th>Tanda kunci</th><th>Tatalaksana kunci</th></tr>
+        <tr><td><span class="hl-coral">Agitasi akut</span></td><td>Psikomotor ↑, mood iritabel/marah, permusuhan</td><td>Deeskalasi verbal → modifikasi lingkungan → restrain → psikofarmaka</td></tr>
+        <tr><td><span class="hl-butter">Intoksikasi opioid</span></td><td>Pinpoint pupil, depresi napas, koma</td><td>ABCDE → <strong>nalokson IV</strong></td></tr>
+        <tr><td><span class="hl-butter">Overdosis benzodiazepin</span></td><td>Sedasi berat, hiporefleksia, hipotensi</td><td>ABCDE → <strong>flumazenil IV</strong></td></tr>
+        <tr><td><span class="hl-butter">Withdrawal alkohol</span></td><td>Tremor, hiperaktivitas otonom, kejang</td><td><strong>Diazepam / lorazepam</strong></td></tr>
+        <tr><td><span class="hl-rose">SNM</span></td><td>Demam, rigiditas, instabilitas otonom, ↓ kesadaran</td><td>Hentikan antipsikotik, suportif, bromokriptin/dantrolen</td></tr>
+        <tr><td><span class="hl-mint">NSSI</span></td><td>Melukai diri <em>tanpa</em> niat mati — regulasi emosi</td><td>Tetap nilai risiko bunuh diri; terapi gangguan dasar + psikoterapi</td></tr>
+        <tr><td><span class="hl-rose">Risiko bunuh diri tinggi</span></td><td>Ide sering-intens, rencana, riwayat berulang-terencana, gangguan psikiatri aktif</td><td>Ide kuat + impulsif → <strong>hospitalisasi</strong>; antidepresan/ECT/TMS + psikoterapi</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ======== AGITASI ======== -->
+<div id="sec-agitasi" class="section">
+  <h2 class="section-heading">🔥 Gaduh Gelisah / Agitasi Akut</h2>
+  <p class="section-desc">Satu gejala, banyak penyebab — dan urutan tatalaksananya selalu dari yang paling tidak invasif.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🧩</span> Penyebab &amp; Tanda Khas</div>
+    <p style="font-size:13.5px;margin-bottom:12px;">Menurut slide, agitasi akut muncul pada: <span class="hl-coral">skizofrenia akut</span> · <span class="hl-coral">psikotik akut</span> · <span class="hl-coral">episode manik</span> · <span class="hl-coral">delirium</span>.</p>
+    <div class="alert alert-coral"><span class="alert-icon">🔎</span><div><strong>Tanda &amp; gejala (slide):</strong> psikomotor ↑ · afek ↑ · mood iritabel / disforik / marah · sikap permusuhan.</div></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Penyebab</th><th>Pembeda kunci <span style="font-weight:400">🔹</span></th><th>Mengapa gaduh?</th></tr>
+        <tr><td><span class="hl-coral">Skizofrenia / psikotik akut</span></td><td>Kesadaran jernih; waham, halusinasi (suara), gangguan pikir</td><td>Suara bertambah intens atau waham persekutorik → bereaksi defensif</td></tr>
+        <tr><td><span class="hl-butter">Episode manik</span></td><td>Mood elasi/iritabel, flight of ideas, pressure of speech, tidur ↓</td><td>Mood tinggi + disinhibisi; mudah marah bila dihalangi</td></tr>
+        <tr><td><span class="hl-rose">Delirium</span></td><td>Onset akut, fluktuatif, ↓ kesadaran, disorientasi waktu/tempat, halusinasi visual</td><td>Ketakutan; salah menafsirkan perawat sebagai ancaman</td></tr>
+        <tr><td><span class="hl-sky">Zat</span></td><td>Riwayat intoksikasi stimulan / withdrawal alkohol-sedatif</td><td>Hiperaktivitas otonom, paranoid, halusinasi</td></tr>
+      </table>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">⚠️</span><div><strong>Jangan lewatkan delirium.</strong> Wanita 50 th mengamuk, TD 190/100, GDS 600 → <strong>delirium</strong> akibat kondisi medis (bukan "skizofrenia"). Agitasi + disorientasi + penyebab medis = cari dan terapi penyebabnya.</div></div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge-warn">⚠️ Tricky</span></div>
+      <div class="soal-dosen-cohort"><span class="cohort-tag cohort-axon">Axon '20 No.50</span></div>
+      <div class="soal-dosen-content">Mengamuk + mencoba mencekik perawat + <span class="hl-warn">TD 190/100, GDS 600, suhu 37</span> → <strong>Delirium</strong>. Distraktor: delirium tremens (butuh riwayat alkohol), opioid, skizofrenia.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🪜</span> Tatalaksana Bertahap</div>
+    <div class="mnemonic">
+      <div class="mnemonic-label">Urutan <span class="hl-sky">🔹 mnemonic buatan</span></div>
+      <div class="mnemonic-text">V · E · R · P</div>
+      <div class="mnemonic-sub"><strong>V</strong>erbal de-escalation → <strong>E</strong>nvironment modification → <strong>R</strong>estrain → <strong>P</strong>sikofarmaka. Naik anak tangga hanya bila anak tangga sebelumnya gagal dan keselamatan terancam.</div>
+    </div>
+    <div class="cr-box">
+      <div class="cr-label">🩺 Penatalaksanaan (slide dr. Adriesti)</div>
+      <ol class="cr-steps">
+        <li><strong>Deeskalasi verbal</strong> <span class="hl-sky">🔹</span> — bicara tenang &amp; singkat, jarak aman, sikap tidak mengancam, dengarkan, validasi perasaan, tawarkan pilihan; satu orang yang berbicara.</li>
+        <li><strong>Modifikasi lingkungan</strong> <span class="hl-sky">🔹</span> — kurangi stimulus (bising, keramaian), singkirkan benda berbahaya, pastikan <em>pasien dan pemeriksa sama-sama punya akses keluar ruangan</em>.</li>
+        <li><strong>Restrain</strong> <span class="hl-sky">🔹</span> — pilihan <em>terakhir</em>, oleh tim terlatih, durasi sesingkat mungkin, pantau tanda vital &amp; sirkulasi ekstremitas, segera diikuti medikasi dan evaluasi ulang.</li>
+        <li><strong>Psikofarmaka</strong> <span class="hl-sky">🔹</span> — umumnya antipsikotik (mis. haloperidol) ± benzodiazepin (lorazepam/diazepam); pilihan &amp; dosis disesuaikan penyebab (delirium, mania, withdrawal) dan pedoman setempat.</li>
+      </ol>
+    </div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Bank Soal — Ruang Periksa</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-axon">Axon '20 No.56</span>
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.85</span>
+      </div>
+      <div class="soal-dosen-content">
+        <strong>❓ "Bagian penting ruang periksa kasus kedaruratan psikiatri?"</strong><br>
+        ✅ <span class="hl-ok">Kesempatan yang sama bagi pasien dan pemeriksa untuk keluar ruangan</span>.<br>
+        ❌ Pasien diikat · jarak dekat terus · meja berlapis kaca. (Opsi "peralatan menjaga diri" juga muncul sebagai pengecoh di salah satu soal — jawabannya tetap akses keluar.)
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="collapse-btn" onclick="toggle(this)">
+      <div class="card-title" style="margin-bottom:0"><span class="card-icon" style="background:var(--sky-pale)">📚</span> Lensa Psikopatologi (Fish) — membaca agitasi <span class="hl-sky">🔹</span></div>
+      <span class="chev">▼</span>
+    </button>
+    <div class="collapse-body">
+      <ul class="styled-list">
+        <li><strong>Paranoid schizophrenia:</strong> kenaikan mendadak intensitas suara halusinasi bisa memicu eksitasi (Fish, Bab 8).</li>
+        <li><strong>Mania:</strong> eksitasi dapat dipahami sebagai konsekuensi mood elasi; bila dihalangi, pasien jadi marah/mengancam.</li>
+        <li><strong>Katatonik:</strong> wajah <em>deadpan</em>, gerakan kaku, kekerasan <em>tanpa tujuan</em> — tak bisa dipahami dari psikologi lain.</li>
+        <li><strong>Delirium:</strong> pasien sangat takut sehingga <em>makin gaduh</em> saat didekati tenaga kesehatan; dapat melompat dari jendela untuk "melarikan diri". Bantu dengan <em>reassurance</em>, bicara lebih keras-lambat, ulangi kalimat.</li>
+        <li><strong>Pathological intoxication (mania à potu):</strong> kekerasan tanpa makna setelah alkohol sedikit, tanpa ataksia, lalu <em>amnesia</em> episode.</li>
+        <li><strong>Fakta anti-stigma:</strong> agresi tidak umum pada gangguan jiwa; pada psikosis episode pertama, agresi terkait <em>penyalahgunaan zat, rawat paksa, dan skor psikopatologi tinggi</em> — bukan sekadar "orang gila".</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ======== ZAT & SNM ======== -->
+<div id="sec-zat" class="section">
+  <h2 class="section-heading">💊 Intoksikasi, Withdrawal &amp; SNM</h2>
+  <p class="section-desc">Zat masuk → intoksikasi. Zat berhenti → withdrawal. Obat antipsikotik bereaksi fatal → SNM.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">⚖️</span> Intoksikasi Akut vs Sindrom Withdrawal</div>
+    <div class="compare-wrap">
+      <div class="compare-col left">
+        <h4>🧪 Intoksikasi Akut</h4>
+        <div class="compare-row"><span>Definisi:</span>Sindrom klinis <strong>reversibel</strong> akibat masuknya zat psikoaktif ke tubuh</div>
+        <div class="compare-row"><span>Alkohol:</span>↓ kesadaran, bingung, gangguan keseimbangan, napas lambat</div>
+        <div class="compare-row"><span>Opioid:</span>Pupil miosis, napas sangat lambat/sesak, tubuh sangat lemas</div>
+        <div class="compare-row"><span>Stimulan:</span>Takikardia, halusinasi, delusi, perilaku mengamuk</div>
+        <div class="compare-row"><span>Kunci:</span>Riwayat penggunaan zat</div>
+      </div>
+      <div class="compare-col right">
+        <h4>📉 Sindrom Withdrawal</h4>
+        <div class="compare-row"><span>Definisi:</span>Kumpulan gejala spesifik akibat <strong>penghentian/pengurangan</strong> zat adiktif</div>
+        <div class="compare-row"><span>Fisik:</span>Tremor, GI terganggu, keringat berlebih, menggigil, nyeri, fatigue, kejang, halusinasi, ↓ kesadaran</div>
+        <div class="compare-row"><span>Mental:</span>Perubahan mood, cemas, paranoid, depresi, gangguan tidur</div>
+      </div>
+    </div>
+    <div class="alert alert-butter"><span class="alert-icon">🧠</span><div><strong>Pola logika:</strong> gejala withdrawal biasanya <em>kebalikan</em> efek zat. Opioid menekan (miosis, napas ↓) → withdrawal gelisah, nyeri, diare. Alkohol/sedatif menekan SSP → withdrawal hiperaktivitas otonom &amp; kejang <span class="hl-sky">🔹</span>.</div></div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Bank Soal</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.26</span>
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.99</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna '17 No.90</span>
+      </div>
+      <div class="soal-dosen-content">
+        <strong>❓ Prinsip terapi intoksikasi NAPZA?</strong> → <span class="hl-ok">Life-saving</span> (bukan psikoterapi / life-long medicine).<br>
+        <strong>❓ Yang biasa ditemukan pada ketergantungan NAPZA?</strong> → <span class="hl-ok">Gejala lepas zat</span>.<br>
+        <strong>❓ Berhenti obat 3 hari → gelisah, sulit tidur, nyeri</strong> → <span class="hl-ok">Withdrawal syndrome</span>.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🚑</span> Tatalaksana Kegawatdaruratan Intoksikasi</div>
+    <div class="cr-box">
+      <div class="cr-label">🩺 Urutan (slide)</div>
+      <ol class="cr-steps">
+        <li><strong>Stabilisasi ABCDE</strong> — patenkan jalan napas, oksigenasi, pasang akses intravena.</li>
+        <li><strong>Dekontaminasi lambung</strong> — karbo adsorben / arang aktif <strong>bila ingesti zat &lt; 1 jam</strong>.</li>
+        <li><strong>Antidotum spesifik</strong> — nalokson, flumazenil, atropin, atau N-asetilsistein sesuai toksidrom.</li>
+      </ol>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">⚠️</span><div><span class="hl-sky">🔹</span> <strong>Catatan keamanan:</strong> arang aktif hanya bila pasien sadar/jalan napas terlindungi (risiko aspirasi). Nalokson punya masa kerja pendek → observasi, bisa perlu redosis. Flumazenil hati-hati pada ketergantungan benzodiazepin kronik (dapat memicu kejang).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">💉</span> Tabel Antidotum Spesifik</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Golongan zat</th><th>Toksidrom khas</th><th>Antidotum utama</th></tr>
+        <tr><td><span class="hl-coral">Opioid</span></td><td>Pinpoint pupil, depresi napas, koma</td><td><strong>Nalokson IV</strong></td></tr>
+        <tr><td><span class="hl-butter">Benzodiazepin</span></td><td>Sedasi berat, hiporefleksia, hipotensi</td><td><strong>Flumazenil IV</strong></td></tr>
+        <tr><td><span class="hl-rose">Withdrawal alkohol</span></td><td>Tremor, hiperaktivitas otonom, kejang</td><td><strong>Diazepam / lorazepam</strong></td></tr>
+        <tr><td><span class="hl-sky">Organofosfat <span style="font-weight:400">🔹</span></span></td><td>Sindrom kolinergik (hipersalivasi, miosis, bradikardia)</td><td><strong>Atropin</strong></td></tr>
+        <tr><td><span class="hl-sky">Parasetamol <span style="font-weight:400">🔹</span></span></td><td>Awalnya samar; hepatotoksik tertunda</td><td><strong>N-asetilsistein</strong></td></tr>
+      </table>
+    </div>
+    <div class="alert alert-coral"><span class="alert-icon">🔑</span><div><strong>Perhatikan:</strong> withdrawal alkohol <em>bukan</em> diobati dengan antidotum, melainkan benzodiazepin (menggantikan efek GABA-ergik alkohol yang hilang).</div></div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Bank Soal — Opioid</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.26</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna '17 No.85</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna '17 No.91</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.53</span>
+      </div>
+      <div class="soal-dosen-content">
+        Ditemukan tak sadar + <span class="hl-warn">bekas suntikan</span>, nadi ↓, <span class="hl-warn">pupil 1/1 mm</span> → <strong>nalokson</strong>.<br>
+        Pembeda intoksikasi opioid: <span class="hl-ok">pin-point pupil (miosis)</span> — bukan midriasis.<br>
+        Keyword: <span class="soal-dosen-keyword">⚡ miosis</span><span class="soal-dosen-keyword">⚡ bekas suntik</span><span class="soal-dosen-keyword">⚡ penurunan kesadaran</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🔁</span> Alur Lanjutan NAPZA &amp; Terapi Rumatan <span class="hl-sky">🔹 tambahan</span></div>
+    <ul class="styled-list">
+      <li><strong>Urutan tatalaksana:</strong> diagnosis → detoksifikasi → rehabilitasi → resosialisasi (Avicenna '17 No.17).</li>
+      <li><strong>Metadon (PTRM)</strong> = terapi rumatan untuk <span class="hl-butter">opioid</span> — untuk mencegah penggunaan opioid ilegal / mengatasi withdrawal opioid. <em>Bukan</em> untuk alkohol, kokain, ecstasy, atau nikotin.</li>
+      <li><strong>Ketergantungan benzodiazepin:</strong> dosis biasa tak lagi berefek (toleransi), tak bisa tidur tanpa obat (gejala lepas obat) → ketergantungan, bukan intoksikasi (UB Blok No.24).</li>
+    </ul>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Bank Soal</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-axon">Axon '20 No.21 &amp; 42</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.37</span>
+      </div>
+      <div class="soal-dosen-content"><strong>❓ Terapi rumatan metadon untuk?</strong> → <span class="hl-ok">Opioid (mencegah penggunaan opioid / withdrawal opioid)</span>.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">⚡</span> Sindrom Neuroleptik Maligna (SNM) <span class="hl-sky">🔹 tambahan</span></div>
+    <div class="alert alert-sky"><span class="alert-icon">ℹ️</span><div>Slide dr. Adriesti hanya mencantumkan SNM sebagai salah satu dari 4 kedaruratan. Isi di bawah dirangkum dari bank soal + referensi umum agar siap ujian.</div></div>
+    <div class="alert alert-rose"><span class="alert-icon">🆘</span><div><strong>SNM</strong> = efek samping antipsikotik (khas tipikal, mis. haloperidol) yang <strong>jarang namun fatal</strong>. Tetrad: <span class="hl-rose">hipertermia</span> · <span class="hl-rose">rigiditas otot</span> · <span class="hl-rose">perubahan status mental</span> · <span class="hl-rose">instabilitas otonom</span> (CK ↑ mendukung).</div></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th></th><th>SNM</th><th>EPS (akut)</th><th>Sindrom serotonin</th></tr>
+        <tr><td><strong>Onset</strong></td><td>Hari–minggu setelah mulai/↑ dosis</td><td>Hari–minggu</td><td>Jam</td></tr>
+        <tr><td><strong>Suhu</strong></td><td>Tinggi</td><td>Normal</td><td>Naik (bervariasi)</td></tr>
+        <tr><td><strong>Otot</strong></td><td>Rigiditas "lead-pipe"</td><td>Rigiditas, tremor, distonia</td><td>Klonus, hiperrefleks</td></tr>
+        <tr><td><strong>Terapi</strong></td><td>Stop antipsikotik, suportif, <strong>bromokriptin</strong> / dantrolen</td><td>Antikolinergik (<strong>triheksifenidil</strong>), turunkan dosis/ganti obat</td><td>Stop agen serotonergik, benzodiazepin</td></tr>
+      </table>
+    </div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Bank Soal</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.77 &amp; 76</span>
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.54</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.70</span>
+      </div>
+      <div class="soal-dosen-content">
+        Efek samping antipsikotik tipikal yang <span class="hl-warn">jarang tapi fatal</span> → <strong>SNM</strong>. Tatalaksana kasus SNM: <strong>bromokriptin</strong>.<br>
+        Kaku + tremor setelah haloperidol (tanpa demam) → <strong>EPS</strong> → <strong>triheksifenidil</strong>.
+      </div>
+    </div>
+    <div class="alert alert-butter"><span class="alert-icon">📚</span><div><strong>Fish (Bab 8):</strong> periksa gangguan gerak <em>sebelum</em> dan <em>selama</em> antipsikotik; akatisia punya komponen subjektif (gelisah, tegang) yang harus ditanyakan; tardive dyskinesia menambah stigma dan disabilitas sosial.</div></div>
+  </div>
+</div>
+
+<!-- ======== SELF-HARM ======== -->
+<div id="sec-selfharm" class="section">
+  <h2 class="section-heading">🩹 Self-Harm (NSSI)</h2>
+  <p class="section-desc">Melukai diri <em>tanpa</em> niat mati — fungsinya meredakan distres emosional, bukan mengakhiri hidup.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">📖</span> Definisi &amp; Prevalensi</div>
+    <div class="alert alert-coral"><span class="alert-icon">📌</span><div><strong>NSSI (Non-Suicidal Self-Injury):</strong> perusakan jaringan tubuh sendiri yang <strong>disengaja</strong>, <strong>tanpa niat bunuh diri</strong>, untuk tujuan yang <strong>tidak diterima secara sosial</strong>, dengan maksud <strong>mengurangi distres psikologis</strong>.</div></div>
+    <div class="alert alert-butter"><span class="alert-icon">💡</span><div>Self-harm sering merupakan <strong>gejala dari kondisi lain</strong>, bukan gangguan mental yang berdiri sendiri. Jadi: cari gangguan dasarnya.</div></div>
+    <div class="grid-3">
+      <div class="mini-card yel"><h4>18–22%</h4><p>Prevalensi pada sampel komunitas di seluruh dunia</p></div>
+      <div class="mini-card red"><h4>14–15 tahun</h4><p>Puncak insidens: remaja pertengahan</p></div>
+      <div class="mini-card"><h4>↓ remaja akhir</h4><p>Onset awal–pertengahan remaja, lalu menurun pada remaja akhir</p></div>
+    </div>
+    <div class="alert alert-sky"><span class="alert-icon">🔹</span><div><strong>Tambahan:</strong> NSSI belum menjadi diagnosis baku di DSM-5 (masuk "kondisi untuk studi lanjut"), tetapi sangat sering menyertai depresi, gangguan kepribadian ambang, dan trauma.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🧩</span> Bentuk Umum NSSI (slide)</div>
+    <div class="grid-3">
+      <div class="mini-card yel"><p>Menggaruk/mencubit kulit berat dengan kuku atau benda lain</p></div>
+      <div class="mini-card red"><p>Menyayat pergelangan tangan, lengan, tungkai, torso, dst.</p></div>
+      <div class="mini-card yel"><p>Membentur/meninju <em>benda</em> hingga memar/berdarah</p></div>
+      <div class="mini-card red"><p>Membentur/meninju <em>diri sendiri</em> hingga memar/berdarah</p></div>
+      <div class="mini-card yel"><p>Menggigit hingga berdarah / meninggalkan bekas</p></div>
+      <div class="mini-card red"><p>Mengabrasi kulit (membakar dengan benda, mis. penghapus)</p></div>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">👀</span><div><span class="hl-sky">🔹</span> <strong>Tanda di pemeriksaan fisik:</strong> luka berpola/berulang di area yang mudah dijangkau namun tersembunyi, pakaian panjang yang tidak sesuai cuaca. Tanyakan dengan empati, tanpa menghakimi.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">⚖️</span> NSSI vs Perilaku Bunuh Diri</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th></th><th>NSSI</th><th>Perilaku bunuh diri</th></tr>
+        <tr><td><strong>Intent</strong></td><td>Mendapat <span class="hl-butter">kelegaan segera</span> dari emosi negatif</td><td><span class="hl-rose">Mati</span> untuk lepas permanen dari nyeri emosional</td></tr>
+        <tr><td><strong>Repetisi</strong></td><td>Lebih sering</td><td>Lebih jarang</td></tr>
+        <tr><td><strong>Letalitas</strong></td><td>Metode kurang letal, <em>tetapi tetap berpotensi letal</em></td><td>Cenderung metode lebih letal</td></tr>
+        <tr><td><strong>Konsekuensi psikologis</strong></td><td>Sering dipakai untuk <em>meredakan</em> nyeri psikologis</td><td>Sering <em>memperberat</em> nyeri psikologis</td></tr>
+      </table>
+    </div>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div><strong>Jangan puas dengan label "hanya NSSI".</strong> Letalitasnya tetap berpotensi, dan slide menempatkan <em>self-harm</em> sebagai titik awal kontinum menuju ide dan percobaan bunuh diri (lihat tab Bunuh Diri). Selalu nilai niat bunuh diri secara eksplisit <span class="hl-sky">🔹</span>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🎯</span> Faktor Risiko</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>👥 Lingkungan</h4><p>Teman atau anggota keluarga yang melukai diri</p></div>
+      <div class="mini-card"><h4>💔 Pengasuhan</h4><p>Riwayat pengabaian emosional dan penyalahgunaan (abuse)</p></div>
+      <div class="mini-card"><h4>🪞 Diri</h4><p>Harga diri rendah &amp; kurang mentalisasi</p></div>
+      <div class="mini-card"><h4>🧠 Kondisi mental</h4><p>Gangguan mental dan isolasi</p></div>
+      <div class="mini-card"><h4>🍺 Zat</h4><p>Penggunaan atau adiksi obat/alkohol</p></div>
+      <div class="mini-card"><h4>⛈️ Stresor</h4><p>Situasi hidup yang penuh tekanan</p></div>
+    </div>
+    <div class="alert alert-butter"><span class="alert-icon">📚</span><div><strong>Fish (Bab 10):</strong> pada gangguan kepribadian ambang, melukai diri (sering menyayat) dipakai untuk <em>mengekspresikan marah, mencari perhatian, atau menumpulkan nyeri emosional</em>; disertai rasa kosong, takut ditinggalkan, dan <em>splitting</em>; riwayat abuse sering ditemukan.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🧬</span> Neurobiologi NSSI</div>
+    <div class="grid-3">
+      <div class="mini-card red"><h4>🟠 Amigdala</h4><p><strong>Hiperaktif</strong> → reaktivitas emosi negatif tinggi</p></div>
+      <div class="mini-card yel"><h4>🔵 Hipokampus</h4><p><strong>Atrofi</strong> &amp; apoptosis hipokampus</p></div>
+      <div class="mini-card red"><h4>🟣 Talamus</h4><p>Gangguan modulasi nyeri &amp; nosiseption; disregulasi emosi; talamus <strong>hiperaktif</strong></p></div>
+    </div>
+    <div class="table-wrap" style="margin-top:14px;">
+      <table>
+        <tr><th>Sistem</th><th>Temuan</th></tr>
+        <tr><td><span class="hl-rose">↑ Stres</span></td><td>Epinefrin, norepinefrin, dan kortisol meningkat</td></tr>
+        <tr><td><span class="hl-butter">↓ Mood</span></td><td>Serotonin menurun</td></tr>
+        <tr><td><span class="hl-coral">Opioid endogen</span></td><td>Kadar tinggi → memengaruhi sensasi nyeri &amp; memperkuat perasaan negatif (disforia, disosiasi). Perilaku NSSI sendiri <strong>melepaskan opioid endogen</strong> → <strong>"auto-addiction"</strong></td></tr>
+      </table>
+    </div>
+    <div class="alert alert-mint"><span class="alert-icon">🔁</span><div><strong>Logika lingkarannya:</strong> emosi negatif memuncak (amigdala ↑) → NSSI → opioid endogen terlepas → lega sesaat → perilaku <em>diperkuat</em> → makin sulit berhenti. Itu sebabnya NSSI cenderung berulang.</div></div>
+  </div>
+</div>
+
+<!-- ======== BUNUH DIRI ======== -->
+<div id="sec-bunuhdiri" class="section">
+  <h2 class="section-heading">🕊️ Bunuh Diri</h2>
+  <p class="section-desc">Perilaku manusia yang kompleks dan multikausal — biologis, psikososial, dan kultural saling bertaut.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🪜</span> Kontinum Perilaku Bunuh Diri</div>
+    <div class="flow">
+      <div class="flow-step fs1">Self-harm</div>
+      <div class="flow-step fs2">Suicidal ideation<small>ide bunuh diri</small></div>
+      <div class="flow-step fs3">Preparatory act<small>persiapan</small></div>
+      <div class="flow-step fs4">Suicidal act-directed behavior</div>
+      <div class="flow-step fs5">Suicide attempt<small>percobaan</small></div>
+    </div>
+    <div class="alert alert-butter"><span class="alert-icon">🧠</span><div>Makin ke kanan, makin dekat dengan kematian. Tugas klinisi: <strong>tentukan pasien ada di titik mana</strong> dan hentikan eskalasinya.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🔺</span> Pendekatan Biopsikososial</div>
+    <div class="grid-3">
+      <div class="mini-card red"><h4>🧬 Biologis</h4><ul><li>Penyakit fisik</li><li>Riwayat keluarga bunuh diri</li><li>Disfungsi serotonergik</li></ul></div>
+      <div class="mini-card yel"><h4>💭 Psikologis</h4><ul><li>Hopelessness (putus asa)</li><li>Rasa malu</li><li>Kesepian</li></ul></div>
+      <div class="mini-card"><h4>🌍 Sosial</h4><ul><li>Pengangguran</li><li>Pemenjaraan</li><li>Paparan pertempuran</li></ul></div>
+    </div>
+    <div class="alert alert-coral"><span class="alert-icon">🎯</span><div>Bunuh diri terjadi di <strong>irisan</strong> ketiganya. Satu faktor jarang cukup — makin banyak lingkaran yang tumpang tindih, makin tinggi risiko.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">📊</span> Gangguan Psikiatri di Balik Bunuh Diri</div>
+    <div class="alert alert-rose"><span class="alert-icon">❗</span><div><strong>90%</strong> pelaku percobaan bunuh diri menderita gangguan psikiatri.</div></div>
+    <div class="grid-2">
+      <div class="mini-card red"><h4>60% · Gangguan mood</h4><p>Depresi &amp; bipolar — kelompok terbesar</p></div>
+      <div class="mini-card yel"><h4>40% · Lainnya</h4><p>Skizofrenia, alkoholisme, penyalahgunaan zat, gangguan kepribadian</p></div>
+    </div>
+    <div class="divider"></div>
+    <p style="font-size:13.5px;font-weight:600;color:var(--coral-deep);margin-bottom:10px;">Hazard Ratio bunuh diri per diagnosis (Song, 2020)</p>
+    <div class="bar-row"><div class="bar-label">Gangguan psikotik</div><div class="bar-track"><div class="bar-fill" style="width:92%">4,16</div></div></div>
+    <div class="bar-row"><div class="bar-label">Bipolar</div><div class="bar-track"><div class="bar-fill" style="width:70%">3,13</div></div></div>
+    <div class="bar-row"><div class="bar-label">Terkait zat</div><div class="bar-track"><div class="bar-fill" style="width:69%">3,12</div></div></div>
+    <div class="bar-row"><div class="bar-label">Gangguan depresif</div><div class="bar-track"><div class="bar-fill" style="width:52%">2,34</div></div></div>
+    <div class="bar-row"><div class="bar-label">Mood tak khas</div><div class="bar-track"><div class="bar-fill" style="width:43%">1,92</div></div></div>
+    <div class="bar-row"><div class="bar-label">Mental organik</div><div class="bar-track"><div class="bar-fill" style="width:37%">1,68</div></div></div>
+    <div class="bar-row"><div class="bar-label">Gangguan tidur</div><div class="bar-track"><div class="bar-fill ns" style="width:33%">1,47 (ns)</div></div></div>
+    <div class="bar-row"><div class="bar-label">Gangguan cemas</div><div class="bar-track"><div class="bar-fill ns" style="width:24%">1,06 (ns)</div></div></div>
+    <div class="alert alert-sky"><span class="alert-icon">🔎</span><div><strong>Cara membaca:</strong> semua diagnosis di atas bermakna secara statistik <em>kecuali</em> gangguan tidur (p = 0,198) dan gangguan cemas (p = 0,833) — ditandai "ns". Catatan: pada slide, interval kepercayaan baris "terkait zat" tampak identik dengan baris depresif (kemungkinan salah ketik), jadi hanya HR yang ditampilkan di sini. <span class="hl-sky">🔹</span> HR <em>tertinggi</em> ada pada psikosis, tetapi <em>jumlah kasus terbanyak</em> berasal dari gangguan mood (60%).</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🎭</span> Gangguan Kepribadian &amp; Bunuh Diri (Na et al., 2020)</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Jenis</th><th>OR</th><th>p</th><th>RR</th><th>p</th></tr>
+        <tr><td>Paranoid</td><td>0,83</td><td>0,088</td><td>1,00</td><td>0,990</td></tr>
+        <tr><td>Skizoid</td><td>0,91</td><td>0,490</td><td>1,08</td><td>0,354</td></tr>
+        <tr><td>Skizotipal</td><td>1,08</td><td>0,316</td><td>1,00</td><td>0,961</td></tr>
+        <tr><td>Antisosial</td><td>1,12</td><td>0,057</td><td>0,95</td><td>0,079</td></tr>
+        <tr><td><span class="hl-rose">Borderline</span></td><td><strong>1,77</strong></td><td><strong>&lt;0,001</strong></td><td>0,97</td><td>0,784</td></tr>
+        <tr><td>Histrionik</td><td>1,03</td><td>0,855</td><td>0,97</td><td>0,696</td></tr>
+        <tr><td><span class="hl-rose">Narsisistik</span></td><td>0,83</td><td>0,081</td><td><strong>1,18</strong></td><td><strong>&lt;0,001</strong></td></tr>
+        <tr><td>Avoidant</td><td>1,03</td><td>0,567</td><td>0,98</td><td>0,673</td></tr>
+        <tr><td>Dependent</td><td>0,90</td><td>0,251</td><td>1,10</td><td>0,181</td></tr>
+        <tr><td>Obsessive</td><td>1,05</td><td>0,510</td><td>0,91</td><td>0,093</td></tr>
+      </table>
+    </div>
+    <div class="alert alert-rose"><span class="alert-icon">⭐</span><div>Hanya dua yang bermakna (disorot kuning di slide): <strong>Borderline</strong> (OR 1,77) dan <strong>Narsisistik</strong> (RR 1,18). Untuk ujian: <strong>borderline = kepribadian cluster B yang paling terkait bunuh diri/self-harm</strong>.</div></div>
+    <div class="alert alert-butter"><span class="alert-icon">📚</span><div><strong>Fish (Bab 10):</strong> pada antisosial, ancaman/perilaku bunuh diri juga lazim tetapi mood rendahnya cenderung reaktif terhadap rencana yang terhambat dan cepat reda; pada borderline, self-harm berulang adalah ciri inti.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">⚠️</span> Faktor Risiko: Tinggi vs Rendah</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Area penilaian</th><th>🔴 Risiko tinggi</th><th>🟢 Risiko rendah</th></tr>
+        <tr><td><strong>Usia</strong></td><td>Usia tua; 15–35 tahun</td><td>Pre-pubertas</td></tr>
+        <tr><td><strong>Jenis kelamin</strong></td><td>Laki-laki</td><td>Perempuan</td></tr>
+        <tr><td><strong>Gagasan / rencana</strong></td><td>Sering, intens, sudah lama</td><td>Jarang, tidak intens, sementara</td></tr>
+        <tr><td><strong>Riwayat perilaku bunuh diri</strong></td><td>Berulang kali, terencana</td><td>Percobaan pertama, impulsif</td></tr>
+        <tr><td><strong>Riwayat gangguan psikiatri</strong></td><td>Depresi berat, psikotik akut, penyalahgunaan zat, skizofrenia tidak patuh obat</td><td>Tidak ada gangguan; gangguan terobati; depresi ringan</td></tr>
+        <tr><td><strong>Gejala psikiatri</strong></td><td>Tidak berdaya, anhedonia berat, serangan panik, ansietas berat</td><td>Optimisme, religiusitas, kepuasan hidup</td></tr>
+      </table>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">🔹</span><div><strong>Nuansa laki-laki vs perempuan:</strong> laki-laki lebih sering <em>meninggal</em> karena bunuh diri (metode lebih letal), sedangkan perempuan lebih sering <em>mencoba</em>. Maka "perempuan = risiko rendah" jangan dibaca "aman".</div></div>
+    <div class="cr-box">
+      <div class="cr-label">🩺 Alur penilaian risiko <span class="hl-sky">🔹</span></div>
+      <ol class="cr-steps">
+        <li><strong>Tanyakan langsung &amp; tenang</strong> tentang ide bunuh diri — bertanya tidak menanamkan ide.</li>
+        <li><strong>Gali ide:</strong> frekuensi, intensitas, durasi — lalu <strong>rencana</strong>, cara, ketersediaan sarana, waktu.</li>
+        <li><strong>Riwayat percobaan</strong> sebelumnya (berapa kali, terencana atau impulsif).</li>
+        <li><strong>Gangguan psikiatri aktif</strong> &amp; kepatuhan obat; zat; stresor.</li>
+        <li><strong>Faktor protektif</strong> — religiusitas, dukungan, alasan untuk hidup.</li>
+        <li><strong>Tentukan disposisi:</strong> ide kuat + impulsif → rawat; sisanya rencana keselamatan + pendamping + kontrol dekat.</li>
+      </ol>
+    </div>
+    <div class="soal-dosen">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge-warn">⚠️ Tricky — kunci beda-beda</span></div>
+      <div class="soal-dosen-cohort">
+        <span class="cohort-tag cohort-axon">Axon '20 No.16</span>
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.23</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.8</span>
+      </div>
+      <div class="soal-dosen-content">
+        <strong>❓ "Informasi penting pada assessment kasus percobaan bunuh diri?"</strong> (opsi: keinginan disembuhkan · penyakit/disabilitas berat · percobaan sebelumnya · dorongan untuk mati · rencana pasien selanjutnya terkait PBD)<br>
+        ✅ Kunci <strong>Axon '20 &amp; Arthron '18 = E, rencana selanjutnya terkait percobaan bunuh diri</strong>. Kunci UB Blok menulis <em>C (percobaan sebelumnya)</em>.<br>
+        Secara klinis semuanya relevan; untuk ujian, <span class="hl-warn">kalau ada opsi "rencana/niat lanjutan"</span> itu yang paling sering dipilih.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">💊</span> Tatalaksana Kuratif</div>
+    <div class="alert alert-rose"><span class="alert-icon">🏥</span><div><strong>Pikiran bunuh diri kuat &amp; impulsif → hospitalisasi.</strong></div></div>
+    <div class="grid-2">
+      <div class="mini-card yel">
+        <h4>🧪 Terapi biologis</h4>
+        <ul>
+          <li><strong>Psikofarmaka:</strong> SSRI · SNRI · antidepresan trisiklik · MAOI · antidepresan atipikal</li>
+          <li><strong>ECT</strong></li>
+          <li><strong>TMS</strong></li>
+        </ul>
+      </div>
+      <div class="mini-card red">
+        <h4>🗣️ Psikoterapi</h4>
+        <p>Dilakukan bersama terapi biologis; sasaran: hopelessness, regulasi emosi, rasa malu, dan isolasi.</p>
+      </div>
+    </div>
+    <div class="alert alert-sky"><span class="alert-icon">🔹</span><div><strong>Tambahan klinis:</strong> SSRI umumnya pilihan awal karena lebih aman saat overdosis dibanding TCA; batasi jumlah obat yang diberikan sekali resep, dan libatkan pendamping untuk mengawasi. ECT sering dipertimbangkan bila ide bunuh diri berat atau depresi psikotik.</div></div>
+  </div>
+
+  <div class="card">
+    <button class="collapse-btn" onclick="toggle(this)">
+      <div class="card-title" style="margin-bottom:0"><span class="card-icon" style="background:var(--sky-pale)">📚</span> Lensa Psikopatologi (Fish) — gejala yang menaikkan risiko <span class="hl-sky">🔹</span></div>
+      <span class="chev">▼</span>
+    </button>
+    <div class="collapse-body">
+      <ul class="styled-list">
+        <li><strong>"Smiling depression":</strong> pasien depresi tersenyum dengan bibir, bukan mata (otot sekitar mata kaku). Senyum komunikatif ini bisa membuat klinisi <em>meremehkan</em> depresi — "terutama penting saat menilai risiko bunuh diri" (Fish, Bab 6).</li>
+        <li><strong>Waham bersalah &amp; hipokondriakal pada depresi berat:</strong> dapat berujung bunuh diri; bila melibatkan anak, dapat terjadi <em>extended suicide</em> — membunuh orang terdekat karena yakin mereka "lebih baik mati" (Fish, Bab 8).</li>
+        <li><strong>Halusinasi pada depresi:</strong> suara terpotong-potong ("kill yourself") dan tidak menakutkan karena pasien merasa pantas; instruksi bunuh diri tidak menakutkan karena sering sudah dipikirkan (Fish, Bab 3). Berbeda dari suara kontinu pada skizofrenia.</li>
+        <li><strong>Halusinasi imperatif</strong> (suara memerintah) pada psikosis: nilai apakah pasien menuruti.</li>
+        <li><strong>Delirium:</strong> pasien takut dapat melompat dari jendela untuk "melarikan diri" — cedera berat tanpa niat bunuh diri murni.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ======== KELUARGA & KDRT ======== -->
+<div id="sec-keluarga" class="section">
+  <h2 class="section-heading">🏡 Keluarga, Layanan Primer &amp; KDRT</h2>
+  <p class="section-desc">Pendekatan sosial dalam deteksi &amp; penanganan kasus psikiatri di keluarga — di sinilah kedaruratan sering pertama kali terdeteksi.</p>
+
+  <div class="src-note">🎧 <strong>Sumber tab ini:</strong> rekaman kuliah family medicine semester 7 (pendekatan sosial deteksi &amp; penanganan kasus psikiatri di keluarga). Nama dosen tidak terdengar jelas di rekaman, jadi bagian ini <em>terpisah</em> dari kuliah dr. Adriesti — hapus saja tab ini bila bukan bagian dari yang kamu butuhkan.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🧭</span> Mengapa Keluarga Begitu Penting?</div>
+    <div class="dr-note">Pada kasus psikiatri, pasien sering merasa sehat dan bingung kenapa dibawa berobat. Yang tahu "ini bukan dia yang biasanya" justru orang terdekat. Jangan pernah menutup komunikasi dengan keluarga pasien — untuk psikiatri, <strong>cross-check itu sangat perlu</strong>.</div>
+    <ul class="styled-list">
+      <li><strong>Pendekatan biopsikososial:</strong> pasien dilihat utuh (model mandala — manusia di pusat, dipengaruhi faktor internal sampai lingkungan), bukan sekadar organ.</li>
+      <li><strong>Siapa "orang terdekat"?</strong> Biasanya keluarga serumah, tetapi bisa tetangga atau anak yang tinggal di kota lain namun rutin berkomunikasi — dan kadang <em>lebih tahu</em> kondisi pasien daripada tetangga sebelah.</li>
+      <li><strong>Keluarga tahu perkembangan:</strong> "dulu pendiam dan baik, kenapa sekarang agresif?" — informasi ini tidak bisa digali dari pasien saja.</li>
+      <li><strong>Fondasi sistem kesehatan Indonesia = layanan primer</strong> (transformasi kesehatan), jadi dokter layanan primer adalah garda depan deteksi.</li>
+    </ul>
+    <div class="alert alert-butter"><span class="alert-icon">💡</span><div><strong>Peluang:</strong> karena stigma, banyak pasien enggan ke psikiater — tetapi mungkin tidak enggan ke dokter keluarga. Tanggung jawabmu justru lebih besar.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🤝</span> Caregiver Juga Bisa Jadi "Pasien"</div>
+    <p style="font-size:13.5px;margin-bottom:10px;">Contoh dari kuliah: pasca-stroke, pasien berteriak kesakitan hampir tiap hari sampai malam; anggota keluarga yang bergiliran merawat akhirnya tidak sanggup dan datang berkonsultasi. <em>Yang bermasalah bukan pasien, melainkan keluarganya.</em></p>
+    <div class="dr-note">Keluarga adalah satu sistem. Bila caregiver dibiarkan kewalahan, pasien yang dirawat akan ikut makin bermasalah.</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Pertanyaan</th><th>Jawaban dari kuliah</th></tr>
+        <tr><td>Kapan caregiver / keluarga perlu mencari bantuan?</td><td><strong>Bekali caregiver</strong>: nilai dulu apakah ia mampu merawat (ada alatnya), lalu ajarkan tanda darurat &amp; bahaya, apa yang dilakukan (A-B-C-D), termasuk menghubungi dokter keluarga.</td></tr>
+        <tr><td>Bagaimana bila keluarga menyewa pengasuh?</td><td>Pengasuh ≠ caregiver terlatih. Caregiver harus tahu jadwal obat, makan &amp; porsi, aktivitas yang boleh, dan respons bila ada keluhan. Sebaiknya <strong>konsultasi dokter keluarga sebelum menunjuk caregiver</strong>.</td></tr>
+        <tr><td>Komentar "wajar, namanya juga orang tua"?</td><td>Jangan jadikan netizen/keluarga non-ahli sebagai sumber keputusan kesehatan — percayai yang ahli di bidangnya. Caregiver stres bukan berarti tidak ikhlas.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--coral-pale)">🩺</span> Pasien Kronis → Risiko Depresi Tinggi</div>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Diabetes, hipertensi, penyakit jantung, stroke, dan terutama <strong>kanker</strong> berisiko tinggi mengalami depresi — dan sering <strong>terlewat</strong> karena dianggap "normal".</div></div>
+    <div class="grid-2">
+      <div class="mini-card red">
+        <h4>🧠 Pemicu dari pikiran pasien</h4>
+        <ul><li>"Bisa sembuh tidak?"</li><li>"Berapa lama harus berobat/minum obat?"</li><li>"Kok belum ada kemajuan?"</li><li>"Bagaimana ginjal/hati saya kalau minum obat lama?"</li></ul>
+      </div>
+      <div class="mini-card yel">
+        <h4>🙈 Mengapa keluarga melewatkannya</h4>
+        <ul><li>Dianggap wajar karena sudah tua / bosan minum obat</li><li>Kejadian harian → dinormalkan</li><li>"Kemarin tidak minum obat juga tidak apa-apa"</li></ul>
+      </div>
+    </div>
+    <div class="alert alert-mint"><span class="alert-icon">✅</span><div><strong>Tugasmu sebagai dokter:</strong> pada pasien kronis, minta pasien datang <em>bersama keluarga</em>; dalam 5–10 menit konsultasi, <strong>selipkan pesan</strong>: bila muncul gejala depresi/buruk atau enggan berobat, segera lapor. Edukasi tanda bahaya (mis. bunuh diri) cukup untuk kasus akut.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--butter-pale)">🧰</span> Alat Bantu di Layanan Primer</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Alat</th><th>Untuk apa</th></tr>
+        <tr><td><span class="hl-coral">PHQ-9</span></td><td>Skrining tingkat depresi — versi Indonesia sudah divalidasi</td></tr>
+        <tr><td><span class="hl-butter">GAD-7</span></td><td>Skrining tingkat kecemasan — versi Indonesia tersedia</td></tr>
+        <tr><td><span class="hl-mint">APGAR keluarga</span></td><td>Menilai dukungan &amp; kenyamanan pasien dalam keluarga (keluarga tak mendukung = faktor risiko cemas/depresi, bahkan bisa jadi sumber masalah)</td></tr>
+        <tr><td><span class="hl-peach">Genogram (3 generasi)</span></td><td>Melihat pola keluarga, mis. riwayat depresi pada ibu → kerentanan genetik</td></tr>
+      </table>
+    </div>
+    <div class="dr-note">Simpan PHQ-9 &amp; GAD-7 di ponsel dan coba pada pasien rutin saat klerkship — kamu akan terkejut dengan hasilnya.</div>
+    <div class="cr-box">
+      <div class="cr-label">🩺 Tatalaksana di layanan primer</div>
+      <ol class="cr-steps">
+        <li><strong>Konseling</strong> pasien.</li>
+        <li><strong>Farmakoterapi sederhana</strong> bila perlu, sesuai kompetensi dokter.</li>
+        <li><strong>Konseling keluarga</strong> — banyak kasus selesai bila konflik keluarga diperbaiki (KDRT, <em>broken home</em> pada anak).</li>
+        <li><strong>Rujuk ke psikiater</strong> bila ada tanda bahaya. <span class="hl-rose">Ide bunuh diri</span> = tanda bahaya paling berat → tangani segera, rujuk bila perlu.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🛡️</span> Kekerasan dalam Rumah Tangga (KDRT)</div>
+    <div class="alert alert-coral"><span class="alert-icon">🔎</span><div><strong>"Mudah sekaligus sulit":</strong> yang paling sering terjadi adalah korban <strong>menyembunyikan</strong> kejadian — malu, takut diancam, takut anak jadi korban. Korban bisa perempuan <em>maupun laki-laki</em>.</div></div>
+    <div class="dr-note">Peran dokter seperti detektif: pasien datang hanya dengan "sakit kepala", tetapi pipinya tampak lebam yang ditutup bedak. Jangan fokus pada keluhan saja.</div>
+
+    <div class="cr-box">
+      <div class="cr-label">🕵️ Alur menghadapi dugaan KDRT</div>
+      <ol class="cr-steps">
+        <li><strong>Tanya pelan &amp; tidak blunt</strong> — arahkan pertanyaan (boleh leading) bertahap; bila langsung ditanya "Ibu dipukul?", korban menutup diri lagi.</li>
+        <li><strong>Pisahkan wawancara</strong> pasien dan keluarga/pasangan — bila bersama, pasien lebih defensif dan penilaian dokter bisa terpengaruh. Setelah itu baru dipertemukan.</li>
+        <li><strong>Tata laksana awal:</strong> obati luka.</li>
+        <li><strong>Dokumentasi objektif:</strong> tulis di rekam medis, petakan luka (ukuran/luas, lokasi) → siap bila polisi meminta laporan medikolegal.</li>
+        <li><strong>Rencana keselamatan (safety planning):</strong> tanyakan siapa yang ingin mendampingi; beri tahu pendamping untuk waspada ide bunuh diri akibat depresi pasca-KDRT; buat alur (flowchart).</li>
+        <li><strong>Rujuk</strong> bila cedera mengkhawatirkan; libatkan <strong>LSM</strong> perlindungan korban KDRT / kekerasan seksual.</li>
+      </ol>
+    </div>
+    <div class="alert alert-rose"><span class="alert-icon">🚫</span><div><strong>Jangan tanya "mau dilapor atau tidak?"</strong> — pasien hampir selalu menjawab "jangan", dan kamu berakhir tidak melakukan apa-apa. Korban sebenarnya butuh mediator/perlindungan; tentukan <em>kepada siapa</em> kejadian akan dilaporkan.</div></div>
+    <div class="alert alert-butter"><span class="alert-icon">👶</span><div>Anak yang menyaksikan ibunya dianiaya adalah <strong>korban emosional</strong>, meski belum ada trauma fisik. Perluas sudut pandang pasien agar ia mau terbuka (teknik konseling).</div></div>
+    <div class="alert alert-sky"><span class="alert-icon">ℹ️</span><div>Kekerasan seksual disebut penting, tetapi dosen mencatat belum ada materinya di blok psikiatri.</div></div>
+  </div>
+</div>
+
+
+<!-- ======== QUIZ ======== -->
+<div id="sec-quiz" class="section">
+  <h2 class="section-heading">🧠 Quiz — Uji Pemahamanmu!</h2>
+  <p class="section-desc">10 soal vignette berbasis slide dr. Adriesti + pola bank soal Blok Psikiatri. Klik jawaban untuk umpan balik instan.</p>
+
+  <div class="quiz-progress" id="quizProg"></div>
+
+  <!-- Q1 -->
+  <div class="quiz-q" id="q1">
+    <div class="q-num">SOAL 01 / OPIOID</div>
+    <div class="q-vignette">Seorang laki-laki 24 tahun dibawa temannya ke IGD dalam keadaan tidak sadar setelah berkumpul hingga dini hari. RR 8×/menit, nadi menurun, pupil 1/1 mm, dan ditemukan bekas suntikan di lengan. Jalan napas sudah diamankan dan oksigenasi diberikan.</div>
+    <p class="q-question">Terapi spesifik yang paling tepat berikutnya adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">A</span>Flumazenil IV</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">B</span>Diazepam IV</button>
+      <button class="q-opt" onclick="ans(this,'q1',true)"><span class="ol">C</span>Nalokson IV</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">D</span>Atropin IV</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">E</span>N-asetilsistein</button>
+    </div>
+    <div class="q-exp" id="exp-q1">✅ <strong>C — Nalokson IV</strong><br><br>Trias opioid: <strong>pinpoint pupil + depresi napas + penurunan kesadaran</strong>, diperkuat bekas suntikan. Antidotum opioid = <strong>nalokson</strong>. Flumazenil untuk benzodiazepin, atropin untuk keracunan kolinergik (organofosfat), NAC untuk parasetamol. Nalokson bermasa kerja pendek → observasi, kemungkinan perlu redosis.</div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-q" id="q2">
+    <div class="q-num">SOAL 02 / BENZODIAZEPIN</div>
+    <div class="q-vignette">Wanita 34 tahun dibawa keluarganya setelah menelan banyak tablet obat tidur (benzodiazepin) sekitar 3 jam lalu. Sedasi berat, hiporefleksia, TD 85/50 mmHg, pupil normal. Jalan napas aman, tidak ada riwayat penggunaan benzodiazepin harian jangka panjang.</div>
+    <p class="q-question">Antidotum spesifik untuk toksidrom ini adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q2',true)"><span class="ol">A</span>Flumazenil IV</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">B</span>Nalokson IV</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">C</span>Atropin IV</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">D</span>Haloperidol IM</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">E</span>Lorazepam IV</button>
+    </div>
+    <div class="q-exp" id="exp-q2">✅ <strong>A — Flumazenil IV</strong><br><br>Sedasi berat + hiporefleksia + hipotensi = toksidrom benzodiazepin → antidotum <strong>flumazenil</strong>. Opsi E justru menambah benzodiazepin. 🔹 Catatan: flumazenil berisiko memicu kejang pada ketergantungan benzodiazepin kronik, jadi pada pasien dependen lebih berhati-hati.</div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-q" id="q3">
+    <div class="q-num">SOAL 03 / WITHDRAWAL ALKOHOL</div>
+    <div class="q-vignette">Laki-laki 25 tahun, pecandu alkohol berat, berhenti minum sejak 3 hari lalu. Dibawa keluarga karena gelisah, tangan gemetar, berkeringat deras, nadi cepat, demam, dan satu kali kejang di rumah.</div>
+    <p class="q-question">Terapi yang paling tepat adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">A</span>Flumazenil IV</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">B</span>Nalokson IV</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">C</span>Haloperidol saja</button>
+      <button class="q-opt" onclick="ans(this,'q3',true)"><span class="ol">D</span>Diazepam / lorazepam</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">E</span>Risperidon + triheksifenidil</button>
+    </div>
+    <div class="q-exp" id="exp-q3">✅ <strong>D — Diazepam / lorazepam</strong><br><br>Tremor + hiperaktivitas otonom + kejang setelah berhenti alkohol = <strong>withdrawal alkohol</strong>. Slide: terapi = diazepam/lorazepam. Ini <em>bukan</em> keracunan sehingga antidotum (nalokson, flumazenil) tidak relevan. Antipsikotik saja (opsi C, E) tidak mengatasi dasar GABA-ergiknya dan dapat menurunkan ambang kejang 🔹.</div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-q" id="q4">
+    <div class="q-num">SOAL 04 / AGITASI AKUT</div>
+    <div class="q-vignette">Laki-laki 23 tahun dibawa keluarga ke IGD: gaduh gelisah, bicara kacau, marah-marah, dan curiga pada semua petugas. Sikapnya bermusuhan tetapi belum melukai siapa pun; tanda vital normal.</div>
+    <p class="q-question">Langkah pertama yang paling tepat adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">A</span>Restrain mekanik segera agar petugas aman</button>
+      <button class="q-opt" onclick="ans(this,'q4',true)"><span class="ol">B</span>Deeskalasi verbal disertai modifikasi lingkungan</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">C</span>Haloperidol IM langsung tanpa bicara dulu</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">D</span>Kurung sendirian di ruangan tertutup tanpa pengawasan</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">E</span>Tunggu hasil laboratorium lengkap dahulu</button>
+    </div>
+    <div class="q-exp" id="exp-q4">✅ <strong>B — Deeskalasi verbal + modifikasi lingkungan</strong><br><br>Urutan slide: <strong>deeskalasi verbal → modifikasi lingkungan → restrain → psikofarmaka</strong> (V-E-R-P). Karena pasien belum melukai siapa pun, mulai dari langkah paling tidak invasif; restrain dan obat dipakai bila gagal dan keselamatan terancam. Ruang periksa harus punya akses keluar yang sama bagi pasien dan pemeriksa.</div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-q" id="q5">
+    <div class="q-num">SOAL 05 / DEKONTAMINASI</div>
+    <div class="q-vignette">Wanita 22 tahun, sadar penuh dan bicara jelas, mengaku menelan banyak tablet (jenis tidak diketahui) 30 menit lalu. Jalan napas aman, tanda vital stabil, akses intravena sudah terpasang.</div>
+    <p class="q-question">Menurut urutan tatalaksana intoksikasi, tindakan berikutnya adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">A</span>Merangsang muntah</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">B</span>Menunggu 4 jam tanpa tindakan</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">C</span>Memberi semua antidotum secara empiris</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">D</span>Psikoterapi suportif segera</button>
+      <button class="q-opt" onclick="ans(this,'q5',true)"><span class="ol">E</span>Karbo adsorben (arang aktif) karena ingesti &lt; 1 jam</button>
+    </div>
+    <div class="q-exp" id="exp-q5">✅ <strong>E — Arang aktif (ingesti &lt; 1 jam)</strong><br><br>Urutan slide: <strong>(A) stabilisasi ABCDE → (B) dekontaminasi lambung dengan arang aktif bila ingesti &lt; 1 jam → (C) antidotum spesifik sesuai toksidrom</strong>. ABCDE sudah beres, ingesti baru 30 menit, pasien sadar → dekontaminasi. Antidotum empiris tanpa toksidrom jelas tidak tepat; prinsip terapi intoksikasi adalah <em>life-saving</em>.</div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-q" id="q6">
+    <div class="q-num">SOAL 06 / NSSI</div>
+    <div class="q-vignette">Remaja 15 tahun menyayat lengan bawahnya berulang kali setiap merasa sangat tertekan di sekolah. Ia mengatakan "rasanya lega setelahnya" dan tegas menyangkal ingin mati. Luka superfisial, tanpa riwayat percobaan bunuh diri sebelumnya.</div>
+    <p class="q-question">Karakterisasi yang paling tepat dan sikap klinis yang sesuai adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q6',true)"><span class="ol">A</span>NSSI — tujuan kelegaan segera dari emosi negatif; tetap perlu menilai risiko bunuh diri dan mencari gangguan dasarnya</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">B</span>Percobaan bunuh diri, karena ada luka yang tampak</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">C</span>Perilaku bunuh diri, karena tujuannya lepas permanen dari nyeri emosional</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">D</span>Malingering untuk mencari keuntungan</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">E</span>Gangguan factitious, tidak perlu dievaluasi lebih lanjut</button>
+    </div>
+    <div class="q-exp" id="exp-q6">✅ <strong>A — NSSI</strong><br><br>Intent NSSI = <strong>kelegaan segera</strong> dari emosi negatif (bukan mati), biasanya <strong>lebih sering berulang</strong>, metode kurang letal <em>namun tetap berpotensi letal</em>, dan umumnya meredakan nyeri psikologis. Puncak onset 14–15 tahun. Self-harm sering merupakan <em>gejala</em> kondisi lain, dan berada di awal kontinum bunuh diri → tetap tanyakan niat bunuh diri secara eksplisit.</div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-q" id="q7">
+    <div class="q-num">SOAL 07 / SNM</div>
+    <div class="q-vignette">Laki-laki 30 tahun dengan skizofrenia; dosis haloperidol dinaikkan 5 hari lalu. Kini suhu 39,8 °C, otot sangat kaku (lead-pipe), berkeringat banyak, tekanan darah labil, bingung, dan CK meningkat.</div>
+    <p class="q-question">Diagnosis dan tatalaksana yang paling tepat adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">A</span>EPS akut — triheksifenidil</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">B</span>Sindrom serotonin — benzodiazepin saja</button>
+      <button class="q-opt" onclick="ans(this,'q7',true)"><span class="ol">C</span>SNM — hentikan antipsikotik, terapi suportif, bromokriptin</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">D</span>Tardive dyskinesia — naikkan dosis haloperidol</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">E</span>Delirium tremens — diazepam</button>
+    </div>
+    <div class="q-exp" id="exp-q7">✅ <strong>C — Sindrom Neuroleptik Maligna</strong><br><br>Antipsikotik + <strong>hipertermia, rigiditas, instabilitas otonom, perubahan status mental, CK ↑</strong> = SNM: efek samping jarang tetapi fatal. Tatalaksana: <strong>hentikan antipsikotik</strong>, suportif, <strong>bromokriptin</strong> (kunci bank soal), dantrolen pada kasus berat. EPS tidak disertai demam &amp; instabilitas otonom; sindrom serotonin onset jam dengan klonus/hiperrefleks.</div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-q" id="q8">
+    <div class="q-num">SOAL 08 / PENILAIAN RISIKO</div>
+    <div class="q-vignette">Lima pasien dinilai di IGD pada hari yang sama setelah muncul pikiran bunuh diri.</div>
+    <p class="q-question">Manakah profil dengan risiko bunuh diri paling tinggi?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">A</span>Perempuan 12 tahun pre-pubertas, percobaan pertama impulsif setelah dimarahi, tanpa gangguan psikiatri</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">B</span>Perempuan 40 tahun, depresi ringan yang sudah terobati, optimis dan religius</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">C</span>Laki-laki 30 tahun tanpa gangguan psikiatri, ide jarang dan sementara</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">D</span>Perempuan 25 tahun, ide sementara, puas dengan hidupnya, gangguan terobati</button>
+      <button class="q-opt" onclick="ans(this,'q8',true)"><span class="ol">E</span>Laki-laki 25 tahun, skizofrenia tidak patuh obat, ide sering dan intens, dua percobaan terencana sebelumnya, merasa tidak berdaya</button>
+    </div>
+    <div class="q-exp" id="exp-q8">✅ <strong>E — profil risiko tinggi pada hampir semua area</strong><br><br>Menurut tabel slide: laki-laki, usia 15–35, ide <strong>sering-intens-lama</strong>, riwayat <strong>berulang &amp; terencana</strong>, skizofrenia tidak patuh obat (gangguan psikotik: HR tertinggi, 4,16), dan perasaan tidak berdaya. Opsi A–D masing-masing memuat ciri <em>risiko rendah</em> (pre-pubertas/impulsif/terobati/optimis/religius/puas hidup).</div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-q" id="q9">
+    <div class="q-num">SOAL 09 / KEPRIBADIAN</div>
+    <div class="q-vignette">Wanita 22 tahun dengan hubungan interpersonal intens namun tidak stabil, takut ditinggalkan, rasa kosong kronis, mood berubah cepat, dan sering menyayat lengan. Baru-baru ini minum obat berlebihan setelah putus dari pacar.</div>
+    <p class="q-question">Gangguan kepribadian yang pada data Na et al. (2020) berkaitan bermakna dengan peningkatan odds bunuh diri (OR 1,77) adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">A</span>Skizoid</button>
+      <button class="q-opt" onclick="ans(this,'q9',true)"><span class="ol">B</span>Borderline</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">C</span>Obsesif-kompulsif</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">D</span>Dependen</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">E</span>Paranoid</button>
+    </div>
+    <div class="q-exp" id="exp-q9">✅ <strong>B — Borderline</strong><br><br>Ketakutan ditinggalkan, hubungan intens-tidak stabil, rasa kosong, dan self-harm berulang adalah inti <strong>gangguan kepribadian ambang (cluster B)</strong>. Pada tabel slide, OR 1,77 (p &lt; 0,001) hanya bermakna untuk borderline (narsistik bermakna pada RR 1,18). Skizoid, OCPD, dependen, dan paranoid tidak bermakna.</div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-q" id="q10">
+    <div class="q-num">SOAL 10 / TATALAKSANA</div>
+    <div class="q-vignette">Laki-laki 45 tahun dengan depresi berat. Ia terus memikirkan bunuh diri, sudah memiliki rencana, dan semalam hampir melakukannya secara impulsif. Istri sangat khawatir dan ingin membawanya pulang.</div>
+    <p class="q-question">Tindakan yang paling tepat adalah?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">A</span>Rawat jalan, SSRI, kontrol 2 minggu</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">B</span>Beri benzodiazepin dan pulangkan</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">C</span>Psikoterapi saja secara rawat jalan</button>
+      <button class="q-opt" onclick="ans(this,'q10',true)"><span class="ol">D</span>Hospitalisasi + terapi biologis (antidepresan, ECT bila perlu) + psikoterapi</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">E</span>Edukasi keluarga dan observasi di rumah saja</button>
+    </div>
+    <div class="q-exp" id="exp-q10">✅ <strong>D — Hospitalisasi + terapi biologis + psikoterapi</strong><br><br>Slide: <strong>pikiran bunuh diri kuat dan impulsif → hospitalisasi</strong>. Terapi kuratif: psikofarmaka (SSRI/SNRI/TCA/MAOI/atipikal), ECT, TMS, plus psikoterapi. Rawat jalan hanya cocok untuk risiko lebih rendah dengan rencana keselamatan dan pendamping.</div>
+  </div>
+
+  <!-- Score -->
+  <div class="score-card" id="scoreCard">
+    <div style="font-size:40px;margin-bottom:8px;">🌼</div>
+    <div class="score-big" id="scoreNum">0</div>
+    <div style="font-size:18px;opacity:0.85;margin-top:4px;">/ 10</div>
+    <p class="score-msg" id="scoreMsg"></p>
+    <button class="btn-restart" onclick="resetQuiz()">🔁 Ulangi Quiz</button>
+  </div>
+</div><!-- /quiz -->
+
+</div><!-- /container -->
+
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  const btn = document.querySelector('.nav-btn[data-t="' + id + '"]');
+  if (btn) { btn.classList.add('active'); btn.scrollIntoView({inline:'center', block:'nearest'}); }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+let answered = {}, score = 0, total = 10;
+
+function initDots() {
+  const p = document.getElementById('quizProg');
+  p.innerHTML = '';
+  for (let i=1; i<=total; i++) {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = 'dot' + i;
+    p.appendChild(d);
+  }
+}
+
+function ans(btn, qid, correct) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  const qNum = parseInt(qid.replace('q',''));
+  const card = document.getElementById(qid);
+  card.querySelectorAll('.q-opt').forEach(b => { b.disabled = true; });
+  if (correct) {
+    btn.classList.add('correct'); score++;
+    document.getElementById('dot'+qNum).classList.add('ok');
+  } else {
+    btn.classList.add('wrong');
+    document.getElementById('dot'+qNum).classList.add('no');
+    card.querySelectorAll('.q-opt').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(',true)')) b.classList.add('correct');
+    });
+  }
+  const exp = document.getElementById('exp-' + qid);
+  if (exp) exp.classList.add('show');
+  if (Object.keys(answered).length === total) setTimeout(showScore, 700);
+}
+
+function showScore() {
+  const sc = document.getElementById('scoreCard');
+  sc.classList.add('show');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter masa depan! 🌼✨'];
+  const idx = score <= 3 ? 0 : score <= 5 ? 1 : score <= 7 ? 2 : score <= 9 ? 3 : 4;
+  document.getElementById('scoreMsg').textContent = msgs[idx];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetQuiz() {
+  answered = {}; score = 0;
+  document.querySelectorAll('.q-opt').forEach(b => { b.disabled=false; b.classList.remove('correct','wrong'); });
+  document.querySelectorAll('.q-exp').forEach(e => e.classList.remove('show'));
+  document.getElementById('scoreCard').classList.remove('show');
+  initDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+initDots();
+</script>
+
+<!-- ====== FLOATING BANK SOAL BUTTON ====== -->
+<button class="float-btn" onclick="openModal()">
+  <div class="float-pulse"></div>
+  🔴 Bank Soal
+</button>
+
+<!-- ====== MODAL RANGKUMAN BANK SOAL ====== -->
+<div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">🔴 Rangkuman Bank Soal</div>
+    <p class="modal-sub">Soal yang beririsan dengan materi ini di bank soal Blok Psikiatri (Axon '20, Arthron '18, Aorta '19, Avicenna '17, dan kumpulan UB Blok). Kunci berasal dari file bank soal — bila ada perbedaan antar angkatan, ditandai.</p>
+
+    <div class="modal-item">
+      <div class="modal-item-num">01 · TRICKY ⚠️</div>
+      <div class="modal-item-q">Informasi terpenting pada assessment percobaan bunuh diri?</div>
+      <div class="modal-item-a"><strong>Axon &amp; Arthron: E — rencana pasien selanjutnya terkait PBD.</strong> UB Blok menulis C (percobaan sebelumnya). Bila opsi "rencana/niat lanjutan" ada → pilih itu.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-axon">Axon '20 No.16</span>
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.23</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.8</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">02 · PALING SERING</div>
+      <div class="modal-item-q">Perhatian utama penatalaksanaan kedaruratan psikiatri di faskes?</div>
+      <div class="modal-item-a"><strong>Keselamatan pasien dan petugas.</strong></div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.89</span>
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.37</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">03 · RUANG PERIKSA</div>
+      <div class="modal-item-q">Bagian penting ruang periksa kedaruratan psikiatri?</div>
+      <div class="modal-item-a"><strong>Kesempatan yang sama bagi pasien dan pemeriksa untuk keluar ruangan.</strong> Bukan pasien diikat, bukan jarak dekat, bukan meja kaca.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-axon">Axon '20 No.56</span>
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.85</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">04 · INTOKSIKASI</div>
+      <div class="modal-item-q">Prinsip terapi intoksikasi NAPZA? Yang biasa ditemukan pada ketergantungan NAPZA?</div>
+      <div class="modal-item-a"><strong>Life-saving.</strong> Ketergantungan → <strong>gejala lepas zat</strong>. Henti obat 3 hari lalu gelisah/sulit tidur/nyeri → <strong>withdrawal syndrome</strong>.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.26 &amp; 99</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna '17 No.90</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">05 · OPIOID</div>
+      <div class="modal-item-q">Tak sadar, bekas suntikan, pupil 1/1 mm — pembeda &amp; terapi?</div>
+      <div class="modal-item-a"><strong>Pin-point pupil (miosis)</strong> → <strong>nalokson</strong> (bukan midriasis).</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.26</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna '17 No.85 &amp; 91</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.53</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">06 · METADON</div>
+      <div class="modal-item-q">Terapi rumatan metadon (PTRM) untuk apa?</div>
+      <div class="modal-item-a"><strong>Opioid</strong> — mencegah penggunaan opioid / withdrawal opioid. Bukan alkohol, kokain, ecstasy, nikotin.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-axon">Axon '20 No.21 &amp; 42</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.37</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">07 · SNM</div>
+      <div class="modal-item-q">Efek samping antipsikotik tipikal yang jarang tapi fatal? Terapinya?</div>
+      <div class="modal-item-a"><strong>Sindrom Neuroleptik Maligna.</strong> Tatalaksana pada soal: <strong>bromokriptin</strong>.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.77</span>
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.54</span>
+        <span class="cohort-tag cohort-blok">UB Blok No.70</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">08 · EPS</div>
+      <div class="modal-item-q">Kaku + tremor setelah haloperidol — terapi &amp; pengganti haloperidol?</div>
+      <div class="modal-item-a">EPS → <strong>triheksifenidil</strong> (antikolinergik). Pengganti pada soal Avicenna: <strong>clozapine</strong>.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-arthron">Arthron '18 No.69 &amp; 76</span>
+        <span class="cohort-tag cohort-aorta">Aorta '19 No.53</span>
+        <span class="cohort-tag cohort-avicenna">Avicenna '17 No.89</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">09 · DELIRIUM ⚠️</div>
+      <div class="modal-item-q">Wanita 50 th mengamuk, mencekik perawat, TD 190/100, GDS 600, suhu 37?</div>
+      <div class="modal-item-a"><strong>Delirium</strong> (kondisi medis umum) — bukan skizofrenia, bukan penyalahgunaan opioid.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-axon">Axon '20 No.50</span>
+      </div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">10 · BENZODIAZEPIN</div>
+      <div class="modal-item-q">Dosis biasa tak lagi berefek, tak bisa tidur tanpa obat?</div>
+      <div class="modal-item-a"><strong>Ketergantungan benzodiazepin</strong> (toleransi + gejala lepas obat), bukan intoksikasi.</div>
+      <div class="modal-cohorts">
+        <span class="cohort-tag cohort-blok">UB Blok No.24</span>
+      </div>
+    </div>
+
+    <button class="modal-nav-btn" onclick="closeModal(); show('quiz')">🧠 Langsung ke Quiz →</button>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('soalDosenModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('soalDosenModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOuter(e) {
+  if (e.target === document.getElementById('soalDosenModal')) closeModal();
+}
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>

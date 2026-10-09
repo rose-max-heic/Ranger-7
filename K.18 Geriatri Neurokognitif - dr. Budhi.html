@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>👴 Psikiatri Geriatri — Study Companion Blok Psikiatri</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lavender: #1B49A2;
+  --lavender-light: #6F95D8;
+  --lavender-pale: #E4EBF8;
+  --lavender-deep: #12306F;
+  --lavender-muted: #2D5CB8;
+  --rose: #C9677A;
+  --rose-light: #E08C9C;
+  --rose-pale: #F9E7EA;
+  --rose-deep: #92404F;
+  --mint: #7A8450;
+  --mint-pale: #EEF1DF;
+  --mint-deep: #4B5530;
+  --peach: #C9B26A;
+  --peach-pale: #EFE6C7;
+  --peach-deep: #6E5A1A;
+  --sky: #7AA3D6;
+  --sky-pale: #E3EEF9;
+  --sky-deep: #2F5F93;
+  --cream: #FBF8EC;
+  --white: #ffffff;
+  --text: #1F2616;
+  --text-muted: #66694F;
+  --border: #E2D9B6;
+  --shadow: rgba(27,73,162,0.10);
+  --srgb: 27,73,162;
+  --h1: #10285E;
+  --h2: #1B49A2;
+  --h3: #5D7A66;
+  --h4: #7A8450;
+  --em: #EFE6C7;
+  --nav2: #1B49A2;
+  --navshadow: rgba(16,40,94,0.4);
+  --navtxt: rgba(239,230,199,0.75);
+  --navhi: #ffffff;
+  --navact: #D9C97F;
+  --th1: #12306F;
+  --th2: #2D5CB8;
+  --zebra: #FDFBF3;
+  --sd1: #252B14;
+  --sd2: #3C4521;
+  --sdacc: #C9B26A;
+  --sdacc2: #9C8A3C;
+  --sdstrong: #F1E6B0;
+  --sdrgb: 201,178,106;
+  --ovl: 15,20,8;
+}
+[data-theme="dark"]{
+  --cream: #12150C;
+  --white: #1B2012;
+  --text: #EEEAD6;
+  --text-muted: #B4B191;
+  --border: #363B24;
+  --lavender-pale: #1D2B4D;
+  --lavender-deep: #9DBBEF;
+  --lavender-muted: #6F95D8;
+  --lavender-light: #2D5CB8;
+  --rose-pale: #3A2328;
+  --rose-deep: #EBA6B2;
+  --mint-pale: #262D17;
+  --mint-deep: #BCC98A;
+  --peach-pale: #352E17;
+  --peach-deep: #E5D184;
+  --sky-pale: #1B2B3F;
+  --sky-deep: #A8C8EE;
+  --zebra: #161A0F;
+  --shadow: rgba(0,0,0,0.4);
+  --srgb: 0,0,0;
+  --th1: #1B49A2;
+  --th2: #2D5CB8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--h1) 0%, var(--h2) 40%, var(--h3) 70%, var(--h4) 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.06);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(var(--sdrgb),0.14);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:var(--em); }
+.hero-sub { color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:300;max-width:580px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,var(--h1),var(--nav2));
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px var(--navshadow);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:var(--navtxt);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:var(--navhi);border-bottom-color:var(--navact);
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(var(--srgb),0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(var(--srgb),0.15);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Budhi menekankan: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--th1),var(--th2));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:var(--zebra);}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(var(--srgb),0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:var(--h1);color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(var(--srgb),0.25);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--th1),var(--th2));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(var(--srgb),0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,var(--h1),var(--h3),var(--h4));
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:var(--em);line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--h1);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, var(--sd1), var(--sd2));
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid var(--sdacc);
+  position: relative;
+  box-shadow: 0 4px 20px rgba(var(--sdrgb),0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sdacc), var(--sdacc2), var(--sdacc));
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, var(--sdacc), var(--sdacc2));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-badge-warn {
+  background: linear-gradient(90deg, #E84060, #C02040);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+}
+.cohort-axon { background: rgba(var(--srgb),0.35); }
+.cohort-arthron { background: rgba(212,120,138,0.35); }
+.cohort-aorta { background: rgba(123,191,168,0.35); }
+.cohort-anthelix { background: rgba(232,168,124,0.35); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.92);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: var(--sdstrong); }
+.soal-dosen-content .hl-warn {
+  background: rgba(232,60,96,0.25);
+  border: 1px solid rgba(232,60,96,0.5);
+  color: #FFB0C0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,191,168,0.25);
+  border: 1px solid rgba(123,191,168,0.4);
+  color: #A0FFD8;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-keyword {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(var(--sdrgb),0.2);
+  border: 1px solid rgba(var(--sdrgb),0.4);
+  color: var(--sdstrong);
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, var(--sd2), var(--sdacc));
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(var(--sdrgb),0.45);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(var(--sdrgb),0.55); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #fff;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(var(--ovl),0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, var(--sd1), var(--sd2));
+  border: 2px solid var(--sdacc);
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(var(--sdrgb),0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: var(--sdacc); border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(var(--sdrgb),0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--sdstrong);
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.55); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(var(--sdrgb),0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, var(--sdacc), var(--sdacc2));
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: var(--sdstrong); font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #A0FFD8; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, var(--sdacc), var(--sdacc2));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+
+/* ===== EXTRA: tags, tools, diagrams ===== */
+html{scroll-behavior:smooth}
+body{transition:background .25s,color .25s}
+.topbar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--h4),var(--em));z-index:10000;transition:width .1s}
+.tools{display:flex;align-items:center;gap:8px;margin-left:auto;padding:0 12px;flex-shrink:0}
+.tool-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:20px;padding:5px 12px;font-size:12px;cursor:pointer;font-family:inherit}
+.tool-btn:hover{background:rgba(255,255,255,.22)}
+.search-wrap{position:relative}
+.search-in{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:20px;padding:5px 14px;font-size:12px;width:150px;font-family:inherit;outline:none}
+.search-in::placeholder{color:rgba(255,255,255,.65)}
+.search-in:focus{width:220px;background:rgba(255,255,255,.22)}
+.search-res{display:none;position:absolute;right:0;top:36px;width:min(360px,86vw);max-height:60vh;overflow:auto;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.28);z-index:500}
+.search-res.open{display:block}
+.sr-item{padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;color:var(--text);font-size:12.5px}
+.sr-item:last-child{border-bottom:none}
+.sr-item:hover{background:var(--lavender-pale)}
+.sr-item b{display:block;color:var(--lavender-deep);font-size:13px}
+.sr-item small{color:var(--text-muted)}
+.sr-empty{padding:14px;color:var(--text-muted);font-size:12.5px}
+.flash-hit{animation:flash 1.6s ease}
+@keyframes flash{0%,100%{box-shadow:0 2px 14px var(--shadow)}30%{box-shadow:0 0 0 4px var(--lavender-light)}}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin:0 4px 6px 0;vertical-align:middle}
+.t-hy{background:var(--lavender);color:#fff}
+.t-mm{background:var(--h1);color:#fff}
+.t-ct{background:var(--rose-pale);color:var(--rose-deep);border:1px solid var(--rose)}
+.t-fa{background:var(--peach-pale);color:var(--peach-deep);border:1px solid var(--peach)}
+.t-dr{background:var(--mint-pale);color:var(--mint-deep);border:1px solid var(--mint)}
+.t-ex{background:var(--sky-pale);color:var(--sky-deep);border:1px dashed var(--sky-deep)}
+.tagrow{margin-bottom:8px}
+.dr-note.warn{background:linear-gradient(135deg,var(--peach-pale),var(--rose-pale));border-color:var(--peach)}
+.dr-note.warn::before{content:'🎤⚠️ dr. Budhi (transkrip kurang jelas): ';color:var(--peach-deep)}
+.dr-note .src{display:block;font-size:11px;color:var(--text-muted);margin-top:4px;font-style:italic}
+.card-head-tags{margin:-4px 0 10px}
+.done-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:26px;padding:14px 18px;border:1.5px dashed var(--border);border-radius:14px;color:var(--text-muted);font-size:13px}
+.done-btn{background:var(--white);border:1.5px solid var(--lavender);color:var(--lavender-deep);border-radius:20px;padding:7px 18px;font-weight:600;font-family:inherit;cursor:pointer;font-size:12.5px}
+.done-btn.on{background:var(--mint);border-color:var(--mint);color:#fff}
+.prog-line{height:7px;border-radius:5px;background:rgba(255,255,255,.2);margin-top:22px;max-width:420px;overflow:hidden}
+.prog-line i{display:block;height:100%;width:0;background:var(--em);border-radius:5px;transition:width .4s}
+.prog-lbl{font-size:12px;color:rgba(255,255,255,.8);margin-top:6px}
+.nav-btn.done::after{content:' ✓';color:var(--mint);font-weight:700}
+/* pyramid */
+.pyr{display:flex;flex-direction:column;align-items:center;gap:5px;margin:10px 0 16px}
+.pyr div{padding:9px 14px;border-radius:10px;font-size:12.5px;font-weight:700;text-align:center;color:#fff}
+.pyr small{display:block;font-weight:400;font-size:11px;opacity:.9}
+/* triangle */
+.tri{position:relative;max-width:420px;height:230px;margin:10px auto 16px}
+.tri .n{position:absolute;background:var(--h1);color:#fff;border-radius:12px;padding:10px 16px;font-weight:700;font-size:13px;text-align:center}
+.tri .n small{display:block;font-weight:400;font-size:11px;opacity:.85}
+.tri .n1{top:0;left:50%;transform:translateX(-50%);background:var(--h4);}
+.tri .n2{bottom:0;left:0;background:var(--h1)}
+.tri .n3{bottom:0;right:0;background:var(--h2)}
+.tri svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.tri .n{z-index:1}
+/* bars */
+.bar-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:12.5px}
+.bar-row span.l{width:150px;flex-shrink:0;color:var(--text-muted)}
+.bar-row .b{flex:1;background:var(--lavender-pale);border-radius:8px;height:18px;overflow:hidden}
+.bar-row .b i{display:block;height:100%;background:linear-gradient(90deg,var(--lavender),var(--h4));border-radius:8px}
+.bar-row b{width:62px;text-align:right;color:var(--lavender-deep)}
+@media(max-width:600px){.bar-row span.l{width:96px}}
+/* horizontal flow */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:12px 0}
+.flow .s{flex:1;min-width:120px;background:var(--lavender-pale);border:1.5px solid var(--lavender-light);border-radius:12px;padding:10px 12px;font-size:12.5px;text-align:center;position:relative}
+.flow .s b{display:block;color:var(--lavender-deep);font-size:13px}
+.flow .s:not(:last-child)::after{content:'→';position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--lavender);font-weight:800;z-index:2}
+@media(max-width:600px){.flow .s:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-15px;transform:translateX(50%)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{background:var(--lavender-pale);color:var(--lavender-deep);border:1px solid var(--lavender-light);border-radius:16px;padding:3px 11px;font-size:12px;font-weight:600}
+.chip.on{background:var(--lavender);color:#fff;border-color:var(--lavender)}
+button.chip{cursor:pointer;font-family:inherit}
+/* flashcards */
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.fc{perspective:900px;height:170px;cursor:pointer}
+.fc-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.fc-f,.fc-b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:16px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13.5px;line-height:1.55;border:1.5px solid var(--border);overflow:auto}
+.fc-f{background:var(--white);color:var(--text);font-weight:600}
+.fc-b{background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));color:var(--text);transform:rotateY(180deg);font-weight:400}
+.fc-hint{font-size:11px;color:var(--text-muted);text-align:center;margin-top:6px}
+/* quiz extras */
+.q-lvl{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;background:var(--lavender-pale);color:var(--lavender-deep);border-radius:8px;padding:2px 9px;margin-left:8px}
+.q-exp{background:var(--mint-pale)}
+.q-exp .why{margin-top:10px;padding-top:10px;border-top:1px dashed var(--mint)}
+.q-exp .why div{padding:5px 0;font-size:13px;color:var(--text)}
+.q-exp .why div b{color:var(--rose-deep)}
+.q-exp .concept{margin-top:10px;background:var(--lavender-pale);border-radius:9px;padding:9px 12px;font-size:13px;color:var(--lavender-deep)}
+.quiz-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.lvl-stat{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.lvl-stat div{background:rgba(255,255,255,.14);border-radius:12px;padding:8px;font-size:12px}
+.lvl-stat b{display:block;font-size:18px}
+/* floating toc */
+.toc-btn{position:fixed;left:18px;bottom:24px;z-index:9998;background:var(--h1);color:#fff;border:none;border-radius:50px;padding:11px 17px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;box-shadow:0 6px 22px rgba(0,0,0,.3)}
+.toc-panel{display:none;position:fixed;left:18px;bottom:76px;z-index:9998;width:min(300px,86vw);max-height:60vh;overflow:auto;background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.3);padding:12px}
+.toc-panel.open{display:block;animation:fadeUp .2s ease}
+.toc-panel h5{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin:8px 6px 4px}
+.toc-panel a{display:block;padding:6px 10px;border-radius:8px;font-size:12.5px;color:var(--text);cursor:pointer;text-decoration:none}
+.toc-panel a:hover{background:var(--lavender-pale)}
+@media(max-width:600px){.float-btn{bottom:78px;right:14px}.toc-btn{left:14px;bottom:18px}.tools{padding:0 8px}.search-in{width:110px}}
+.kbd{font-family:ui-monospace,monospace;font-size:11px;background:var(--lavender-pale);padding:1px 6px;border-radius:5px}
+.mini-card.hl{border-color:var(--lavender);background:var(--lavender-pale)}
+.small{font-size:12.5px;color:var(--text-muted)}
+.cohort-avicenna{background:rgba(122,163,214,.4)}
+.cohort-ub{background:rgba(255,255,255,.22)}
+.ref{font-size:11px;color:var(--text-muted);font-style:italic;margin-top:8px}
+th.c,td.c{text-align:center}
+@media print{.sticky-nav,.float-btn,.toc-btn,.topbar{display:none}.section{display:block!important}}
+
+</style>
+</head>
+<body>
+<div class="topbar" id="topbar"></div>
+<div class="hero">
+  <div class="hero-eyebrow">👴 Blok Psychiatry & Mental Health · dr. Rahaju Budhi Muljanto, Sp.KJ</div>
+  <h1>Psikiatri <em>Geriatri</em><br>Gangguan Neurokognitif</h1>
+  <p class="hero-sub">Disusun dari PPT 22 (68 slide) &amp; transkrip kuliah dr. Budhi, dipadukan dengan pola soal Axon'20, Arthron'18, Aorta'19, Avicenna'17 dan bank UB.</p>
+  <div class="hero-pills"><span class="pill">👴 Menua</span><span class="pill">🌫️ Delirium</span><span class="pill">🧠 Demensia</span><span class="pill">🎭 Depresi Lansia</span><span class="pill">🎤 Highlight Dosen</span><span class="pill">🧠 13 Soal C1–C4</span></div>
+  <div class="prog-line"><i id="progFill"></i></div><div class="prog-lbl" id="progLbl"></div>
+</div>
+<div class="sticky-nav" id="mainNav">
+<button class="nav-btn active" data-sec="overview" onclick="show('overview')">🏠 Overview</button><button class="nav-btn" data-sec="lansia" onclick="show('lansia')">👴 Lansia & Menua</button><button class="nav-btn" data-sec="delirium" onclick="show('delirium')">🌫️ Delirium</button><button class="nav-btn" data-sec="demensia" onclick="show('demensia')">🧠 Demensia</button><button class="nav-btn" data-sec="depresi" onclick="show('depresi')">🎭 Depresi & Banding 3D</button><button class="nav-btn" data-sec="terapi" onclick="show('terapi')">💊 Tatalaksana</button><button class="nav-btn" data-sec="dosen" onclick="show('dosen')">🎤 Highlight Dosen</button><button class="nav-btn" data-sec="soal" onclick="show('soal')">📊 Analisis Soal</button><button class="nav-btn" data-sec="review" onclick="show('review')">⚡ Quick Review</button><button class="nav-btn" data-sec="quiz" onclick="show('quiz')">🧠 Quiz</button>
+<div class="tools">
+  <div class="search-wrap"><input class="search-in" id="searchIn" placeholder="🔍 Cari ( / )" autocomplete="off"><div class="search-res" id="searchRes"></div></div>
+  <button class="tool-btn" id="themeBtn" onclick="toggleTheme()">🌙 Dark</button>
+</div>
+</div>
+<div class="container">
+
+<!-- ======== OVERVIEW ======== -->
+<div id="sec-overview" class="section active">
+<h2 class="section-heading">Peta Belajar: Psikiatri Geriatri & Gangguan Neurokognitif</h2>
+<p class="section-desc">PPT 22 (68 slide) dr. Budhi diringkas menjadi tiga raksasa geriatri: <strong>Delirium · Demensia · Depresi</strong> — plus konteks menua yang membuatnya berbeda dari dewasa muda.</p>
+<div class="dr-note">Untuk mudah diingat: <strong>delirium</strong> itu akut &amp; berfluktuasi dengan kesadaran terganggu; <strong>demensia</strong> kronik progresif dengan kesadaran jernih; <strong>depresi</strong> berkaitan dengan mood &amp; psikososial. Dosen meminta kamu bisa membedakan ketiganya dari kasus.<span class="src">Poin pembeda disusun dari slide 54–57 dan penekanan dosen tentang membedakan lewat kasus.</span></div>
+<div class="alert alert-rose"><span class="alert-icon">🚩</span><div><strong>Temuan penting dari analisis soal:</strong> dosen bilang delirium “baca sendiri, yang penting Alzheimer”, <u>tetapi</u> delirium adalah topik <strong>paling sering muncul</strong> di bank soal (≈ 9 soal). Jangan lewatkan tab Delirium.</div></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎯</span> Learning Objectives</div><ul class="styled-list"><li>Menjelaskan kategori usia lanjut (Depkes 2009 &amp; WHO) dan perubahan fisiologis menua yang relevan secara klinis/farmakologis.</li><li>Menegakkan diagnosis <strong>delirium</strong> (kriteria, klasifikasi etiologi) dan menatalaksananya.</li><li>Menegakkan diagnosis <strong>demensia</strong> (Alzheimer vs vaskular), menyebut neurotransmiter, pemeriksaan, dan terapinya.</li><li>Mengenali <strong>depresi pada lansia</strong> yang khas dan membedakannya dari demensia &amp; delirium (pseudodemensia).</li><li>Menerapkan prinsip psikofarmaka geriatri: dosis ½–⅓, hindari polifarmasi &amp; antikolinergik.</li><li>Memahami tantangan psikososial &amp; stigma lansia dan konsep <em>successful aging</em>.</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:#E3EEF9">🗺️</span> SKDI Mapping & Kodifikasi</div><div class="table-wrap"><table><tr><th>Topik</th><th>Kelompok PPDGJ-III</th><th>Catatan</th></tr><tr><td>Delirium</td><td><span class="hl-lav">F05</span> (gangguan mental organik, F0)</td><td>Akut, fluktuatif, kesadaran ↓</td></tr><tr><td>Demensia Alzheimer</td><td>F00 (F0)</td><td>Onset bertahap, progresif</td></tr><tr><td>Demensia vaskular</td><td>F01 (F0)</td><td>Onset akut / berjenjang</td></tr><tr><td>Demensia lain</td><td>F02 (Pick, CJD, Huntington, Parkinson, HIV)</td><td>Sesuai slide 42</td></tr><tr><td>Depresi pada lansia</td><td>F3 (gangguan mood)</td><td>Sering atipikal</td></tr><tr><td>ICD-11</td><td>Neurocognitive disorders (6D70 delirium; 6D80 dementia)</td><td>Dari pengetahuan umum, belum diverifikasi</td></tr></table></div>
+<div class="alert alert-peach"><span class="alert-icon">📎</span><div><strong>Catatan kejujuran:</strong> PPDGJ-III &amp; ICD-11 belum ada di folder project; kode diambil dari PPT (ICD-10/PPDGJ-III) dan pengetahuan umum. Tingkat kompetensi SKDI tidak kuisi supaya tidak mengarang — cek dokumen SKDI. Soal bank menanyakan “kelompok diagnosis: <strong>F0</strong>” untuk demensia.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⭐</span> High-Yield Topics (urut frekuensi bank soal)</div><div class="table-wrap"><table><tr><th>#</th><th>Topik</th><th>Muncul</th><th>Tag</th></tr><tr><td>1</td><td>Delirium (diagnosis dari vignette, etiologi, terapi haloperidol)</td><td>≈ 9 soal</td><td><span class="tag t-fa">Frequently Asked</span></td></tr><tr><td>2</td><td>Demensia Alzheimer — diagnosis dari ciri khas</td><td>≈ 6 soal</td><td><span class="tag t-hy">High Yield</span></td></tr><tr><td>3</td><td>Informed consent pasien gangguan jiwa / demensia</td><td>≈ 6 soal</td><td><span class="tag t-ct">Common Trap</span></td></tr><tr><td>4</td><td>Depresi pada lansia &amp; gangguan jiwa tersering lansia</td><td>≈ 5 soal</td><td><span class="tag t-hy">High Yield</span></td></tr><tr><td>5</td><td>Terapi: donepezil, dosis ½–⅓</td><td>≈ 4 soal</td><td><span class="tag t-mm">Must Memorize</span></td></tr><tr><td>6</td><td>Pemeriksaan: MMSE vs ADL</td><td>3 soal</td><td><span class="tag t-ct">Common Trap</span></td></tr><tr><td>7</td><td>Neurotransmiter (asetilkolin)</td><td>2 soal</td><td><span class="tag t-mm">Must Memorize</span></td></tr><tr><td>8</td><td>Kategori usia Depkes 2009</td><td>1 soal</td><td><span class="tag t-mm">Must Memorize</span></td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎤</span> Top 5 penekanan dosen</div><ul class="styled-list"><li><span class="tag t-dr">Dosen</span> Alzheimer bisa dimulai sejak <strong>usia 40</strong> — jangan abaikan pelupa dini.</li><li><span class="tag t-dr">Dosen</span> Obat demensia hanya <strong>menahan progresi</strong>, bukan menyembuhkan (kecuali penyebab reversibel).</li><li><span class="tag t-dr">Dosen</span> Lansia membawa <strong>tas penuh obat</strong> → waspada polifarmasi.</li><li><span class="tag t-dr">Dosen</span> <strong>Risiko bunuh diri tinggi</strong> pada lansia — menolak makan/obat berlebihan.</li><li><span class="tag t-dr">Dosen</span> Jangan skrining berlebihan; lab dasar tiap 6 bulan; pakai <strong>fakta</strong> untuk mengubah kebiasaan.</li></ul>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="overview" onclick="markDone('overview')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== LANSIA ======== -->
+<div id="sec-lansia" class="section">
+<h2 class="section-heading">Lansia & Proses Menua</h2>
+<p class="section-desc">Perubahan fisiologis menua menjelaskan kenapa dosis obat turun, gejala bergeser ke fisik, dan penyakit jiwa sering “tersembunyi”.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📅</span> Kategori Usia — Depkes RI 2009 vs WHO</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span><span class="tag t-ct">⚠️ Common Trap</span></div><div class="compare-wrap"><div class="compare-col left"><h4>🇮🇩 Depkes RI 2009</h4>
+<div class="compare-row"><span>Balita</span>0–5 th</div><div class="compare-row"><span>Kanak-kanak</span>5–11 th</div><div class="compare-row"><span>Remaja awal</span>12–16 th</div><div class="compare-row"><span>Remaja akhir</span>17–25 th</div><div class="compare-row"><span>Dewasa awal</span>26–35 th</div><div class="compare-row"><span>Dewasa akhir</span>36–45 th</div>
+<div class="compare-row"><span><strong>Lansia awal</strong></span><strong>46–55 th</strong></div><div class="compare-row"><span><strong>Lansia akhir</strong></span><strong>56–65 th</strong></div><div class="compare-row"><span>Manula</span>&gt; 65 th</div></div>
+<div class="compare-col right"><h4>🌍 WHO (lanjut usia)</h4>
+<div class="compare-row"><span>Middle age</span>45–59 th</div><div class="compare-row"><span>Elderly</span>60–74 th</div><div class="compare-row"><span>Old</span>75–90 th</div><div class="compare-row"><span>Very old</span>&gt; 90 th</div>
+<div class="divider"></div><div class="compare-row"><span>Psikiatri geriatri</span><strong>mulai 65 th</strong></div><div class="compare-row"><span>Di Indonesia</span>≥ 60 th dianggap lansia</div></div></div><div class="dr-note">Psikiatri geriatri dimulai usia 65 tahun, mencakup lansia sehat dan lansia dengan masalah medis/psikiatrik. Di Indonesia, 60 tahun sudah dianggap lansia.</div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-arthron">Arthron '18 No.35</span></div><div class="soal-dosen-content">Batas usia lanjut menurut <strong>Depkes RI 2009</strong> → ✅ <span class="hl-ok">Lansia awal 46–55 tahun</span>. ⚠️ <span class="hl-warn">Jebakan:</span> opsi “elderly 60–74” dan “old 75–90” adalah klasifikasi <strong>WHO</strong>, bukan Depkes.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧬</span> Faktor yang Memengaruhi Proses Menua</div><ul class="styled-list"><li>Kultural &amp; etnik</li><li>Polesan genetik dan keturunan</li><li>Kondisi fisiologis saat konsepsi dan kelahiran</li><li>Pertumbuhan dan maturasi</li><li>Lingkungan, sistem kekeluargaan, dan kemaknaan hidup</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚙️</span> Perubahan Sistem Organ & Implikasi Klinis</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-mm">📌 Must Memorize</span></div><div class="table-wrap"><table><tr><th>Sistem</th><th>Perubahan</th><th>Implikasi</th></tr><tr><td>Kulit</td><td>Lemak kulit &amp; otot ↓; mudah robek; gatal</td><td>Dekubitus pada yang kurang bergerak; toksin lambat dibersihkan</td></tr><tr><td>Kardiovaskular</td><td>TD sistol ↑; kemampuan ↑ denyut jantung ↓; disfungsi diastolik</td><td><strong>Hipotensi postural ↑</strong> → jatuh (waspada obat antihipertensi/psikotropik)</td></tr><tr><td>Respirasi</td><td>Energi bernapas ↑; resistensi jalan napas ↑; dead space ↑</td><td>Hati-hati sedatif/benzodiazepin (depresi napas)</td></tr><tr><td>Penglihatan</td><td>Adaptasi gelap ↓; lensa keruh; elastisitas ↓; sensitif silau ↑</td><td>Memperparah disorientasi &amp; delirium</td></tr><tr><td>Pendengaran/pengecapan</td><td>Sel rambut &amp; neuron koklea ↓; pengecapan ↓</td><td>Salah komunikasi → tampak “pikun”</td></tr><tr><td>Tulang</td><td>Osteoporosis: kalsium rendah, hilang proteksi endokrin, vit D ↓, disuse; penyakit ginjal kronik, RA, tiroid; obat steroid/tiroksin</td><td>Risiko fraktur — hindari gerakan berbahaya</td></tr><tr><td>Pencernaan</td><td>Motilitas gaster &amp; kolon ↓, pH berubah, absorpsi usus ↓; <strong>hepar: aliran darah ↓ &amp; CYP450 ↓</strong></td><td><span class="hl-lav">Metabolisme obat melambat → dosis dikurangi ½–⅓</span></td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-aorta">Aorta '19 No.10</span></div><div class="soal-dosen-content">Dosis psikofarmaka pada lansia → ✅ <span class="hl-ok">½ sampai ⅓ dosis dewasa</span> (bukan dosis anak, bukan dosis maksimal, bukan berdasarkan BB).</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🪞</span> Tantangan & Stigma Lansia</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="compare-wrap"><div class="compare-col left"><h4>🧗 Tantangan nyata</h4><div class="compare-row"><span>1</span>Menjaga citra diri &amp; integritas fisik</div><div class="compare-row"><span>2</span>Menghadapi kenyataan hidup</div><div class="compare-row"><span>3</span>Mempertahankan kehidupan seksual</div><div class="compare-row"><span>4</span>Kehilangan orang dicintai</div><div class="compare-row"><span>5</span>Menghadapi pensiun</div><div class="compare-row"><span>6</span>Fungsi tubuh menurun</div><div class="compare-row"><span>7</span>Melepas milik; hubungan dengan cucu berubah</div></div><div class="compare-col right"><h4>❌ Stigma masyarakat (keliru)</h4><div class="compare-row"><span>1</span>Tidak butuh hubungan sosial</div><div class="compare-row"><span>2</span>Tidak butuh prestasi</div><div class="compare-row"><span>3</span>Tidak butuh seks</div><div class="compare-row"><span>4</span>Pantas dikucilkan</div><div class="compare-row"><span>5</span>Tinggal menunggu kematian</div><div class="compare-row"><span>6</span>Tidak berdaya (jompo)</div><div class="compare-row"><span>7</span>Pasti mengalami kemunduran</div></div></div>
+<div class="dr-note">Lansia <strong>masih sangat butuh</strong> hubungan sosial dan pencapaian; mereka ikut kegiatan masyarakat dan perayaan. Banyak gangguan jiwa lansia <strong>tersembunyi</strong> karena takut citra dirinya sebagai orang yang “tidak bisa menghadapi kenyataan”. “Kita pun akan menghadapi peringatan tubuh: usia 40 butuh kacamata baca…”<span class="src">Kalimat disusun ulang dari transkrip; makna: terima perubahan, jangan menstigma.</span></div>
+<div class="alert alert-sky"><span class="alert-icon">📚</span><div><strong>Lansia normal:</strong> kebanyakan lansia baik-baik saja; gambaran “sakit-sakitan” sebagian karena yang terlihat adalah yang memakai sarana kesehatan.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧩</span> Masalah Kesehatan Jiwa pada Lansia</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span><span class="tag t-ct">⚠️ Common Trap</span></div><div class="grid-2"><div class="mini-card"><h4>Masalah umum</h4><ul><li>Pola tidur</li><li>Daya ingat</li><li>Perubahan minat</li><li>Penyesuaian diri</li><li>Ansietas, depresi, <strong>demensia</strong> (paling umum)</li><li>Psikotik: jarang, bisa paranoid</li><li>Penyalahgunaan obat/zat</li></ul></div>
+<div class="mini-card hl"><h4>Epidemi tersembunyi</h4><p>Alzheimer &amp; gangguan memori: 30–40% merupakan komplikasi depresi atau psikosis. Depresi, cemas, gangguan jiwa berat, dan penyalahgunaan NAPZA sering tak terdeteksi.</p></div></div><div class="dr-note">Pasien lansia bisa datang membawa <strong>tas penuh obat</strong> dan meminum semuanya → waspada polifarmasi &amp; penyalahgunaan obat. <strong>Risiko bunuh diri cukup tinggi</strong>; cara tersering: <strong>menolak makan</strong> dan <strong>minum obat berlebihan</strong>.</div>
+<div class="alert alert-peach"><span class="alert-icon">🩺</span><div><strong>Kekhasan pemeriksaan psikiatrik lansia:</strong> pasien tidak nyaman dengan prosedur; keluhan lebih banyak fisik daripada psikologis; keluarga kurang mampu menceritakan perjalanan penyakit; faktor biologis-psikologis-sosial saling memengaruhi; <strong>waspadai CVD</strong>.</div></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge-warn">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-arthron">Arthron '18 No.8</span><span class="cohort-tag cohort-axon">Axon '20 No.36, 54</span></div><div class="soal-dosen-content">“Gangguan jiwa yang sering pada lansia”: kunci bank Arthron/Axon No.54 = <strong>cerebrovascular disease</strong>; Axon No.36 = <strong>gangguan depresif</strong>. ⚠️ Pahami: CVD bukan diagnosis psikiatrik sensu stricto; ia disebut karena slide “waspadai CVD”. Jika ada opsi depresi/demensia dan CVD, baca konteks pertanyaan &amp; pembahasan resmi.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🌿</span> Successful Aging</div><div class="flow"><div class="s"><b>Fisik</b>Tetap berfungsi, hindari sakit</div><div class="s"><b>Psikis</b>Tidak pikun; bekerja optimal</div><div class="s"><b>Sosial</b>Berguna bagi lingkungan</div><div class="s"><b>Spiritual</b>Gaya hidup sesuai nilai agama</div></div>
+<ul class="styled-list"><li>Faktor harapan hidup: silaturahim, kontak sosial, latihan, nutrisi, stimulasi intelektual, berkegiatan, jaga berat badan, keuangan terjamin, <strong>hindari merokok</strong>, cegah penyakit, kecilkan tantangan, dapatkan “jati diri” baru.</li><li>Rehabilitasi: latihan keterampilan kelompok, keterampilan sosial, menjaga kesehatan; perawatan kesehatan masyarakat (kesmas, puskesmas, penyuluh).</li></ul>
+<div class="alert alert-mint"><span class="alert-icon">💚</span><div>Tujuan akhirnya <strong>hidup bermakna</strong> — bukan sekadar panjang umur.</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="lansia" onclick="markDone('lansia')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== DELIRIUM ======== -->
+<div id="sec-delirium" class="section">
+<h2 class="section-heading">Delirium</h2>
+<p class="section-desc">Gawat darurat neuropsikiatri yang paling sering muncul di soal. Pola berpikir: <em>akut + kesadaran/atensi terganggu + fluktuatif + ada penyebab medis</em>.</p>
+<div class="dr-note warn">Dosen tidak mengupas delirium di kelas (“baca sendiri”), dan menyatakan fokus pada Alzheimer. Namun bank soal memuat delirium paling banyak — jadi perlakukan ini sebagai bacaan wajib.<span class="src">Transkrip menit ±01:06 — ucapannya terpotong; interpretasi: delirium dibaca mandiri untuk pengetahuan.</span></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🌫️</span> Definisi & Manifestasi</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-hy">⭐ High Yield</span></div><p><strong>Sindrom akut</strong> berupa gangguan kesadaran dan kognisi yang <strong>berfluktuasi</strong> — kesadaran “berkabut”, kejernihan kewaspadaan terhadap lingkungan berkurang.</p><ul class="styled-list"><li><strong>Atensi ↓</strong> (memfokuskan, mempertahankan, mengalihkan)</li><li>Defisit memori, disorientasi, gangguan berbahasa</li><li>Agitasi psikomotor <em>atau</em> hipoaktif</li><li>Gangguan persepsi (halusinasi), emosi, arus &amp; isi pikir kacau</li><li>Gangguan siklus tidur-bangun (<strong>mengantuk siang, memburuk malam</strong>)</li><li>Berkembang cepat, berfluktuasi dalam sehari</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">✅</span> Kriteria Diagnosis (ICD-10 + PPDGJ-III)</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span></div><div class="cr-box"><div class="cr-label">🧠 Lima komponen</div><ol class="cr-steps"><li><strong>Gangguan kesadaran</strong>: kejernihan kewaspadaan ↓ + kemampuan memfokus/mempertahankan/mengalihkan atensi ↓.</li><li><strong>Perubahan kognisi</strong> (memori, disorientasi, bahasa) atau persepsi — bukan karena demensia.</li><li><strong>Gangguan psikomotor</strong>: hipo/hiperaktivitas, reaksi lambat, arus bicara berubah, reaksi terperanjat ↑.</li><li><strong>Gangguan siklus tidur</strong>: insomnia / siklus terbalik; memburuk malam; mimpi buruk → halusinasi.</li><li><strong>Gangguan emosional</strong>: depresi, ansietas, takut, iritabel, euforia, apatis.</li></ol></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧭</span> Klasifikasi Etiologi — Kunci Menjawab Vignette</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-hy">⭐ High Yield</span><span class="tag t-ct">⚠️ Common Trap</span></div><div class="table-wrap"><table><tr><th>Tipe</th><th>Clue di vignette</th><th>Contoh dari bank soal</th></tr><tr><td><strong>Akibat kondisi medis umum</strong></td><td>Penyakit sistemik/metabolik: gula darah &amp; TD tinggi, infeksi, pasca operasi, trauma kepala, kemoterapi/kanker, luka bakar</td><td>Wanita 50 th mengamuk, TD 190/100, GDS 600; pasca operasi jantung; kepala terbentur</td></tr><tr><td>Akibat intoksikasi zat/obat</td><td>Obat baru/overdosis (benzodiazepin, digoksin, steroid, antikolinergik)</td><td>Wanita 60 th digoksin + benzodiazepin baru</td></tr><tr><td>Akibat putus zat</td><td>Baru berhenti alkohol/sedatif</td><td>Delirium tremens</td></tr><tr><td>Etiologi beragam</td><td>Lebih dari satu penyebab (KMU + obat)</td><td>—</td></tr><tr><td>Tidak terspesifikasi</td><td>Penyebab tak jelas (mis. deprivasi sensorik)</td><td>—</td></tr></table></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 I WATCH DEATH</div><div class="mnemonic-text">Infection · Withdrawal · Acute metabolic · Trauma · CNS pathology · Hypoxia · Deficiencies · Endocrine · Acute vascular · Toxins/drugs · Heavy metals</div><div class="mnemonic-sub">Daftar periksa mencari penyebab. Slide dosen merinci: SSP, sistemik (infeksi, cairan, nutrisi, luka bakar, nyeri tak terkontrol, ketinggian &gt;5000 m), jantung, metabolik, paru, obat, endokrin, hematologi, renal, hepar.</div></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu — paling sering</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-ub">Bank UB No.23, 57, 65</span><span class="cohort-tag cohort-axon">Axon '20 No.50</span><span class="cohort-tag cohort-arthron">Arthron '18 No.79, 86, 96</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.74, 81, 96</span></div><div class="soal-dosen-content">Usia lanjut + <strong>akut</strong> bingung/mengamuk + penyakit medis (HT, DM, GDS 600, kepala terbentur, pasca operasi, kemoterapi) → ✅ <span class="hl-ok">Delirium</span>.<br>Operasi jantung usia 65: delirium / <em>Post-Operative Cognitive Dysfunction</em> (catatan bank).<br>⚠️ <span class="hl-warn">Kunci bank meragukan:</span> Arthron No.79 (key “halusinasi organik”) &amp; Avicenna No.74 (key “psikosis akut”), No.81 (key “demensia”) — vignette-nya khas delirium (kesadaran menurun, disorientasi, onset cepat).</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🩺</span> Tatalaksana</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-mm">📌 Must Memorize</span></div><div class="cr-box"><div class="cr-label">🧠 Tiga tujuan utama</div><ol class="cr-steps"><li><strong>Cari &amp; obati penyebab</strong>: pemeriksaan fisik cermat; darah lengkap, elektrolit, AGD, fungsi hati &amp; ginjal; EEG/pencitraan bila perlu.</li><li><strong>Pastikan keamanan pasien.</strong></li><li><strong>Obati gangguan perilaku</strong> (mis. agitasi psikomotor).</li></ol></div>
+<div class="table-wrap"><table><tr><th>Aspek</th><th>Detail</th></tr><tr><td>Prinsip obat</td><td>Bijak <strong>tidak menambah obat</strong> pada yang sudah ada kecuali alasan signifikan (agitasi/psikotik) — catat alasannya di rekam medik; waspadai interaksi</td></tr><tr><td>Antipsikotik</td><td>Bila halusinasi, waham, atau sangat agitatif (risiko melukai)</td></tr><tr><td><strong>Haloperidol</strong></td><td>Rekam jejak terpanjang; PO/IM/IV; <strong>2–5 mg IM/IV</strong>, ulang tiap 30 menit, maks <strong>20 mg/hari</strong>; EPS: parkinsonisme &amp; akatisia; IV → pantau EKG (QTc, disritmia)</td></tr><tr><td>Benzodiazepin</td><td>Bila antipsikotik tak bisa (mis. <strong>SNM</strong>) / tak respons: yang tanpa metabolit aktif, mis. <strong>lorazepam</strong> 1–2 mg PO; <strong>kontraindikasi bila gangguan napas</strong></td></tr><tr><td>⛔ Hindari</td><td><strong>Antikolinergik</strong> (mis. triheksifenidil) → memperberat delirium; <strong>restrain = pilihan terakhir</strong> (memperberat agitasi)</td></tr><tr><td>Non-farmakologis</td><td>Psikoterapi suportif (rasa aman); reorientasi lingkungan (jam besar); edukasi keluarga</td></tr><tr><td>Komplikasi</td><td>Gangguan stres akut pasca-delirium (pengalaman traumatik) → benzodiazepin jangka pendek bila tetap cemas</td></tr><tr><td>Prognosis</td><td>Bergantung tata laksana penyakit dasar</td></tr></table></div>
+<div class="alert alert-peach"><span class="alert-icon">🧐</span><div><strong>Catatan kritis:</strong> dosis haloperidol pada slide adalah dosis umum; pada lansia tetap ingat prinsip <strong>½–⅓ dosis</strong>. Untuk ujian: <em>haloperidol</em> = jawaban untuk agitasi/psikosis delirium (soal Arthron No.86, kemoterapi).</div></div>
+<div class="alert alert-sky"><span class="alert-icon">🔀</span><div><strong>DD:</strong> demensia, gangguan psikotik singkat, skizofrenia/skizofreniform, gangguan mood dengan psikotik, gangguan stres akut.</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="delirium" onclick="markDone('delirium')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== DEMENSIA ======== -->
+<div id="sec-demensia" class="section">
+<h2 class="section-heading">Demensia</h2>
+<p class="section-desc">Fokus utama dosen: Alzheimer. Kesadaran jernih, kronik progresif, ≥ 6 bulan, memengaruhi aktivitas sehari-hari.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧠</span> Definisi & Etiologi</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><p><strong>Sindrom akibat penyakit otak</strong>, kronik progresif: kemunduran fungsi kognitif multipel (memori, afasia, apraksia, agnosia, fungsi eksekutif). <strong>Kesadaran umumnya tidak terganggu</strong>; kadang disertai gangguan psikologik &amp; perilaku.</p>
+<div class="bar-row"><span class="l">Alzheimer</span><div class="b"><i style="width:100%"></i></div><b>50–60%</b></div>
+<div class="bar-row"><span class="l">Vaskular</span><div class="b"><i style="width:50%"></i></div><b>20–30%</b></div>
+<p class="small">Lainnya: Pick (frontotemporal), Creutzfeldt-Jakob, Huntington, Parkinson, HIV/AIDS, badan Lewy (7–50%).</p><div class="dr-note">Obat demensia hanya <strong>menahan supaya tidak makin parah</strong>; tidak ada yang menyembuhkan. Kalau bisa sembuh, berarti <strong>penyebab dasarnya</strong> yang diobati (mis. demensia reversibel).</div>
+<div class="dr-note"><strong>Alzheimer bisa mulai sejak usia 40.</strong> Kalau umur 40 sudah mulai pelupa, jangan diabaikan — segera diperiksa (lab &amp; psikologis) untuk melihat apakah berkembang menjadi Alzheimer.</div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">✅</span> Kriteria Diagnosis (ICD-10 / PPDGJ-III, F00–F03)</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span><span class="tag t-fa">🔁 Frequently Asked</span></div><div class="cr-box"><div class="cr-label">🧠 Syarat utama</div><ol class="cr-steps"><li>Bukti <strong>penurunan daya ingat &amp; daya pikir</strong> yang mengganggu kegiatan sehari-hari.</li><li>Hendaya memori khas mengenai <strong>registrasi, penyimpanan, pemanggilan</strong> informasi baru; ingatan lama bisa hilang di stadium akhir.</li><li>Gangguan orientasi, pemahaman, kalkulasi, kapasitas belajar, bahasa, pertimbangan.</li><li><strong>Kesadaran tidak berkabut</strong> (pembeda dari delirium).</li><li>Disertai deteriorasi kontrol emosi, perilaku sosial, atau motivasi.</li><li>Gejala nyata <strong>≥ 6 bulan</strong> untuk diagnosis klinis mantap.</li></ol></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-arthron">Arthron '18 No.19</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.38</span><span class="cohort-tag cohort-axon">Axon '20 No.28</span><span class="cohort-tag cohort-ub">Bank UB No.16</span></div><div class="soal-dosen-content">Lansia lupa nama, tempat, waktu, <strong>pergi lalu lupa jalan pulang</strong>, tanpa DM/HT, fisik &amp; neurologis normal → ✅ <span class="hl-ok">Demensia Alzheimer</span>. Lansia pelupa + CT scan infark → ✅ <span class="hl-ok">Demensia vaskular</span>. Dikelompokkan sebagai <span class="hl-ok">F0</span> (gangguan mental organik).</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚖️</span> Alzheimer vs Vaskular</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-mm">📌 Must Memorize</span></div><div class="compare-wrap"><div class="compare-col left"><h4>🔵 Alzheimer</h4><div class="compare-row"><span>Onset</span><strong>Perlahan</strong>, progresif</div><div class="compare-row"><span>Perjalanan</span>Makin berat; akhirnya tergantung penuh</div><div class="compare-row"><span>Neurotransmiter</span><strong>Asetilkolin ↓</strong></div><div class="compare-row"><span>Neurologis</span>Biasanya normal</div><div class="compare-row"><span>Faktor risiko</span>Tanpa DM/HT khas di soal</div></div><div class="compare-col right"><h4>🟠 Vaskular</h4><div class="compare-row"><span>Onset</span><strong>Akut</strong></div><div class="compare-row"><span>Perjalanan</span><strong>Berjenjang</strong> mengikuti serangan vaskular</div><div class="compare-row"><span>Dasar</span>Kerusakan vaskular otak (CT: infark)</div><div class="compare-row"><span>Neurologis</span>Tanda fokal / CVD</div><div class="compare-row"><span>Faktor risiko</span>HT, DM, stroke</div></div></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-axon">Axon '20 No.3, 63</span></div><div class="soal-dosen-content">Neurotransmiter gangguan mental lansia &amp; fungsi kognitif → ✅ <span class="hl-ok">Asetilkolin</span> (Alzheimer). Dopamin = skizofrenia; norepinefrin/serotonin = depresi; GABA = ansietas.</div></div>
+<div class="card"><button class="collapse-btn" onclick="toggle(this)"><span class="card-title" style="margin:0"><span class="card-icon" style="background:var(--lavender-pale)">🔟</span> Alzheimer Warning Signs — 10 gejala (dosen: biasanya dibaca saat ujian)</span><span class="chev">▼</span></button><div class="collapse-body"><ul class="styled-list"><li>Kehilangan memori baru yang memengaruhi pekerjaan</li><li>Sulit melakukan tugas familiar</li><li>Masalah bahasa</li><li>Disorientasi waktu/tempat</li><li>Daya nilai menurun</li><li>Gangguan berpikir abstrak</li><li>Salah menaruh barang</li><li>Perubahan mood/perilaku</li><li>Perubahan kepribadian</li><li>Hilang inisiatif</li></ul>
+<p class="ref">Kriteria DSM-IV Alzheimer: defisit kognitif multipel (memori + ≥1 lain), hendaya sosial/pekerjaan, onset bertahap &amp; menurun, bukan karena kondisi SSP lain/zat/delirium/gangguan psikiatrik lain. Vaskular: hendaya kognitif multipel + tanda neurologis fokal/lab CVD + bukan delirium.</p></div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🕰️</span> Menua Normal vs Demensia</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-ct">⚠️ Common Trap</span></div><div class="table-wrap"><table><tr><th>Aspek</th><th>Penurunan memori terkait usia</th><th>Demensia</th></tr><tr><td>Substrat</td><td>Atrofi hippocampus ringan</td><td>Penyakit otak progresif</td></tr><tr><td>Kecepatan</td><td>Respons lebih lambat</td><td>Hendaya fungsi harian</td></tr><tr><td>“Mudah lupa”</td><td>Ingatan kembali dengan <strong>isyarat/petunjuk</strong> atau menelusuri tempat</td><td>Lupa jalan pulang, lupa tujuan, disorientasi</td></tr><tr><td>Catatan</td><td>Masalah memori bisa menjadi predisposisi Alzheimer (MCI)</td><td>Kemunduran fungsi sosial/pekerjaan</td></tr></table></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge-warn">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-axon">Axon '20 No.12</span><span class="cohort-tag cohort-aorta">Aorta '19 No.52</span></div><div class="soal-dosen-content">“Ciri mudah lupa pada usia lanjut”: opsi klasik = <span class="hl-ok">dapat mengingat kembali bila diberi isyarat</span>. ⚠️ Kunci Aorta No.52 tertulis C (“mengulang ingatan dengan menaruh barang di suatu tempat”) — keduanya menggambarkan lupa jinak; bila opsi isyarat ada, bandingkan dulu.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔀</span> Diagnosis Banding & Penyebab Reversibel</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span></div><div class="table-wrap"><table><tr><th>Kelompok</th><th>Contoh (slide 58–62)</th></tr><tr><td>Psikiatrik</td><td>Delirium, depresi, gangguan buatan, skizofrenia</td></tr><tr><td>Endokrin / metabolik</td><td>Hipotiroid (TSH ↑), hipertiroid, DM (hipo/hiperglikemia), hiperkalsemia, uremia, disfungsi hepar (Wilson), defisiensi B12/tiamin/niasin</td></tr><tr><td>Lingkungan / sensorik</td><td>Katarak, gangguan pendengaran, stresor lingkungan, defisiensi nutrisi</td></tr><tr><td>Neurologis</td><td>Demensia badan Lewy (7–50%), frontotemporal, afasia progresif primer, <strong>hidrosefalus tekanan normal</strong> (demensia + sulit berjalan + inkontinensia)</td></tr><tr><td>3T</td><td><strong>T</strong>umor · <strong>T</strong>oxins · <strong>T</strong>rauma</td></tr><tr><td>Infeksi SSP</td><td>HIV, neurosifilis, ensefalitis herpes, meningitis bakteri, jamur (kriptokokus)</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔬</span> Pemeriksaan Penunjang & Instrumen</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-ct">⚠️ Common Trap</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="table-wrap"><table><tr><th>Jenis</th><th>Isi</th></tr><tr><td>Rutin</td><td>Darah &amp; urin, EKG, rontgen toraks, <strong>CT scan otak</strong></td></tr><tr><td>Khusus</td><td>Functional brain imaging (SPECT, PET), EEG/evoked potentials (P300), analisis CSF, skrining logam berat (urin 24 jam)</td></tr><tr><td><strong>MMSE</strong></td><td>Skor 30, 7 domain (orientasi waktu &amp; tempat, registrasi, atensi/kalkulasi, mengingat, bahasa, konstruksi visual) → <strong>menegakkan/memastikan gangguan kognitif</strong></td></tr><tr><td><strong>ADL</strong></td><td>Menilai kemandirian aktivitas sehari-hari</td></tr><tr><td>GAF / WHODAS</td><td>Fungsi global / disabilitas — bukan untuk memastikan demensia</td></tr><tr><td>GCS</td><td>Tingkat kesadaran</td></tr></table></div>
+<div class="dr-note">Jangan buru-buru melakukan semua skrining — tidak perlu CT scan tiap tahun. Untuk orang tua di rumah, <strong>cek lab dasar minimal tiap 6 bulan</strong>.</div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge-warn">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-arthron">Arthron '18 No.66</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.56, 10</span></div><div class="soal-dosen-content">Wanita 70 th lupa 2 bulan, marah, nyasar, dulu bisa memasak kini tidak, “<strong>pemeriksaan untuk menentukan dan memastikan diagnosis</strong>” → ✅ <span class="hl-ok">MMSE</span>. ⚠️ Versi serupa (“pemeriksaan lanjutan… kinerja aktivitas sehari-hari”) kuncinya <strong>ADL</strong>. Baca kalimat tanya!</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💊</span> Terapi & Prognosis Demensia</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="table-wrap"><table><tr><th>Aspek</th><th>Detail</th></tr><tr><td>Psikososial</td><td>Pertahankan kemampuan tersisa; latihan memori sederhana, orientasi realitas, senam otak; <strong>psikoedukasi keluarga/caregiver</strong> (sangat penting)</td></tr><tr><td><strong>Antidemensia</strong></td><td><strong>Donepezil, rivastigmin</strong> (penghambat kolinesterase): bermanfaat pada demensia <strong>ringan–sedang</strong>, <u>tidak</u> dianjurkan pada berat</td></tr><tr><td>Memantin</td><td>Disebut dosen bersama donepezil; <span class="tag t-ex">tambahan</span> umumnya untuk demensia sedang–berat (antagonis NMDA)</td></tr><tr><td>Perilaku agresif</td><td>Antipsikotik dosis rendah: haloperidol 0,5–1 mg/hari atau risperidon 0,5–1 mg/hari</td></tr><tr><td>Depresi</td><td>Antidepresan: sertralin 25 mg/hari</td></tr><tr><td>Prognosis</td><td>Perburukan bertahap 5–10 tahun hingga kematian; onset dini → perjalanan cepat</td></tr><tr><td>Penyulit</td><td>Cemas &amp; depresi memperburuk gejala</td></tr></table></div>
+<div class="alert alert-rose"><span class="alert-icon">🛑</span><div><span class="tag t-ex">Tambahan</span> Antipsikotik pada lansia dengan demensia meningkatkan risiko kematian (peringatan kelas obat) — pakai dosis terendah, durasi singkat, dan hanya bila gejala berat.</div></div>
+<div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-aorta">Aorta '19 No.4, 56</span></div><div class="soal-dosen-content">Lansia kemunduran kognitif &amp; mudah lupa → ✅ <span class="hl-ok">Donepezil</span> (bukan risperidon/klorpromazin). Kognitif: <strong>kolinesterase inhibitor (rivastigmin)</strong>; agresif: antipsikotik dosis kecil.</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="demensia" onclick="markDone('demensia')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== DEPRESI ======== -->
+<div id="sec-depresi" class="section">
+<h2 class="section-heading">Depresi pada Lansia & Pembeda 3D</h2>
+<p class="section-desc">Delirium, Demensia, Depresi — mirip di permukaan, berbeda di awitan, kesadaran, dan mood.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎭</span> Depresi pada Lansia: Wajah yang Berbeda</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><div class="grid-2"><div class="mini-card hl"><h4>Ciri khas</h4><ul><li>Dominasi <strong>keluhan fisik</strong>, sulit tidur, nafsu makan terganggu</li><li>Emosi &amp; rasa bersalah <strong>tidak diucapkan</strong>; disangkal (“depresi terselubung”)</li><li>Disforik; apatis; sulit konsentrasi</li><li>Menarik diri, bergantung, mengisolasi diri</li><li>Sering iritabel &amp; cemas</li><li>Perasaan putus asa relatif menetap</li><li><strong>Pseudodemensia</strong>: bingung, kognitif terganggu</li></ul></div>
+<div class="mini-card"><h4>Dosen menekankan</h4><p>Depresi lansia sudah dibahas di kuliah depresi — isinya serupa; <strong>perbedaannya</strong> (lansia lebih somatik/terselubung) yang perlu dibedakan di kasus. Waspadai pula risiko bunuh diri.</p></div></div><div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-arthron">Arthron '18 No.97</span><span class="cohort-tag cohort-avicenna">Avicenna '17 No.75</span></div><div class="soal-dosen-content">“Ciri khas depresi pada lansia?” → ✅ <span class="hl-ok">Didominasi gejala fisik</span> (bukan penurunan kesadaran, bukan karena gangguan kognitif, bukan ekspresi rasa bersalah yang jelas, bukan tanpa putus asa). Lansia murung, tak mau makan &amp; aktivitas → depresi.</div></div>
+<div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Lansia menolak makan + murung = tanda bahaya depresi berat <strong>dan</strong> risiko bunuh diri.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧮</span> Tabel Pembeda: Delirium vs Demensia vs Depresi</div><div class="tagrow"><span class="tag t-hy">⭐ High Yield</span><span class="tag t-mm">📌 Must Memorize</span></div><div class="table-wrap"><table><tr><th>Fitur</th><th>Delirium</th><th>Demensia</th><th>Depresi (pseudodemensia)</th></tr><tr><td>Onset</td><td><strong>Akut</strong> (jam–hari)</td><td>Bertahap (Alzheimer) / berjenjang (vaskular)</td><td><strong>Cepat</strong>, presipitasi psikososial</td></tr><tr><td>Durasi</td><td>Singkat; berfluktuasi harian</td><td><strong>≥ 6 bulan</strong>, progresif</td><td>&lt; 3 bulan (slide)</td></tr><tr><td>Kesadaran</td><td><strong>Terganggu</strong> (berkabut)</td><td><strong>Jernih</strong></td><td>Jernih</td></tr><tr><td>Atensi</td><td>Sangat terganggu</td><td>Relatif baik awal</td><td>Bisa menurun (apatis)</td></tr><tr><td>Memori / kognitif</td><td>Memori, orientasi, bahasa, persepsi berubah</td><td>Memori baru → global; apraksia, agnosia, afasia</td><td>Respons buruk/“tidak tahu”, tapi tidak hendaya sejati</td></tr><tr><td>Mood</td><td>Labil/ansietas</td><td>Datar/labil</td><td><strong>Depresif</strong>, cemas</td></tr><tr><td>Perilaku</td><td>Agitasi atau hipoaktif; memburuk malam</td><td>Perubahan kepribadian, agresif</td><td>Aktivitas ↓ atau agitasi; somatik (lelah, tidur, nafsu makan)</td></tr><tr><td>Penyebab</td><td><strong>Selalu ada etiologi medis</strong></td><td>Penyakit otak degeneratif/vaskular</td><td>Psikososial (bukan organik)</td></tr><tr><td>Reversibel?</td><td>Ya, bila penyebab diatasi</td><td>Umumnya tidak (kecuali sekunder)</td><td><strong>Ya</strong>, cepat membaik dengan terapi</td></tr></table></div>
+<p class="ref">Sumber baris: slide 54–57 (depresi &amp; delirium), 41–45 (demensia). Beberapa sel (atensi, mood) merupakan ringkasan klinis umum.</p><div class="cr-box"><div class="cr-label">🧠 Alur berpikir pasien lansia “pelupa / bingung”</div><ol class="cr-steps"><li>Cek <strong>kesadaran &amp; atensi</strong>: berkabut, fluktuatif, akut? → <strong>Delirium</strong> → cari penyebab medis/obat (I WATCH DEATH).</li><li>Kesadaran jernih → tanyakan <strong>onset &amp; durasi</strong>.</li><li>Cepat (&lt; 3 bulan) + murung + pencetus psikososial + keluhan somatik → <strong>Depresi</strong> (tapi ingat bisa awal Alzheimer).</li><li>Bertahap ≥ 6 bulan, nyasar, apraksia/agnosia → <strong>Demensia</strong>; tanda fokal/CT infark → vaskular.</li><li>Selalu singkirkan penyebab <strong>reversibel</strong> (tiroid, B12, obat, sensorik).</li></ol></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="depresi" onclick="markDone('depresi')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== TERAPI ======== -->
+<div id="sec-terapi" class="section">
+<h2 class="section-heading">Tatalaksana & Farmakoterapi Geriatri</h2>
+<p class="section-desc">Prinsip: mulai rendah, naik pelan, kurangi obat, dan cari tahu apa yang sudah diminum pasien.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧭</span> Prinsip Psikofarmaka Lansia</div><div class="tagrow"><span class="tag t-mm">📌 Must Memorize</span><span class="tag t-hy">⭐ High Yield</span><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li><strong>½–⅓ dosis dewasa</strong> (metabolisme hepar &amp; ginjal menurun; CYP450 ↓).</li><li>Jangan menambah obat pada yang sudah diterima kecuali alasan signifikan; <strong>catat alasannya</strong> di rekam medik.</li><li>Review <strong>seluruh obat</strong> (tas obat pasien) — polifarmasi &amp; interaksi.</li><li>Hindari <strong>antikolinergik</strong> (triheksifenidil) pada delirium/demensia.</li><li>Benzodiazepin: hati-hati (depresi napas, jatuh, delirium); bila perlu pilih tanpa metabolit aktif (lorazepam).</li><li>Restrain = pilihan terakhir.</li></ul>
+<div class="alert alert-sky"><span class="alert-icon">➕</span><div><span class="tag t-ex">Tambahan</span> Trisiklik (mis. amitriptilin) bersifat antikolinergik dan umumnya dihindari pada lansia. Namun di bank soal UB, amitriptilin tetap menjadi jawaban depresi pada pasien <em>muda</em> — baca usia pasien di vignette.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💊</span> Tabel Obat per Kondisi (dosis dari PPT)</div><div class="table-wrap"><table><tr><th>Kondisi</th><th>Obat</th><th>Catatan</th></tr><tr><td>Delirium: agitasi/psikotik</td><td>Haloperidol 2–5 mg IM/IV tiap 30 menit, maks 20 mg/hari</td><td>Pantau EKG (QTc) bila IV; turunkan dosis pada lansia</td></tr><tr><td>Delirium: antipsikotik tak bisa / SNM</td><td>Lorazepam 1–2 mg PO</td><td>Kontraindikasi gangguan napas</td></tr><tr><td>Demensia ringan–sedang</td><td>Donepezil / rivastigmin</td><td>Tidak untuk demensia berat</td></tr><tr><td>Demensia: agresif</td><td>Haloperidol 0,5–1 mg/hari / risperidon 0,5–1 mg/hari</td><td>Dosis rendah</td></tr><tr><td>Demensia: depresi</td><td>Sertralin 25 mg/hari</td><td>SSRI</td></tr><tr><td>Depresi lansia</td><td>Antidepresan (SSRI)</td><td>Tanpa riwayat manik; bila ada → +mood stabilizer</td></tr><tr><td>Stres akut pasca delirium</td><td>Lorazepam jangka pendek</td><td>Hanya bila tetap cemas</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📝</span> Informed Consent pada Pasien Gangguan Jiwa / Demensia</div><div class="tagrow"><span class="tag t-fa">🔁 Frequently Asked</span><span class="tag t-ct">⚠️ Common Trap</span><span class="tag t-ex">➕ Tambahan di luar kuliah</span></div><div class="grid-2"><div class="mini-card hl"><h4>Pasien <u>kompeten</u></h4><p>Sadar penuh &amp; sehat jiwa saat ini → <strong>pasien sendiri</strong> yang menandatangani, meski punya riwayat gangguan jiwa.</p></div>
+<div class="mini-card"><h4>Pasien <u>tidak kompeten</u></h4><p>Demensia berat/psikotik aktif → <strong>keluarga terdekat</strong> (wali). Jika tidak ada → cari keluarga; bukan sembarang pengantar/ketua RT.</p></div></div><div class="soal-dosen"><div class="soal-dosen-header"><span class="soal-dosen-badge">🔴 Soal Tahun Lalu — sering</span></div><div class="soal-dosen-cohort"><span class="cohort-tag cohort-ub">Bank UB No.2, 47, 68</span><span class="cohort-tag cohort-arthron">Arthron '18 No.16, 95</span><span class="cohort-tag cohort-aorta">Aorta '19 No.20</span></div><div class="soal-dosen-content">Pasien dengan riwayat jiwa yang sadar &amp; membaik, luka ringan → ✅ <span class="hl-ok">pasien sendiri</span>. Lansia 88 th demensia, tinggal dengan anak yang bekerja → keluarga terdekat (kunci bank: <strong>cucu</strong>). Pengantar tetangga, ketua RT → bukan yang berhak (kecuali sementara menunggu keluarga di kasus Arthron No.95).</div></div>
+<div class="alert alert-peach"><span class="alert-icon">📎</span><div>Materi consent berasal dari kuliah lain (dr. Siti — <em>Specific Health Issues</em>), bukan PPT 22; ditaruh di sini karena sering muncul dengan skenario demensia. Dalam kegawatdaruratan, tindakan menyelamatkan nyawa tidak boleh tertunda karena menunggu persetujuan.</div></div>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="terapi" onclick="markDone('terapi')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== DOSEN ======== -->
+<div id="sec-dosen" class="section">
+<h2 class="section-heading">🎤 Highlight Dosen</h2>
+<p class="section-desc">Penekanan dr. Budhi dalam rekaman kuliah geriatri, per tema.</p>
+<div class="alert alert-peach"><span class="alert-icon">🎧</span><div><strong>Kualitas transkrip:</strong> hasil auto-transcribe dengan banyak potongan dan salah dengar. Hanya poin yang cukup jelas yang dimasukkan; ⚠️ = ambigu.</div></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👴</span> Konsep Lansia</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>Usia lanjut WHO: 65; di Indonesia 60 tahun dianggap lansia; yang penting sehat &amp; berguna.</li><li>Gangguan jiwa lansia sering <strong>tersembunyi</strong> karena menjaga citra diri.</li><li>Pandangan negatif masyarakat adalah tantangan; lansia tetap butuh sosial &amp; pencapaian.</li><li>Proses menua dipengaruhi budaya &amp; etnis.</li><li>Masalah jiwa umum: cemas, depresi, demensia; psikotik jarang (bisa paranoia).</li><li>Waspadai <strong>penyalahgunaan obat</strong> — tas penuh obat.</li><li><strong>Risiko bunuh diri tinggi</strong>; cara tersering menolak makan &amp; minum obat berlebihan.</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧠</span> Delirium & Demensia</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>Delirium: “baca sendiri” untuk pengetahuan — fokus kuliah pada Alzheimer ⚠️.</li><li>Demensia paling sering = <strong>Alzheimer</strong>; bisa mulai usia 40, jangan diabaikan.</li><li>Gejala klinis: lupa, kesulitan niat/tujuan (mau ke kamar mandi malah ke dapur).</li><li>Kriteria diagnostik &amp; <strong>10 gejala Alzheimer</strong>: dibaca sendiri, “biasanya keluar saat ujian”.</li><li>Obat hanya <strong>menahan progresi</strong>; donepezil &amp; memantin; kalau penyebab dasar diobati bisa sembuh.</li><li>Demensia vaskular: perbaikan vaskularisasi otak.</li><li>Prognosis alami menurun — “yang tidak bisa disembuhkan adalah usia tua”, tapi masih bisa ditahan.</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎭</span> Depresi & Pembanding</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li>Depresi pada lansia sudah dibahas di kuliah depresi; yang dibedakan adalah gambaran lansia vs demensia/delirium.</li><li>Delirium terkait lingkungan, mata, telinga → rawat dengan baik.</li><li>⚠️ Dosen menyiratkan perbedaan akan ditanyakan lewat kasus (kalimat terpotong).</li></ul>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🏠</span> Praktik Merawat Lansia</div><div class="tagrow"><span class="tag t-dr">🎤 Highlight Dosen</span></div><ul class="styled-list"><li><strong>Cek lab minimal tiap 6 bulan</strong>; biayanya tidak mahal; tunjukkan hasil ke ayah/ibu/kakek-nenek.</li><li>Gunakan <strong>fakta</strong> (mis. kolesterol tinggi → batasi gorengan) alih-alih sekadar mengalah.</li><li>Tunjukkan jadwal kegiatanmu agar lansia paham waktu kebersamaan.</li><li>Jangan skrining berlebihan (tak perlu CT scan tiap tahun).</li><li>Lansia yang <strong>masih merokok</strong> → jangan merokok di dekat mereka; <em>successful aging</em> = tetap berguna, hidup bermakna, selaras agama.</li></ul>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="dosen" onclick="markDone('dosen')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== SOAL ======== -->
+<div id="sec-soal" class="section">
+<h2 class="section-heading">📊 Analisis Soal Tahun Lalu</h2>
+<p class="section-desc">Pola dari lima kompilasi. Bagian prediksi adalah inferensiku.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📈</span> Peta Frekuensi Topik</div><div class="bar-row"><span class="l">Delirium</span><div class="b"><i style="width:100%"></i></div><b>≈ 9</b></div>
+<div class="bar-row"><span class="l">Demensia (dx)</span><div class="b"><i style="width:67%"></i></div><b>≈ 6</b></div>
+<div class="bar-row"><span class="l">Informed consent</span><div class="b"><i style="width:67%"></i></div><b>≈ 6</b></div>
+<div class="bar-row"><span class="l">Depresi lansia</span><div class="b"><i style="width:56%"></i></div><b>≈ 5</b></div>
+<div class="bar-row"><span class="l">Terapi (donepezil, dosis)</span><div class="b"><i style="width:44%"></i></div><b>≈ 4</b></div>
+<div class="bar-row"><span class="l">MMSE / ADL</span><div class="b"><i style="width:33%"></i></div><b>3</b></div>
+<div class="bar-row"><span class="l">Neurotransmiter</span><div class="b"><i style="width:22%"></i></div><b>2</b></div>
+<div class="bar-row"><span class="l">Mudah lupa</span><div class="b"><i style="width:22%"></i></div><b>2</b></div>
+<div class="bar-row"><span class="l">Kategori usia</span><div class="b"><i style="width:11%"></i></div><b>1</b></div></div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔁</span> Pola yang Berulang</div><div class="table-wrap"><table><tr><th>Pola</th><th>Jawaban berulang</th></tr><tr><td>Lansia + akut bingung + penyakit medis</td><td>Delirium</td></tr><tr><td>Lansia lupa jalan pulang + tanpa DM/HT + neuro normal</td><td>Alzheimer</td></tr><tr><td>Pelupa + infark CT</td><td>Demensia vaskular</td></tr><tr><td>Pemeriksaan “memastikan diagnosis”</td><td>MMSE</td></tr><tr><td>Terapi kognitif lansia</td><td>Donepezil</td></tr><tr><td>Dosis lansia</td><td>½–⅓ dosis dewasa</td></tr><tr><td>Depresi lansia</td><td>Gejala fisik dominan</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔮</span> Prediksi Area Penting (inferensi)</div><div class="table-wrap"><table><tr><th>Area</th><th>Kemungkinan</th><th>Alasan</th></tr><tr><td>Delirium (vignette, etiologi, terapi)</td><td><span class="hl-rose">Sangat tinggi</span></td><td>Terbanyak di bank, walau dosen “baca sendiri”</td></tr><tr><td>Alzheimer vs vaskular</td><td><span class="hl-rose">Tinggi</span></td><td>Ditekankan dosen, pola soal berulang</td></tr><tr><td>Donepezil / terapi / dosis lansia</td><td><span class="hl-peach">Tinggi</span></td><td>Berulang di Aorta</td></tr><tr><td>10 gejala Alzheimer / kriteria demensia</td><td><span class="hl-peach">Sedang–tinggi</span></td><td>Dosen: “biasanya keluar saat ujian”</td></tr><tr><td>Pembeda depresi–demensia–delirium</td><td><span class="hl-peach">Sedang–tinggi</span></td><td>Dosen menyiratkan lewat kasus</td></tr><tr><td>Risiko bunuh diri lansia</td><td><span class="hl-mint">Sedang</span></td><td>Disebut tegas, belum ada di bank</td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🕳️</span> Jebakan & Kunci Bank yang Meragukan</div><ul class="styled-list"><li><strong>Arthron No.79</strong> (trauma kepala, disorientasi akut): kunci “halusinasi organik”; konsep → delirium.</li><li><strong>Avicenna No.74</strong> (luka bakar lansia, kesadaran turun 2 jam): kunci “psikosis akut”; konsep → delirium.</li><li><strong>Avicenna No.81</strong> (HT 200/120, GD 500, disorientasi): kunci tercatat “demensia”; konsep → delirium karena KMU.</li><li><strong>MMSE vs ADL</strong>: baca tujuan — “memastikan diagnosis” = MMSE; “aktivitas sehari-hari” = ADL.</li><li><strong>Depkes vs WHO</strong> pada kategori usia.</li><li><strong>Amitriptilin</strong>: benar untuk depresi pasien muda di bank; antikolinergik berisiko di lansia.</li><li>Verifikasi kunci meragukan ke pembahasan resmi/dosen sebelum menghafal.</li></ul>
+</div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="soal" onclick="markDone('soal')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== REVIEW ======== -->
+<div id="sec-review" class="section">
+<h2 class="section-heading">⚡ Quick Review</h2>
+<p class="section-desc">Ringkasan satu layar, mnemonic, dan flashcards.</p>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📝</span> Ringkasan Satu Layar</div><div class="table-wrap"><table><tr><th>Tema</th><th>Kunci</th></tr><tr><td>Usia</td><td>Depkes: lansia awal 46–55, akhir 56–65, manula &gt; 65 · WHO elderly 60–74 · psikiatri geriatri ≥ 65</td></tr><tr><td>Menua</td><td>Hepar/CYP450 ↓ → dosis ½–⅓; hipotensi postural; sensori ↓</td></tr><tr><td>Delirium</td><td>Akut + kesadaran/atensi ↓ + fluktuatif + etiologi medis; haloperidol; hindari antikolinergik; restrain terakhir</td></tr><tr><td>Demensia</td><td>Kronik progresif ≥ 6 bln; kesadaran jernih; Alzheimer 50–60% (ACh ↓); vaskular 20–30% (berjenjang)</td></tr><tr><td>Terapi demensia</td><td>Donepezil/rivastigmin (ringan–sedang); antipsikotik dosis rendah; sertralin 25 mg</td></tr><tr><td>Depresi lansia</td><td>Gejala fisik dominan, terselubung, pseudodemensia, risiko bunuh diri</td></tr><tr><td>Pemeriksaan</td><td>MMSE (kognitif) · ADL (fungsi) · CT rutin; lab dasar tiap 6 bulan</td></tr><tr><td>Kode</td><td>Gangguan mental organik = <strong>F0</strong></td></tr></table></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧩</span> Mnemonic</div><div class="mnemonic"><div class="mnemonic-label">🧩 Tiga D Geriatri</div><div class="mnemonic-text">Delirium · Demensia · Depresi</div><div class="mnemonic-sub">Delirium = Datang cepat; Demensia = Dalam bertahap; Depresi = mood rendah.</div></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 Penyebab delirium</div><div class="mnemonic-text">I WATCH DEATH</div><div class="mnemonic-sub">Infeksi · Withdrawal · Acute metabolic · Trauma · CNS · Hypoxia · Deficiency · Endocrine · Acute vascular · Toxin · Heavy metal.</div></div>
+<div class="mnemonic"><div class="mnemonic-label">🧩 Penyebab demensia reversibel</div><div class="mnemonic-text">3T + endokrin + defisiensi</div><div class="mnemonic-sub">Tumor, Toxins, Trauma; tiroid, DM; B12/tiamin/niasin; infeksi SSP; hidrosefalus.</div></div>
+</div>
+<div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🃏</span> Flashcards — klik untuk membalik</div><div class="fc-grid" id="fcGrid"></div><p class="fc-hint">Tebak dulu dalam hati sebelum membalik.</p></div>
+
+<div class="done-bar"><span>Selesai membaca bagian ini?</span><button class="done-btn" data-id="review" onclick="markDone('review')">Tandai sudah dipelajari</button></div>
+</div>
+
+<!-- ======== QUIZ ======== -->
+<div id="sec-quiz" class="section">
+<h2 class="section-heading">🧠 Quiz — C1 sampai C4</h2>
+<p class="section-desc">Vignette berbasis kuliah geriatri &amp; pola soal tahun lalu. Opsi diacak tiap kali dimuat; ada pembahasan + clinical reasoning tiap opsi.</p>
+<div class="quiz-bar"><span class="small">Filter level:</span><button class="chip lvl-chip on" onclick="setLvl('ALL',this)">Semua</button><button class="chip lvl-chip" onclick="setLvl('C1',this)">C1</button><button class="chip lvl-chip" onclick="setLvl('C2',this)">C2</button><button class="chip lvl-chip" onclick="setLvl('C3',this)">C3</button><button class="chip lvl-chip" onclick="setLvl('C4',this)">C4</button></div><div class="quiz-progress" id="quizProg"></div><div id="quizBox"></div><div class="score-card" id="scoreCard"><div style="font-size:40px">🌿</div><div class="score-big" id="scoreNum">0</div><div id="scoreTot" style="font-size:18px;opacity:.8"></div><p class="score-msg" id="scoreMsg"></p><div class="lvl-stat" id="lvlStat"></div><button class="btn-restart" onclick="resetQuiz()">🔁 Acak &amp; Ulangi</button></div>
+</div>
+
+</div>
+<button class="toc-btn" onclick="toggleToc()">☰ Quick Jump</button>
+<div class="toc-panel" id="tocPanel"></div>
+<button class="float-btn" onclick="openModal()"><div class="float-pulse"></div>🔴 Soal Tahun Lalu</button>
+<div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-title">🔴 Soal Tahun Lalu — Sering Keluar</div>
+    <div class="modal-sub">Topik dari bank soal angkatan sebelumnya yang sama dengan materi ini. Tanda ⚠️ = kunci bank perlu dicek ulang.</div>
+    <div class="modal-item"><span class="modal-item-num">01 · PALING SERING</span><div class="modal-item-q">Lansia akut bingung + penyakit medis (HT, DM, GDS 600, kepala terbentur, pasca operasi, kemoterapi, luka bakar)</div><div class="modal-item-a"><strong>Delirium</strong> (kemoterapi → haloperidol).</div><div class="modal-cohorts"><span class="cohort-tag cohort-ub">UB No.23,57,65</span><span class="cohort-tag cohort-axon">Axon '20 No.50</span><span class="cohort-tag cohort-arthron">Arthron No.79,86</span><span class="cohort-tag cohort-avicenna">Avicenna No.74,81</span></div></div><div class="modal-item"><span class="modal-item-num">02 · KONSEP</span><div class="modal-item-q">Digoksin + benzodiazepin baru, lansia berbaring 2 jam</div><div class="modal-item-a"><strong>Delirium akibat intoksikasi zat</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-avicenna">Avicenna No.96</span></div></div><div class="modal-item"><span class="modal-item-num">03 · DX</span><div class="modal-item-q">Lansia lupa nama/tempat/waktu, nyasar, tanpa DM/HT, neuro normal</div><div class="modal-item-a"><strong>Demensia Alzheimer</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.19</span><span class="cohort-tag cohort-avicenna">Avicenna No.38</span><span class="cohort-tag cohort-axon">Axon '20 No.28</span></div></div><div class="modal-item"><span class="modal-item-num">04 · DX</span><div class="modal-item-q">Lansia pelupa + CT infark</div><div class="modal-item-a"><strong>Demensia vaskular</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-ub">UB No.16</span></div></div><div class="modal-item"><span class="modal-item-num">05 · KODE</span><div class="modal-item-q">Kelompok PPDGJ-III demensia</div><div class="modal-item-a"><strong>F0</strong> (gangguan mental organik).</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.70</span></div></div><div class="modal-item"><span class="modal-item-num">06 · NEURO</span><div class="modal-item-q">Neurotransmiter gangguan lansia / kognitif</div><div class="modal-item-a"><strong>Asetilkolin</strong> (Alzheimer).</div><div class="modal-cohorts"><span class="cohort-tag cohort-axon">Axon '20 No.3,63</span></div></div><div class="modal-item"><span class="modal-item-num">07 · TERAPI</span><div class="modal-item-q">Kemunduran kognitif lansia</div><div class="modal-item-a"><strong>Donepezil</strong>; kognitif: rivastigmin.</div><div class="modal-cohorts"><span class="cohort-tag cohort-aorta">Aorta No.4,56</span></div></div><div class="modal-item"><span class="modal-item-num">08 · TERAPI</span><div class="modal-item-q">Dosis psikofarmaka lansia</div><div class="modal-item-a"><strong>½–⅓ dosis dewasa</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-aorta">Aorta No.10</span></div></div><div class="modal-item"><span class="modal-item-num">09 · TRICKY ⚠️</span><div class="modal-item-q">Pemeriksaan: MMSE vs ADL</div><div class="modal-item-a">“Memastikan diagnosis” → <strong>MMSE</strong>; aktivitas harian → <strong>ADL</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.66</span><span class="cohort-tag cohort-avicenna">Avicenna No.10,56</span></div></div><div class="modal-item"><span class="modal-item-num">10 · KONSEP</span><div class="modal-item-q">Depresi pada lansia</div><div class="modal-item-a">Didominasi <strong>gejala fisik</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.97</span></div></div><div class="modal-item"><span class="modal-item-num">11 · TRICKY ⚠️</span><div class="modal-item-q">Gangguan jiwa tersering pada lansia</div><div class="modal-item-a">Kunci bank: CVD (Arthron/Axon 54); depresi (Axon 36).</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.8</span><span class="cohort-tag cohort-axon">Axon '20 No.36,54</span></div></div><div class="modal-item"><span class="modal-item-num">12 · HAFALAN</span><div class="modal-item-q">Batas usia lanjut Depkes 2009</div><div class="modal-item-a"><strong>Lansia awal 46–55 tahun</strong>.</div><div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron No.35</span></div></div><div class="modal-item"><span class="modal-item-num">13 · TRICKY ⚠️</span><div class="modal-item-q">Informed consent: demensia/gangguan jiwa</div><div class="modal-item-a">Pasien sadar → <strong>sendiri</strong>; demensia → <strong>keluarga terdekat</strong> (cucu/anak).</div><div class="modal-cohorts"><span class="cohort-tag cohort-ub">UB No.2,47,68</span><span class="cohort-tag cohort-arthron">Arthron No.16,95</span><span class="cohort-tag cohort-aorta">Aorta No.20</span></div></div><div class="modal-item"><span class="modal-item-num">14 · KONSEP</span><div class="modal-item-q">Ciri “mudah lupa” pada lansia</div><div class="modal-item-a">Bisa ingat kembali dengan isyarat (kunci Aorta: C).</div><div class="modal-cohorts"><span class="cohort-tag cohort-axon">Axon '20 No.12</span><span class="cohort-tag cohort-aorta">Aorta No.52</span></div></div>
+    <button class="modal-nav-btn" onclick="closeModal();show('quiz')">🧠 Langsung ke Quiz</button>
+  </div>
+</div>
+<script>
+var KEY='geriatri';
+var QUIZ=[{"lvl": "C1", "topic": "KATEGORI USIA", "src": "Arthron No.35", "v": "Seorang perempuan berusia 50 tahun berobat ke puskesmas. Mahasiswa koas diminta mengelompokkan pasien menurut klasifikasi umur Depkes RI 2009.", "q": "Kategori usia pasien ini adalah…", "opts": [{"t": "Masa lansia awal (46–55 tahun)", "ok": true, "why": "Depkes 2009: lansia awal = 46–55 tahun."}, {"t": "Masa dewasa akhir (36–45 tahun)", "ok": false, "why": "Rentang ini sudah terlewat."}, {"t": "Masa lansia akhir (56–65 tahun)", "ok": false, "why": "Belum mencapai 56 tahun."}, {"t": "Masa manula (&gt; 65 tahun)", "ok": false, "why": "Jauh dari batas."}, {"t": "Lansia tua / <em>old</em> (75–90 tahun)", "ok": false, "why": "Itu istilah WHO dan rentang usia lebih tinggi."}], "concept": "Hafalkan Depkes: dewasa akhir 36–45 → lansia awal 46–55 → lansia akhir 56–65 → manula &gt; 65. Jangan campur dengan WHO."}, {"lvl": "C1", "topic": "NEUROTRANSMITER", "src": "Axon'20 No.3, 63", "v": "Seorang lelaki 72 tahun dengan penurunan memori progresif; postmortem ditemukan atrofi hippocampus dan kehilangan neuron kolinergik.", "q": "Neurotransmiter yang berperan pada gangguan ini adalah…", "opts": [{"t": "Asetilkolin ↓", "ok": true, "why": "Defisit kolinergik menjelaskan gangguan memori Alzheimer; dasar pemakaian penghambat kolinesterase."}, {"t": "Dopamin ↑", "ok": false, "why": "Dopamin ↑ terkait psikosis/skizofrenia."}, {"t": "Norepinefrin ↓", "ok": false, "why": "Terkait depresi."}, {"t": "GABA ↓", "ok": false, "why": "Terkait ansietas."}, {"t": "Serotonin ↑", "ok": false, "why": "Serotonin ↓ terkait depresi, bukan memori Alzheimer."}], "concept": "Alzheimer = asetilkolin ↓ → donepezil/rivastigmin (cholinesterase inhibitor)."}, {"lvl": "C2", "topic": "DELIRIUM vs DEMENSIA", "src": "", "v": "Lelaki 78 tahun dengan infeksi saluran kemih. Sejak 2 hari bingung, siang mengantuk, malam gelisah melihat serangga, tidak fokus mendengarkan pertanyaan. Sebelumnya mandiri dan memori baik.", "q": "Temuan yang paling menegakkan delirium (dan bukan demensia) adalah…", "opts": [{"t": "Onset akut dengan kesadaran/atensi terganggu yang berfluktuasi", "ok": true, "why": "Itu inti delirium; demensia memiliki kesadaran jernih dan onset bertahap."}, {"t": "Lupa nama anak sejak 1 tahun", "ok": false, "why": "Khas demensia (kronik)."}, {"t": "Kesadaran jernih dengan disorientasi tempat", "ok": false, "why": "Kesadaran jernih bertentangan dengan delirium."}, {"t": "Perubahan kepribadian bertahap", "ok": false, "why": "Pola demensia/frontotemporal."}, {"t": "Murung dan kehilangan minat 2 bulan", "ok": false, "why": "Lebih ke depresi."}], "concept": "Delirium = akut + atensi/kesadaran ↓ + fluktuatif + etiologi medis (di sini ISK)."}, {"lvl": "C2", "topic": "ALZHEIMER vs VASKULAR", "src": "", "v": "Lelaki 70 tahun, hipertensi tak terkontrol. Dua bulan lalu tiba-tiba lemah separuh tubuh disertai lupa; kondisi sempat membaik lalu memburuk lagi setelah serangan kedua. CT otak: infark multipel.", "q": "Gambaran yang paling khas diagnosis ini adalah…", "opts": [{"t": "Penurunan kognitif berjenjang dengan tanda neurologis fokal", "ok": true, "why": "Ciri demensia vaskular: onset akut, berjenjang mengikuti serangan vaskular."}, {"t": "Penurunan bertahap halus tanpa defisit neurologis", "ok": false, "why": "Khas Alzheimer."}, {"t": "Kesadaran berkabut dan berfluktuasi harian", "ok": false, "why": "Delirium."}, {"t": "Perbaikan total dalam 2 minggu", "ok": false, "why": "Bukan pola demensia."}, {"t": "Mood depresif sebagai gejala utama", "ok": false, "why": "Depresi."}], "concept": "Alzheimer: perlahan, tanpa fokal. Vaskular: akut/berjenjang + tanda fokal/CT infark."}, {"lvl": "C2", "topic": "DEPRESI LANSIA", "src": "Arthron No.97", "v": "Lelaki 70 tahun, istri meninggal 2 bulan lalu. Mengeluh nyeri badan, sulit tidur, nafsu makan turun. Ia menyangkal sedih: “Saya baik-baik saja, hanya capek.”", "q": "Ciri khas depresi pada lansia yang tampak di kasus ini adalah…", "opts": [{"t": "Didominasi gejala fisik dan emosi disangkal (depresi terselubung)", "ok": true, "why": "Lansia sering menyampaikan depresi lewat keluhan somatik."}, {"t": "Penurunan kesadaran", "ok": false, "why": "Itu delirium."}, {"t": "Disebabkan gangguan kognitif", "ok": false, "why": "Tidak ada data hendaya kognitif primer."}, {"t": "Rasa bersalah diucapkan jelas", "ok": false, "why": "Pada lansia emosi/rasa bersalah sering <em>tidak diucapkan</em>."}, {"t": "Tidak ada rasa putus asa", "ok": false, "why": "Perasaan putus asa relatif menetap pada lansia."}], "concept": "Depresi lansia: somatik, terselubung, kognitif terganggu, putus asa menetap."}, {"lvl": "C3", "topic": "TATALAKSANA DELIRIUM", "src": "", "v": "Lelaki 70 tahun hari ke-2 pasca operasi fraktur panggul. Malam gelisah, melihat serangga, disorientasi, mencoba mencabut infus. TTV stabil. Na 125 mEq/L. Ia mendapat triheksifenidil dari dokter sebelumnya.", "q": "Penatalaksanaan yang paling tepat adalah…", "opts": [{"t": "Koreksi penyebab (hiponatremia), amankan lingkungan, hentikan triheksifenidil; haloperidol dosis rendah bila agitasi berisiko", "ok": true, "why": "Tiga tujuan: cari/obati penyebab, keamanan, atasi perilaku; antikolinergik memperberat delirium."}, {"t": "Lanjutkan triheksifenidil dan tambah diazepam rutin", "ok": false, "why": "Antikolinergik harus dihindari; diazepam rutin memperberat delirium."}, {"t": "Restrain fisik sebagai pilihan awal", "ok": false, "why": "Restrain pilihan terakhir; memperberat agitasi."}, {"t": "Donepezil", "ok": false, "why": "Obat demensia, bukan delirium akut."}, {"t": "Amitriptilin malam hari", "ok": false, "why": "Antikolinergik kuat; memperburuk delirium."}], "concept": "Delirium: cari penyebab, aman, haloperidol bila perlu, hindari antikolinergik &amp; restrain."}, {"lvl": "C3", "topic": "TERAPI DEMENSIA", "src": "Aorta No.4", "v": "Lelaki 74 tahun, Alzheimer ringan–sedang. MMSE 20/30, keluarga cemas karena memori makin turun; tidak ada agresivitas.", "q": "Obat yang paling tepat untuk memperlambat penurunan kognitif adalah…", "opts": [{"t": "Donepezil", "ok": true, "why": "Penghambat kolinesterase untuk demensia ringan–sedang."}, {"t": "Haloperidol 5 mg", "ok": false, "why": "Hanya untuk agresi/psikosis, dosis rendah; bukan memperlambat kognitif."}, {"t": "Diazepam", "ok": false, "why": "Memperburuk kognisi dan risiko jatuh."}, {"t": "Litium", "ok": false, "why": "Mood stabilizer, tak ada indikasi."}, {"t": "Amitriptilin", "ok": false, "why": "Antikolinergik, memperburuk kognisi."}], "concept": "Alzheimer ringan–sedang: donepezil/rivastigmin; tidak dianjurkan pada berat."}, {"lvl": "C3", "topic": "MMSE vs ADL", "src": "Arthron No.66 · Avicenna No.10, 56", "v": "Perempuan 70 tahun dibawa ke IGD: sering lupa 2 bulan, marah karena lupa menaruh barang, sering nyasar, bertanya hal yang sama berulang. Dulu bisa memasak, sekarang tidak.", "q": "Pemeriksaan selanjutnya yang paling tepat untuk menentukan dan memastikan diagnosis adalah…", "opts": [{"t": "MMSE", "ok": true, "why": "Skrining standar fungsi kognitif (30 poin, 7 domain)."}, {"t": "GAF", "ok": false, "why": "Menilai fungsi global psikiatrik, bukan memastikan demensia."}, {"t": "GCS", "ok": false, "why": "Tingkat kesadaran; kesadaran pasien jernih."}, {"t": "ADL", "ok": false, "why": "Menilai kemandirian harian; relevan bila pertanyaan tentang aktivitas sehari-hari, tapi bukan untuk memastikan diagnosis."}, {"t": "WHODAS", "ok": false, "why": "Menilai disabilitas, bukan kognisi."}], "concept": "Memastikan diagnosis kognitif → MMSE. Kinerja aktivitas sehari-hari → ADL."}, {"lvl": "C3", "topic": "DOSIS LANSIA", "src": "Aorta No.10", "v": "Perempuan 80 tahun, insomnia dan ansietas. Dokter akan memberi obat psikofarmaka untuk pertama kali.", "q": "Prinsip dosis awal yang benar adalah…", "opts": [{"t": "½ sampai ⅓ dosis dewasa", "ok": true, "why": "Metabolisme (aliran darah hepar, CYP450) dan ekskresi menurun."}, {"t": "Dosis dewasa penuh", "ok": false, "why": "Risiko toksisitas dan jatuh."}, {"t": "Dosis maksimum agar cepat efektif", "ok": false, "why": "Berbahaya pada lansia."}, {"t": "Dosis anak", "ok": false, "why": "Tidak ada dasar fisiologis."}, {"t": "Berdasarkan berat badan saja", "ok": false, "why": "Bukan pedoman geriatri; fungsi organ yang menentukan."}], "concept": "Start low, go slow: ½–⅓ dosis dewasa karena CYP450 &amp; aliran darah hepar ↓."}, {"lvl": "C3", "topic": "POLIFARMASI", "src": "Dosen", "v": "Lelaki 82 tahun datang membawa tas berisi banyak obat dari beberapa dokter, mengeluh bingung dan mengantuk sejak seminggu.", "q": "Langkah pertama yang paling tepat adalah…", "opts": [{"t": "Tinjau seluruh obat (polifarmasi/interaksi), jangan menambah obat baru tanpa alasan signifikan", "ok": true, "why": "Sesuai PPT/dosen: bijak tidak menambah obat; interaksi serius."}, {"t": "Tambah antipsikotik", "ok": false, "why": "Menambah beban obat; tidak ada indikasi."}, {"t": "Berikan diazepam agar tenang", "ok": false, "why": "Dapat memperberat bingung."}, {"t": "Segera rawat sebagai demensia", "ok": false, "why": "Onset 1 minggu → pikirkan delirium/obat."}, {"t": "Abaikan, normal usia", "ok": false, "why": "Bingung akut bukan proses menua normal."}], "concept": "Lansia + obat banyak + bingung baru = pikirkan delirium akibat obat; review obat dulu."}, {"lvl": "C4", "topic": "PSEUDODEMENSIA", "src": "", "v": "Lelaki 72 tahun, 6 minggu murung dan lemas setelah istri meninggal. Mengeluh “tidak bisa mengingat apa-apa”, tetapi saat didorong menjawab “tidak tahu” bukan jawaban salah. Kesadaran jernih; MMSE 22. Tidur dan nafsu makan turun.", "q": "Diagnosis yang paling mungkin dan terapinya adalah…", "opts": [{"t": "Depresi (pseudodemensia); antidepresan (mis. sertralin) dan pantau kemungkinan awal Alzheimer", "ok": true, "why": "Onset cepat &lt; 3 bulan, pencetus psikososial, mood depresif, respons “tidak tahu”, somatik; reversibel dengan terapi."}, {"t": "Demensia Alzheimer; donepezil", "ok": false, "why": "Onset terlalu cepat dan dominan mood."}, {"t": "Delirium hipoaktif; haloperidol", "ok": false, "why": "Kesadaran jernih, tak ada gangguan atensi fluktuatif."}, {"t": "Demensia vaskular; antiplatelet", "ok": false, "why": "Tak ada riwayat/infark/fokal."}, {"t": "Skizofrenia residual; risperidon", "ok": false, "why": "Tak ada riwayat psikotik."}], "concept": "Pseudodemensia = depresi yang menyerupai demensia; waspada karena bisa awal Alzheimer."}, {"lvl": "C4", "topic": "DELIRIUM vs PSIKOSIS PRIMER", "src": "Avicenna No.74 (kunci bank diragukan)", "v": "Perempuan 72 tahun luka bakar derajat 2, hari ke-4 perawatan. Tiba-tiba berteriak ada orang ingin menyakitinya. Dalam 2 jam kesadaran menurun dan ia disorientasi waktu, tempat, dan orang.", "q": "Diagnosis yang paling tepat adalah…", "opts": [{"t": "Delirium akibat kondisi medis umum (luka bakar)", "ok": true, "why": "Onset akut, kesadaran menurun, disorientasi, ada kondisi medis berat."}, {"t": "Psikosis akut primer", "ok": false, "why": "Psikosis primer tidak disertai penurunan kesadaran dan disorientasi menyeluruh."}, {"t": "Reaksi stres akut", "ok": false, "why": "Stres akut tidak menurunkan kesadaran."}, {"t": "Gangguan cemas", "ok": false, "why": "Tidak menjelaskan penurunan kesadaran."}, {"t": "Gangguan stres pascatrauma", "ok": false, "why": "Perlu ≥ 1 bulan dan tidak ada penurunan kesadaran."}], "concept": "Penurunan kesadaran + disorientasi akut pada pasien sakit berat = delirium. Kunci bank bisa berbeda: cek pembahasan."}, {"lvl": "C4", "topic": "INFORMED CONSENT", "src": "UB No.47", "v": "Lelaki 88 tahun dengan demensia sejak 70 tahun tinggal bersama anaknya (22 tahun, bekerja sejak subuh). Ia tertabrak motor menuju masjid, dibawa warga ke RS dengan dugaan patah tulang kaki. Pasien tidak mampu memahami penjelasan.", "q": "Siapa yang paling tepat dimintai informed consent?", "opts": [{"t": "Keluarga terdekat (anak/cucu pasien)", "ok": true, "why": "Pasien tidak kompeten; wali sah adalah keluarga terdekat. Kunci bank: cucu/anak."}, {"t": "Ketua RT", "ok": false, "why": "Bukan keluarga dan tak berwenang."}, {"t": "Perwakilan warga yang mengantar", "ok": false, "why": "Pengantar tidak otomatis wali."}, {"t": "Dokter sendiri", "ok": false, "why": "Menghilangkan hak pasien/keluarga; kecuali gawat darurat."}, {"t": "Semua warga yang mengantar", "ok": false, "why": "Tidak berwenang."}], "concept": "Pasien tidak kompeten → keluarga terdekat. Gawat darurat: tindakan penyelamatan nyawa tidak ditunda."}];
+var FLASH=[["Depkes 2009: lansia awal?", "46–55 tahun"], ["Psikiatri geriatri mulai usia?", "65 tahun"], ["Dosis psikofarmaka lansia?", "½–⅓ dosis dewasa"], ["Neurotransmiter Alzheimer?", "Asetilkolin ↓"], ["Durasi minimal diagnosis demensia?", "≥ 6 bulan"], ["Delirium: kesadaran?", "Terganggu (berkabut), akut, fluktuatif"], ["Demensia: kesadaran?", "Jernih"], ["Obat Alzheimer ringan–sedang?", "Donepezil / rivastigmin"], ["Obat delirium agitatif?", "Haloperidol (2–5 mg IM/IV, maks 20 mg/hari)"], ["Obat yang dihindari pada delirium?", "Antikolinergik (triheksifenidil)"], ["Pemeriksaan memastikan demensia?", "MMSE"], ["Depresi lansia ciri khas?", "Gejala fisik dominan, terselubung"], ["Kelompok PPDGJ-III demensia?", "F0 (gangguan mental organik)"], ["Alzheimer vs vaskular", "Bertahap vs akut/berjenjang + tanda fokal"], ["Alzheimer bisa mulai usia?", "40 tahun (dosen)"]];
+
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.from((r||document).querySelectorAll(s))}
+var CUR='overview';
+function show(id,noScroll){
+  $$('.section').forEach(function(s){s.classList.remove('active')});
+  $$('.nav-btn').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-sec')===id)});
+  var el=document.getElementById('sec-'+id); if(!el) return;
+  el.classList.add('active'); CUR=id; buildToc();
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  if(!noScroll) window.scrollTo({top:0,behavior:'smooth'});
+  var b=$('.nav-btn.active'); if(b&&b.scrollIntoView) b.scrollIntoView({inline:'center',block:'nearest'});
+}
+function toggle(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open');}
+/* theme */
+function toggleTheme(){
+  var d=document.documentElement.getAttribute('data-theme')==='dark';
+  document.documentElement.setAttribute('data-theme',d?'light':'dark');
+  $('#themeBtn').textContent=d?'🌙 Dark':'☀️ Light';
+  try{localStorage.setItem(KEY+'-theme',d?'light':'dark')}catch(e){}
+}
+/* progress */
+var DONE={};
+function markDone(id,btn){
+  DONE[id]=!DONE[id]; refreshDone();
+  try{localStorage.setItem(KEY+'-done',JSON.stringify(DONE))}catch(e){}
+}
+function refreshDone(){
+  var ids=$$('.done-btn').map(function(b){return b.getAttribute('data-id')});
+  var n=0;
+  ids.forEach(function(id){
+    var on=!!DONE[id]; if(on)n++;
+    $$('.done-btn[data-id="'+id+'"]').forEach(function(b){b.classList.toggle('on',on);b.textContent=on?'✓ Sudah dipelajari':'Tandai sudah dipelajari'});
+    var nb=$('.nav-btn[data-sec="'+id+'"]'); if(nb) nb.classList.toggle('done',on);
+  });
+  var p=$('#progFill'); if(p) p.style.width=(ids.length?Math.round(n/ids.length*100):0)+'%';
+  var l=$('#progLbl'); if(l) l.textContent=n+' dari '+ids.length+' bagian ditandai selesai';
+}
+/* scroll bar */
+window.addEventListener('scroll',function(){
+  var h=document.documentElement; var m=h.scrollHeight-h.clientHeight;
+  $('#topbar').style.width=(m>0?(h.scrollTop/m*100):0)+'%';
+});
+/* search */
+var IDX=[];
+function buildIdx(){
+  IDX=[];
+  $$('.section').forEach(function(s){
+    var sid=s.id.replace('sec-','');
+    var sh=$('.section-heading',s); var sname=sh?sh.textContent:sid;
+    $$('.card',s).forEach(function(c,i){
+      if(sid==='quiz') return;
+      var t=$('.card-title',c)||$('.collapse-btn',c); var title=t?t.textContent.replace(/\s+/g,' ').trim():('Bagian '+(i+1));
+      if(!c.id) c.id='c-'+sid+'-'+i;
+      IDX.push({sid:sid,id:c.id,title:title,sec:sname,text:c.textContent.replace(/\s+/g,' ').toLowerCase()});
+    });
+  });
+}
+function doSearch(q){
+  var box=$('#searchRes'); q=(q||'').trim().toLowerCase();
+  if(q.length<2){box.classList.remove('open');return}
+  var res=IDX.filter(function(x){return x.text.indexOf(q)>-1||x.title.toLowerCase().indexOf(q)>-1}).slice(0,9);
+  if(!res.length){box.innerHTML='<div class="sr-empty">Tidak ada hasil untuk “'+q.replace(/</g,'')+'”.</div>';box.classList.add('open');return}
+  box.innerHTML=res.map(function(x){
+    var i=x.text.indexOf(q); var sn=i>-1?('…'+x.text.substr(Math.max(0,i-35),90)+'…'):'';
+    return '<div class="sr-item" data-s="'+x.sid+'" data-i="'+x.id+'"><b>'+x.title+'</b><small>'+x.sec+' · '+sn.replace(/</g,'')+'</small></div>';
+  }).join('');
+  box.classList.add('open');
+  $$('.sr-item',box).forEach(function(el){el.onclick=function(){jumpTo(el.getAttribute('data-s'),el.getAttribute('data-i'));box.classList.remove('open')}});
+}
+function jumpTo(sid,cid){
+  show(sid,true);
+  setTimeout(function(){
+    var c=document.getElementById(cid); if(!c) return;
+    var cb=$('.collapse-body',c); 
+    c.scrollIntoView({behavior:'smooth',block:'start'});
+    c.classList.remove('flash-hit'); void c.offsetWidth; c.classList.add('flash-hit');
+  },60);
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();$('#searchIn').focus()}
+  if(e.key==='Escape'){$('#searchRes').classList.remove('open');$('#tocPanel').classList.remove('open');closeModal&&closeModal()}
+});
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.search-wrap')) $('#searchRes').classList.remove('open');
+  if(!e.target.closest('.toc-panel')&&!e.target.closest('.toc-btn')) $('#tocPanel').classList.remove('open');
+});
+/* toc */
+function buildToc(){
+  var s=document.getElementById('sec-'+CUR); var h='<h5>Pindah bagian</h5>';
+  $$('.nav-btn').forEach(function(b){h+='<a onclick="show(\''+b.getAttribute('data-sec')+'\');toggleToc()">'+b.textContent.replace(' ✓','')+'</a>'});
+  h+='<h5>Di halaman ini</h5>';
+  $$('.card',s).forEach(function(c,i){
+    var t=$('.card-title',c)||$('.collapse-btn',c); if(!t) return;
+    if(!c.id) c.id='c-'+CUR+'-'+i;
+    h+='<a onclick="jumpTo(\''+CUR+'\',\''+c.id+'\');toggleToc()">'+t.textContent.replace(/\s+/g,' ').trim().slice(0,52)+'</a>';
+  });
+  $('#tocPanel').innerHTML=h;
+}
+function toggleToc(){$('#tocPanel').classList.toggle('open')}
+/* modal */
+function openModal(){$('#soalDosenModal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){var m=$('#soalDosenModal'); if(m){m.classList.remove('open');document.body.style.overflow=''}}
+function closeModalOuter(e){if(e.target===$('#soalDosenModal'))closeModal()}
+/* flashcards */
+function buildFlash(){
+  var g=$('#fcGrid'); if(!g||typeof FLASH==='undefined') return;
+  g.innerHTML=FLASH.map(function(f){return '<div><div class="fc" onclick="this.classList.toggle(\'flip\')"><div class="fc-in"><div class="fc-f">'+f[0]+'</div><div class="fc-b">'+f[1]+'</div></div></div></div>'}).join('');
+}
+/* quiz */
+var QSTATE={ans:{},score:0,lvl:{}};
+var LVL='ALL';
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function renderQuiz(){
+  QSTATE={ans:{},score:0,lvl:{}};
+  var qs=QUIZ.filter(function(q){return LVL==='ALL'||q.lvl===LVL});
+  var box=$('#quizBox'); var dots=$('#quizProg'); dots.innerHTML='';
+  qs.forEach(function(q,i){var d=document.createElement('div');d.className='pdot';d.id='dot'+i;dots.appendChild(d)});
+  var L='ABCDE';
+  box.innerHTML=qs.map(function(q,qi){
+    var o=shuf(q.opts);
+    return '<div class="quiz-q" id="q'+qi+'"><div class="q-num">SOAL '+String(qi+1).padStart(2,'0')+' / '+q.topic+'</div>'+
+    '<div style="margin:2px 0 10px"><span class="tag t-hy" style="background:var(--lavender)">'+q.lvl+' · '+({C1:'Mengingat',C2:'Memahami',C3:'Menerapkan',C4:'Menganalisis'}[q.lvl])+'</span>'+(q.src?'<span class="tag t-fa">'+q.src+'</span>':'')+'</div>'+
+    '<div class="q-vignette">'+q.v+'</div><p class="q-question">'+q.q+'</p><div class="q-opts">'+
+    o.map(function(x,k){return '<button class="q-opt" data-ok="'+(x.ok?1:0)+'" data-k="'+k+'" onclick="ansQ(this,'+qi+')"><span class="ol">'+L[k]+'</span><span>'+x.t+'</span></button>'}).join('')+
+    '</div><div class="q-exp" id="exp'+qi+'"></div></div>';
+  }).join('');
+  $('#scoreCard').classList.remove('show');
+  QSTATE.total=qs.length; QSTATE.qs=qs;
+}
+function ansQ(btn,qi){
+  if(QSTATE.ans[qi]!==undefined) return;
+  var q=QSTATE.qs[qi]; var card=document.getElementById('q'+qi);
+  var ok=btn.getAttribute('data-ok')==='1'; QSTATE.ans[qi]=ok;
+  var L='ABCDE';
+  $$('.q-opt',card).forEach(function(b){b.disabled=true; if(b.getAttribute('data-ok')==='1') b.classList.add('correct')});
+  if(ok){QSTATE.score++;$('#dot'+qi).classList.add('ok')}else{btn.classList.add('wrong');$('#dot'+qi).classList.add('no')}
+  QSTATE.lvl[q.lvl]=QSTATE.lvl[q.lvl]||[0,0]; QSTATE.lvl[q.lvl][1]++; if(ok)QSTATE.lvl[q.lvl][0]++;
+  var right=q.opts.filter(function(x){return x.ok})[0];
+  var h=(ok?'✅ <strong>Benar!</strong> ':'❌ <strong>Belum tepat.</strong> ')+'Jawaban: <strong>'+right.t+'</strong><br><br>'+right.why+'<div class="why"><strong>🔎 Clinical reasoning — kenapa opsi lain bukan jawabannya:</strong>';
+  q.opts.filter(function(x){return !x.ok}).forEach(function(x){h+='<div><b>'+x.t+'</b> → '+x.why+'</div>'});
+  h+='</div><div class="concept">💡 <strong>Konsep inti:</strong> '+q.concept+'</div>';
+  var e=$('#exp'+qi); e.innerHTML=h; e.classList.add('show');
+  if(Object.keys(QSTATE.ans).length===QSTATE.total) setTimeout(showScore,700);
+}
+function showScore(){
+  var sc=$('#scoreCard'); sc.classList.add('show');
+  $('#scoreNum').textContent=QSTATE.score; $('#scoreTot').textContent='/ '+QSTATE.total;
+  var r=QSTATE.score/QSTATE.total;
+  var msgs=['Yuk ulang materinya pelan-pelan, kamu pasti bisa! 💪','Lumayan! Fokus ke bagian “Konsep inti” soal yang salah 📖','Bagus! Tinggal rapikan jebakan-jebakannya 🌟','Hampir sempurna! Tajam banget 🔥','PERFECT! Dokter masa depan ✨'];
+  $('#scoreMsg').textContent=msgs[r<.35?0:r<.6?1:r<.8?2:r<1?3:4];
+  var h=''; ['C1','C2','C3','C4'].forEach(function(l){var v=QSTATE.lvl[l];h+='<div><b>'+(v?v[0]+'/'+v[1]:'–')+'</b>'+l+'</div>'});
+  $('#lvlStat').innerHTML=h; sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function setLvl(l,btn){LVL=l;$$('.lvl-chip').forEach(function(b){b.classList.toggle('on',b===btn)});renderQuiz()}
+function resetQuiz(){renderQuiz();window.scrollTo({top:$('#sec-quiz').offsetTop,behavior:'smooth'})}
+/* init */
+(function(){
+  try{var t=localStorage.getItem(KEY+'-theme'); if(t){document.documentElement.setAttribute('data-theme',t);$('#themeBtn').textContent=t==='dark'?'☀️ Light':'🌙 Dark'}}catch(e){}
+  try{DONE=JSON.parse(localStorage.getItem(KEY+'-done')||'{}')}catch(e){DONE={}}
+  buildIdx(); refreshDone(); buildFlash(); renderQuiz(); buildToc();
+  $('#searchIn').addEventListener('input',function(){doSearch(this.value)});
+  var h=(location.hash||'').replace('#',''); if(h&&document.getElementById('sec-'+h)) show(h,true);
+})();
+
+</script>
+</body>
+</html>

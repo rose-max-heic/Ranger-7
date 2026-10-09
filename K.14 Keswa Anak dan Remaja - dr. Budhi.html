@@ -1,0 +1,621 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>🌱 Kesehatan Jiwa Anak & Remaja — dr. Budhi</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"><style>
+:root {
+  --lavender: #5FA8A0;
+  --lavender-light: #8CC7BE;
+  --lavender-pale: #E3F4F1;
+  --lavender-deep: #2F6F6A;
+  --lavender-muted: #4A8F88;
+  --rose: #D4788A;
+  --rose-light: #E89BAA;
+  --rose-pale: #FDE8EC;
+  --rose-deep: #A84D60;
+  --mint: #7BBFA8;
+  --mint-pale: #E4F5F0;
+  --mint-deep: #3D8B73;
+  --peach: #E8A87C;
+  --peach-pale: #FDF0E6;
+  --peach-deep: #C07040;
+  --sky: #7AAFCF;
+  --sky-pale: #E4F1FA;
+  --sky-deep: #3A7A9A;
+  --cream: #F4FBFA;
+  --white: #ffffff;
+  --text: #173A3A;
+  --text-muted: #4F7370;
+  --border: #CDE8E4;
+  --shadow: rgba(95,168,160,0.15);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1F5558 0%, #3F8F8A 40%, #6BB5C8 70%, #8FCFD6 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.06);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(212,120,138,0.12);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#D7F5EE; }
+.hero-sub { color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:300;max-width:580px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#1F5558,#2F7C7A);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(31,85,88,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(220,210,255,0.65);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#E3F4F1;border-bottom-color:#E89BAA;
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(95,168,160,0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(95,168,160,0.15);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--lavender-pale),#effaf8);
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Budhi menekankan: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--lavender-deep),var(--lavender-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#F4FBFA;}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(95,168,160,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:#1F5558;color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(95,168,160,0.25);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--lavender-deep),var(--rose-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(95,168,160,0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#1F5558,#6BB5C8,#8FCFD6);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#E3F4F1;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--lavender-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, #0F3B3E, #1F6B66);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid #6FD3C0;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(63,168,150,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6FD3C0, #E89BAA, #6FD3C0);
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, #6FD3C0, #3FA896);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-badge-warn {
+  background: linear-gradient(90deg, #E84060, #C02040);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+}
+.cohort-axon { background: rgba(95,168,160,0.35); }
+.cohort-arthron { background: rgba(212,120,138,0.35); }
+.cohort-aorta { background: rgba(123,191,168,0.35); }
+.cohort-anthelix { background: rgba(232,168,124,0.35); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.92);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: #D6F7EF; }
+.soal-dosen-content .hl-warn {
+  background: rgba(232,60,96,0.25);
+  border: 1px solid rgba(232,60,96,0.5);
+  color: #FFB0C0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,191,168,0.25);
+  border: 1px solid rgba(123,191,168,0.4);
+  color: #B8FFE6;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-keyword {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(111,211,192,0.2);
+  border: 1px solid rgba(111,211,192,0.4);
+  color: #CFF5EC;
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #1F6B66, #6FD3C0);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(63,168,150,0.45);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(63,168,150,0.55); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #FFB0C0;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(5,25,27,0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, #0B2E30, #134A4C);
+  border: 2px solid #6FD3C0;
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(63,168,150,0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: #6FD3C0; border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(111,211,192,0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: #D6F7EF;
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.55); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(111,211,192,0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, #6FD3C0, #3FA896);
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: #CFF5EC; font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #B8FFE6; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #6FD3C0, #3FA896);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+
+.cohort-avicenna{background:rgba(122,175,207,.38)}.cohort-blok{background:rgba(255,255,255,.18)}
+.hot{position:relative;border:2px solid var(--rose-light);box-shadow:0 0 0 4px var(--rose-pale),0 4px 18px var(--shadow)}
+.freq{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(90deg,var(--rose-deep),var(--rose));color:#fff;
+ font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:3px 11px;border-radius:20px;margin:0 0 10px;text-transform:uppercase}
+.freq small{font-weight:600;opacity:.9;letter-spacing:0;text-transform:none}
+.tagrow{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0 2px}
+.tg{font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:6px;background:var(--lavender-pale);color:var(--lavender-deep);border:1px solid var(--border)}
+.q-num{max-width:90%}
+.tag-hint{font-size:12px;color:var(--text-muted);margin:-4px 0 18px}
+.mark{background:linear-gradient(transparent 55%,var(--peach-pale) 55%);font-weight:600}
+@media(max-width:600px){.float-btn{bottom:16px;right:14px;padding:10px 15px}}
+</style></head><body><div class="hero"><div class="hero-eyebrow">🌱 Blok Psikiatri & Mental Health · dr. RH Budhi Muljanto, Sp.KJ</div><h1>Kesehatan Jiwa <em>Anak & Remaja</em><br>Gangguan Emosional & Perilaku</h1><p class="hero-sub">Disusun dari 2 PPT (Keswa Anak Balita; Gangguan Emosional & Perilaku Onset Masa Kanak) dan rekaman kuliah. Materi yang sering keluar di bank soal ditandai 🔁.</p><div class="hero-pills"><span class="pill">🌱 Fase Perkembangan</span><span class="pill">🏫 Masalah Sekolah</span><span class="pill">📏 Retardasi Mental</span><span class="pill">💧 Enuresis · Tic</span><span class="pill">🔁 8 Topik Berulang</span><span class="pill">🧠 20 Soal Semua Tahun</span></div></div><div class="sticky-nav"><button class="nav-btn active" onclick="show('overview',this)">🏠 Overview</button><button class="nav-btn" onclick="show('kembang',this)">🌱 Perkembangan</button><button class="nav-btn" onclick="show('sekolah',this)">🏫 Masalah Sekolah</button><button class="nav-btn" onclick="show('f9',this)">🧩 Gangguan F9</button><button class="nav-btn" onclick="show('rm',this)">📏 Retardasi Mental</button><button class="nav-btn" onclick="show('lain',this)">💧 Enuresis/Tic/Bicara</button><button class="nav-btn" onclick="show('tj',this)">💬 Tanya Jawab</button><button class="nav-btn" onclick="show('quiz',this)">🧠 Quiz</button></div><div class="container"><div id="sec-overview" class="section active"><h2 class="section-heading">Peta Konsep: Jiwa Anak & Remaja</h2><p class="section-desc">Gabungan dua kuliah dr. Budhi: Keswa Anak Balita + Gangguan Emosional & Perilaku Onset Masa Kanak (F7, F9).</p><div class="dr-note">Pelayanan keswa di layanan primer itu menjangkau banyak penduduk, deteksi dini, kurangi stigma, murah, mudah dicapai. Jadi kamu sebagai dokter umum/Puskesmas adalah <span class="mark">garda depan</span>: kenali, edukasi guru & orang tua, baru rujuk.</div><div class="grid-3"><div class="mini-card"><h4>1️⃣ Perkembangan normal</h4><p>Prinsip + fase (bayi → remaja). Dasar untuk tahu mana yang menyimpang.</p></div><div class="mini-card"><h4>2️⃣ Masalah di sekolah</h4><p>Kesulitan belajar, hiperkinetik, tingkah laku, fobia sekolah, cemas, depresi, epilepsi, psikotik.</p></div><div class="mini-card"><h4>3️⃣ Klasifikasi F7 & F9</h4><p>RM (F70–73) dan gangguan perilaku-emosional (F90–F98) lengkap dengan terapinya.</p></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🧩</span> Pola yang berulang di hampir semua gangguan</div><div class="cr-box"><div class="cr-label">Alur berpikir dokter umum</div><ol class="cr-steps"><li><b>Tanya milestone</b> (kapan guling, jalan, bicara) → sesuaikan dengan usia.</li><li><b>Singkirkan penyebab fisik dulu</b> (mata/telinga, tiroid, ISK, kejang).</li><li><b>Edukasi orang tua & guru</b> — sikap dan tindakan guru adalah bagian dari terapi.</li><li><b>Terapi perilaku / psikososial</b> dulu; obat hanya untuk indikasi tertentu.</li><li><b>Rujuk</b> bila tidak membaik 6 bulan atau ada kondisi berat.</li></ol></div><div class="alert alert-rose"><span class="alert-icon">⚠️</span><div><b>Jangan langsung menyuruh ke psikiater</b> atas inisiatif sendiri — orang tua bisa terpukul ("anak saya tidak gila!"). Sarankan setelah orang tua bertanya/siap.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🔁</span> Peta gangguan yang paling sering diuji</div><div class="table-wrap"><table><tr><th>Topik</th><th>Muncul di soal</th><th>Kata kunci jawaban</th></tr><tr><td>Retardasi mental (IQ)</td><td>UB Blok, AXON'20, ARTHRON'18, AVICENNA'17</td><td>Ringan 50–69 · Sedang 35–49 · Berat 20–34</td></tr><tr><td>Tic / Tourette</td><td>UB Blok, AXON'20, ARTHRON'18, AORTA'19</td><td>Tic sementara &lt;12 bln · Tourette → antipsikotik</td></tr><tr><td>Enuresis / enkopresis</td><td>UB Blok, AXON'20, ARTHRON'18, AORTA'19</td><td>Sekunder · antidepresan (imipramin) · terapi kombinasi</td></tr><tr><td>Autisme / GPP</td><td>UB Blok, AVICENNA'17</td><td>Kontak mata (−), main sendiri, &lt;3 th</td></tr><tr><td>Pica, gagap, cemas perpisahan</td><td>UB Blok, AXON'20, AVICENNA'17</td><td>Makan non-makanan · pengulangan suara · tak mau lepas dari ibu</td></tr><tr><td>Hiperkinetik & tingkah laku</td><td>ARTHRON'18, AXON'20</td><td>Kurang terarah · bisa sampai kriminal</td></tr><tr><td>Tumbuh kembang & stimulasi</td><td>ARTHRON'18, AORTA'19</td><td>Bertahap & berkelanjutan · fase oral → ketergantungan</td></tr></table></div></div></div><div id="sec-kembang" class="section"><h2 class="section-heading">Prinsip & Fase Perkembangan</h2><p class="section-desc">Sifat bawaan × lingkungan. Keberhasilan satu fase menentukan fase berikutnya.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">📐</span> 7 Prinsip Perkembangan</div><ul class="styled-list"><li>Sifat bawaan + pengaruh lingkungan → dari tergantung orang lain menjadi mandiri.</li><li>Hubungan erat fisik-motorik, mental-emosional, dan sosial.</li><li>Fase berurutan dan <b>universal</b>.</li><li>Lama tiap fase tergantung bawaan & lingkungan.</li><li><span class="hl-rose">Keberhasilan fase dipengaruhi fase sebelumnya</span> (beda dengan nilai sekolah — teman yang lambat di SD bisa jadi profesor).</li><li>Setiap individu unik, kembar identik pun bisa berbeda.</li></ul></div><div class="dr-note">Hati-hati di fase tumbuh kembang karena <span class="mark">fase sebelumnya menentukan hasil</span>. Ada hubungan sebab-akibat yang tidak boleh dianggap remeh.</div><div class="table-wrap"><table><tr><th>Fase</th><th>Usia</th><th>Ciri inti</th><th>Bila terganggu</th></tr><tr><td>Bayi</td><td>0–1,5 th</td><td>Fondasi ketahanan; senyum 6 mgg; kelekatan ibu-anak; kognitif sensorimotor; 10 bln mengerti ≥10 kata</td><td>Ketergantungan, komunikasi terhambat (Erikson: trust vs mistrust)</td></tr><tr><td>Toddler</td><td>1,5–3 th</td><td>Otonomi, ambivalen (ingin bebas tapi melekat), toilet training, bermain simbolik, takut gelap/binatang</td><td>Obsesif, cemas perpisahan; kegagalan bahasa = tanda awal kesulitan belajar</td></tr><tr><td>Pra-sekolah</td><td>3–6 th</td><td>Peka belajar; ego-sentrik; superego terbentuk; moral prakonvensional; <b>fase oedipal 3–5 th</b></td><td>Identifikasi dengan orang tua sejenis terganggu</td></tr><tr><td>Sekolah awal</td><td>6–10 th</td><td>Konkret-operasional; teman sebaya penting; moral prakonvensional</td><td>Kesulitan belajar</td></tr><tr><td>Sekolah akhir</td><td>10–12 th</td><td>Mulai abstrak; pubertas (♀ 10–12, ♂ 12–14); moral konvensional; industri vs inferior</td><td>Rendah diri</td></tr><tr><td>Remaja</td><td>12–18 th</td><td>Identitas, pematangan seksual</td><td>Gangguan perilaku/emosional</td></tr></table></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>ARTHRON'18, AORTA'19</small></div><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧠</span> Fase perkembangan ↔ gangguan dewasa</div><div class="grid-2"><div class="mini-card"><h4>0–1,5 th (oral)</h4><p>Masalah tak tuntas → <span class="hl-rose">ketergantungan</span> saat dewasa. Contoh: bayi disusui kaku menurut jadwal → kehilangan percaya pada lingkungan.</p></div><div class="mini-card"><h4>1,5–3 th (anal)</h4><p>Autonomy vs shame/doubt → bisa muncul <span class="hl-rose">gangguan obsesif</span>.</p></div></div><div class="mnemonic"><div class="mnemonic-label">Mnemonic</div><div class="mnemonic-text">Oral → Ketergantungan · Anal → Obsesif</div><div class="mnemonic-sub">Dua pasangan ini keluar di bank soal.</div></div></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>ARTHRON'18 No.64, 71, 4</small></div><div class="card-title"><span class="card-icon" style="background:var(--sky-pale)">🌱</span> Stimulasi dini & deteksi tumbuh kembang</div><ul class="styled-list"><li>Prinsip stimulasi dini: <span class="hl-mint">bertahap dan berkelanjutan</span> (bukan dipaksa, bukan di ruang tertutup).</li><li>Tujuan pemantauan deteksi dini: <b>mencegah hambatan tumbuh kembang</b>.</li><li>Aspek fisik-biologis pembinaan anak: <b>imunisasi</b>.</li></ul></div></div><div id="sec-sekolah" class="section"><h2 class="section-heading">Masalah Anak di Sekolah</h2><p class="section-desc">Setiap masalah: penyebab → gejala → sikap & tindakan guru → kapan rujuk.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">📚</span> Kesulitan belajar — 5 penyebab</div><ul class="styled-list"><li><b>Gangguan penglihatan/pendengaran</b> (tersering!)</li><li><b>Keterbelakangan mental</b> (RM ringan/borderline: naik kelas tapi nilai jelek)</li><li><b>Kesulitan belajar khusus</b> (disleksia, disgrafia, diskalkulia)</li><li><b>Keluarga kurang mendukung</b></li><li><b>Masalah emosional</b></li></ul><div class="dr-note">Anak dikira lamban ternyata <span class="mark">minus 4</span>. Apalagi sekarang balita sudah pakai gadget. Tempatkan di bangku depan, rujuk ke Puskesmas / poli mata / THT.</div></div><div class="table-wrap"><table><tr><th>Masalah</th><th>Gejala kunci</th><th>Sikap guru / dokter</th></tr><tr><td>Gangguan lihat/dengar</td><td>Memelototi papan, memperhatikan gerak bibir guru</td><td>Bangku depan, rujuk mata/THT</td></tr><tr><td>Kesulitan belajar khusus</td><td>Disleksia (huruf terbalik/hilang), disgrafia, diskalkulia; <b>tidak terbelakang di semua pelajaran</b></td><td>Les tambahan sabar, berbagai metode (peragaan)</td></tr><tr><td>Kidal dipaksa</td><td>Tangan kiri lebih terampil; dipaksa kanan → emosional, gagal</td><td>Terima apa adanya. Makan tangan kanan boleh dibiasakan (ajaran agama), menulis kiri tidak masalah</td></tr><tr><td>Kurang perhatian</td><td>Sering bolos, lelah, bermasalah di rumah</td><td>Cari info keluarga, orang tua asuh, pengawasan</td></tr><tr><td>Fobia sekolah</td><td>Menolak berangkat + sakit kepala/perut/muntah; menangis tak mau lepas ibu; pandai di sekolah tapi menentang di rumah</td><td>Ibu menunggu dulu, lepas bertahap; <b>cari penyebab</b> (mis. takut teman → pindah kelas); rujuk bila 6 bln tak membaik</td></tr><tr><td>Gangguan cemas</td><td>Pemalu, pencemas, bergantung pada ortu; sakit perut, diare, berdebar, tics, mimpi menakutkan</td><td>Lembut, ajari relaksasi, kurangi stres, dorong mandiri</td></tr><tr><td>Depresi</td><td>Murung, mudah menangis, nilai turun, nafsu makan/BB/tidur berubah, bersalah, <b>ide menyakiti diri</b></td><td>Bangun hubungan saling percaya; <b>tanyakan langsung ide bunuh diri</b></td></tr><tr><td>Penyakit kronis/cacat</td><td>Asma, kelumpuhan; rendah diri, mudah tersinggung & menyerah</td><td>Dukung pengobatan fisik <b>+ psikoterapi suportif</b></td></tr><tr><td>Epilepsi</td><td>Jatuh + kejang; atau absans (bengong) &rarr; sering kecelakaan</td><td>Miring, longgarkan baju, jangan dikerumuni, jangan masukkan benda ke mulut, jangan hentikan kejang; 2× kejang pada usia 6–12 th → rujuk. <b>5 tahun bebas kejang = sembuh</b></td></tr><tr><td>Psikotik</td><td>Menarik diri, tertawa/menangis tanpa sebab, halusinasi, waham, gangguan tidur</td><td>Pantau minum obat, maklumi mengantuk karena obat, gaduh-gelisah → rujuk</td></tr></table></div><div class="alert alert-peach"><span class="alert-icon">🎤</span><div><b>Kasus dr. Budhi:</b> dua anak 4 & 5 tahun "hiperaktif" mengacak ruang praktik, tapi langsung tenang mengerjakan puzzle. Ternyata mereka terlalu pintar & bosan — <b>cukup edukasi orang tua</b>. Anak yang rajin ngobrol di kelas sering sudah paham materi.</div></div><div class="alert alert-lavender"><span class="alert-icon">📝</span><div>Kasus enuresis wanita 35 th (mengompol tiap malam, malu berobat) → dari anamnesis ternyata <b>depresi</b>. Selalu cari penyebab di balik gejala.</div></div></div><div id="sec-f9" class="section"><h2 class="section-heading">Gangguan Perilaku & Emosional (F90–F98)</h2><p class="section-desc">Daftar klasifikasi PPDGJ — yang wajib dibaca: F90 dan F91 (F8 cukup yang hiperkinetik).</p><div class="dr-note">Untuk F8 tidak perlu dipahami semua. Yang perlu dibaca adalah <span class="mark">F9: gangguan hiperkinetik dan gangguan perilaku</span>.</div><div class="card hot"><div class="freq">🔁 Sering keluar <small>ARTHRON'18 No.63, 98</small></div><div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">⚡</span> F90 — Hiperkinetik (GPPH / ADHD)</div><div class="table-wrap"><table><tr><th>Domain</th><th>Isi</th></tr><tr><td>Gambaran</td><td>Aktif berlebihan, perilaku kurang terarah, perhatian & ketekunan sangat kurang — <b>hampir semua situasi, lama dan terus-menerus</b></td></tr><tr><td>Ciri</td><td>Impulsif, kacau, gelisah berlebihan; bukan depresif, tidak menyerang, tidak akut</td></tr><tr><td>Subtipe</td><td>G aktivitas & perhatian · GTL hiperkinetik · lainnya · YTT</td></tr><tr><td>Medikasi</td><td>Kasus berat: <b>metilfenidat 15–45 mg/hari</b> dibagi 2 dosis (pagi & siang). Bila ada tics: klonidin</td></tr><tr><td>Guru</td><td>Bangku depan, beri kesempatan bergerak, puji perilaku positif, hindari hukuman fisik/mempermalukan, olahraga</td></tr></table></div><div class="alert alert-sky"><span class="alert-icon">💡</span><div>Dosen tak menyebut ADHD sebagai "nakal": bedakan <b>anak nakal vs aktif vs pintar</b> dengan <b>kriteria</b>, bukan kesan. Anak pintar tetap bisa memenuhi kriteria.</div></div></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>ARTHRON'18 No.60</small></div><div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🚧</span> F91 — Gangguan Tingkah Laku</div><div class="table-wrap"><table><tr><th>Domain</th><th>Isi</th></tr><tr><td>Gambaran</td><td>Pola dissosial, agresif atau menentang; berulang & menetap; <span class="hl-rose">bisa sampai tingkat kriminal</span>; di keluarga/umum; sendiri/berkelompok</td></tr><tr><td>Kriteria</td><td><b>≥3 dari 9</b>: mencuri tanpa kekerasan &gt;1×, kabur dari rumah ≥2×, sering bohong, sering bolos, merusak barang, kejam pada hewan/manusia, sering berkelahi, membakar, provokatif</td></tr><tr><td>Subtipe</td><td>Terbatas lingkungan keluarga · tak berkelompok · berkelompok · sikap menentang</td></tr><tr><td>Medikasi</td><td><b>Tidak ada obat</b> untuk GTL; bila akibat hiperkinetik maka diobati. Rujuk bila 6 bln tidak teratasi</td></tr><tr><td>Guru</td><td>Sabar, hukuman mendidik (bukan fisik), puji saat baik, cari latar belakang</td></tr></table></div></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>AXON'20 No.60</small></div><div class="card-title"><span class="card-icon" style="background:var(--sky-pale)">🗂️</span> Klasifikasi F92–F95 & F98 (cepat)</div><div class="table-wrap"><table><tr><th>Kode</th><th>Gangguan</th><th>Contoh</th></tr><tr><td>F92</td><td>Campuran TL + emosi</td><td>GTL depresif</td></tr><tr><td>F93</td><td>Emosional khas masa kanak (beda dari neurosis dewasa)</td><td>Cemas perpisahan, fobik, sosial, <b>persaingan antar-saudara</b></td></tr><tr><td>F94</td><td>Fungsi sosial onset masa kanak/remaja</td><td>Mutisme elektif, gangguan kelekatan reaktif/tak terkendali</td></tr><tr><td>F95</td><td>Tic</td><td>Tic sementara · tic kronis · <b>Tourette</b></td></tr><tr><td>F98</td><td>PL & emosional lainnya</td><td>Enuresis & enkopresis nonorganik, gangguan makan bayi, <b>pika</b>, stereotipik, <b>gagap</b>, cluttering</td></tr></table></div></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>UB Blok, AVICENNA'17</small></div><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧩</span> Gangguan perkembangan pervasif (autisme)</div><div class="grid-2"><div class="mini-card"><h4>Pedoman (≥3 hal)</h4><ul><li>Cemas mendadak berlebih, tak bisa ditenangkan</li><li>Afek terbatas/tak wajar</li><li>Menolak perubahan lingkungan, rutinitas kaku</li><li>Motorik janggal, bicara tidak normal</li><li><b>Sulit kontak mata</b></li><li>Hiper/hiposensitif sensorik</li><li>Mutilasi diri (membenturkan kepala)</li></ul><p><b>Terlihat sebelum usia 3 tahun.</b></p></div><div class="mini-card"><h4>Tatalaksana</h4><ul><li>Edukasi: gangguan biologis otak (komunikasi & sosial)</li><li>Diet bebas gluten &amp; kasein (slide)</li><li>Terapi perilaku harian, tarik kontak mata</li><li>Agresif/stereotipik: <b>risperidon 3×0,5 mg</b></li><li>Segera konsul psikiater; jangan beri banyak obat</li></ul></div></div><div class="alert alert-mint"><span class="alert-icon">🎤</span><div>Dosen: anak tampak "menatap ke belakang kita" — fokus mata di belakang pemeriksa. <b>Hati-hati bedakan dengan psikotik/skizofrenia.</b></div></div></div></div><div id="sec-rm" class="section"><h2 class="section-heading">Retardasi Mental (F70–F73)</h2><p class="section-desc">Perkembangan mental lambat, onset &lt;18 tahun, kesulitan belajar & adaptasi sosial.</p><div class="card hot"><div class="freq">🔁 Sering keluar <small>6 soal · UB Blok, AXON'20, ARTHRON'18, AVICENNA'17</small></div><div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">📏</span> Tingkat keparahan — kunci angka IQ & usia terdeteksi</div><div class="table-wrap"><table><tr><th>Tingkat</th><th>IQ</th><th>Kode</th><th>Terdeteksi</th><th>Kemampuan</th></tr><tr><td><span class="derajat d1">Ringan</span></td><td>50–69</td><td>F70</td><td>Usia sekolah</td><td>Mandiri, tugas sederhana; masalah saat naik SMP</td></tr><tr><td><span class="derajat d2">Sedang</span></td><td>35–49</td><td>F71</td><td>3–5 th</td><td>Pekerjaan sederhana dengan pengawasan</td></tr><tr><td><span class="derajat d3">Berat</span></td><td>20–34</td><td>F72</td><td>&lt;2 th (bayi)</td><td>Bicara sederhana, semua dibantu</td></tr><tr><td><span class="derajat d4">Sangat berat</span></td><td>&lt;20</td><td>F73</td><td>Sejak bayi</td><td>Total bergantung pada orang lain</td></tr><tr><td>Borderline (Fish)</td><td>70–90</td><td>—</td><td>—</td><td>Bisa sekolah, nilai jelek tiap naik kelas</td></tr></table></div><div class="mnemonic"><div class="mnemonic-label">Mnemonic IQ</div><div class="mnemonic-text">50 – 35 – 20</div><div class="mnemonic-sub">Batas bawah ringan 50 · sedang 35 · berat 20 → angka di bawahnya naik 1 tingkat keparahan.</div></div><div class="alert alert-rose"><span class="alert-icon">🔁</span><div>Soal sering memberi IQ langsung: <b>IQ 63 / 61 / 55 = ringan</b>, <b>48 = sedang</b>, <b>30 = berat</b>. Diagnosis baru ditegakkan <b>setelah tes IQ</b>.</div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--sky-pale)">🔍</span> Gejala per usia & penyebab</div><div class="grid-2"><div class="mini-card"><h4>Gejala</h4><ul><li><b>Anak:</b> terlambat jalan, bicara, BAK/BAB; sulit tugas sekolah; problem tingkah laku</li><li><b>Remaja:</b> sulit bergaul dengan sebaya; kadang perilaku seksual tak sesuai</li><li><b>Dewasa:</b> sulit tugas harian, kematangan sosial (menikah, kerja, mengasuh)</li></ul><p>Usia 3 th belum jalan/bicara → curigai RM.</p></div><div class="mini-card"><h4>Penyebab</h4><p>Sebagian besar tidak bisa diobati. Yang <b>bisa diobati</b>: <span class="hl-mint">hipotiroidisme, keracunan timbal, fenilketonuria</span>. Malnutrisi & penyakit kronik juga memperlambat.</p></div></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🎤</span> Tatalaksana & pesan dosen</div><ul class="styled-list"><li>Pelatihan sedini mungkin → mampu bantu diri; anak RM <b>mampu menjalin kasih sayang</b>; keluarga rutin memuji.</li><li>Dukungan & empati pada keluarga (beban berat); <b>pelatihan membantu tapi kesembuhan tidak pernah terjadi</b>.</li><li>Cari <b>bakat lain</b> (melukis, menari); bila sulit di sekolah umum → <b>SLB</b>.</li><li><span class="hl-rose">Tidak ada obat yang menambah kecerdasan</span>; obat hanya untuk komorbid (kejang, psikiatrik).</li><li>Rujuk spesialis saat pertama kali diketahui, untuk perencanaan pelatihan & pendidikan.</li></ul><div class="dr-note">Jangan pernah berjanji pada orang tua bahwa obat X akan membuat anak pintar. <span class="mark">Kalau ada pil pintar, saya minum sendiri.</span> Jangan juga menjanjikan anak RM jadi sarjana; tapi berprestasi di luar pendidikan formal sangat mungkin.</div></div></div><div id="sec-lain" class="section"><h2 class="section-heading">Enuresis, Tic, Bicara, Makan</h2><p class="section-desc">Gangguan F95 & F98 yang paling sering keluar di ujian.</p><div class="card hot"><div class="freq">🔁 Sering keluar <small>8 soal · UB Blok, AXON'20, ARTHRON'18, AORTA'19</small></div><div class="card-title"><span class="card-icon" style="background:var(--sky-pale)">💧</span> Enuresis fungsional (F98.8)</div><div class="table-wrap"><table><tr><th>Domain</th><th>Isi</th></tr><tr><td>Kriteria</td><td>Mengompol ≥2×/bulan usia 5 th, ≥1×/bulan usia ≥6 th. &lt;5 th = normal</td></tr><tr><td>Primer vs sekunder</td><td><b>Primer</b>: sejak lahir, tak pernah kering. <b>Sekunder</b>: muncul lagi <b>setelah periode kering</b> (mis. mengompol lagi umur 7 th selama beberapa bulan → sekunder), sering dipicu stres/trauma/konflik ortu</td></tr><tr><td>Singkirkan fisik</td><td>Spina bifida, diuretik, diabetes, kejang, ISK, kelainan traktus urinarius → periksa fisik & urin</td></tr><tr><td>Terapi</td><td>Edukasi (bukan disengaja, hukuman memperburuk), anak ikut tanggung jawab (ganti sprei), kalender kering + pujian, latihan menahan kencing</td></tr><tr><td>Obat</td><td><span class="hl-rose">Antidepresan: imipramin 25–50 mg, 2 jam sebelum tidur</span> (bila sangat perlu)</td></tr><tr><td>Rujuk</td><td>Konflik keluarga/emosional berat · ISK/inkontinensia siang · masih mengompol usia 10 th</td></tr></table></div><div class="alert alert-rose"><span class="alert-icon">🔁</span><div><b>Terapi utama gangguan ekskresi = psikoterapi + psikofarmaka + terapi perilaku</b> (kombinasi). Enkopresis = BAB, enuresis = BAK.</div></div></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>7 soal · UB Blok, AXON'20, ARTHRON'18, AORTA'19</small></div><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚡</span> Tic & Tourette (F95)</div><div class="table-wrap"><table><tr><th>Jenis</th><th>Kriteria</th></tr><tr><td>Tic sementara</td><td><span class="hl-rose">&lt; 12 bulan</span>; gerakan mendadak, cepat, berulang; hilang saat tidur</td></tr><tr><td>Tic kronis</td><td>Motorik <i>atau</i> vokal, &gt;1 tahun</td></tr><tr><td>Tourette</td><td>Tic motorik <b>multipel + ≥1 vokal</b>, menetap &gt;1 tahun, onset &lt;18 th; memberat saat cemas; <b>terapi antipsikotik</b></td></tr></table></div><div class="alert alert-lavender"><span class="alert-icon">🎯</span><div>Target obat pada tic = <b>mengurangi gejala</b> (bukan menyembuhkan).</div></div></div><div class="grid-2"><div class="mini-card"><h4>🗣️ Gagap (stuttering) — F98</h4><p>Pengulangan suara/suku kata, terhenti, bisa disertai gerak wajah; ≥3 bulan. Guru: beri 10–20 detik menjawab, tatap wajah, jangan didesak, cegah ditertawakan.</p><p><span class="hl-lav">Cluttering</span> = bicara cepat berantakan.</p></div><div class="mini-card"><h4>🍽️ Pika</h4><p>Makan zat non-makanan (tanah, kertas, tisu, benang) — masa bayi/kanak. Anak BB rendah &amp; sulit makan.</p></div><div class="mini-card"><h4>😢 Cemas perpisahan (F93)</h4><p>Anak SD tak mau berpisah dari orang tua, menangis dicari padahal rumah dekat sekolah.</p></div><div class="mini-card"><h4>🧵 Bonus bank soal</h4><p><b>Trikotilomania</b> (cabut rambut/alis saat stres, juga gigit kuku): SSRI/antidepresan atau <b>CBT</b>. <b>Kleptomania</b>: dorongan mencuri tanpa kebutuhan, setelah konflik keluarga.</p></div></div></div><div id="sec-tj" class="section"><h2 class="section-heading">Tanya Jawab Kelas</h2><p class="section-desc">Diskusi di akhir kuliah — penting untuk sikap & komunikasi dokter.</p><div class="grid-2"><div class="mini-card"><h4>👶 Anak diperlakukan "dewasa" / disiplin keras</h4><p>Disiplin boleh bila <b>anak paham alasan & tujuan</b>, aturan jelas, orang tua konsisten. Adaptasi butuh 2–3 bulan. Waspada konten medsos yang hanya "akting". Orang tua tidak boleh menyuruh bangun subuh sambil tidur sampai siang.</p></div><div class="mini-card"><h4>👨 Fenomena fatherless</h4><p>Masa krusial: <b>3–5 th (fase oedipal)</b> — anak laki mengidentifikasi ayah, anak perempuan ibu. Bila absen: <b>cari figur pengganti</b> (paman, kakek/nenek). Dampak dewasa: perempuan cari suami lebih tua, laki cari istri keibuan.</p></div><div class="mini-card"><h4>😈 Nakal vs aktif vs pintar</h4><p>Lihat <b>kriteria</b> (mis. ≥3 kriteria gangguan tingkah laku). Pintar tidak menghapus kriteria. Edukasi orang tua berbasis bukti: "3 dari kriteria ini terpenuhi, Bu."</p></div><div class="mini-card"><h4>👪 Sikap orang tua ke anak normal</h4><p>Pakai <b>hati nurani</b>. Beri apresiasi wajar, beri contoh perbaikan. Emosi meledak → anak meledak. Orang tua adalah <b>teladan</b> (mis. ngebut harus ada alasan yang dijelaskan).</p></div></div><div class="card hot"><div class="freq">🔁 Sering keluar <small>Pesan dosen berulang</small></div><div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🚫</span> Komunikasi dokter: jangan berbohong soal obat</div><ul class="styled-list"><li><span class="hl-rose">Jangan menyebut antipsikotik/anti-cemas sebagai "vitamin"</span> — begitu pasien membuka internet, kepercayaan hilang total.</li><li>Contoh: trifluoperazin dosis kecil untuk cemas; pasien protes "saya gila?" → tunjukkan dosis skizofrenia vs dosisnya.</li><li>Jelaskan nama, fungsi, dan alasan dosis secara jujur.</li></ul></div></div><div id="sec-quiz" class="section"><h2 class="section-heading">🧠 Latihan Soal — Semua Tahun</h2><p class="section-desc">Soal dari bank UB (tanpa tahun), AXON'20, ARTHRON'18, AORTA'19, AVICENNA'17 — sumber tiap soal tertera di label.</p><div class="quiz-progress" id="quizProg"></div><div id="quizBox"></div><div class="score-card" id="scoreCard"><div>Skor kamu</div><div class="score-big" id="scoreNum">0</div><div class="score-msg" id="scoreMsg"></div><button class="btn-restart" onclick="resetQuiz()">🔄 Ulangi</button></div></div></div><button class="float-btn" onclick="openModal()"><div class="float-pulse"></div>🔁 Sering Keluar</button><div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)"><div class="modal-box"><button class="modal-close" onclick="closeModal()">✕</button><div class="modal-title">🔁 Materi yang Sering Keluar</div><p class="modal-sub">Topik yang berulang di bank soal UB, AXON'20, ARTHRON'18, AORTA'19, AVICENNA'17.</p><div id="bankBox"></div><button class="modal-nav-btn" onclick="closeModal()">Tutup & lanjut belajar</button></div></div><script>const Q=[{"t": "UB Blok", "v": "Anak menangis & berteriak, tumbuh kembang jelek, hasil tes <b>IQ 48</b>.", "q": "Diagnosisnya?", "o": ["RM ringan", "RM sedang", "RM berat", "Autisme"], "a": 1, "e": "<b>IQ 35–49 = RM sedang (F71)</b>, terdeteksi usia 3–5 tahun."}, {"t": "AXON'20", "v": "Anak marah-marah minta dibelikan motor, tumbuh kembang jelek, <b>IQ 63</b>.", "q": "Diagnosisnya?", "o": ["RM ringan", "RM sedang", "RM berat", "RM sangat berat"], "a": 0, "e": "IQ 50–69 = <b>RM ringan (F70)</b>."}, {"t": "AVICENNA'17", "v": "Anak marah-marah minta dibelikan motor, tumbuh kembang jelek, <b>IQ 30</b>.", "q": "Diagnosisnya?", "o": ["RM ringan", "RM sedang", "RM berat", "RM sangat berat"], "a": 2, "e": "IQ 20–34 = <b>RM berat (F72)</b>, bisa diketahui sebelum usia 2 tahun."}, {"t": "ARTHRON'18", "v": "", "q": "Kapankah diagnosis retardasi mental baru dapat ditegakkan?", "o": ["Sejak lahir", "Pada usia sekolah", "Setiap ada gejala mencurigakan", "Setelah dapat dites IQ-nya"], "a": 3, "e": "RM ditandai IQ di bawah normal → <b>perlu pemeriksaan IQ</b>."}, {"t": "UB Blok", "v": "Anak mulai mengompol lagi pada usia 7 tahun setelah sebelumnya kering, berlangsung 3 bulan.", "q": "Diagnosisnya?", "o": ["Enuresis primer", "Enuresis sekunder", "Enkopresis primer", "Enkopresis sekunder"], "a": 1, "e": "Mengompol <b>BAK</b> setelah periode kering = <b>enuresis sekunder</b> (enkopresis = BAB)."}, {"t": "ARTHRON'18 / AXON'20", "v": "", "q": "Psikofarmaka yang dianjurkan untuk enuresis non-organik?", "o": ["Anti-ageing", "Antipsikotik", "Antidepresan", "Anti-cemas"], "a": 2, "e": "<b>Antidepresan (imipramin 25–50 mg, 2 jam sebelum tidur)</b>."}, {"t": "ARTHRON'18", "v": "", "q": "Terapi utama gangguan ekskresi (enuresis/enkopresis)?", "o": ["Psikofarmaka saja", "Psikoterapi saja", "Psikoterapi + psikofarmaka + terapi perilaku", "Terapi perilaku saja"], "a": 2, "e": "Pendekatan <b>kombinasi</b>; mulai edukasi, kalender kering, latihan kandung kemih."}, {"t": "ARTHRON'18 / AORTA'19", "v": "", "q": "Kapankah disebut gangguan tic sementara?", "o": ["Gerakan multipel", "Disertai ekopraksia", "Berlangsung > 1 tahun", "Berlangsung &lt; 12 bulan"], "a": 3, "e": "Tic sementara: <b>&lt;12 bulan</b>. Kronis &gt;1 tahun."}, {"t": "UB Blok", "v": "Anak tidak bisa mengendalikan diri, menepuk-nepuk sendiri, mengangkat bahu; makin parah bila cemas.", "q": "Diagnosisnya?", "o": ["Sindrom Rett", "Sindrom Tourette", "Autisme", "ADHD"], "a": 1, "e": "Tic motorik (± vokal) yang memberat saat cemas → <b>Tourette</b>."}, {"t": "AXON'20 / AORTA'19", "v": "", "q": "Tatalaksana sindrom Tourette?", "o": ["Antidepresan", "Antipsikotik", "Antiepilepsi", "Antiansietas"], "a": 1, "e": "<b>Antipsikotik</b> (target: mengurangi gejala)."}, {"t": "AVICENNA'17 / UB Blok", "v": "Anak 3 tahun sulit diajak komunikasi, bermain, tersenyum & bicara sendiri, tidak menoleh dipanggil, kontak mata (−).", "q": "Diagnosisnya?", "o": ["ADHD", "Skizofrenia anak", "Autisme", "Gangguan perilaku"], "a": 2, "e": "<b>Gangguan perkembangan pervasif/autisme</b>: onset &lt;3 th, kontak mata sulit, dunia sendiri."}, {"t": "UB Blok", "v": "Anak SD ditinggal ibu menangis & mencari-cari, padahal rumah dekat sekolah.", "q": "Diagnosisnya?", "o": ["Gangguan cemas perpisahan", "Reaksi stres masa kanak", "Gangguan penyesuaian", "Fobia sekolah"], "a": 0, "e": "<b>Cemas perpisahan (F93)</b> khas masa kanak."}, {"t": "ARTHRON'18 / AXON'20", "v": "Anak 4 th 8 bln selalu mengganggu teman, memegang & memindahkan semua benda di ruang periksa.", "q": "Diagnosis paling tepat?", "o": ["GTL hiperkinetik", "GTL terbatas keluarga", "Campuran tingkah laku & emosi", "Gangguan cemas"], "a": 0, "e": "Aktif berlebihan, kurang terarah, semua situasi → <b>hiperkinetik (F90)</b>."}, {"t": "ARTHRON'18", "v": "", "q": "Pernyataan benar tentang gangguan tingkah laku pada anak?", "o": ["Hanya bersifat soliter", "Dapat sampai tingkat kriminal", "Tidak disertai gangguan lain", "Hanya di lingkungan terbatas"], "a": 1, "e": "GTL bisa soliter/berkelompok, keluarga/umum, dan <b>sampai kriminal</b>."}, {"t": "UB Blok / AVICENNA'17", "v": "Anak 6 tahun, TB pendek, BB rendah, sulit makan, suka menggigit benang, pulpen, kertas.", "q": "Diagnosis yang mungkin?", "o": ["Gangguan disosiasi", "Pika", "Anoreksia nervosa", "Enuresis non-organik"], "a": 1, "e": "<b>Pika</b> = makan/mengunyah zat non-makanan."}, {"t": "AXON'20", "v": "", "q": "Kelompok gangguan emosional khas onset masa kanak?", "o": ["Gagap", "Hiperkinetik", "Persaingan antar-saudara", "Enuresis"], "a": 2, "e": "F93: cemas perpisahan, fobik, sosial, <b>persaingan antar-saudara</b>."}, {"t": "ARTHRON'18", "v": "", "q": "Prinsip stimulasi dini pada anak?", "o": ["Di ruang khusus tertutup", "Bertahap dan berkelanjutan", "Dipaksakan agar optimal", "Memakai alat bantu terkini"], "a": 1, "e": "Stimulasi <b>bertahap dan berkelanjutan</b>."}, {"t": "ARTHRON'18", "v": "", "q": "Gangguan masa dewasa yang muncul bila masalah belum tuntas di usia 0–1,5 tahun?", "o": ["Makan dan ekskresi", "Ketergantungan", "Psikosomatik", "Psikoseksual"], "a": 1, "e": "Fase oral/bayi (trust vs mistrust) → <b>ketergantungan</b>."}, {"t": "AORTA'19", "v": "", "q": "Gangguan perkembangan pada fase autonomy vs shame/doubt (1,5–3 th) menimbulkan pada dewasa…", "o": ["Gangguan obsesif", "Gangguan afektif", "Skizofrenia", "Gangguan mental akibat zat"], "a": 0, "e": "Fase anal → <b>gangguan obsesif</b>."}, {"t": "UB Blok", "v": "Anak laki-laki 12 th mencabuti rambut & alis sejak masuk SMP favorit saat stres, menggigit kuku. Tiroid normal.", "q": "Tatalaksana yang tepat?", "o": ["SSRI / antidepresan atau CBT", "Antipsikotik", "Antikonvulsan", "Mood stabilizer"], "a": 0, "e": "<b>Trikotilomania</b> → SSRI/antidepresan dan CBT."}];const B=[{"n": "01 · 6 SOAL · PALING SERING", "h": "Retardasi mental: IQ berapa tingkatnya?", "a": "<b>Ringan 50–69</b> (63, 61, 55) · <b>Sedang 35–49</b> (48) · <b>Berat 20–34</b> (30) · sangat berat &lt;20. Diagnosis setelah tes IQ.", "t": ["UB Blok No.22", "AXON'20 No.43, 53, 70", "ARTHRON'18 No.91", "AVICENNA'17 No.50, 58"]}, {"n": "02 · 7 SOAL", "h": "Tic / Tourette", "a": "Tic sementara <b>&lt;12 bulan</b>; Tourette = multipel motor + vokal, &gt;1 tahun; terapi <b>antipsikotik</b>; target obat: <b>kurangi gejala</b>.", "t": ["UB Blok No.9", "AXON'20 No.29, 46", "ARTHRON'18 No.18, 25", "AORTA'19 No.6, 16, 35"]}, {"n": "03 · 8 SOAL", "h": "Enuresis & enkopresis", "a": "Ngompol lagi setelah periode kering = <b>sekunder</b>; obat <b>antidepresan (imipramin)</b>; terapi utama <b>kombinasi</b>.", "t": ["UB Blok No.7, 61", "AXON'20 No.51, 69", "ARTHRON'18 No.7, 90", "AORTA'19 No.15, 41"]}, {"n": "04 · 4 SOAL", "h": "Autisme / gangguan perkembangan pervasif", "a": "Main/bicara sendiri, tak menoleh, kontak mata (−), rutinitas kaku; onset &lt;3 th. Beda: skizofrenia anak.", "t": ["UB Blok No.69", "AVICENNA'17 No.29, 66"]}, {"n": "05 · 5 SOAL", "h": "Pika, gagap, cemas perpisahan", "a": "<b>Pika</b> makan non-makanan · <b>gagap</b> pengulangan suara/putus-putus · <b>cemas perpisahan</b> anak SD tak mau lepas ortu.", "t": ["UB Blok No.27, 43, 45, 58", "AVICENNA'17 No.78", "AXON'20 No.40"]}, {"n": "06 · 3 SOAL", "h": "Hiperkinetik & gangguan tingkah laku", "a": "Hiperkinetik: kurang terarah, semua situasi. GTL: bisa sampai <b>kriminal</b>. Persaingan antar-saudara = F93.", "t": ["ARTHRON'18 No.60, 63, 98", "AXON'20 No.60"]}, {"n": "07 · 5 SOAL", "h": "Tumbuh kembang & stimulasi", "a": "Stimulasi <b>bertahap & berkelanjutan</b>; 0–1,5 th → ketergantungan; 1,5–3 th → obsesif; imunisasi = aspek fisik-biologis.", "t": ["ARTHRON'18 No.4, 64, 71, 93", "AORTA'19 No.46"]}, {"n": "08 · BONUS", "h": "Trikotilomania & kleptomania", "a": "Trikotilomania → <b>SSRI / CBT</b>. Kleptomania → mencuri tanpa kebutuhan.", "t": ["UB Blok No.14, 17, 31, 33", "AXON'20 No.2, 49", "ARTHRON'18 No.2", "AVICENNA'17 No.33", "AORTA'19 No.39"]}];
+function show(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+document.getElementById('sec-'+id).classList.add('active');btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function toggle(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open');}
+let answered={},score=0,total=Q.length;
+function initDots(){const p=document.getElementById('quizProg');p.innerHTML='';for(let i=1;i<=total;i++){const d=document.createElement('div');d.className='pdot';d.id='dot'+i;p.appendChild(d);}}
+function renderQuiz(){document.getElementById('quizBox').innerHTML=Q.map((q,i)=>'<div class="quiz-q" id="q'+(i+1)+'"><div class="q-num">SOAL '+(i+1)+' · '+q.t+'</div>'+
+(q.v?'<div class="q-vignette">'+q.v+'</div>':'')+'<div class="q-question">'+q.q+'</div><div class="q-opts">'+
+q.o.map((o,j)=>'<button class="q-opt" onclick="ans(this,'+(i+1)+','+j+')"><span class="ol">'+'ABCD'[j]+'</span><span>'+o+'</span></button>').join('')+
+'</div><div class="q-exp" id="exp-q'+(i+1)+'">'+q.e+'</div></div>').join('');}
+function ans(btn,n,j){const qid='q'+n;if(answered[qid])return;answered[qid]=true;const card=document.getElementById(qid);
+card.querySelectorAll('.q-opt').forEach(b=>b.disabled=true);const ok=(j===Q[n-1].a);
+if(ok){btn.classList.add('correct');score++;document.getElementById('dot'+n).classList.add('ok');}
+else{btn.classList.add('wrong');document.getElementById('dot'+n).classList.add('no');card.querySelectorAll('.q-opt')[Q[n-1].a].classList.add('correct');}
+document.getElementById('exp-'+qid).classList.add('show');if(Object.keys(answered).length===total)setTimeout(showScore,700);}
+function showScore(){const sc=document.getElementById('scoreCard');sc.classList.add('show');document.getElementById('scoreNum').textContent=score+'/'+total;
+const r=score/total;const m=['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter masa depan! ✨'];
+document.getElementById('scoreMsg').textContent=m[r<.35?0:r<.55?1:r<.75?2:r<1?3:4];sc.scrollIntoView({behavior:'smooth',block:'center'});}
+function resetQuiz(){answered={};score=0;renderQuiz();document.getElementById('scoreCard').classList.remove('show');initDots();window.scrollTo({top:0,behavior:'smooth'});}
+function cls(t){return t.startsWith('AXON')?'axon':t.startsWith('ARTHRON')?'arthron':t.startsWith('AORTA')?'aorta':t.startsWith('AVICENNA')?'avicenna':'blok';}
+function renderBank(){document.getElementById('bankBox').innerHTML=B.map(b=>'<div class="modal-item"><div class="modal-item-num">'+b.n+'</div><div class="modal-item-q">'+b.h+'</div><div class="modal-item-a">'+b.a+'</div><div class="modal-cohorts">'+
+b.t.map(t=>'<span class="cohort-tag cohort-'+cls(t)+'">'+t+'</span>').join('')+'</div></div>').join('');}
+function openModal(){document.getElementById('soalDosenModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('soalDosenModal').classList.remove('open');document.body.style.overflow='';}
+function closeModalOuter(e){if(e.target===document.getElementById('soalDosenModal'))closeModal();}
+renderQuiz();initDots();renderBank();
+</script></body></html>

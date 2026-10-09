@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌼 Tersesat antara Realitas & Persepsi — Psikotik</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lavender: #E6B93A;
+  --lavender-light: #F2D272;
+  --lavender-pale: #FFF6D6;
+  --lavender-deep: #7A5A00;
+  --lavender-muted: #A67C00;
+  --rose: #D4788A;
+  --rose-light: #E89BAA;
+  --rose-pale: #FDE8EC;
+  --rose-deep: #A84D60;
+  --mint: #7BBFA8;
+  --mint-pale: #E4F5F0;
+  --mint-deep: #3D8B73;
+  --peach: #E8A87C;
+  --peach-pale: #FDF0E6;
+  --peach-deep: #C07040;
+  --sky: #7AAFCF;
+  --sky-pale: #E4F1FA;
+  --sky-deep: #3A7A9A;
+  --cream: #FFFCF0;
+  --white: #ffffff;
+  --text: #33280F;
+  --text-muted: #7A6A45;
+  --border: #F0E2B0;
+  --shadow: rgba(230,185,58,0.15);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #6B4A00 0%, #A87D0A 40%, #D9A520 70%, #F0CB5A 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.06);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(212,120,138,0.12);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#FFF1B8; }
+.hero-sub { color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:300;max-width:580px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#6B4A00,#8A6200);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(107,74,0,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(220,210,255,0.65);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#FFF6D6;border-bottom-color:#E89BAA;
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(230,185,58,0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(230,185,58,0.15);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--lavender-pale),#FFFBEA);
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Arifin menekankan: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--lavender-deep),var(--lavender-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#FFFCF0;}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(230,185,58,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:#6B4A00;color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(230,185,58,0.25);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--lavender-deep),var(--rose-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--rose-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(230,185,58,0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#6B4A00,#D9A520,#F0CB5A);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#FFF6D6;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--lavender-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+
+.lo-badge{display:inline-block;background:linear-gradient(90deg,var(--lavender-deep),var(--lavender-muted));color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.1em;padding:3px 12px;border-radius:20px;margin-bottom:10px}
+.hy{background:linear-gradient(135deg,#FFF3B8,#FFE680);border:2px solid var(--lavender);border-radius:14px;padding:14px 18px;margin:14px 0;font-size:13.5px;color:#4a3800}
+.hy::before{content:'⭐ HIGH-YIELD  ';font-weight:800;font-size:10.5px;letter-spacing:.12em;color:var(--lavender-deep)}
+.ayat-card{background:linear-gradient(135deg,#FFFBEA,#FFF1B8);border:1.5px solid var(--lavender-light);border-radius:14px;padding:16px 20px;margin:12px 0;text-align:center}
+.ayat-arab{font-size:24px;direction:rtl;color:var(--lavender-deep);line-height:1.9}
+.ayat-id{font-size:13px;font-style:italic;margin-top:6px}.ayat-ref{font-size:11px;color:var(--text-muted);margin-top:4px;font-weight:600}
+.step{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13.5px}.step:last-child{border:none}
+.sn{background:var(--lavender-muted);color:#fff;border-radius:50%;min-width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.q-opt:hover:not(:disabled){border-color:var(--lavender)}
+.ref li{margin-bottom:6px;font-size:13px}
+</style></head><body>
+<div class="hero"><div class="hero-eyebrow">🌼 Blok Psikiatri & Mental Health · Tutorial Seven-Jump</div><h1>Tersesat antara <em>Realitas</em><br>dan Persepsi</h1><p class="hero-sub">Gangguan psikotik: skizofrenia paranoid pada Arman (24 th) — 13 LO, quiz, dan referensi Fish 5th ed., PPDGJ-III, DSM-5-TR & jurnal.</p><div class="hero-pills"><span class="pill">🧠 13 LO</span><span class="pill">💊 Farmakologi</span><span class="pill">👨‍👩‍👦 Kedokteran Keluarga</span><span class="pill">🕌 Islam</span><span class="pill">🚨 Kegawatan</span><span class="pill">🧠 10 Soal</span></div></div>
+<div class="sticky-nav"><button class="nav-btn active" onclick="show('kasus')">📋 Kasus & 7-Jump</button><button class="nav-btn" onclick="show('lo12')">LO1–2 Konsep</button><button class="nav-btn" onclick="show('lo34')">LO3–4 Dx & DD</button><button class="nav-btn" onclick="show('lo5')">LO5 MSE</button><button class="nav-btn" onclick="show('lo67')">LO6–7 Etiologi</button><button class="nav-btn" onclick="show('lo8')">LO8 Tata Awal</button><button class="nav-btn" onclick="show('lo9')">LO9 Terapi</button><button class="nav-btn" onclick="show('lo10')">LO10 Efek Samping</button><button class="nav-btn" onclick="show('lo1112')">LO11–12 Keluarga & Islam</button><button class="nav-btn" onclick="show('lo13')">LO13 Kegawatan</button><button class="nav-btn" onclick="show('sintesis')">✅ Sintesis</button><button class="nav-btn" onclick="show('ref')">📚 Pustaka</button><button class="nav-btn" onclick="show('quiz')">🧠 Quiz</button></div><div class="container"><div id="sec-kasus" class="section active"><h2 class="section-heading">Arman, 24 Tahun — "Tersesat antara Realitas dan Persepsi"</h2><p class="section-desc">Seven-jump: langkah 1–5 di tab ini, langkah 6 = tab LO, langkah 7 = tab Sintesis.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📖</span>Langkah 1 · Klarifikasi Istilah</div><div class="table-wrap"><table><tr><th>Istilah</th><th>Arti singkat</th></tr><tr><td>Guarded</td><td>Waspada, tertutup, enggan membuka diri saat wawancara</td></tr><tr><td>Halusinasi auditorik</td><td>Persepsi suara tanpa stimulus eksternal (<i>Fish: perception without an object</i>)</td></tr><tr><td>Waham persekutorik</td><td>Keyakinan salah, fixed, bahwa dirinya diawasi/akan dicelakai</td></tr><tr><td>Delayed recall</td><td>Mengingat kembali setelah jeda → menilai memori & kognitif</td></tr><tr><td>Gejala negatif</td><td>Afek datar, alogia, avolisi, asosial, hilang minat</td></tr><tr><td>Insight</td><td>Kesadaran bahwa dirinya sakit → di sini <b>buruk</b> (menyangkal)</td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🎯</span>Langkah 2 · Identifikasi Masalah</div><ul class="styled-list"><li>Menarik diri, prestasi turun, self-care buruk <b>8 bulan</b> (prodromal/gejala negatif)</li><li>Halusinasi auditorik 2 suara <i>berdiskusi tentang dirinya</i> + waham persekutorik <b>2 bulan</b></li><li>Sensorium jernih, orientasi baik → <b>bukan delirium</b></li><li>Insight negatif, menolak obat; respons terhadap suara berisiko (tidak mau bilang ada perintah atau tidak)</li><li>Belum ada riwayat episode; pemeriksaan fisik–neurologis, zat, mood masih berjalan</li><li>Ibu bingung, bertanya prognosis dan keamanan pulang</li></ul></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💡</span>Langkah 3 · Brainstorming (Hipotesis)</div><div class="table-wrap"><table><tr><th>Hipotesis</th><th>Alasan</th></tr><tr><td><span class="hl-lav">Skizofrenia (paranoid)</span></td><td>Halusinasi + waham >1 bulan, gejala negatif, fungsi turun, total >6 bln</td></tr><tr><td>Gangguan psikotik akibat zat/kondisi medis</td><td>Harus disingkirkan dulu (anamnesis zat, neuro, lab)</td></tr><tr><td>Gangguan mood dengan gejala psikotik</td><td>Perlu digali episode depresi/manik</td></tr><tr><td>Skizoafektif · Waham menetap · Skizofreniform · Psikotik singkat</td><td>Lihat durasi & pola gejala mood/waham tunggal</td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗺️</span>Langkah 4 · Analisis (Peta Masalah)</div><div class="cr-box"><div class="cr-label">Alur Klinis</div><ol class="cr-steps"><li><b>Prodromal</b> 8 bln: menarik diri, prestasi ↓, hygiene ↓ → gejala negatif</li><li><b>Fase aktif</b> 2 bln: halusinasi auditorik komentar/diskusi (first-rank Schneider) + waham kejar</li><li>Dampak fungsi: tidak kuliah, tidak keluar rumah, mengunci diri</li><li>Risiko: insight ↓, kemungkinan command hallucination tidak terjelaskan → <b>asesmen risiko wajib</b></li><li>Rencana: eksklusi organik/zat/mood → diagnosis → antipsikotik + psikoedukasi keluarga → rujuk psikiater</li></ol></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📚</span>Langkah 5 · Learning Objectives</div><div class="grid-2"><div class="mini-card"><h4>LO1</h4><p>Konsep & klasifikasi psikotik</p></div><div class="mini-card"><h4>LO2</h4><p>Gejala positif, negatif, fungsi</p></div><div class="mini-card"><h4>LO3</h4><p>Kriteria dx skizofrenia & psikotik lain</p></div><div class="mini-card"><h4>LO4</h4><p>Diagnosis banding</p></div><div class="mini-card"><h4>LO5</h4><p>MSE pada psikotik</p></div><div class="mini-card"><h4>LO6</h4><p>Faktor biologis (neurotransmitter)</p></div><div class="mini-card"><h4>LO7</h4><p>Faktor psikologis</p></div><div class="mini-card"><h4>LO8</h4><p>Tatalaksana awal</p></div><div class="mini-card"><h4>LO9</h4><p>Prinsip terapi farmako & non-farmako</p></div><div class="mini-card"><h4>LO10</h4><p>Efek samping & monitoring</p></div><div class="mini-card"><h4>LO11</h4><p>Pendekatan kedokteran keluarga</p></div><div class="mini-card"><h4>LO12</h4><p>Pendekatan spiritual Islam</p></div><div class="mini-card"><h4>LO13</h4><p>Tanda kegawatan</p></div></div></div></div><div id="sec-lo12" class="section"><h2 class="section-heading">LO1–2 · Konsep, Klasifikasi & Gejala</h2><p class="section-desc">Psikosis = hilangnya reality testing. Fokus pada bentuk gejala (Jaspers), bukan sekadar isi.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧠</span>Konsep Psikotik</div><ul class="styled-list"><li><b>Psikosis</b> = sindrom (halusinasi, waham, disorganisasi) dengan <span class="hl-lav">reality testing terganggu</span>; bukan diagnosis tunggal</li><li>Fish menekankan: bedakan <b>bentuk</b> (form) vs <b>isi</b> (content) — mis. waham kejar (isi) vs waham primer/sekunder (bentuk)</li><li>Psikotik ≠ neurotik lama: insight & reality testing menjadi pembeda klasik, tetapi tidak absolut (Fish, Bab 1)</li></ul><div class="table-wrap"><table><tr><th>Kelompok</th><th>Contoh</th><th>Ciri kunci</th></tr><tr><td>Primer (PPDGJ F20–F29)</td><td>Skizofrenia, skizotipal, waham menetap, psikotik akut & sementara, skizoafektif</td><td>Psikosis inti tanpa penyebab organik/zat</td></tr><tr><td>Sekunder</td><td>Psikosis akibat zat (F1), organik (F0), mood dengan psikotik (F3)</td><td>Ada penyebab/konteks jelas</td></tr><tr><td>Berdasarkan durasi</td><td>Psikotik singkat <1 bln → skizofreniform 1–6 bln → skizofrenia ≥6 bln (DSM-5)</td><td>Durasi menentukan label</td></tr></table></div><div class="hy">PPDGJ-III: skizofrenia minimal <b>1 bulan</b> gejala; DSM-5: total gejala/gangguan ≥<b>6 bulan</b> (termasuk prodromal/residual) dengan ≥1 bulan fase aktif.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚡</span>Gejala Utama</div><div class="table-wrap"><table><tr><th>Domain</th><th>Contoh</th><th>Pada Arman</th></tr><tr><td><span class="hl-rose">Positif</span></td><td>Halusinasi, waham, bicara kacau, perilaku kacau/katatonik</td><td>2 suara membicarakan dirinya; yakin diawasi tetangga</td></tr><tr><td><span class="hl-lav">Negatif</span></td><td>Afek datar, alogia, avolisi, anhedonia, asosial</td><td>Bicara sedikit, ekspresi minim, menarik diri, hygiene ↓</td></tr><tr><td>Kognitif</td><td>Atensi, working memory, fungsi eksekutif ↓</td><td>Mudah teralih, sulit konsentrasi belajar</td></tr><tr><td>Mood/afektif</td><td>Depresi, ansietas, agitasi</td><td>Takut, tegang</td></tr><tr><td>Fungsional</td><td>Sosial, akademik/okupasi, self-care ↓</td><td>Prestasi turun, tak keluar rumah</td></tr></table></div><div class="mnemonic"><div class="mnemonic-label">🧩 Mnemonic</div><div class="mnemonic-text">"PANAS-MATI"</div><div class="mnemonic-sub"><b>Positif</b> = tambahan yang muncul (halusinasi, waham) · <b>Negatif</b> = hilangnya fungsi normal (afek, motivasi, bicara). Negatif & kognitif lebih menentukan disabilitas jangka panjang.</div></div><div class="alert alert-sky"><span class="alert-icon">ℹ️</span><div><b>Fish (Bab 3–4):</b> suara yang <i>berkomentar</i> atau <i>berdiskusi tentang pasien</i> (orang ketiga) = first-rank Schneider. Tidak lagi patognomonik karena dapat muncul pada mania, tetapi tetap sangat mendukung skizofrenia bila mood datar/normal.</div></div></div></div><div id="sec-lo34" class="section"><h2 class="section-heading">LO3–4 · Kriteria Diagnosis & Diagnosis Banding</h2><p class="section-desc">Arman: skizofrenia paranoid (F20.0) — tapi buktikan dengan mengeksklusi yang lain.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📋</span>Kriteria Diagnosis Skizofrenia</div><div class="table-wrap"><table><tr><th>Sistem</th><th>Inti kriteria</th></tr><tr><td><b>PPDGJ-III</b></td><td>≥1 gejala jelas (a–d) <i>atau</i> ≥2 gejala (e–h) dalam <b>≥1 bulan</b>: thought echo/insertion/withdrawal/broadcast · delusion of control/influence · halusinasi komentar/diskusi · waham menetap tak wajar · halusinasi menetap disertai waham · arus pikir terputus · katatonik · gejala negatif. Bukan akibat organik/zat/depresi-manik.</td></tr><tr><td><b>DSM-5-TR</b></td><td>≥2 dari: waham, halusinasi, bicara kacau, perilaku kacau/katatonik, gejala negatif (≥1 harus waham/halusinasi/bicara kacau) selama ≥1 bulan aktif; fungsi turun; total ≥6 bulan; eksklusi skizoafektif/mood/zat.</td></tr></table></div><div class="hy">Pada Arman: halusinasi komentar/diskusi + waham kejar + gejala negatif; 8 bln total → memenuhi. Subtipe: <b>paranoid</b> (halusinasi & waham menonjol, afek/bicara relatif terjaga).</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧩</span>Subtipe Skizofrenia (PPDGJ)</div><div class="table-wrap"><table><tr><th>Subtipe</th><th>Ciri khas</th></tr><tr><td>Paranoid F20.0</td><td>Waham kejar/kebesaran, halusinasi auditorik</td></tr><tr><td>Hebefrenik F20.1</td><td>Onset 15–25 th, afek dangkal/tak wajar, perilaku kekanakan, giggling, grimace</td></tr><tr><td>Katatonik F20.2</td><td>Stupor, negativisme, fleksibilitas cerea, posturing, ekopraksia</td></tr><tr><td>Tak terinci F20.3</td><td>Kriteria terpenuhi, bukan tipe lain</td></tr><tr><td>Residual F20.5</td><td>Gejala negatif menonjol pasca episode psikotik</td></tr><tr><td>Simpleks F20.6</td><td>Hanya gejala negatif progresif, tanpa episode psikotik jelas</td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔍</span>Gangguan Psikotik Lain</div><div class="table-wrap"><table><tr><th>Diagnosis</th><th>Pembeda kunci</th></tr><tr><td>Psikotik akut/singkat</td><td>Onset akut, <1 bulan (DSM) — sering ada stresor</td></tr><tr><td>Skizofreniform</td><td>Gejala 1–6 bulan</td></tr><tr><td>Waham menetap (F22)</td><td>Waham tunggal/sistematik ≥3 bln, tanpa halusinasi menonjol, fungsi relatif baik</td></tr><tr><td>Skizoafektif (F25)</td><td>Skizofrenia + episode mood <b>bersamaan</b> menonjol</td></tr><tr><td>Mood dengan psikotik</td><td>Psikosis hanya saat episode mood; mood-congruent</td></tr><tr><td>Akibat zat/medis</td><td>Ada temporal dengan zat/penyakit; delirium: kesadaran ↓</td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚖️</span>Diagnosis Banding Arman</div><div class="cr-box"><div class="cr-label">Alur Klinis</div><ol class="cr-steps"><li><b>Organik:</b> kesadaran jernih & orientasi baik → delirium/demensia unlikely; tetap periksa neuro, TSH, elektrolit, GDS, HIV/sifilis bila indikasi, CT/MRI bila atipikal</li><li><b>Zat:</b> tanyakan amfetamin/sabu, ganja, alkohol (halusinasi alkoholik: kesadaran jernih, auditorik!)</li><li><b>Mood:</b> tak ada episode manik/depresif dominan → skizoafektif/mood psikotik kurang mungkin</li><li><b>Durasi:</b> 8 bln >6 bln → bukan skizofreniform/psikotik singkat</li><li><b>Waham menetap:</b> gugur karena ada halusinasi menonjol + gejala negatif</li></ol></div></div></div><div id="sec-lo5" class="section"><h2 class="section-heading">LO5 · Pemeriksaan Status Mental (MSE)</h2><p class="section-desc">Interpretasi MSE Arman dengan istilah Fish. Ingat: sensorium jernih = pembeda psikotik vs delirium.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🩺</span>MSE Arman → Interpretasi</div><div class="table-wrap"><table><tr><th>Aspek</th><th>Temuan</th><th>Interpretasi</th></tr><tr><td>Penampilan/perilaku</td><td>Kurang terawat, guarded, kontak mata terbatas, tegang, memeriksa pintu</td><td>Self-neglect (negatif), kewaspadaan berlebih (paranoid)</td></tr><tr><td>Kesadaran/orientasi</td><td>Compos mentis, orientasi orang-tempat-waktu baik</td><td>Bukan delirium (Fish Bab 9: gangguan kesadaran → disorientasi)</td></tr><tr><td>Psikomotor</td><td>Tegang, tak ada gerakan involunter</td><td>Tanpa EPS/TD; baseline sebelum antipsikotik</td></tr><tr><td>Bicara</td><td>Pelan, sedikit, latensi ↑, koheren relevan</td><td><b>Poverty of speech</b> (alogia); tanpa formal thought disorder</td></tr><tr><td>Mood/afek</td><td>Takut; ekspresi tegang, variasi minimal</td><td>Mood ansietas; afek <b>menyempit/constricted</b> (Fish Bab 6)</td></tr><tr><td>Bentuk pikir</td><td>Koheren, relevan</td><td>Bentuk pikir realistik terganggu isinya, bukan alur</td></tr><tr><td>Isi pikir</td><td>Yakin diawasi & akan dicelakai</td><td><span class="hl-rose">Waham persekutorik</span> (± delusi referensi)</td></tr><tr><td>Persepsi</td><td>Dua suara membicarakan dirinya, menoleh ke sudut</td><td><span class="hl-rose">Halusinasi auditorik</span> (komentar/diskusi)</td></tr><tr><td>Atensi/memori</td><td>Kadang teralih; immediate & delayed recall baik</td><td>Distraktibilitas akibat halusinasi; kognitif dasar intak</td></tr><tr><td>Insight/judgement</td><td>Menyangkal sakit, menolak obat</td><td>Insight buruk (derajat 1); judgement terganggu</td></tr></table></div><div class="hy">Perhatikan tanda halusinasi aktif: <b>berhenti bicara & tampak mendengarkan</b>, menoleh ke sudut kosong, menjawab suara (Fish Bab 3).</div><div class="alert alert-peach"><span class="alert-icon">⚠️</span><div>Pertanyaan wajib: <i>"Apakah suara-suara itu menyuruh Anda melakukan sesuatu? Apa yang biasanya Anda lakukan?"</i> — Arman tak mau menjawab → anggap <b>risiko command hallucination belum tersingkirkan</b>.</div></div><div class="card"><button class="collapse-btn" onclick="toggle(this)"><span class="card-title" style="margin:0">Pertanyaan probe (Fish Text Box 3.1 & 4.1)</span><span class="chev">▼</span></button><div class="collapse-body"><ul class="styled-list"><li>"Apakah Anda mendengar suara saat tak ada orang?" → "Apakah orang lain juga mendengarnya?"</li><li>"Apakah ada yang berusaha mengganggu/mencelakai Anda?" → minta contoh</li><li>"Apakah pikiran Anda terasa dimasukkan/diambil/disiarkan?" (thought alienation)</li><li>Tanyakan juga: mood, zat, tidur, ide bunuh/homisida, kepemilikan senjata</li></ul></div></div></div></div><div id="sec-lo67" class="section"><h2 class="section-heading">LO6–7 · Faktor Biologis & Psikologis</h2><p class="section-desc">Model kerentanan–stres: gen + neurodevelopmental + lingkungan → salience aberrant → psikosis.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚗️</span>Neurotransmiter</div><div class="table-wrap"><table><tr><th>Jalur/sistem</th><th>Perubahan</th><th>Klinis</th><th>Implikasi obat</th></tr><tr><td>Dopamin <b>mesolimbik</b></td><td>↑ hiperaktif</td><td>Gejala positif</td><td>Antagonis D2 → menurunkan</td></tr><tr><td>Dopamin <b>mesokortikal</b></td><td>↓ hipoaktif</td><td>Negatif & kognitif</td><td>D2 blok bisa memperburuk; SGA/aripiprazol lebih baik</td></tr><tr><td>Dopamin <b>nigrostriatal</b></td><td>Terblokir obat</td><td>EPS, parkinsonisme, akatisia, TD</td><td>Efek samping</td></tr><tr><td>Dopamin <b>tuberoinfundibular</b></td><td>Terblokir obat</td><td>Hiperprolaktinemia</td><td>Risperidon > lain</td></tr><tr><td><b>Glutamat</b> (NMDA hipofungsi)</td><td>↓</td><td>Negatif, kognitif; ketamin/PCP memicu psikosis mirip skizofrenia</td><td>Target riset</td></tr><tr><td><b>Serotonin</b> 5-HT2A</td><td>↑ aktivitas</td><td>Positif; modulasi dopamin</td><td>SGA (antagonis 5-HT2A)</td></tr><tr><td>GABA</td><td>Interneuron ↓</td><td>Sinkronisasi kortikal ↓</td><td>—</td></tr></table></div><div class="mnemonic"><div class="mnemonic-label">🧩 Mnemonic</div><div class="mnemonic-text">"MESO-LIMBIK naik = POSITIF, MESO-KORTIKAL turun = NEGATIF"</div><div class="mnemonic-sub">Hipotesis dopamin versi III (Howes & Kapur): berbagai faktor risiko konvergen pada hiperdopaminergia striatal presinaptik.</div></div><ul class="styled-list"><li><b>Genetik:</b> risiko ~10% pada kerabat tingkat 1, ~40–50% kembar monozigot; poligenik</li><li><b>Neurodevelopmental:</b> komplikasi obstetri, infeksi maternal, ventrikel ↑, volume kortikal ↓</li><li><b>Lingkungan:</b> ganja masa remaja, urbanisasi, migrasi, trauma masa kanak</li></ul></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💭</span>Faktor Psikologis</div><div class="table-wrap"><table><tr><th>Konsep</th><th>Penjelasan</th><th>Contoh Arman</th></tr><tr><td>Stress–vulnerability</td><td>Kerentanan + stresor memicu onset</td><td>Masuk usia dewasa muda, tekanan akademik</td></tr><tr><td>Aberrant salience</td><td>Stimulus netral dinilai bermakna/mengancam</td><td>Suara/bunyi tetangga → "mereka mengawasi"</td></tr><tr><td>Jumping to conclusions</td><td>Menyimpulkan dengan bukti minimal (Huq 1988; Garety 1991, dalam Fish)</td><td>Yakin tetangga berniat jahat, menolak alternatif</td></tr><tr><td>Attribution bias / ToM</td><td>Menyalahkan pihak luar; empati mental ↓</td><td>Curiga & menarik diri</td></tr><tr><td>Expressed emotion (EE)</td><td>Keluarga kritis/hostile/over-involved ↑ relaps</td><td>Penting untuk edukasi ibu</td></tr><tr><td>Mekanisme defensif</td><td>Proyeksi, denial (insight), regresi</td><td>Menyangkal sakit; menyalahkan tetangga</td></tr></table></div><div class="alert alert-lavender"><span class="alert-icon">🧭</span><div>Fish (Bab 4): waham dapat dipahami sebagai <b>primer</b> (autochthonous/delusional perception) atau <b>sekunder</b> terhadap halusinasi. Pada Arman: waham diawasi kemungkinan sekunder terhadap suara.</div></div></div></div><div id="sec-lo8" class="section"><h2 class="section-heading">LO8 · Tatalaksana Awal</h2><p class="section-desc">Keamanan dulu → eksklusi organik/zat → mulai terapi → libatkan keluarga.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚑</span>Tatalaksana Awal di Layanan Primer</div><div class="cr-box"><div class="cr-label">Alur Klinis</div><ol class="cr-steps"><li><b>Keamanan:</b> nilai risiko bunuh/homisida, command hallucination, akses senjata/benda tajam</li><li>Bangun rapport; dengarkan tanpa membenarkan/menyangkal waham; tenang, tidak konfrontatif</li><li>Anamnesis (mood, zat, medis) + pemeriksaan fisik–neurologis + lab dasar (DL, GDS, fungsi hati-ginjal, elektrolit, TSH, drug screen, EKG bila perlu)</li><li>Mulai antipsikotik bila tak ada kontraindikasi, atau rujuk segera ke psikiater/RS</li><li>Libatkan keluarga: psikoedukasi, pengawasan minum obat, lingkungan rendah stimulus</li><li>Kontrol berkala; rawat inap bila risiko tinggi/self-care buruk berat</li></ol></div></div><div class="alert alert-mint"><span class="alert-icon">✅</span><div>Arman: tidak mengancam dan menyangkal SI/HI saat ini, tetapi <b>insight nol + risiko tak jelas</b> → rujuk psikiater segera; jangan pulang tanpa rencana keselamatan.</div></div></div><div id="sec-lo9" class="section"><h2 class="section-heading">LO9 · Prinsip Terapi Farmakologi & Non-Farmakologi</h2><p class="section-desc">Obat mengatasi gejala positif; psikososial menjaga fungsi & mencegah relaps.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💊</span>Terapi Farmakologi</div><div class="table-wrap"><table><tr><th>Golongan</th><th>Obat & dosis (dewasa)</th><th>Catatan</th></tr><tr><td><b>APG-II (SGA) lini 1</b></td><td>Risperidon 2–6 mg/hr; Olanzapin 10–20; Aripiprazol 10–30; Quetiapin 300–600</td><td>Mulai dosis rendah, naik bertahap; EPS lebih rendah</td></tr><tr><td><b>APG-I (FGA)</b></td><td>Haloperidol 5–15 mg/hr; Klorpromazin 300–600</td><td>EPS ↑; IM untuk agitasi</td></tr><tr><td><b>Resisten</b></td><td><b>Klozapin</b> setelah gagal ≥2 antipsikotik adekuat (≥6 mgg)</td><td>Satu-satunya terbukti pada TRS</td></tr><tr><td>LAI (depot)</td><td>Risperidon/paliperidon/aripiprazol/flufenazin dekanoat</td><td>Adherens buruk</td></tr><tr><td>Adjuvan</td><td>Triheksifenidil 3×2 mg (EPS); benzodiazepin sementara</td><td>Antikolinergik jangan rutin jangka panjang</td></tr></table></div><div class="hy">Episode pertama: lanjutkan minimal <b>1–2 tahun</b> setelah remisi; nilai respons ≥2–6 minggu; <b>monoterapi</b> dulu.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🤝</span>Terapi Non-Farmakologi</div><div class="table-wrap"><table><tr><th>Intervensi</th><th>Tujuan</th></tr><tr><td>Psikoedukasi pasien & keluarga</td><td>↓ relaps, ↑ adherens</td></tr><tr><td>Family intervention (turunkan EE)</td><td>↓ relaps</td></tr><tr><td>CBT for psychosis (CBTp)</td><td>↓ distres waham/halusinasi</td></tr><tr><td>Social skills training, cognitive remediation</td><td>Fungsi sosial & kognitif</td></tr><tr><td>Supported education/employment, case management</td><td>Reintegrasi ke kampus</td></tr><tr><td>Coordinated Specialty Care (episode pertama)</td><td>Luaran jangka panjang lebih baik</td></tr></table></div></div></div><div id="sec-lo10" class="section"><h2 class="section-heading">LO10 · Efek Samping & Monitoring Terapi</h2><p class="section-desc">Tiap antipsikotik punya profil efek samping — pilih dan pantau sesuai pasien.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚠️</span>Efek Samping Antipsikotik</div><div class="table-wrap"><table><tr><th>Efek samping</th><th>Gambaran</th><th>Tata laksana</th></tr><tr><td>Distonia akut</td><td>Spasme leher/mata (hari 1–5)</td><td>Antikolinergik IM/IV, difenhidramin</td></tr><tr><td>Parkinsonisme</td><td>Rigiditas, tremor, wajah topeng, sialorea</td><td>Turunkan dosis/ganti SGA; triheksifenidil</td></tr><tr><td>Akatisia</td><td>Gelisah tak tenang, subjektif</td><td>Propranolol, turunkan dosis</td></tr><tr><td>Tardive dyskinesia</td><td>Gerak involunter mulut/lidah</td><td>Ganti obat; skrining AIMS</td></tr><tr><td><b>NMS</b></td><td>Demam, rigiditas, ↓ kesadaran, otonom labil, CK ↑</td><td><span class="hl-rose">Stop obat + ICU</span>; bromokriptin/dantrolen</td></tr><tr><td>Metabolik</td><td>BB↑, DM, dislipidemia (olanzapin/klozapin)</td><td>Monitor BB, lingkar perut, GDP, lipid</td></tr><tr><td>Hiperprolaktinemia</td><td>Galaktorea, amenore (risperidon)</td><td>Ganti/aripiprazol</td></tr><tr><td>QTc ↑</td><td>Haloperidol, klorpromazin</td><td>EKG baseline</td></tr><tr><td>Klozapin</td><td>Agranulositosis, miokarditis, kejang</td><td><b>Monitor ANC</b></td></tr></table></div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📈</span>Jadwal Monitoring</div><div class="table-wrap"><table><tr><th>Parameter</th><th>Baseline</th><th>Follow-up</th></tr><tr><td>BB/IMT, lingkar perut</td><td>✔</td><td>Tiap kunjungan; 4, 8, 12 mgg; tahunan</td></tr><tr><td>GDP/HbA1c, lipid</td><td>✔</td><td>12 mgg, lalu tahunan</td></tr><tr><td>Tekanan darah</td><td>✔</td><td>Tiap kunjungan</td></tr><tr><td>EPS/AIMS</td><td>✔</td><td>Tiap kunjungan; TD tiap 6–12 bln</td></tr><tr><td>Prolaktin, EKG</td><td>Bila indikasi</td><td>Sesuai gejala/obat</td></tr><tr><td>ANC (klozapin)</td><td>✔</td><td>Mingguan 18 mgg pertama, lalu berkala</td></tr></table></div></div></div><div id="sec-lo1112" class="section"><h2 class="section-heading">LO11–12 · Kedokteran Keluarga & Perspektif Islam</h2><p class="section-desc">Keluarga = "terapis" utama — dan sumber risiko relaps bila EE tinggi.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👨‍👩‍👦</span>LO11 · Pendekatan Kedokteran Keluarga</div><div class="table-wrap"><table><tr><th>Alat/prinsip</th><th>Aplikasi pada Arman</th></tr><tr><td>Genogram & family map</td><td>Riwayat gangguan jiwa keluarga, struktur ibu–Arman</td></tr><tr><td>Family APGAR / SCREEM</td><td>Dukungan, adaptasi, kohesi ibu</td></tr><tr><td>Family life cycle</td><td>Anak dewasa muda; transisi kemandirian</td></tr><tr><td>Beban pengasuh (caregiver burden)</td><td>Ibu bingung, tak tahu cara bantu → skrining kelelahan</td></tr><tr><td>Home visit</td><td>Lingkungan, keamanan kamar/obat, interaksi tetangga</td></tr><tr><td>Psikoedukasi</td><td>Penyakit = medis, bukan guna-guna/kelemahan; obat jangka panjang; tanda kambuh</td></tr><tr><td>Komunikasi (LEAP, empati)</td><td><i>Listen–Empathize–Agree–Partner</i>; jangan debat waham</td></tr></table></div><div class="alert alert-mint"><span class="alert-icon">🗨️</span><div><b>Contoh jawaban untuk ibu:</b> "Ini gangguan otak (psikosis) yang bisa diobati. Banyak penderita membaik dengan obat teratur & dukungan keluarga. Kami akan tentukan keamanan berdasarkan hasil penilaian risiko."</div></div><div class="hy">Kurangi <b>Expressed Emotion</b>: kritik ↓, over-involvement ↓, hangat ↑ → relaps turun bermakna.</div></div><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🕌</span>LO12 · Pendekatan Spiritual Islam</div><div class="ayat-card"><div class="ayat-arab">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</div><div class="ayat-id">"Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram."</div><div class="ayat-ref">QS Ar-Ra'd [13]: 28</div></div><div class="ayat-card"><div class="ayat-arab">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</div><div class="ayat-id">"Allah tidak membebani seseorang melainkan sesuai kesanggupannya."</div><div class="ayat-ref">QS Al-Baqarah [2]: 286</div></div><ul class="styled-list"><li><b>Sakit = ujian & ikhtiar</b>: berobat dianjurkan ("tiap penyakit ada obatnya", HR Bukhari); jangan menyalahkan iman pasien</li><li>Spiritual <b>pelengkap</b>, bukan pengganti obat: doa, dzikir, ibadah sesuai kapasitas</li><li>Waspadai <b>religious delusion</b>: bedakan pengalaman religius normal dari halusinasi/waham (pastikan bukan bid'ah pengobatan berbahaya, mis. pasung)</li><li>Kapasitas hukum: "pena diangkat dari orang gila hingga sembuh" (HR Abu Dawud) → tanggung jawab & persetujuan tindakan melalui wali/keluarga</li><li>Dukung keluarga: sabar, tawakal, tidak menghakimi; libatkan tokoh agama sebagai mitra dan bukan penentu terapi</li><li>Hormati dignitas: jangan stigma "gila", tidak memasung (UU 18/2014 melarang)</li></ul></div></div><div id="sec-lo13" class="section"><h2 class="section-heading">LO13 · Tanda Kegawatan</h2><p class="section-desc">Kegawatan psikiatri: keselamatan pasien & petugas dulu (PPT dr. Budhi).</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚨</span>Kapan Kegawatan?</div><div class="table-wrap"><table><tr><th>Tanda</th><th>Contoh</th><th>Aksi</th></tr><tr><td>Risiko bunuh/homisida</td><td>Ide, rencana, akses alat; command hallucination</td><td>Pengawasan 1:1, rawat inap</td></tr><tr><td>Agitasi/kekerasan</td><td>Mengancam, memukul, gaduh gelisah</td><td>De-escalation, rapid tranquilization</td></tr><tr><td>Katatonia/stupor</td><td>Mutisme, posturing, tak makan-minum</td><td>IGD, benzodiazepin/ECT</td></tr><tr><td>NMS / sindrom serotonin</td><td>Demam, rigiditas, ↓ kesadaran, otonom labil</td><td>Stop obat, ICU</td></tr><tr><td>Distonia laring / krisis okulogirik</td><td>Sesak, disfagia</td><td>Antikolinergik IV segera</td></tr><tr><td>Self-neglect berat</td><td>Tak makan, dehidrasi, tak mampu ADL</td><td>Rawat inap</td></tr><tr><td>Kondisi medis</td><td>Delirium, kejang, intoksikasi</td><td>Stabilisasi dulu, rujuk</td></tr></table></div><div class="cr-box"><div class="cr-label">Alur Klinis</div><ol class="cr-steps"><li>Ruang periksa aman: pintu terbuka untuk kedua pihak, jarak aman, tak ada benda berbahaya (Budhi, Kegawatdaruratan)</li><li>Verbal de-escalation: tenang, singkat, tawarkan pilihan</li><li>Rapid tranquilization: haloperidol 5 mg IM ± lorazepam 2 mg / prometazin 25–50 mg IM</li><li>Restrain fisik hanya bila perlu, singkat, dengan monitoring vital</li><li>Pantau vital & efek samping; rawat/ rujuk segera</li></ol></div><div class="alert alert-rose"><span class="alert-icon">🛑</span><div>Arman: <b>belum kegawatan</b>, tapi ada red-flag potensial: perintah suara tak dijelaskan, mengunci diri, insight nol → harus <b>terjadwal rujukan segera</b> dan rencana keselamatan.</div></div></div></div><div id="sec-sintesis" class="section"><h2 class="section-heading">Langkah 7 · Sintesis & Jawaban untuk Ibu</h2><p class="section-desc">Ringkasan kasus (bahan presentasi/lapor).</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">✅</span>Kesimpulan</div><div class="table-wrap"><table><tr><th>Pertanyaan</th><th>Jawaban</th></tr><tr><td>Diagnosis kerja</td><td>Skizofrenia paranoid (F20.0) — eksklusi organik/zat/mood</td></tr><tr><td>Apa yang terjadi?</td><td>Psikosis: halusinasi auditorik + waham persekutorik + gejala negatif, 8 bulan</td></tr><tr><td>Bisa sembuh?</td><td>Dapat remisi dengan obat + psikososial; banyak mengalami relaps → terapi jangka panjang</td></tr><tr><td>Aman dibawa pulang?</td><td>Bergantung asesmen risiko (bunuh/homisida/command hallucination). Bila risiko rendah & keluarga siap → pulang dengan rencana keselamatan & rujukan segera; bila tidak → rawat inap</td></tr><tr><td>Rencana</td><td>Antipsikotik SGA dosis awal rendah, psikoedukasi, family intervention, monitoring metabolik, rujuk psikiater</td></tr></table></div><div class="alert alert-lavender"><span class="alert-icon">🌟</span><div><b>Take-home:</b> psikosis = reality testing ↓ · diagnosis butuh ≥1 bln (PPDGJ) / ≥6 bln (DSM) · eksklusi zat & organik · SGA lini 1 · klozapin untuk resisten · monitoring metabolik & EPS · keluarga = kunci.</div></div></div></div><div id="sec-ref" class="section"><h2 class="section-heading">📚 Daftar Pustaka</h2><p class="section-desc">Verifikasi ulang sebelum dikutip di laporan resmi.</p><div class="card"><div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">📖</span>Referensi</div><ol class="ref"><li>Casey P, Kelly B. Fish's Clinical Psychopathology: Signs and Symptoms in Psychiatry. 5th ed. Cambridge: Cambridge University Press; 2024 (Bab 3, 4, 6, 9).</li><li>Departemen Kesehatan RI. Pedoman Penggolongan dan Diagnosis Gangguan Jiwa di Indonesia III (PPDGJ-III). Jakarta; 1993.</li><li>American Psychiatric Association. Diagnostic and Statistical Manual of Mental Disorders, 5th ed., Text Revision (DSM-5-TR). Washington DC: APA; 2022.</li><li>Keepers GA, et al. The APA Practice Guideline on the Treatment of Patients with Schizophrenia (3rd ed.). Am J Psychiatry. 2020;177(9):868–72.</li><li>Kahn RS, et al. Schizophrenia. Nat Rev Dis Primers. 2015;1:15067.</li><li>Owen MJ, Sawa A, Mortensen PB. Schizophrenia. Lancet. 2016;388:86–97.</li><li>Howes OD, Kapur S. The dopamine hypothesis of schizophrenia: version III. Schizophr Bull. 2009;35(3):549–62.</li><li>Huhn M, et al. Comparative efficacy and tolerability of 32 oral antipsychotics. Lancet. 2019;394:939–51.</li><li>NICE. Psychosis and schizophrenia in adults (CG178). London; 2014.</li><li>Kemenkes RI. Undang-Undang No. 18 Tahun 2014 tentang Kesehatan Jiwa.</li><li>Materi kuliah Blok Psikiatri & Mental Health FK UMS (dr. Erna, dr. Budhi, dr. Yusuf) & SKDI 2026.</li><li>Al-Qur'an dan hadits (HR Bukhari; HR Abu Dawud).</li></ol></div></div><div id="sec-quiz" class="section"><h2 class="section-heading">🧠 Quiz — Uji Pemahamanmu!</h2><p class="section-desc">10 soal vignette, jawaban benar sudah diacak posisinya.</p><div class="quiz-progress" id="quizProg"></div><div class="quiz-q" id="q1"><div class="q-num">SOAL 01 / DEFINISI</div><div class="q-vignette">Pria 24 th, 2 bulan mendengar dua suara membicarakan dirinya, yakin dimata-matai; sadar penuh, orientasi baik.</div><p class="q-question">Manakah gambaran ini paling menyingkirkan delirium?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q1',true)"><span class="ol">A</span>Sensorium jernih dengan orientasi baik</button><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">B</span>Halusinasi auditorik</button><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">C</span>Waham persekutorik</button><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">D</span>Gejala negatif</button><button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">E</span>Insight buruk</button></div><div class="q-exp" id="exp-q1">✅ <strong>A — Sensorium jernih dengan orientasi baik</strong><br><br>Delirium ditandai gangguan kesadaran/disorientasi (Fish Bab 9). Pada Arman jernih → psikotik primer lebih mungkin.</div></div><div class="quiz-q" id="q2"><div class="q-num">SOAL 02 / DURASI</div><div class="q-vignette">Gejala psikotik aktif 2 bln setelah prodromal 8 bln, tanpa gangguan mood.</div><p class="q-question">Diagnosis yang tepat?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">A</span>Psikotik singkat</button><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">B</span>Skizofreniform</button><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">C</span>Waham menetap</button><button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">D</span>Skizoafektif</button><button class="q-opt" onclick="ans(this,'q2',true)"><span class="ol">E</span>Skizofrenia</button></div><div class="q-exp" id="exp-q2">✅ <strong>E — Skizofrenia</strong><br><br>Total >6 bln (DSM-5) dengan ≥1 bln fase aktif → skizofrenia.</div></div><div class="quiz-q" id="q3"><div class="q-num">SOAL 03 / GEJALA</div><div class="q-vignette">Bicara sedikit, afek datar, tidak mau mandi.</div><p class="q-question">Ini termasuk domain?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">A</span>Positif</button><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">B</span>Kognitif</button><button class="q-opt" onclick="ans(this,'q3',true)"><span class="ol">C</span>Negatif</button><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">D</span>Afektif</button><button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">E</span>Katatonik</button></div><div class="q-exp" id="exp-q3">✅ <strong>C — Negatif</strong><br><br>Alogia, afek datar, avolisi = gejala negatif.</div></div><div class="quiz-q" id="q4"><div class="q-num">SOAL 04 / FIRST-RANK</div><div class="q-vignette">Pasien mendengar dua suara saling membicarakan dirinya.</div><p class="q-question">Termasuk?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">A</span>Halusinasi imperatif</button><button class="q-opt" onclick="ans(this,'q4',true)"><span class="ol">B</span>Halusinasi komentar/diskusi (first-rank Schneider)</button><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">C</span>Pseudohalusinasi</button><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">D</span>Ilusi</button><button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">E</span>Thought echo</button></div><div class="q-exp" id="exp-q4">✅ <strong>B — Halusinasi komentar/diskusi (first-rank Schneider)</strong><br><br>Suara orang ketiga yang berdiskusi/berkomentar = first-rank; tapi bisa juga pada mania (Fish Bab 3).</div></div><div class="quiz-q" id="q5"><div class="q-num">SOAL 05 / DD</div><div class="q-vignette">Waham cemburu tunggal 6 bln tanpa halusinasi, fungsi baik.</div><p class="q-question">Diagnosis?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">A</span>Skizofrenia paranoid</button><button class="q-opt" onclick="ans(this,'q5',true)"><span class="ol">B</span>Gangguan waham menetap</button><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">C</span>Skizoafektif</button><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">D</span>Episode manik</button><button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">E</span>Skizotipal</button></div><div class="q-exp" id="exp-q5">✅ <strong>B — Gangguan waham menetap</strong><br><br>Waham tunggal sistematik dan halusinasi tidak menonjol → F22.</div></div><div class="quiz-q" id="q6"><div class="q-num">SOAL 06 / NEUROTRANSMITER</div><div class="q-vignette">Jalur mana yang hipoaktif dan menjelaskan gejala negatif?</div><p class="q-question">Pilih yang tepat:</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">A</span>Nigrostriatal</button><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">B</span>Tuberoinfundibular</button><button class="q-opt" onclick="ans(this,'q6',true)"><span class="ol">C</span>Mesokortikal</button><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">D</span>Mesolimbik</button><button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">E</span>Semua meningkat</button></div><div class="q-exp" id="exp-q6">✅ <strong>C — Mesokortikal</strong><br><br>Mesokortikal hipodopaminergik → negatif & kognitif; mesolimbik ↑ → positif.</div></div><div class="quiz-q" id="q7"><div class="q-num">SOAL 07 / FARMAKO</div><div class="q-vignette">Pasien tidak respons terhadap 2 antipsikotik dosis & durasi adekuat.</div><p class="q-question">Langkah berikut?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">A</span>Naikkan haloperidol maksimal</button><button class="q-opt" onclick="ans(this,'q7',true)"><span class="ol">B</span>Klozapin</button><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">C</span>Tambah benzodiazepin</button><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">D</span>ECT langsung</button><button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">E</span>Hentikan semua obat</button></div><div class="q-exp" id="exp-q7">✅ <strong>B — Klozapin</strong><br><br>Skizofrenia resisten → klozapin (perlu monitoring ANC).</div></div><div class="quiz-q" id="q8"><div class="q-num">SOAL 08 / EFEK SAMPING</div><div class="q-vignette">Setelah haloperidol: demam 39°C, rigiditas, kesadaran ↓, CK ↑.</div><p class="q-question">Diagnosis?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">A</span>Distonia akut</button><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">B</span>Akatisia</button><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">C</span>Parkinsonisme</button><button class="q-opt" onclick="ans(this,'q8',true)"><span class="ol">D</span>Neuroleptic malignant syndrome</button><button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">E</span>Tardive dyskinesia</button></div><div class="q-exp" id="exp-q8">✅ <strong>D — Neuroleptic malignant syndrome</strong><br><br>NMS = kegawatan; hentikan obat & rawat ICU.</div></div><div class="quiz-q" id="q9"><div class="q-num">SOAL 09 / KELUARGA</div><div class="q-vignette">Ibu sering marah dan mengkritik Arman setiap hari.</div><p class="q-question">Konsep yang berperan pada relaps?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">A</span>Locus of control</button><button class="q-opt" onclick="ans(this,'q9',true)"><span class="ol">B</span>Expressed emotion</button><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">C</span>Secondary gain</button><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">D</span>Learned helplessness</button><button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">E</span>Splitting</button></div><div class="q-exp" id="exp-q9">✅ <strong>B — Expressed emotion</strong><br><br>EE tinggi (kritik/hostile/over-involved) ↑ relaps.</div></div><div class="quiz-q" id="q10"><div class="q-num">SOAL 10 / KEGAWATAN</div><div class="q-vignette">Pasien menolak mengaku ada perintah suara; menyimpan pisau di kamar, tidak tidur, sangat curiga.</div><p class="q-question">Tindakan paling tepat?</p><div class="q-opts"><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">A</span>Pulang dengan kontrol 1 bulan</button><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">B</span>Beri diazepam & pulang</button><button class="q-opt" onclick="ans(this,'q10',true)"><span class="ol">C</span>Anggap risiko tinggi; pengawasan ketat, rujuk/rawat inap</button><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">D</span>Debat waham agar sadar</button><button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">E</span>Beri ibu penuh tanggung jawab</button></div><div class="q-exp" id="exp-q10">✅ <strong>C — Anggap risiko tinggi; pengawasan ketat, rujuk/rawat inap</strong><br><br>Risiko command hallucination + akses alat → prioritas keselamatan.</div></div><div class="score-card" id="scoreCard"><div style="font-size:40px">🌼</div><div class="score-big" id="scoreNum">0</div><div style="font-size:18px;opacity:.8">/ 10</div><p class="score-msg" id="scoreMsg"></p><button class="btn-restart" onclick="resetQuiz()">🔁 Ulangi Quiz</button></div></div></div><script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+let answered = {}, score = 0, total = 10;
+
+function initDots() {
+  const p = document.getElementById('quizProg');
+  p.innerHTML = '';
+  for (let i=1; i<=total; i++) {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = 'dot' + i;
+    p.appendChild(d);
+  }
+}
+
+function ans(btn, qid, correct) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  const qNum = parseInt(qid.replace('q',''));
+  const card = document.getElementById(qid);
+  card.querySelectorAll('.q-opt').forEach(b => { b.disabled = true; });
+  if (correct) {
+    btn.classList.add('correct'); score++;
+    document.getElementById('dot'+qNum).classList.add('ok');
+  } else {
+    btn.classList.add('wrong');
+    document.getElementById('dot'+qNum).classList.add('no');
+    card.querySelectorAll('.q-opt').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(',true)')) b.classList.add('correct');
+    });
+  }
+  const exp = document.getElementById('exp-' + qid);
+  if (exp) exp.classList.add('show');
+  if (Object.keys(answered).length === total) setTimeout(showScore, 700);
+}
+
+function showScore() {
+  const sc = document.getElementById('scoreCard');
+  sc.classList.add('show');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter masa depan! 🌼✨'];
+  const idx = score <= 3 ? 0 : score <= 5 ? 1 : score <= 7 ? 2 : score <= 9 ? 3 : 4;
+  document.getElementById('scoreMsg').textContent = msgs[idx];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetQuiz() {
+  answered = {}; score = 0;
+  document.querySelectorAll('.q-opt').forEach(b => { b.disabled=false; b.classList.remove('correct','wrong'); });
+  document.querySelectorAll('.q-exp').forEach(e => e.classList.remove('show'));
+  document.getElementById('scoreCard').classList.remove('show');
+  initDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+initDots();
+</script></body></html>

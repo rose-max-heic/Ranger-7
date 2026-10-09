@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>🌸 Seksualitas, Disfungsi Seksual & Parafilia — dr. Budhi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --lavender: #E27AA6;
+  --lavender-light: #F0A3C2;
+  --lavender-pale: #FCE8F1;
+  --lavender-deep: #A8305F;
+  --lavender-muted: #C94F81;
+  --rose: #E0645C;
+  --rose-light: #EE918B;
+  --rose-pale: #FDE9E7;
+  --rose-deep: #B23A33;
+  --mint: #5DB596;
+  --mint-pale: #E3F5EC;
+  --mint-deep: #2D7D5F;
+  --peach: #E8A87C;
+  --peach-pale: #FDF0E6;
+  --peach-deep: #C07040;
+  --sky: #7AAFCF;
+  --sky-pale: #E4F1FA;
+  --sky-deep: #3A7A9A;
+  --cream: #FFF8FB;
+  --white: #ffffff;
+  --text: #3A1A2A;
+  --text-muted: #7A5568;
+  --border: #F2D5E2;
+  --shadow: rgba(226,122,166,0.15);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #7A1F45 0%, #B83A74 38%, #D9689A 66%, #4FA586 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.06);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(93,181,150,0.18);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.9);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,54px);font-weight:900;
+  color:#fff;line-height:1.1;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#FFE0EE; }
+.hero-sub { color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:300;max-width:580px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#7A1F45,#2F7A5E);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(122,31,69,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(255,225,238,0.75);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#FFF0F6;border-bottom-color:#8EE0BF;
+}
+
+/* LAYOUT */
+.container { max-width:940px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--lavender-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(226,122,166,0.2);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--lavender-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(226,122,166,0.15);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--lavender-pale);border-left:4px solid var(--lavender);color:var(--lavender-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--mint-pale));
+  border:1.5px solid var(--lavender-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Budhi menekankan: ';
+  font-weight:700;color:var(--lavender-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--lavender-deep),var(--lavender-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#FFF8FB;}
+tr:hover td {background:var(--lavender-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--lavender-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--lavender-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--mint-pale));
+  border:1.5px solid var(--lavender-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--lavender-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(226,122,166,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--lavender-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--mint-pale));
+  border:2px solid var(--lavender-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--lavender-pale);color:var(--lavender-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--lavender-pale);border-color:var(--lavender-light);}
+.compare-col.right {background:var(--mint-pale);border-color:var(--mint);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--lavender-deep);}
+.compare-col.right h4 {color:var(--mint-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:#7A1F45;color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(226,122,166,0.25);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--lavender-deep),var(--mint-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--lavender-pale),var(--mint-pale));
+  border-left:4px solid var(--lavender-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--lavender-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--lavender);background:var(--lavender-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(226,122,166,0.2);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#7A1F45,#D9689A,#4FA586);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#FFF0F6;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.85;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--lavender-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, #0E3326, #1C5C45);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid #F08DB6;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(226,90,150,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #F08DB6, #E89BAA, #F08DB6);
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, #F08DB6, #D45F90);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-badge-warn {
+  background: linear-gradient(90deg, #E84060, #C02040);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+}
+.cohort-axon { background: rgba(226,122,166,0.35); }
+.cohort-arthron { background: rgba(212,120,138,0.35); }
+.cohort-aorta { background: rgba(123,191,168,0.35); }
+.cohort-anthelix { background: rgba(232,168,124,0.35); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.92);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: #FFD6E7; }
+.soal-dosen-content .hl-warn {
+  background: rgba(232,60,96,0.25);
+  border: 1px solid rgba(232,60,96,0.5);
+  color: #FFB0C0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,191,168,0.25);
+  border: 1px solid rgba(123,191,168,0.4);
+  color: #A0FFD8;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-keyword {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(240,141,182,0.2);
+  border: 1px solid rgba(240,141,182,0.4);
+  color: #FFD0E3;
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #1C5C45, #F08DB6);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(226,90,150,0.45);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(226,90,150,0.55); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #FFB0C0;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(5,25,17,0.88);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, #0B2A1F, #174B39);
+  border: 2px solid #F08DB6;
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(226,90,150,0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: #F08DB6; border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(240,141,182,0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: #FFD6E7;
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.55); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(240,141,182,0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, #F08DB6, #D45F90);
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: #FFD0E3; font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #A0FFD8; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #F08DB6, #D45F90);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+
+/* ====== EXTRA: HIGHLIGHT SYSTEM (diulang dosen / bank soal) ====== */
+.rep{background:linear-gradient(transparent 38%,#FFC6DD 38%);padding:0 2px;font-weight:600;color:#7A1F45;border-radius:2px;}
+.bank{background:linear-gradient(transparent 38%,#B8EBD3 38%);padding:0 2px;font-weight:600;color:#1F5C45;border-radius:2px;}
+.both{background:linear-gradient(100deg,#FFC6DD,#B8EBD3);padding:1px 6px;font-weight:700;color:#4A1A33;border-radius:6px;box-shadow:0 0 0 1px rgba(122,31,69,0.15);}
+.xn{display:inline-block;font-size:10px;font-weight:800;background:#7A1F45;color:#fff;border-radius:8px;padding:0 6px;margin-left:3px;vertical-align:middle;line-height:17px;}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:640px){.legend{grid-template-columns:1fr;}}
+.legend>div{background:var(--white);border:1px solid var(--border);border-radius:13px;padding:13px 15px;font-size:13px;color:var(--text-muted);line-height:1.6;}
+.legend b{display:block;margin-bottom:4px;font-size:13.5px;color:var(--text);}
+.cohort-avicenna{background:rgba(122,175,207,0.4);}
+.cohort-blok{background:rgba(255,255,255,0.18);}
+.cohort-baru{background:rgba(255,224,150,0.35);}
+.cohort-lt{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;margin:1px 2px 1px 0;color:#fff;}
+.cl-axon{background:#C94F81;}.cl-arthron{background:#E0645C;}.cl-aorta{background:#2D7D5F;}.cl-avicenna{background:#3A7A9A;}.cl-blok{background:#7A5568;}.cl-baru{background:#C07040;}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--lavender-muted);color:#fff;font-weight:700;font-size:12px;}
+.bar{height:8px;border-radius:6px;background:linear-gradient(90deg,#E27AA6,#5DB596);display:inline-block;vertical-align:middle;}
+.chip{background:var(--white);border:1.5px solid var(--border);border-radius:20px;padding:6px 14px;font-size:12.5px;font-family:inherit;cursor:pointer;color:var(--text);}
+.chip.on{background:linear-gradient(90deg,var(--lavender-muted),var(--mint-deep));color:#fff;border-color:transparent;}
+.quiz-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px;}
+.q-src{margin-top:6px;}
+.tl{font-size:11px;color:var(--text-muted);font-weight:500;}
+mark.kw{background:#FFE9A8;padding:0 3px;border-radius:3px;}
+
+</style>
+</head>
+<body>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">🌸 Blok Psikiatri & Mental Health · dr. Rahaju Budhi Muljanto, Sp.KJ</div>
+  <h1>Seksualitas <em>Normal</em>, Disfungsi Seksual,<br>Identitas Gender & <em>Parafilia</em></h1>
+  <p class="hero-sub">Disusun dari PPT + transkrip kuliah dr. Budhi, lalu dicocokkan dengan bank soal Blok, Axon'20, Arthron'18, Aorta'19 & Avicenna'17. Poin yang <b>diulang-ulang dosen</b> ditandai pink, yang <b>keluar di bank soal</b> ditandai hijau.</p>
+  <div class="hero-pills">
+    <span class="pill">🌸 F52 Disfungsi Seksual</span>
+    <span class="pill">🌿 F64 Identitas Gender</span>
+    <span class="pill">🌸 F65 Parafilia</span>
+    <span class="pill">🔁 Poin Diulang Dosen</span>
+    <span class="pill">🧠 Quiz Acak (semua bank soal)</span>
+  </div>
+</div>
+
+<div class="sticky-nav" id="mainNav">
+  <button class="nav-btn active" data-tab="overview" onclick="show('overview')">🏠 Peta Konsep</button>
+  <button class="nav-btn" data-tab="disfungsi" onclick="show('disfungsi')">🌸 Disfungsi Seksual</button>
+  <button class="nav-btn" data-tab="gender" onclick="show('gender')">🌿 Identitas Gender</button>
+  <button class="nav-btn" data-tab="parafilia" onclick="show('parafilia')">🌸 Parafilia</button>
+  <button class="nav-btn" data-tab="pembeda" onclick="show('pembeda')">🔍 Pembeda & Trik</button>
+  <button class="nav-btn" data-tab="highlight" onclick="show('highlight')">🔁 Highlight Dosen</button>
+  <button class="nav-btn" data-tab="quiz" onclick="show('quiz')">🧠 Quiz</button>
+</div>
+
+<div class="container">
+
+<!-- ======== OVERVIEW ======== -->
+<div id="sec-overview" class="section active">
+  <h2 class="section-heading">Peta Konsep Seksualitas</h2>
+  <p class="section-desc">Fondasi: aspek seksualitas, siklus, penyebab gangguan, epidemiologi, dan alur rujukan.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🖍️</span> Cara baca highlight di guide ini</div>
+    <div class="legend">
+      <div><b><span class="rep">Marker pink</span></b>Poin yang <u>diulang-ulang</u> dosen saat kuliah (pakai badge <span class="xn">×3</span> = kira-kira berapa kali muncul di transkrip).</div>
+      <div><b><span class="bank">Marker hijau</span></b>Konsep yang <u>keluar di bank soal</u> (Blok / Axon'20 / Arthron'18 / Aorta'19 / Avicenna'17).</div>
+      <div><b><span class="both">Pink + hijau</span></b>Diulang dosen <u>dan</u> keluar di soal = <b>paling high-yield</b>. Hafalkan duluan!</div>
+    </div>
+    <div class="alert alert-sky" style="margin-top:14px"><span class="alert-icon">ℹ️</span><div>Transkrip kuliah adalah hasil <i>speech-to-text</i> (ada salah dengar), jadi hitungan "×" bersifat perkiraan. Detail timestamp ada di tab <b>🔁 Highlight Dosen</b>.</div></div>
+  </div>
+
+  <div class="dr-note">Hubungan psikiatri dan seksualitas sudah sangat lama. <b>Semua agama</b> membahas seksualitas dan hampir semua budaya punya ritual/cerita terkait seksualitas. Masalah seksual itu <span class="rep">banyak dipelajari (learned) dari keluarga terdekat</span>, sama seperti kebanyakan gangguan jiwa.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🧭</span> Aspek-aspek Seksualitas (3 pilar → seksualitas)</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>🧬 Biologis</h4><ul><li>Anatomis</li><li>Fisiologis</li></ul></div>
+      <div class="mini-card"><h4>🧠 Psikologis</h4><ul><li>Psikologis</li><li>Kognitif</li><li>Belajar (learning)</li></ul></div>
+      <div class="mini-card"><h4>🕌 Sosio-religius</h4><ul><li>Filosofis</li><li>Moral</li><li>Etik</li><li>Agama (letaknya paling bawah = <b>fondasi</b>)</li></ul></div>
+    </div>
+    <div class="alert alert-lavender"><span class="alert-icon">🔄</span><div>Ketiga pilar <b>saling berpengaruh dua arah</b> (panah bolak-balik), dan hasil akhirnya adalah <b>seksualitas</b>. Artinya gangguan di satu pilar bisa "menjalar" ke pilar lain.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⏱️</span> Siklus Seksualitas</div>
+    <div class="table-wrap"><table>
+      <tr><th>Fase</th><th>Durasi (slide)</th><th>Catatan dosen</th><th>Gangguan terkait (penghubung konsep)</th></tr>
+      <tr><td><b>Dorongan</b> (drive)</td><td>tidak pasti</td><td>bisa seharian, bisa berhari-hari</td><td>Gairah seksual rendah</td></tr>
+      <tr><td><b>Eksitasi</b></td><td>menit – jam</td><td>—</td><td>Gangguan ereksi / lubrikasi</td></tr>
+      <tr><td><b>Orgasme</b></td><td><span class="both">3 – 15 detik</span></td><td>fase paling singkat</td><td>Ejakulasi dini/tertunda, anorgasmia</td></tr>
+      <tr><td><b>Peredaan</b> (resolusi)</td><td>10 – 15 menit</td><td>pada sebagian individu bisa ½ – 1 hari</td><td>—</td></tr>
+    </table></div>
+    <p class="tl">*Kolom terakhir adalah penghubung konsep dari aku (bukan dari slide) supaya mudah menempatkan tiap gangguan di fase mana.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🔁</span> Penyebab Gangguan Seksual: Psikogenik · Campuran · Organik</div>
+    <ul class="styled-list">
+      <li>Gangguan seksual bisa bersifat <b>psikogenik, campuran, atau organik</b>.</li>
+      <li>Polanya <span class="rep">vicious circle</span> (lingkaran setan): panah bisa berputar berurutan atau melompat-lompat antar faktor.</li>
+      <li>Faktor lain (slide): <b>depresi, ansietas, problem hubungan perkawinan</b>, serta faktor fisik: <b>diabetes, hipertensi, multipel sklerosis, alkohol, tembakau, dan medikasi tertentu</b>.</li>
+      <li>"SD" di sini = <i>sexual dysfunction</i> (bukan "sound").</li>
+    </ul>
+    <div class="dr-note">Teknologi informasi makin luas, jadi faktor yang memengaruhi seksualitas akan makin banyak. Jangan lupa semua faktor ini kalau nanti jadi "ahli seks" 😄</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">📊</span> Epidemiologi (slide)</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>WHO</h4><p><b>8 – 22%</b> wanita mengalami dispareunia</p></div>
+      <div class="mini-card"><h4>Swedia (3000 wanita, 20–60 th)</h4><p><b>9%</b> dispareunia sekali seumur hidup · usia 20–30 th: <b>13%</b> · usia 50–60 th: <b>6%</b></p></div>
+      <div class="mini-card"><h4>Kasus tercatat</h4><p>Sebagian besar (±2/3) yang tercatat adalah <b>dispareunia</b>. <span class="tl">(teks slide terpotong; angka ini dari ucapan dosen)</span></p></div>
+    </div>
+    <div class="alert alert-peach"><span class="alert-icon">⏳</span><div>Kebanyakan pasien <span class="rep">terlambat mencari pertolongan</span> karena berharap membaik sendiri.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🧭</span> Alur Rujukan: Psikiatri Paling Akhir! <span class="xn">×4</span></div>
+    <div class="cr-box">
+      <div class="cr-label">Urutan Rujukan</div>
+      <ol class="cr-steps">
+        <li><b>Anamnesis + pemeriksaan fisik</b> (anatomi → fisiologi → baru psikologi).</li>
+        <li><b>Urologi / andrologi</b> (pria) atau <b>ginekologi</b> (wanita). Pria <u>jangan</u> dikirim ke ginekolog.</li>
+        <li><b>Dermato-venerologi</b> (kalau ada kecurigaan infeksi kulit-kelamin).</li>
+        <li>Bila <u>semua normal</u> → baru <b>psikiatri</b>.</li>
+      </ol>
+    </div>
+    <div class="dr-note">Kalau pasien datang ke psikiater duluan, intervensi psikiater bisa <b>berlebihan</b> sementara masalah <b>organiknya tidak terdeteksi</b>. Pernah ada kasus dispareunia yang sudah melewati semua dokter itu dulu sebelum sampai ke dr. Budhi.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">💞</span> Tujuan Hubungan Seksual: "3 Pro"</div>
+    <div class="mnemonic"><div class="mnemonic-label">Mnemonic</div>
+      <div class="mnemonic-text">Pro-kreasi · Pro-rekreasi · Pro-relaksasi</div>
+      <div class="mnemonic-sub">Prokreasi = keturunan · Rekreasi = kesenangan · Relaksasi = ketenangan. Pasien sering tidak paham tujuannya, jadi gali dulu persepsinya. Kalau pasangan sama-sama tidak keberatan dengan caranya, lanjutkan; kalau ada yang keberatan, sesuaikan agar tidak ada yang dirugikan. Hubungan suami-istri harus <b>terbuka</b>.</div></div>
+  </div>
+</div>
+
+<!-- ======== DISFUNGSI ======== -->
+<div id="sec-disfungsi" class="section">
+  <h2 class="section-heading">🌸 F52 · Disfungsi Seksual</h2>
+  <p class="section-desc">Pria vs wanita: keluhan, pedoman diagnostik, penanganan, dan kapan merujuk.</p>
+
+  <div class="dr-note">Pasien (pria <u>maupun</u> wanita) <span class="both">enggan membicarakan masalah seksual</span> <span class="xn">×4</span>, terutama bila dokternya lawan jenis. Mereka biasanya datang dengan <b>keluhan fisik</b> (mudah lelah, sulit tidur, tidur tidak nyaman), <b>suasana perasaan murung</b>, atau <b>problem perkawinan</b> (sering bertengkar). Baru setelah digali, masalah seksualnya muncul.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🏷️</span> Kode Disfungsi Seksual F52 <span class="tl">(tambahan: ICD-10/PPDGJ-III, tidak ada di slide)</span></div>
+    <div class="table-wrap"><table>
+      <tr><th>Kode</th><th>Nama</th><th>Kata kunci</th></tr>
+      <tr><td>F52.0</td><td>Gairah seksual kurang</td><td>libido turun / tidak bergairah</td></tr>
+      <tr><td>F52.1</td><td>Penolakan & kurangnya kenikmatan seksual</td><td>takut/cemas pada interaksi seksual → menghindar (<b>aversi</b>)</td></tr>
+      <tr><td>F52.2</td><td>Kegagalan respons genital</td><td>gagal ereksi (pria) / gagal lubrikasi (wanita)</td></tr>
+      <tr><td>F52.3</td><td>Disfungsi orgasme</td><td>anorgasmia / ejakulasi tertunda</td></tr>
+      <tr><td>F52.4</td><td>Ejakulasi dini</td><td>ejakulasi sebelum waktunya</td></tr>
+      <tr><td>F52.5</td><td>Vaginismus non-organik</td><td>spasme otot vagina → penetrasi tidak bisa</td></tr>
+      <tr><td>F52.6</td><td>Dispareunia non-organik</td><td>nyeri saat sanggama</td></tr>
+      <tr><td>F52.7</td><td>Dorongan seksual berlebihan</td><td>libido meningkat</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">♂️♀️</span> Ringkasan Pria vs Wanita</div>
+    <div class="compare-wrap">
+      <div class="compare-col left">
+        <h4>♂ Pria</h4>
+        <div class="compare-row"><span>Diagnosis:</span>Gangguan ereksi (impotensi), ejakulasi dini, ejakulasi tertunda, gairah seksual rendah</div>
+        <div class="compare-row"><span>Paling sering:</span><span class="rep">Gairah seksual rendah</span></div>
+        <div class="compare-row"><span>Dispareunia:</span>Ada, tapi <b>sangat jarang</b></div>
+        <div class="compare-row"><span>Rujuk ke:</span>Urolog / <b>andrologis</b></div>
+      </div>
+      <div class="compare-col right">
+        <h4>♀ Wanita</h4>
+        <div class="compare-row"><span>Diagnosis:</span>Gairah seksual rendah, vaginismus, dispareunia, anorgasmia</div>
+        <div class="compare-row"><span>Sering di balik:</span>perkawinan tidak bahagia, infeksi/tumor/kista, trauma</div>
+        <div class="compare-row"><span>Penting:</span>datang <b>bersama pasangan</b></div>
+        <div class="compare-row"><span>Rujuk ke:</span>Ginekolog (obgyn)</div>
+      </div>
+    </div>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div>Faktor yang memperburuk keduanya: depresi, ansietas, masalah hubungan, DM, hipertensi, MS, alkohol, tembakau, obat tertentu (slide).</div></div>
+  </div>
+
+  <h3 class="section-heading" style="font-size:22px;margin:26px 0 12px">♂ Disfungsi Seksual Pria</h3>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">1️⃣</span> Gangguan Ereksi (Impotensi)</div>
+    <ul class="styled-list">
+      <li>Banyak penyebab; biasanya <b>reaksi sementara</b> terhadap <b>stres</b> atau <b>kehilangan percaya diri</b>.</li>
+      <li>Bisa diobati, <b>terutama bila masih ereksi di pagi hari</b> (tanda fungsi fisik masih baik → condong psikogenik).</li>
+      <li><b>Tidak berhubungan seksual 1–2 minggu</b>; lakukan kontak fisik menyenangkan <u>tanpa sanggama</u>, lalu <b>bertahap kembali</b> sanggama.</li>
+      <li>Informasikan kemungkinan <b>terapi fisik</b>.</li>
+    </ul>
+    <div class="dr-note">Urutan kerja dokter umum: <b>periksa fisik dulu</b> → bila organik sudah disingkirkan, cari sumber psikiatrik. Yang paling sering: <b>stres</b>, lalu <b>depresi</b>. Pria dikirim ke andrologis, bukan ginekolog.</div>
+    <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Kunci soal (Arthron'18 No.56):</span> pria 48 th tidak bisa sanggama setelah istri mengaku selingkuh, <b>ereksi spontan pagi hari masih ada</b> → penyebab <b>psikogenik</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">2️⃣</span> Ejakulasi Dini</div>
+    <ul class="styled-list">
+      <li>Ejakulasi terjadi <b>sebelum waktunya</b> (belum ada orgasme yang "sesuai"); pengendalian ejakulasi <b>mungkin</b> dan meningkatkan kepuasan <u>kedua</u> pasangan.</li>
+      <li>Terapi perilaku: <span class="both">teknik memencet (squeeze)</span> atau <span class="both">teknik berhenti-mulai (stop-start)</span>.</li>
+      <li>Obat: <b>Klomipramin</b> atau <b>SSRI</b> (menunda ejakulasi).</li>
+    </ul>
+    <div class="dr-note">Tidak ada <i>one size fits all</i>, carilah yang cocok untuk pasien itu. Obat punya efek samping: <b>antidepresan justru bisa melemahkan ereksi / membuat sulit orgasme</b>. (Itu pula sebabnya SSRI/klomipramin "dimanfaatkan" untuk menunda ejakulasi.)</div>
+    <div class="alert alert-mint"><span class="alert-icon">✅</span><div><span class="bank">Jebakan soal (Arthron'18 No.11, Axon'20 No.62):</span> jawaban benar = <b>teknik memencet / berhenti-mulai</b>. Salah: "jangan beri obat", "yang penting orgasme", "obat pertahankan ereksi".</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">3️⃣</span> Tak Mampu Orgasme / Ejakulasi Tertunda</div>
+    <ul class="styled-list">
+      <li>Lebih <b>sulit diatasi</b>. Bila bisa ejakulasi dengan cara lain (mis. masturbasi) → <b>prognosis lebih baik</b>.</li>
+      <li>Anjuran: latihan <b>stimulasi penis dengan minyak/pelumas</b> (stimulasi cukup).</li>
+      <li>Program kesuburan: pertimbangkan <b>inseminasi buatan</b> dengan sperma suami.</li>
+    </ul>
+    <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Kunci soal (Axon'20 No.30):</span> "gangguan seksual pada laki-laki" = <b>ejakulasi lambat / tidak terjadi ejakulasi</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">4️⃣</span> Gairah Seksual Rendah (pria)</div>
+    <ul class="styled-list">
+      <li>Penyebab: <b>kekurangan hormon, penyakit fisik, stres, problem hubungan antar manusia, gangguan jiwa lain</b>.</li>
+      <li>Anjuran: <b>relaksasi</b>, kurangi stres, <b>komunikasi terbuka</b>, sikap asertif yang sesuai, <b>kerja sama pasangan</b>.</li>
+    </ul>
+    <div class="dr-note">Ini keluhan pria yang <b>paling sering</b>. Orangnya sering disebut "dingin"; biasanya komunikasi dan interaksi sosialnya kurang. Saran: relaksasi, jangan terlalu menekan.</div>
+  </div>
+
+  <h3 class="section-heading" style="font-size:22px;margin:26px 0 12px">♀ Disfungsi Seksual Wanita</h3>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">1️⃣</span> Gairah Seksual Rendah (wanita)</div>
+    <ul class="styled-list">
+      <li>Penyebab: <b>problem perkawinan, trauma sebelumnya, penyakit fisik/psikiatrik</b>; biasanya reaksi sementara.</li>
+      <li>Penanganan: (1) bicarakan <b>pendapat pasien tentang hubungan seksual</b>, (2) <span class="both">tanyakan pengalaman seksual traumatik</span> dan sikap terhadap masalah seksual, (3) <b>temui pasangan bersama</b>, (4) <b>rencanakan kegiatan seksual</b> pada hari tertentu.</li>
+    </ul>
+    <div class="dr-note">Wanita jangan dibiarkan datang sendirian (<span class="rep">usahakan bersama suami</span> <span class="xn">×3</span>). Yang <u>merencanakan</u> kegiatan seksual adalah <b>pasangan</b>, bukan dokter. Kadang pasangan <u>tidak mau tapi dipaksa</u>, sehingga hubungan jadi terasa seperti siksaan. Pengalaman traumatik bisa menurunkan gairah yang sebelumnya normal, bahkan hanya dengan satu suami/istri.</div>
+    <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Kunci soal (Axon'20 No.4 & 45):</span> penatalaksanaan gairah rendah wanita = <b>eksplorasi/tanyakan pengalaman traumatik</b>. Salah: "hubungan tidak perlu direncanakan", "pasien datang tanpa pasangan", "orgasme tidak penting".</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">2️⃣</span> Vaginismus</div>
+    <ul class="styled-list">
+      <li><b>Spasme/kontraksi involunter otot</b> sekitar vagina → liang vagina menutup rapat, penetrasi sulit/tidak mungkin walau suami ereksi.</li>
+      <li>Sering pada perkawinan <b>tak bahagia / tak memuaskan secara seksual</b>.</li>
+      <li>Diagnosis: <b>periksa vagina</b>. Terapi: <b>relaksasi</b>, jelaskan anatomi-fisiologi otot vagina.</li>
+      <li>Latihan <b>melibatkan suami</b>: kenali titik sensitif (zona erotik) → memasukkan jari ke vagina agar liang melebar <b>disertai relaksasi</b>.</li>
+    </ul>
+    <div class="dr-note">Suami <b>harus dilibatkan</b> supaya bisa membantu istri rileks. Bahkan pada kasus dispareunia dosen, pasangan akhirnya sehat <b>hanya dengan relaksasi tanpa obat</b> dan tidak lama punya anak.</div>
+    <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Kunci soal (Blok No.4):</span> vagina "tertutup rapat dan ketat, tidak bisa dimasuki walau suami ereksi" = <b>vaginismus</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">3️⃣</span> Dispareunia (nyeri saat sanggama)</div>
+    <ul class="styled-list">
+      <li>Sering disebabkan faktor fisik: <b>infeksi vagina/pelvis, tumor, kista</b> → periksa fisik dulu.</li>
+      <li>Pada sebagian kasus karena <b>tidak ada lubrikasi + ketegangan otot</b> (sebenarnya gangguan fisiologis).</li>
+      <li>Terapi: <b>relaksasi</b>, <b>pemanasan (foreplay) lebih lama</b>, <b>penetrasi hati-hati</b>. Jangan terburu-buru saat berhubungan.</li>
+      <li>Bila gagal → <b>rujuk obgyn</b>.</li>
+    </ul>
+    <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Kunci soal (Axon'20 No.31):</span> gangguan seksual wanita = <b>nyeri saat hubungan seksual</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">4️⃣</span> Anorgasmia</div>
+    <ul class="styled-list">
+      <li>Banyak wanita <b>tak orgasme saat sanggama</b>, tetapi bisa lewat <b>stimulasi klitoris</b> (dinilai tidak berbeda dengan orgasme vaginal, menurut slide).</li>
+      <li>Diskusikan sikap & pendapat pasien; dorong <b>eksplorasi mandiri secara manual</b>; bantu pasangan <b>berkomunikasi terbuka</b> dan <b>turunkan harapan yang tidak realistis</b>.</li>
+    </ul>
+    <div class="dr-note">Banyak wanita <b>berpura-pura orgasme</b> demi menyenangkan pasangan, jadi suami jangan langsung bangga. Kalau sering terjadi → konsultasi <b>sebagai pasangan</b> supaya sama-sama bahagia.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🚦</span> Kapan Dirujuk ke Spesialis? <span class="xn">×2</span></div>
+    <div class="alert alert-rose"><span class="alert-icon">🛑</span><div>Bila problem seksual <b>berlangsung > 3 bulan</b> walau semua upaya di atas sudah dilakukan → <b>rujuk spesialis sesuai gangguan</b> (pria & wanita sama).</div></div>
+    <div class="dr-note">Kalau sudah 3 bulan tidak berhasil, <b>rujuk saja</b>. Jangan keburu memberi macam-macam obat sampai pasien jadi <b>tergantung obat</b>; ujungnya dokternya yang tertekan dan merasa bersalah. Prinsip: <b>semangati pasien, bantu pasangan, komunikasi</b>.</div>
+  </div>
+
+  <div class="card">
+    <button class="collapse-btn" onclick="toggle(this)"><div class="card-title" style="margin-bottom:0"><span class="card-icon" style="background:var(--peach-pale)">📖</span> Cerita kasus dari dosen (opsional)</div><span class="chev">▼</span></button>
+    <div class="collapse-body">
+      <ul class="styled-list">
+        <li><b>Pasangan dokter di Belanda</b> tidak punya anak 3 tahun: mereka mengira cukup dengan berciuman. Pelajaran: cek pemahaman dasar pasien, jangan berasumsi.</li>
+        <li><b>Pasutri menikah 2 tahun tanpa anak</b>: istri dispareunia tiap hubungan sehingga hubungan tidak "sempurna". Sembuh dengan relaksasi, tanpa obat.</li>
+        <li><b>Pasangan harus cocok</b>: pasangan perlu saling menyesuaikan penampilan/kerapian supaya daya tarik tetap terjaga (ini memengaruhi gairah).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🔎</span> Kunci Vignette: Diagnosis Mana?</div>
+    <div class="table-wrap"><table>
+      <tr><th>Petunjuk di soal</th><th>Diagnosis</th><th>Muncul di</th></tr>
+      <tr><td>Takut + sakit, belum pernah berhubungan sama sekali, riwayat KDRT</td><td><b>Aversi seksual</b> (F52.1)</td><td><span class="cohort-lt cl-blok">Blok No.3</span></td></tr>
+      <tr><td>Menolak berhubungan karena <b>tidak bergairah</b></td><td><b>Gangguan gairah (arousal) seksual wanita</b></td><td><span class="cohort-lt cl-blok">Blok No.6</span></td></tr>
+      <tr><td>Vagina menutup rapat, tidak bisa dimasuki walau ereksi</td><td><b>Vaginismus</b></td><td><span class="cohort-lt cl-blok">Blok No.4</span></td></tr>
+      <tr><td>Nyeri saat sanggama, infeksi/tumor</td><td><b>Dispareunia</b></td><td><span class="cohort-lt cl-axon">Axon'20 No.31</span></td></tr>
+      <tr><td>Tidak ejakulasi / ejakulasi lambat</td><td><b>Disfungsi orgasme pria</b></td><td><span class="cohort-lt cl-axon">Axon'20 No.30</span> <span class="cohort-lt cl-arthron">Arthron'18 No.30</span></td></tr>
+      <tr><td>Ereksi pagi masih ada, mulai setelah konflik perkawinan</td><td><b>Psikogenik</b></td><td><span class="cohort-lt cl-arthron">Arthron'18 No.56</span></td></tr>
+    </table></div>
+    <p class="tl">*Soal Blok No.3 punya catatan tangan di bank soal ("bisa arousal disorder") sehingga kuncinya agak ambigu. Aku pakai <b>aversi</b> karena yang menonjol adalah rasa takut → menghindar. Cek lagi dengan kunci dosen jika ada.</p>
+  </div>
+</div>
+
+<!-- ======== GENDER ======== -->
+<div id="sec-gender" class="section">
+  <h2 class="section-heading">🌿 F64 · Gangguan Identitas Gender</h2>
+  <p class="section-desc">Lima kode, tiga yang penting: transseksualisme, transvestisme peran ganda, dan gangguan identitas jenis kelamin masa kanak.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🏷️</span> Daftar Kode F64</div>
+    <div class="table-wrap"><table>
+      <tr><th>Kode</th><th>Nama</th></tr>
+      <tr><td>F64.0</td><td><b>Transseksualisme</b></td></tr>
+      <tr><td>F64.1</td><td><b>Transvestisme peran ganda</b></td></tr>
+      <tr><td>F64.2</td><td><b>Gangguan identitas jenis kelamin masa kanak</b></td></tr>
+      <tr><td>F64.8</td><td>Gangguan identitas jenis kelamin lainnya</td></tr>
+      <tr><td>F64.9</td><td>Gangguan identitas jenis kelamin YTT (tak tergolongkan)</td></tr>
+    </table></div>
+    <div class="dr-note">Kode <b>.8</b> dan <b>.9</b> adalah "laci sampah" (<i>junk drawer</i>) yang ada di setiap blok diagnosis: .8 untuk "lainnya", .9 untuk yang penyebab/rinciannya tidak ditentukan. Seharusnya setelah usia 18 tahun seseorang sudah tahu di mana identitas gendernya berada.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">⚧</span> F64.0 Transseksualisme</div>
+    <ul class="styled-list">
+      <li>Ada <b>hasrat untuk hidup dan diterima</b> sebagai anggota kelompok <b>lawan jenisnya</b>.</li>
+      <li>Biasanya disertai <b>rasa tidak nyaman/tidak sesuai dengan anatomi seksualnya</b> dan ingin <b>terapi hormonal dan/atau pembedahan</b> (<i>sex reassignment</i>).</li>
+      <li>Identitas transseksual harus <b>menetap minimal 2 tahun</b> <span class="rep">(2 tahun)</span>.</li>
+      <li><b>Bukan</b> gejala gangguan jiwa lain, kelainan intersex, atau kelainan genetik/kromosom seks.</li>
+    </ul>
+    <div class="alert alert-rose"><span class="alert-icon">⚠️</span><div><b>Jangan salah label!</b> <span class="both">Pasien skizofrenia</span> yang sebelumnya identitas gendernya jelas, setelah sakit mendadak tertarik sesama jenis atau berperilaku seperti lawan jenis → itu <b>gejala penyakitnya</b>, <u>bukan</u> transseksual/gay/lesbian. Ini kesalahan yang sering terjadi di klinik psikiatri. <span class="xn">×3</span></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">👗</span> F64.1 Transvestisme Peran Ganda</div>
+    <ul class="styled-list">
+      <li>Memakai pakaian lawan jenis sebagai bagian dari eksistensinya untuk <b>sejenak menikmati pengalaman</b> sebagai lawan jenis.</li>
+      <li><b>Tanpa hasrat</b> mengubah jenis kelamin secara permanen.</li>
+      <li><span class="both">Tidak ada kepuasan seksual</span> yang menyertai <span class="xn">×4</span> (beda dengan transvestisme fetishistik F65.1).</li>
+    </ul>
+    <div class="dr-note">Contoh teman dosen: pria yang <b>suka memakai pakaian wanita</b>, tetapi <b>bukan gay</b>, tidak mendapat kepuasan seksual dari itu. Karena di lingkungan umum tidak dihargai, ia sering berada di komunitas yang menerima. Pada wanita, memakai pakaian pria sangat lazim, jadi baru perlu diperhatikan bila hanya itu yang disukai terus-menerus.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧒</span> F64.2 Gangguan Identitas Jenis Kelamin Masa Kanak</div>
+    <ul class="styled-list">
+      <li>Tampak pertama kali pada <b>masa dini kanak, selalu sebelum pubertas</b> (pra-sekolah).</li>
+      <li>Ditandai <b>stres yang dalam dan permanen</b>, <b>hasrat kuat jadi lawan jenis</b>, <b>penolakan jenis kelaminnya</b>.</li>
+      <li><span class="rep">Diagnosis tidak dapat diterapkan bila sudah pubertas</span>.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <tr><th>Pedoman diagnostik (slide)</th></tr>
+      <tr><td>Keinginan <b>pervasif</b> (menyeluruh) dan menetap menjadi lawan jenis</td></tr>
+      <tr><td><b>Menolak atribut</b> sesuai jenis kelaminnya</td></tr>
+      <tr><td>Manifestasi pertama pada <b>usia prasekolah</b></td></tr>
+      <tr><td><b>Menyangkal</b> bahwa dirinya mengalami gangguan</td></tr>
+      <tr><td><b>Anak laki-laki > perempuan</b></td></tr>
+      <tr><td><b>Tidak</b> menimbulkan kepuasan seksual</td></tr>
+    </table></div>
+    <div class="dr-note"><b>Pervasif</b> = menyeluruh: bukan hanya satu kali bermain, tapi gaya, pakaian, dan keinginannya semua begitu. Bila ketemu anak seperti ini, <b>intervensi sejak dini</b>: berikan hal-hal yang <b>sesuai jenis kelaminnya</b>. Tapi <u>jangan memarahi</u> anak yang sekadar meniru (mis. anak perempuan mengambil lipstik ibu: bantu poles dengan rapi; anak laki-laki meniru kumis ayah pada fase Oedipal). Anak yang benar-benar gangguan akan <b>menolak</b> atribut jenis kelaminnya (marah saat diberi bedak atau sebaliknya).</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">⚖️</span> Perbandingan: F64.0 · F64.1 · F64.2 · F65.1</div>
+    <div class="table-wrap"><table>
+      <tr><th></th><th>F64.0 Transseksual</th><th>F64.1 Transvestisme peran ganda</th><th>F64.2 Masa kanak</th><th>F65.1 Transvestisme fetishistik</th></tr>
+      <tr><td><b>Ingin ganti kelamin?</b></td><td>Ya (hormon/operasi)</td><td>Tidak</td><td>Ingin <i>menjadi</i> lawan jenis</td><td>Tidak</td></tr>
+      <tr><td><b>Kepuasan seksual?</b></td><td>—</td><td><span class="hl-rose">TIDAK</span></td><td><span class="hl-rose">TIDAK</span></td><td><span class="hl-mint">YA</span> (lalu ingin melepas pakaian setelah orgasme)</td></tr>
+      <tr><td><b>Syarat waktu / usia</b></td><td>≥ 2 tahun, menetap</td><td>—</td><td>Sebelum pubertas</td><td>—</td></tr>
+      <tr><td><b>Catatan</b></td><td>Bukan gejala gangguan jiwa lain</td><td>Sekadar menikmati pengalaman</td><td>Laki-laki > perempuan</td><td>Sering fase awal transseksualisme</td></tr>
+    </table></div>
+  </div>
+</div>
+
+<!-- ======== PARAFILIA ======== -->
+<div id="sec-parafilia" class="section">
+  <h2 class="section-heading">🌸 F65 · Gangguan Preferensi Seksual (Parafilia)</h2>
+  <p class="section-desc">Individu lebih menyukai <b>benda atau kondisi lain</b> untuk mendapatkan <b>orgasme / kepuasan seksual</b>, bukan lewat sanggama biasa dengan lawan jenis.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🗺️</span> Peta Cepat F65</div>
+    <div class="table-wrap"><table>
+      <tr><th>Kode</th><th>Nama</th><th>Inti</th><th>Jenis kelamin</th></tr>
+      <tr><td>F65.0</td><td><b>Fetishisme</b></td><td>Benda mati → gairah + kepuasan</td><td>Khusus pria</td></tr>
+      <tr><td>F65.1</td><td><b>Transvestisme fetishistik</b></td><td>Pakaian lawan jenis untuk kepuasan seksual</td><td>—</td></tr>
+      <tr><td>F65.2</td><td><b>Ekshibisionisme</b></td><td>Memamerkan alat kelamin</td><td>Hampir semua pria</td></tr>
+      <tr><td>F65.3</td><td><b>Voyeurisme</b></td><td>Mengintip orang bersanggama/telanjang</td><td>—</td></tr>
+      <tr><td>F65.4</td><td><b>Pedofilia</b></td><td>Preferensi seksual ke anak</td><td>Pelaku terbanyak pria</td></tr>
+      <tr><td>F65.5</td><td><b>Sadomasokisme</b></td><td>Ikat, sakit, penghinaan</td><td>—</td></tr>
+      <tr><td>F65.6</td><td>Multipel</td><td>Gabungan seimbang</td><td>—</td></tr>
+      <tr><td>F65.8</td><td>Lainnya</td><td>Frotteurisme, telepon cabul, dll.</td><td>—</td></tr>
+    </table></div>
+    <div class="mnemonic"><div class="mnemonic-label">Mnemonic urutan F65.0 → .6 ("7B")</div>
+      <div class="mnemonic-text">Benda · Baju · Buka · Bintip · Bocah · Bonyok · Banyak</div>
+      <div class="mnemonic-sub">.0 Fetish <b>benda</b> mati · .1 <b>baju</b> lawan jenis · .2 <b>buka</b>/pamer · .3 <b>bintip</b> (voyeur) · .4 <b>bocah</b> (pedofilia) · .5 <b>bonyok</b> (sadomasokis) · .6 <b>banyak</b> (multipel). Lalu .8 = lainnya.</div></div>
+    <div class="alert alert-peach"><span class="alert-icon">🔁</span><div>Pola yang diulang dosen: parafilia umumnya <b>terbatas pada pria</b> <span class="xn">×4</span> (fetishisme, ekshibisionisme, pedofilia; gangguan identitas masa kanak juga lebih banyak pada anak laki-laki).</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">👙</span> F65.0 Fetishisme</div>
+      <ul class="styled-list">
+        <li>Mengandalkan <b>benda mati</b> sebagai stimulus yang membangkitkan gairah <u>dan</u> memberi <b>kepuasan seksual</b>.</li>
+        <li>Pentingnya objek bervariasi antar individu.</li>
+        <li><b>Mengganggu hubungan seksual</b> dan menyebabkan penderitaan.</li>
+        <li><b>Khusus pada pria</b>; hampir tidak pernah pada wanita.</li>
+      </ul>
+      <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Soal:</span> mengoleksi pakaian dalam perempuan (tidak dipakai) demi kepuasan → <b>Fetishisme</b> (Avicenna'17 No.35 & 63).</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">👗</span> F65.1 Transvestisme Fetishistik</div>
+      <ul class="styled-list">
+        <li>Memakai pakaian lawan jenis <b>untuk mencapai kepuasan seksual</b>.</li>
+        <li>Ada keinginan kuat <b>melepas</b> "fetish" setelah orgasme dan gairah turun.</li>
+        <li>Sering <b>fase awal transseksualisme</b>.</li>
+      </ul>
+      <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Soal (Avicenna'17 No.70):</span> suami memakai pakaian dalam istri untuk kegairahan seksual → kunci bank: <b>Transvestisme</b>.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🚪</span> F65.2 Ekshibisionisme</div>
+      <ul class="styled-list">
+        <li>Kecenderungan <b>berulang/menetap memamerkan alat kelamin</b> ke lawan jenis; bisa timbul hanya saat stres/krisis.</li>
+        <li><b>Hampir seluruhnya laki-laki.</b></li>
+        <li>Pada sebagian penderita itu <b>satu-satunya penyaluran seksual</b>.</li>
+        <li><b>Sulit mengendalikan diri</b> meski <b>ego-alien (ego-distonik)</b>.</li>
+        <li>Bila yang melihat <b>terkejut/takut/terkesan</b> → kenikmatan <b>meningkat</b>.</li>
+      </ul>
+      <div class="dr-note"><b>Jangan bereaksi heboh</b> ("wow!"): reaksi kaget itulah yang memberi "kepuasan". <b>Waspada diagnosis keliru</b>: pasien dikirim ke RSJ dengan label "ekshibisionis" padahal ternyata <b>skizofrenia</b> (telanjang di tempat ramai karena psikosis). Wanita telanjang biasanya bukan ekshibisionisme. <span class="xn">×2</span></div>
+      <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Soal (Axon'20 No.67):</span> hobi menampakkan alat kelamin ke orang umum → <b>Ekshibisionisme</b>.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">👀</span> F65.3 Voyeurisme</div>
+      <ul class="styled-list">
+        <li>Kecenderungan berulang/menetap <b>melihat orang bersanggama, bermesraan, atau menanggalkan pakaian</b>.</li>
+        <li>Biasanya menjurus pada <b>pemuasan seksual</b> (orgasme dari mengintip).</li>
+        <li>Zaman sekarang: kamera/HP diletakkan di <b>kamar mandi/toilet</b>, CCTV mini tersembunyi.</li>
+      </ul>
+      <div class="dr-note"><b>Menonton pornografi ≠ voyeurisme</b> (itu disebut <b>kecanduan pornografi</b>). Voyeur khusus <u>mengintip</u> orang yang tidak tahu sedang diamati.</div>
+      <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Soal (Avicenna'17 No.65 & 69):</span> tidak puas dengan istri tapi puas <b>mengintip/melihat</b> orang lain berhubungan → <b>Voyeurisme</b>.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🧸</span> F65.4 Pedofilia</div>
+      <ul class="styled-list">
+        <li>Preferensi seksual terhadap <b>anak, biasanya prapubertas atau awal pubertas</b>.</li>
+        <li>Ada yang menyukai anak perempuan, anak laki-laki, atau keduanya.</li>
+        <li>Termasuk juga orang yang preferensinya partner dewasa tetapi <b>kronis frustrasi</b> dalam hubungan yang memadai.</li>
+      </ul>
+      <div class="dr-note">Pelaku <b>terbanyak pria</b>; berita sering memuat pria dewasa memperkosa anak kecil. Varian yang preferensi aslinya dewasa itu sangat jarang.</div>
+      <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Soal (Avicenna'17 No.76):</span> pria rutin ke panti asuhan lalu melecehkan anak asuh → <b>Pedofilia</b>.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">⛓️</span> F65.5 Sadomasokisme</div>
+      <ul class="styled-list">
+        <li>Aktivitas seksual yang melibatkan <b>pengikatan, menimbulkan rasa sakit, atau penghinaan</b>.</li>
+        <li><b>Masokisme</b> = suka <u>disakiti</u>; <b>Sadisme</b> = <u>pelaku</u> yang menyakiti.</li>
+        <li>Sering <b>sulit dibedakan dari kekerasan</b> dalam hubungan seksual.</li>
+      </ul>
+      <div class="dr-note">Kasus dosen: pasangan sadis-masokis; anak-anak ketakutan karena orangtua berteriak setiap berhubungan. Sulit diterapi bila pasangan memang puas dengan cara itu; disarankan <b>tidak dilakukan di rumah</b>. Sering yang melapor adalah <b>pihak ketiga</b> (tetangga/kerabat) dengan tuduhan KDRT. <span class="tl">Catatan: batasnya adalah persetujuan kedua pihak; jika ada paksaan atau cedera berbahaya → itu kekerasan.</span></div>
+      <div class="alert alert-sky"><span class="alert-icon">🧩</span><div><span class="bank">Soal (Avicenna'17 No.34):</span> suami melakukan kekerasan sebelum berhubungan, istri banyak luka → <b>Sadisme</b>.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🧩</span> F65.6 Multipel & F65.8 Lainnya</div>
+    <div class="grid-2">
+      <div class="mini-card"><h4>F65.6 Multipel</h4><p>Kombinasi lebih dari satu parafilia secara <b>seimbang</b>. Yang sering: <b>fetishisme + transvestisme + sadomasokisme</b>. Karena berlangsung terus dan korbannya pihak ketiga.</p><p class="tl">Di transkrip dosen terdengar "satyriasis", tapi slide tertulis <b>sadomasokisme</b>; ikuti slide.</p></div>
+      <div class="mini-card"><h4>F65.8 Lainnya</h4><p>Varian tidak lazim: <b>panggilan telepon cabul, frotteurisme, hubungan seksual dengan binatang, cekikan/anoksia</b>, serta bentuk ekstrem lain (urine, feses, menusuk bagian tubuh). Dosen: "bisa ditambah lagi, sangat beragam".</p><p class="tl">Frotteurisme = menggesek/menyentuh orang yang tidak setuju di keramaian (tambahan definisi umum, tidak di slide).</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== PEMBEDA ======== -->
+<div id="sec-pembeda" class="section">
+  <h2 class="section-heading">🔍 Pembeda & Trik Cepat</h2>
+  <p class="section-desc">Pasangan konsep yang sering dibuat jebakan di soal.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">⚔️</span> "Kembar tapi Beda"</div>
+    <div class="table-wrap"><table>
+      <tr><th>Pasangan</th><th>Pembeda utama</th></tr>
+      <tr><td>Transvestisme <b>peran ganda</b> vs <b>fetishistik</b></td><td>Ada tidaknya <b>kepuasan seksual</b> (<span class="both">tidak = F64.1; ya = F65.1</span>)</td></tr>
+      <tr><td>Fetishisme vs transvestisme fetishistik</td><td>Fetishisme: <b>benda mati</b> apa saja. Transvestisme fetishistik: <b>pakaian lawan jenis dipakai</b> lalu dilepas setelah orgasme</td></tr>
+      <tr><td>Dispareunia vs vaginismus</td><td>Dispareunia: <b>nyeri</b> saat sanggama. Vaginismus: <b>otot menutup</b>, penetrasi tidak bisa</td></tr>
+      <tr><td>Aversi seksual vs gairah rendah</td><td>Aversi: <b>takut/cemas</b> lalu menghindar. Gairah rendah: <b>tidak berminat/tidak bergairah</b></td></tr>
+      <tr><td>Anorgasmia vs gairah rendah</td><td>Anorgasmia: <b>tidak mencapai orgasme</b> (bisa lewat stimulasi klitoris). Gairah rendah: <b>dorongan</b> yang turun</td></tr>
+      <tr><td>Ejakulasi dini vs tertunda</td><td>Dini: terlalu cepat (squeeze/stop-start). Tertunda: lambat/tidak ejakulasi (lebih sulit diatasi)</td></tr>
+      <tr><td>Voyeurisme vs menonton porno</td><td>Voyeur <b>mengintip</b> orang tak sadar; porno = <b>kecanduan pornografi</b></td></tr>
+      <tr><td>Ekshibisionisme vs psikosis</td><td>Cek penyakit dasar: telanjang karena skizofrenia ≠ ekshibisionis</td></tr>
+      <tr><td>Sadomasokisme vs KDRT</td><td>Ada <b>persetujuan</b> dan kepuasan kedua pihak vs paksaan/cedera</td></tr>
+      <tr><td>Transseksual vs gejala psikosis</td><td>Transseksual: menetap ≥2 th & <b>bukan</b> gejala gangguan jiwa lain</td></tr>
+      <tr><td>F64.2 vs anak sekadar meniru</td><td>Pervasif, menetap, menolak atribut jenis kelamin sendiri, stres mendalam</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🌉</span> Jembatan ke Fish's Clinical Psychopathology</div>
+    <ul class="styled-list">
+      <li><b>Ego-distonik vs ego-sintonik</b>: ego-distonik = menimbulkan distres dan tidak sesuai konsep diri (cocok untuk ekshibisionis yang tidak menyukai dorongannya), ego-sintonik = tidak menimbulkan distres/sesuai konsep diri (Fish, Bab 1).</li>
+      <li><b>Kriteria distres/disabilitas</b> dipakai untuk memisahkan variasi normal dari gangguan. Contoh di Fish: homoseksualitas dikeluarkan dari DSM-III karena <u>tidak menyebabkan distres maupun disfungsi</u> (Bab 2). Jadi orientasi seksual sendiri bukan gangguan; yang dipakai di slide adalah gangguan <b>preferensi</b> dan <b>identitas</b>.</li>
+      <li><b>Waham perselingkuhan</b> (Othello/morbid jealousy) sering terkait alkohol dan bisa berbahaya; bedakan dari disfungsi seksual psikogenik akibat konflik perkawinan (Fish, Bab 4 & Apendiks I).</li>
+      <li><b>Jangan terkecoh psikosis</b>: perilaku seksual aneh pada skizofrenia/mania (disinhibisi, telanjang) adalah gejala penyakit dasar (Fish, Bab 8).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">✅</span> Checklist 1 Menit Sebelum Ujian</div>
+    <ol class="cr-steps">
+      <li>Urutan rujukan: <b>fisik → urologi/ginekologi/dermato-venerologi → psikiatri</b>.</li>
+      <li>Rujuk spesialis bila <b>&gt; 3 bulan</b> tidak membaik.</li>
+      <li>Ejakulasi dini = <b>squeeze / stop-start</b> (+ klomipramin/SSRI).</li>
+      <li>Wanita: <b>tanyakan trauma</b>, <b>temui pasangan</b>, <b>relaksasi</b>.</li>
+      <li>Vaginismus = spasme; dispareunia = nyeri; anorgasmia = tidak orgasme.</li>
+      <li>Transseksual ≥ <b>2 tahun</b>, bukan gejala psikosis; F64.2 <b>tidak</b> diterapkan setelah pubertas.</li>
+      <li>Transvestisme peran ganda <b>tanpa</b> kepuasan; fetishistik <b>dengan</b> kepuasan.</li>
+      <li>Parafilia: "7B" Benda-Baju-Buka-Bintip-Bocah-Bonyok-Banyak.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ======== HIGHLIGHT ======== -->
+<div id="sec-highlight" class="section">
+  <h2 class="section-heading">🔁 Highlight Dosen & Peta Bank Soal</h2>
+  <p class="section-desc">Apa saja yang di-highlight, kenapa, dan seberapa sering muncul.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--lavender-pale)">🖍️</span> Apa yang di-highlight di guide ini?</div>
+    <ul class="styled-list">
+      <li><span class="rep">Pink</span>: poin yang dosen ulang-ulang di kuliah (pesan "tersirat penting").</li>
+      <li><span class="bank">Hijau</span>: konsep yang sudah muncul di bank soal (Blok, Axon'20, Arthron'18, Aorta'19, Avicenna'17).</li>
+      <li><span class="both">Pink + hijau</span>: dua-duanya. Prioritas utama.</li>
+      <li><b>Badge ×N</b>: perkiraan frekuensi disebut di transkrip.</li>
+      <li>Kotak <b>🎤 dr. Budhi menekankan</b>: penjelasan lisan dosen di luar slide.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">📈</span> Poin yang Paling Sering Diulang Dosen</div>
+    <div class="table-wrap"><table>
+      <tr><th>#</th><th>Poin</th><th>Frekuensi</th><th>Muncul di slide?</th><th>Di bank soal?</th></tr>
+      <tr><td><span class="rank">1</span></td><td><b>Periksa fisik/organik dulu, psikiatri paling akhir</b><br><span class="tl">≈07:58 · 08:47 · 12:09 · 16:57</span></td><td><span class="bar" style="width:80px"></span> ×4</td><td>✔ (slide rujukan)</td><td>—</td></tr>
+      <tr><td><span class="rank">2</span></td><td><b>Pasien enggan bicara</b>, datang dengan keluhan fisik / problem perkawinan<br><span class="tl">≈09:31 · 10:20 · 15:37 · 16:19</span></td><td><span class="bar" style="width:80px"></span> ×4</td><td>✔</td><td>—</td></tr>
+      <tr><td><span class="rank">3</span></td><td><b>Transvestisme tanpa kepuasan</b> vs fetishistik dengan kepuasan<br><span class="tl">≈27:34 · 28:16 · 33:23 · 34:17</span></td><td><span class="bar" style="width:80px"></span> ×4</td><td>✔</td><td>✔ Avicenna No.70</td></tr>
+      <tr><td><span class="rank">4</span></td><td><b>Parafilia/gangguan identitas banyak pada pria</b><br><span class="tl">≈31:37 · 33:23 · 35:06 · 38:28</span></td><td><span class="bar" style="width:80px"></span> ×4</td><td>✔</td><td>—</td></tr>
+      <tr><td><span class="rank">5</span></td><td><b>Libatkan pasangan</b>, wanita jangan sendirian<br><span class="tl">≈20:38 · 21:33 · 23:23</span></td><td><span class="bar" style="width:60px"></span> ×3</td><td>✔ ("temui pasangan")</td><td>✔ Axon No.4/45</td></tr>
+      <tr><td><span class="rank">6</span></td><td><b>Relaksasi</b> sebagai terapi inti<br><span class="tl">≈14:22 · 21:33 · 22:32</span></td><td><span class="bar" style="width:60px"></span> ×3</td><td>✔</td><td>—</td></tr>
+      <tr><td><span class="rank">7</span></td><td><b>Jangan salah label psikosis</b> (skizofrenia ≠ transseksual/gay/ekshibisionis)<br><span class="tl">≈26:12 · 35:06</span></td><td><span class="bar" style="width:60px"></span> ×3</td><td>✔ ("bukan gejala gangguan jiwa lain")</td><td>—</td></tr>
+      <tr><td><span class="rank">8</span></td><td><b>Rujuk bila &gt; 3 bulan</b>, jangan buat pasien tergantung obat<br><span class="tl">≈15:37 · 24:17</span></td><td><span class="bar" style="width:40px"></span> ×2</td><td>✔ (2 slide)</td><td>—</td></tr>
+      <tr><td><span class="rank">9</span></td><td><b>Ego-alien</b> pada ekshibisionis, jangan terkejut<br><span class="tl">≈35:55 · 36:44</span></td><td><span class="bar" style="width:40px"></span> ×2</td><td>✔</td><td>✔ Axon No.67</td></tr>
+      <tr><td><span class="rank">10</span></td><td><b>Ejakulasi dini: teknik, obat ada efek samping</b><br><span class="tl">≈12:09 · 13:11</span></td><td><span class="bar" style="width:40px"></span> ×2</td><td>✔</td><td>✔ Arthron No.11, Axon No.62</td></tr>
+    </table></div>
+    <div class="alert alert-peach"><span class="alert-icon">📝</span><div>Sesi tanya jawab di akhir kuliah (membahas isu sosial-politik dan peraturan terkait) adalah <b>pandangan/opini</b>, bukan materi diagnostik, jadi tidak dimasukkan sebagai bahan ujian.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🧾</span> Peta Bank Soal (konsep → asal soal)</div>
+    <div class="table-wrap"><table>
+      <tr><th>Konsep</th><th>Asal soal</th><th>Jawaban</th></tr>
+      <tr><td>Seksualitas normal</td><td><span class="cohort-lt cl-axon">Axon'20 No.39</span><span class="cohort-lt cl-arthron">Arthron'18 No.1</span><span class="cohort-lt cl-aorta">Aorta'19 No.23/58</span></td><td>Tidak bertentangan dengan sosial budaya</td></tr>
+      <tr><td>Gangguan seksual pria</td><td><span class="cohort-lt cl-axon">Axon'20 No.30</span><span class="cohort-lt cl-arthron">Arthron'18 No.30</span></td><td>Ejakulasi lambat / tidak ejakulasi</td></tr>
+      <tr><td>Gangguan seksual wanita</td><td><span class="cohort-lt cl-axon">Axon'20 No.31</span></td><td>Nyeri saat hubungan (dispareunia)</td></tr>
+      <tr><td>Penanganan gairah rendah wanita</td><td><span class="cohort-lt cl-axon">Axon'20 No.4 & 45</span></td><td>Eksplorasi/tanya pengalaman traumatik</td></tr>
+      <tr><td>Ejakulasi dini</td><td><span class="cohort-lt cl-axon">Axon'20 No.62</span><span class="cohort-lt cl-arthron">Arthron'18 No.11</span></td><td>Teknik memencet / berhenti-mulai</td></tr>
+      <tr><td>Penyebab disfungsi ereksi (ereksi pagi +)</td><td><span class="cohort-lt cl-arthron">Arthron'18 No.56</span></td><td>Psikogenik</td></tr>
+      <tr><td>Vaginismus / aversi / arousal</td><td><span class="cohort-lt cl-blok">Blok No.4, 3, 6</span></td><td>Vaginismus / aversi / arousal wanita</td></tr>
+      <tr><td>Ekshibisionisme</td><td><span class="cohort-lt cl-axon">Axon'20 No.67</span></td><td>Ekshibisionisme</td></tr>
+      <tr><td>Fetishisme · Transvestisme · Voyeurisme · Sadisme · Pedofilia</td><td><span class="cohort-lt cl-avicenna">Avicenna'17 No.34, 35, 63, 65, 69, 70, 76</span></td><td>lihat tab Quiz</td></tr>
+    </table></div>
+    <p class="tl">Pola besar: soal <b>paling banyak</b> menanyakan <b>parafilia (nama diagnosis dari vignette)</b> dan <b>penatalaksanaan disfungsi seksual</b>. Gangguan identitas gender belum ada di bank soal, jadi aku buat latihan tambahan (ditandai <span class="cohort-lt cl-baru">LATIHAN BARU</span>) di tab Quiz.</p>
+  </div>
+</div>
+
+<!-- ======== QUIZ ======== -->
+<div id="sec-quiz" class="section">
+  <h2 class="section-heading">🧠 Quiz Acak — Semua Bank Soal</h2>
+  <p class="section-desc" id="quizDesc"></p>
+  <div class="quiz-bar">
+    <button class="chip on" id="chipExtra" onclick="toggleExtra()">✨ Sertakan latihan baru</button>
+    <button class="chip" onclick="reshuffle()">🔀 Acak ulang</button>
+    <span class="tl" id="quizCount"></span>
+  </div>
+  <div class="quiz-progress" id="quizProg"></div>
+  <div id="quizBox"></div>
+  <div class="score-card" id="scoreCard">
+    <div style="font-size:40px;margin-bottom:8px;">🌸</div>
+    <div class="score-big" id="scoreNum">0</div>
+    <div style="font-size:18px;opacity:0.8;margin-top:4px;" id="scoreTotal">/ 0</div>
+    <p class="score-msg" id="scoreMsg"></p>
+    <button class="btn-restart" onclick="reshuffle()">🔀 Acak & Ulangi</button>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<!-- ====== FLOAT BUTTON ====== -->
+<button class="float-btn" onclick="openModal()">
+  <div class="float-pulse"></div>
+  🔁 Diulang Dosen
+</button>
+
+<div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">🔁 Rangkuman Poin yang Diulang Dosen</div>
+    <p class="modal-sub">Poin yang dr. Budhi ucapkan berkali-kali di kuliah + keterkaitannya dengan bank soal</p>
+
+    <div class="modal-item"><div class="modal-item-num">01 · ×4</div>
+      <div class="modal-item-q">Urutan rujukan masalah seksual?</div>
+      <div class="modal-item-a"><strong>Periksa fisik dulu</strong> → urologi/andrologi, ginekologi, dermato-venerologi → <strong>psikiatri paling akhir</strong>. Kalau psikiater duluan, intervensi bisa berlebihan dan organik terlewat.</div></div>
+    <div class="modal-item"><div class="modal-item-num">02 · ×4</div>
+      <div class="modal-item-q">Kenapa pasien sulit terdiagnosis?</div>
+      <div class="modal-item-a">Pasien <strong>enggan bicara</strong>; datang dengan <strong>keluhan fisik / murung / problem perkawinan</strong>.</div></div>
+    <div class="modal-item"><div class="modal-item-num">03 · ×4 · TRICKY ⚠️</div>
+      <div class="modal-item-q">Transvestisme peran ganda vs fetishistik?</div>
+      <div class="modal-item-a">Peran ganda (F64.1): <strong>tanpa kepuasan seksual</strong>. Fetishistik (F65.1): <strong>dengan kepuasan seksual</strong>, lepas pakaian setelah orgasme.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-avicenna">Avicenna'17 No.70</span></div></div>
+    <div class="modal-item"><div class="modal-item-num">04 · ×4</div>
+      <div class="modal-item-q">Parafilia/identitas masa kanak lebih sering pada siapa?</div>
+      <div class="modal-item-a">Hampir semua <strong>pria</strong> (fetishisme, ekshibisionisme, pedofilia); F64.2 lebih banyak <strong>anak laki-laki</strong>.</div></div>
+    <div class="modal-item"><div class="modal-item-num">05 · ×3</div>
+      <div class="modal-item-q">Penanganan gairah rendah wanita?</div>
+      <div class="modal-item-a"><strong>Tanyakan pengalaman traumatik</strong>, <strong>temui pasangan bersama</strong>, rencanakan kegiatan seksual, relaksasi.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-axon">Axon'20 No.4</span><span class="cohort-tag cohort-axon">Axon'20 No.45</span></div></div>
+    <div class="modal-item"><div class="modal-item-num">06 · ×3</div>
+      <div class="modal-item-q">Jangan salah label psikosis</div>
+      <div class="modal-item-a">Skizofrenia yang tiba-tiba tertarik sesama jenis, berpakaian lawan jenis, atau telanjang di tempat ramai = <strong>gejala penyakit</strong>, bukan transseksual/ekshibisionis.</div></div>
+    <div class="modal-item"><div class="modal-item-num">07 · ×2</div>
+      <div class="modal-item-q">Kapan merujuk?</div>
+      <div class="modal-item-a">Masalah seksual <strong>&gt; 3 bulan</strong> walau sudah dilakukan upaya. Jangan buat pasien tergantung obat.</div></div>
+    <div class="modal-item"><div class="modal-item-num">08 · ×2</div>
+      <div class="modal-item-q">Ejakulasi dini</div>
+      <div class="modal-item-a"><strong>Squeeze / stop-start</strong>; obat klomipramin/SSRI.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-arthron">Arthron'18 No.11</span><span class="cohort-tag cohort-axon">Axon'20 No.62</span></div></div>
+    <div class="modal-item"><div class="modal-item-num">09 · ×2</div>
+      <div class="modal-item-q">Ekshibisionisme</div>
+      <div class="modal-item-a"><strong>Ego-alien</strong>, hampir semua pria; <strong>jangan bereaksi terkejut</strong> karena kenikmatan naik bila orang kaget.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-axon">Axon'20 No.67</span></div></div>
+    <div class="modal-item"><div class="modal-item-num">10 · ×1</div>
+      <div class="modal-item-q">Transseksual</div>
+      <div class="modal-item-a">Menetap <strong>≥ 2 tahun</strong>, <strong>bukan</strong> gejala gangguan jiwa lain; F64.2 <strong>tidak</strong> diterapkan setelah pubertas.</div></div>
+
+    <button class="modal-nav-btn" onclick="closeModal(); show('quiz')">🧠 Langsung ke Quiz →</button>
+  </div>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  const nb=document.querySelector('.nav-btn[data-tab="'+id+'"]'); if(nb) nb.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggle(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open');}
+function openModal(){document.getElementById('soalDosenModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('soalDosenModal').classList.remove('open');document.body.style.overflow='';}
+function closeModalOuter(e){if(e.target===document.getElementById('soalDosenModal'))closeModal();}
+
+/* ===== QUIZ (acak soal + acak opsi) ===== */
+const SRC={blok:'Blok',axon:"Axon'20",arthron:"Arthron'18",aorta:"Aorta'19",avicenna:"Avicenna'17",baru:'LATIHAN BARU'};
+const QS=[
+// ===== BANK SOAL =====
+{t:'SEKSUALITAS NORMAL',s:[['axon','No.39'],['arthron','No.1'],['aorta','No.23']],q:'Manakah yang menunjukkan seksualitas normal?',o:['Tidak bertentangan dengan sosial budaya','Tidak dipengaruhi oleh gairah seksual','Bebas dari gangguan seksual','Pasangan mencapai orgasme bersama','Sesuai dengan siklus dan aspek-aspek seksualitas'],a:0,e:'<b>Tidak bertentangan dengan sosial budaya.</b> Seksualitas normal dinilai dari kesesuaian dengan norma sosial-budaya (dan agama). Bukan syarat: bebas dari gangguan, orgasme bersama, atau tidak dipengaruhi gairah. Ketiga bank (Axon, Arthron, Aorta) menjawab ini.'},
+{t:'GANGGUAN SEKSUAL PRIA',s:[['axon','No.30'],['arthron','No.30']],q:'Manakah yang termasuk gangguan seksual pada laki-laki?',o:['Lebih menyukai pasangan sejenis','Ejakulasi lambat atau tidak terjadi ejakulasi','Nyeri saat hubungan seksual','Depresi atau ansietas','Tidak ada gairah seksual terhadap lawan jenis'],a:1,e:'<b>Ejakulasi lambat / tidak ejakulasi</b> = disfungsi orgasme/ejakulasi tertunda. Nyeri saat sanggama (dispareunia) pada pria sangat jarang, jadi di soal ini menjadi pengecoh; depresi/ansietas adalah faktor yang memengaruhi, bukan disfungsinya.'},
+{t:'GANGGUAN SEKSUAL WANITA',s:[['axon','No.31']],q:'Manakah yang termasuk gangguan seksual pada perempuan?',o:['Lebih menyukai pasangan sejenis','Ejakulasi lambat atau tidak terjadi ejakulasi','Nyeri saat hubungan seksual','Depresi atau ansietas','Tidak ada gairah seksual terhadap lawan jenis'],a:2,e:'<b>Nyeri saat hubungan seksual = dispareunia</b>. Ejakulasi hanya pada pria; menyukai sesama jenis bukan disfungsi seksual; depresi/ansietas hanya faktor pengaruh.'},
+{t:'PENATALAKSANAAN · GAIRAH RENDAH WANITA',s:[['axon','No.4']],q:'Apakah yang perlu dilakukan pada penatalaksanaan wanita dengan gairah seksual rendah?',o:['Hubungan seksual suami istri tidak perlu direncanakan','Sampaikan pada pasien bahwa orgasme tidak penting bagi wanita','Saat konsultasi sebaiknya pasien tidak disertai pasangannya agar bebas menyampaikan keluhan','Eksplorasi kemungkinan masalah traumatis terkait masalah seksual','Meyakinkan pasien bahwa yang penting pasangannya bisa orgasme'],a:3,e:'<b>Eksplorasi kemungkinan trauma seksual.</b> Pada gairah rendah wanita: bicarakan pendapat pasien, tanyakan pengalaman traumatik, <u>temui pasangan bersama</u>, dan <u>rencanakan</u> kegiatan seksual. Jadi opsi "tidak perlu direncanakan" dan "tanpa pasangan" keliru.'},
+{t:'PENATALAKSANAAN · GAIRAH RENDAH WANITA',s:[['axon','No.45']],q:'Tatalaksana pada wanita dengan gairah seksual rendah?',o:['Pasutri tidak perlu merencanakan hubungannya','Suami tidak perlu ikut agar istri lebih leluasa menyampaikan keluhan','Menanyakan pengalaman traumatik pada seks','Menyarankan pasien tidak membicarakan hubungan seksualnya','Memberi obat penambah gairah sampai hubungan membaik'],a:2,e:'<b>Menanyakan pengalaman seksual traumatik.</b> Suami justru perlu dilibatkan, dan pasangan merencanakan kegiatan seksualnya. (Opsi D dan E ditambahkan sebagai pengecoh; bank hanya memuat 3 opsi.)'},
+{t:'EJAKULASI DINI',s:[['arthron','No.11'],['axon','No.62']],q:'Apakah yang dapat dilakukan pada penatalaksanaan ejakulasi dini?',o:['Jangan diberikan obat karena akan menimbulkan ketergantungan','Yakinkan pasien bahwa yang terpenting ia mencapai orgasme','Yakinkan pasien bahwa ejakulasi dini bukan masalah dalam hubungan seksual','Teknik memencet (squeeze) atau teknik berhenti-mulai (stop-start)','Berikan obat yang dapat mempertahankan ereksi'],a:3,e:'<b>Teknik memencet / berhenti-mulai.</b> Pengendalian ejakulasi mungkin dan meningkatkan kepuasan kedua pasangan. Obat yang menunda ejakulasi: klomipramin atau SSRI.'},
+{t:'PENYEBAB DISFUNGSI EREKSI',s:[['arthron','No.56']],v:'Laki-laki 48 tahun datang mengeluh tidak mampu berhubungan seksual dengan istrinya sejak istrinya mengaku berselingkuh dengan rekan kerja yang lebih muda selama 5 tahun. Ia masih mengalami ereksi spontan setiap pagi.',q:'Penyebab disfungsi seksual yang paling mungkin?',o:['Gangguan identitas seksual','Satu bentuk parafilia','Penyebab psikogenik','Proses psikodinamik','Gangguan organik'],a:2,e:'<b>Psikogenik.</b> Ereksi spontan pagi hari masih ada (fungsi fisik utuh) dan keluhan muncul tepat setelah konflik emosional.'},
+{t:'VAGINISMUS',s:[['blok','No.4']],q:'Wanita ketika berhubungan seksual vaginanya tertutup rapat dan ketat sehingga tidak bisa dimasuki walaupun suaminya sudah ereksi. Kelainan apakah itu?',o:['Dispareunia','Anorgasmia','Vaginismus'],a:2,e:'<b>Vaginismus</b> = kontraksi involunter otot sekitar vagina → liang menutup, penetrasi sulit/tidak mungkin walau ada rangsangan dan ereksi. Terapi: relaksasi, melibatkan suami. (Opsi bank hanya a dan c yang terbaca; opsi lain dilengkapi.)'},
+{t:'AVERSI SEKSUAL',s:[['blok','No.3']],v:'Istri 29 tahun datang bersama suami ke puskesmas karena tidak mau berhubungan seksual. Setelah 2 bulan menikah belum pernah berhubungan sama sekali. Istri merasa takut dan merasa sakit. Ada riwayat KDRT sebelumnya.',q:'Apakah diagnosisnya?',o:['Gangguan lubrikasi','Dispareunia','Aversi seksual'],a:2,e:'<b>Aversi seksual (F52.1)</b>: pikiran tentang interaksi seksual menimbulkan <u>takut/cemas</u> sehingga dihindari. Belum pernah berhubungan sama sekali, jadi "nyeri saat sanggama" (dispareunia) belum bisa dinilai. <i>Catatan: bank soal memuat catatan tangan "bisa arousal disorder", jadi kunci agak ambigu.</i>'},
+{t:'GANGGUAN GAIRAH WANITA',s:[['blok','No.6']],v:'Suami istri sudah menikah selama 2 tahun. Sejak 2 bulan pernikahan, istri selalu menolak melakukan hubungan seksual karena tidak bergairah.',q:'Apa diagnosisnya?',o:['Sexual aversion disorder','Dyspareunia','Female orgasmic disorder','Female sexual arousal disorder'],a:3,e:'<b>Female sexual arousal disorder</b> (gairah seksual kurang/tidak bergairah). Aversi: yang menonjol rasa takut menghindar. Dispareunia: nyeri. Orgasmic disorder: gagal orgasme.'},
+{t:'EKSHIBISIONISME',s:[['axon','No.67']],q:'Seorang laki-laki memiliki hobi menampakkan alat kelaminnya ke orang umum. Gangguan apa?',o:['Ekshibisionisme','Fetisisme','Voyeurisme','Froteurisme','Masokisme seksual'],a:0,e:'<b>Ekshibisionisme (F65.2)</b>: berulang memamerkan alat kelamin ke lawan jenis, hampir seluruhnya pria, ego-alien, dan kenikmatan naik bila yang melihat terkejut/takut.'},
+{t:'SADISME',s:[['avicenna','No.34']],v:'Seorang istri datang ke dokter dengan badan banyak luka. Suami selalu melakukan kekerasan sebelum berhubungan dengan istrinya.',q:'Perilaku tersebut berarti?',o:['Fetihisme','Frotteurisme','Sadisme'],a:2,e:'<b>Sadisme</b> (bagian dari F65.5 sadomasokisme): kepuasan seksual dari <u>menyakiti</u> pasangan. Masokisme = puas bila <u>disakiti</u>.'},
+{t:'FETISHISME',s:[['avicenna','No.35']],v:'Seorang pria 30 tahun dibawa ke RSJ setelah kepergok warga mencuri pakaian dalam perempuan. Dari keluarga: di laci lemarinya ditemukan banyak celana dalam perempuan, pelaku hanya mengoleksi untuk hasrat seksualnya dan tidak memakainya.',q:'Diagnosis yang tepat?',o:['Voyeurism','Fetishism','Transvestisme','Frotteurism','Pedofil'],a:1,e:'<b>Fetishisme (F65.0)</b>: benda mati (pakaian dalam) sebagai stimulus kepuasan, dikoleksi tanpa dipakai. Bila <u>dipakai</u> untuk mencapai kepuasan → transvestisme fetishistik.'},
+{t:'FETISHISME',s:[['avicenna','No.63']],v:'Seorang laki-laki 26 tahun dibawa keluarganya ke RSJ. Pasien sering mengambil pakaian dalam anak kos putri dan menyimpannya; ia mengatakan dengan demikian mendapatkan kepuasan seksual, namun tidak sampai mengenakan pakaian dalam curiannya.',q:'Diagnosisnya?',o:['Ekshibisionisme','Voyeurism','Masochism','Fetishism Transvestism','Fetishism'],a:4,e:'<b>Fetishism</b>: objek benda mati, tidak dipakai. "Fetishism transvestism" (transvestisme fetishistik) salah karena pasien tidak mengenakannya.'},
+{t:'VOYEURISME',s:[['avicenna','No.65']],v:'Seorang laki-laki 30 tahun mengeluh tidak puas saat berhubungan suami istri. Ia merasa puas ketika melihat pasangan lain berhubungan suami istri.',q:'Diagnosisnya?',o:['Transvestisme','Masokisme','Fetishisme','Sadisme','Voyeurisme'],a:4,e:'<b>Voyeurisme (F65.3)</b>: berulang/menetap melihat orang bersanggama, bermesraan, atau menanggalkan pakaian, menjurus pada pemuasan seksual.'},
+{t:'VOYEURISME',s:[['avicenna','No.69']],q:'Seorang laki-laki datang ke dokter mengeluh tidak merasa puas saat berhubungan seksual dengan istrinya, namun kepuasannya didapat dari mengintip hubungan seksual suami istri yang lain. Diagnosisnya?',o:['Transvestisme','Fetisisme','Ekshibisionisme','Voyeurisme','Masochism'],a:3,e:'<b>Voyeurisme.</b> Kata kunci: <u>mengintip</u> orang lain berhubungan. Bedakan dengan sekadar menonton pornografi (kecanduan pornografi).'},
+{t:'TRANSVESTISME',s:[['avicenna','No.70']],v:'Seorang suami sering menggunakan pakaian dalam istrinya untuk mendapat kegairahan seksual, sehingga istrinya menjadi kesal.',q:'Apa diagnosisnya?',o:['Fetihisme','Transvestisme','Voyeurisme','Frotteurisme'],a:1,e:'<b>Transvestisme</b> (di sini jenis <u>fetishistik</u>, F65.1): memakai pakaian lawan jenis demi kepuasan seksual. Perbedaan kuncinya dengan peran ganda (F64.1) adalah ada tidaknya kepuasan seksual. Soal ini menjadi jebakan karena kata "pakaian dalam" mirip fetishisme, tetapi <u>dipakai</u>.'},
+{t:'PEDOFILIA',s:[['avicenna','No.76']],v:'Seorang pria suka mengunjungi panti asuhan untuk melihat anak-anak asuhnya dan tampak dekat dengan mereka. Akhir-akhir ini kepala panti melihat pria tersebut melecehkan anak-anak di sana.',q:'Apa diagnosisnya?',o:['Pedofilia','Voyeurisme','Fetihisme','Exhibitionisme','Transeksualism'],a:0,e:'<b>Pedofilia (F65.4)</b>: preferensi seksual terhadap anak, biasanya prapubertas/awal pubertas; pelaku terbanyak pria.'},
+// ===== LATIHAN BARU (dibuat dari slide + transkrip) =====
+{t:'SIKLUS SEKSUAL',s:[['baru','']],q:'Fase siklus seksualitas yang paling singkat adalah?',o:['Dorongan','Eksitasi','Orgasme (3–15 detik)','Peredaan','Semua fase sama lamanya'],a:2,e:'<b>Orgasme: 3–15 detik.</b> Eksitasi menit–jam; peredaan 10–15 menit (pada sebagian individu bisa ½–1 hari); dorongan tidak pasti (jam sampai hari).'},
+{t:'ALUR DOKTER UMUM',s:[['baru','']],v:'Pria 40 tahun mengeluh mudah lelah, sulit tidur, dan sering bertengkar dengan istri. Setelah digali ternyata ereksinya melemah.',q:'Langkah awal yang paling tepat sebagai dokter umum?',o:['Langsung memberi antidepresan','Langsung merujuk ke psikiater','Pemeriksaan fisik dan menyingkirkan penyebab organik, lalu menelusuri stres/depresi/problem perkawinan','Meminta istri saja yang datang berkonsultasi','Meyakinkan bahwa ini normal dan akan hilang sendiri'],a:2,e:'<b>Fisik dulu, psikiatri terakhir.</b> Bila organik sudah disingkirkan, cari stres lalu depresi. Obat (antidepresan) sendiri dapat melemahkan ereksi.'},
+{t:'TRANSSEKSUALISME',s:[['baru','']],v:'Pria 24 tahun sejak remaja merasa dirinya perempuan, tidak nyaman dengan anatomi tubuhnya, hidup dan berpakaian sebagai perempuan, dan ingin menjalani terapi hormonal serta operasi. Keadaan ini menetap selama 4 tahun. Tidak ada tanda gangguan jiwa lain.',q:'Diagnosisnya?',o:['Transvestisme peran ganda','Transvestisme fetishistik','Gangguan identitas jenis kelamin masa kanak','Transseksualisme','Skizofrenia'],a:3,e:'<b>Transseksualisme (F64.0)</b>: hasrat hidup sebagai lawan jenis + ketidaksesuaian anatomi + ingin hormonal/operasi, menetap <b>≥ 2 tahun</b>, bukan gejala gangguan jiwa lain.'},
+{t:'JANGAN SALAH LABEL',s:[['baru','']],v:'Pria 28 tahun, skizofrenia paranoid sejak 6 bulan lalu. Sebelum sakit identitas gendernya jelas. Kini ia mengaku tertarik pada sesama jenis dan ingin berpakaian seperti perempuan, disertai halusinasi dan waham.',q:'Sikap diagnostik yang paling tepat?',o:['Diagnosis transseksualisme','Diagnosis transvestisme peran ganda','Menilai perubahan itu sebagai bagian gejala skizofrenia, bukan gangguan identitas gender','Diagnosis ekshibisionisme','Diagnosis fetishisme'],a:2,e:'Transseksualisme mensyaratkan <b>bukan gejala gangguan jiwa lain</b> dan menetap ≥ 2 tahun. Perubahan yang muncul setelah psikosis dianggap gejala penyakit, ini kesalahan yang sering terjadi di klinik psikiatri.'},
+{t:'TRANSVESTISME PERAN GANDA',s:[['baru','']],v:'Pria 35 tahun kadang memakai pakaian perempuan untuk menikmati pengalaman sebagai perempuan. Ia tidak ingin mengubah jenis kelamin dan tidak mendapat kepuasan seksual dari tindakan itu.',q:'Diagnosisnya?',o:['Transseksualisme','Transvestisme fetishistik','Fetishisme','Transvestisme peran ganda','Gangguan identitas jenis kelamin masa kanak'],a:3,e:'<b>Transvestisme peran ganda (F64.1)</b>: pakaian lawan jenis sebagai bagian dari eksistensi, <u>tanpa</u> hasrat ganti kelamin permanen dan <u>tanpa</u> kepuasan seksual.'},
+{t:'TRANSVESTISME FETISHISTIK',s:[['baru','']],q:'Seorang pria memakai pakaian perempuan untuk mencapai kepuasan seksual, lalu ingin segera melepasnya setelah orgasme. Diagnosis dan catatan pentingnya?',o:['F64.1 transvestisme peran ganda; bukan gangguan','F65.1 transvestisme fetishistik; sering fase awal transseksualisme','F65.0 fetishisme; khusus pada wanita','F64.0 transseksualisme; menetap 2 tahun','F65.2 ekshibisionisme'],a:1,e:'<b>F65.1 transvestisme fetishistik</b>: ada kepuasan seksual dan keinginan melepas pakaian setelah orgasme; sering menjadi fase awal transseksualisme.'},
+{t:'GANGGUAN IDENTITAS MASA KANAK',s:[['baru','']],v:'Anak laki-laki 5 tahun sejak prasekolah selalu ingin menjadi perempuan, menolak mainan dan pakaian laki-laki, tampak sangat tertekan bila dipaksa, dan menyangkal ada yang salah.',q:'Pernyataan yang benar tentang kasus ini?',o:['Diagnosis F64.2; tidak berlaku lagi setelah pubertas','Diagnosis F64.0; menunggu 2 tahun','Diagnosis F64.1; pasti ada kepuasan seksual','Bukan gangguan, cukup dimarahi','Diagnosis F65.0; khusus wanita'],a:0,e:'<b>F64.2</b>: pervasif, menetap, muncul pra-sekolah, menolak atribut jenis kelamin sendiri, menyangkal gangguan, tanpa kepuasan seksual, <u>tidak dapat diterapkan bila sudah pubertas</u>, lebih banyak pada laki-laki.'},
+{t:'SIKAP PADA ANAK',s:[['baru','']],q:'Anak perempuan 4 tahun mengambil lipstik ibunya untuk bermain. Sikap yang paling tepat?',o:['Memarahi agar tidak diulang','Membantu memoleskan dengan rapi sambil memuji, karena itu hanya meniru','Langsung merujuk karena pasti gangguan identitas','Mengurung anak agar tidak meniru','Menganggap sebagai tanda transseksualisme'],a:1,e:'Anak meniru orangtua adalah hal wajar (fase Oedipal, imitasi). <b>Jangan dimarahi.</b> Gangguan identitas ditandai <u>penolakan</u> atribut jenis kelaminnya sendiri yang pervasif dan menetap.'},
+{t:'RESPONS TERHADAP EKSHIBISIONIS',s:[['baru','']],q:'Menghadapi seorang ekshibisionis, respons yang tepat adalah?',o:['Berteriak keras agar ia malu','Bereaksi terkejut dan menjerit','Tidak menunjukkan keterkejutan karena reaksi kaget meningkatkan kenikmatannya','Menertawakan secara terbuka','Mendekat lalu menyentuhnya'],a:2,e:'Kenikmatan ekshibisionis <b>meningkat</b> bila yang melihat terkejut, takut, atau terkesan. Sebaiknya tidak bereaksi berlebihan. Pastikan juga bukan psikosis (mis. skizofrenia).'},
+{t:'VOYEURISME vs PORNOGRAFI',s:[['baru','']],q:'Seorang pria sering menonton film porno dewasa dan merasa terpuaskan. Ia tidak pernah mengintip orang. Kondisi ini paling sesuai dengan?',o:['Voyeurisme','Kecanduan pornografi (bukan voyeurisme)','Ekshibisionisme','Fetishisme','Pedofilia'],a:1,e:'Voyeurisme = <u>mengintip</u> orang yang tidak tahu diamati. Menonton pornografi dikategorikan <b>kecanduan pornografi</b>.'},
+{t:'SADOMASOKISME vs KDRT',s:[['baru','']],q:'Pasangan suami istri merasa puas dengan aktivitas yang melibatkan rasa sakit, tetapi tetangga melapor ke polisi sebagai KDRT dan anak-anak ketakutan mendengar teriakan. Saran yang paling sesuai?',o:['Memastikan persetujuan kedua pihak tanpa paksaan dan menjaga anak tidak terpapar (dilakukan di tempat lain)','Mengabaikan karena pasti normal','Memberikan antipsikotik pada keduanya','Memisahkan pasangan secara paksa tanpa penilaian','Memarahi anak karena mendengar'],a:0,e:'Sadomasokisme sulit dibedakan dari kekerasan; kuncinya <b>persetujuan dan ada tidaknya paksaan/cedera berbahaya</b>. Dosen menyarankan tidak dilakukan di rumah. Anak harus dilindungi dari paparan.'},
+{t:'DISPAREUNIA NON-ORGANIK',s:[['baru','']],q:'Wanita 28 tahun nyeri saat sanggama; pemeriksaan ginekologi tidak menemukan infeksi/tumor/kista. Penyebabnya diduga kurang lubrikasi dan tegang otot. Penanganan yang tepat?',o:['Relaksasi, pemanasan lebih lama, penetrasi hati-hati; rujuk obgyn bila gagal','Menyuruh berhubungan lebih sering dan cepat','Memberi antipsikotik','Operasi','Membiarkan karena pasti hilang sendiri'],a:0,e:'Relaksasi + <b>pemanasan (foreplay) lebih lama</b> + penetrasi hati-hati. Bila tidak berhasil → <b>rujuk obgyn</b>.'},
+{t:'ANORGASMIA',s:[['baru','']],q:'Seorang istri cemas karena tidak orgasme saat sanggama, tetapi dapat orgasme lewat stimulasi klitoris. Edukasi yang paling tepat?',o:['Itu pasti penyakit berat','Banyak wanita tidak orgasme saat sanggama namun dapat lewat stimulasi klitoris; dorong eksplorasi, komunikasi terbuka, dan turunkan harapan tidak realistis','Segera beri antidepresan','Sarankan berpura-pura orgasme','Sarankan menghindari hubungan seksual'],a:1,e:'Edukasi + eksplorasi mandiri + <b>komunikasi pasangan</b> + realistis. Dosen juga mengingatkan banyak wanita berpura-pura orgasme demi pasangan.'},
+{t:'OBAT & EJAKULASI',s:[['baru','']],q:'Obat yang dapat dipakai untuk menunda ejakulasi pada ejakulasi dini adalah?',o:['Haloperidol','Klomipramin atau SSRI','Diazepam','Litium','Risperidon'],a:1,e:'<b>Klomipramin atau SSRI.</b> Efek samping antidepresan pada ereksi/orgasme dimanfaatkan untuk menunda ejakulasi.'},
+{t:'KAPAN MERUJUK',s:[['baru','']],q:'Dokter umum telah memberi konseling dan terapi perilaku untuk masalah seksual pasien selama 3 bulan tanpa perbaikan. Tindakan selanjutnya?',o:['Menambah berbagai obat sampai berhasil','Merujuk ke spesialis sesuai gangguan','Menghentikan semua terapi','Menunggu 1 tahun lagi','Menyuruh pasien berganti pasangan'],a:1,e:'Masalah seksual <b>> 3 bulan</b> walau upaya sudah dilakukan → <b>konsultasi spesialistik</b>. Jangan membuat pasien tergantung obat.'}
+];
+
+let includeExtra=true, cur=[], answered={}, score=0;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function build(){
+  const pool=QS.filter(q=>includeExtra||q.s[0][0]!=='baru');
+  cur=shuffle(pool).map(q=>{
+    const idx=shuffle(q.o.map((_,i)=>i));
+    return {q:q,opts:idx.map(i=>q.o[i]),correct:idx.indexOf(q.a)};
+  });
+  answered={};score=0;render();
+}
+function tags(q){return q.s.map(x=>'<span class="cohort-lt cl-'+x[0]+'">'+SRC[x[0]]+(x[1]?' '+x[1]:'')+'</span>').join('');}
+function render(){
+  const bank=QS.filter(q=>q.s[0][0]!=='baru').length;
+  document.getElementById('quizDesc').textContent=bank+' soal dari bank (Blok, Axon\'20, Arthron\'18, Aorta\'19, Avicenna\'17)'+(includeExtra?' + '+(QS.length-bank)+' latihan baru':'')+'. Urutan soal & opsi diacak tiap kali dibuka.';
+  document.getElementById('quizCount').textContent=cur.length+' soal';
+  const chip=document.getElementById('chipExtra');chip.classList.toggle('on',includeExtra);
+  const p=document.getElementById('quizProg');p.innerHTML='';
+  cur.forEach((_,i)=>{const d=document.createElement('div');d.className='pdot';d.id='dot'+i;p.appendChild(d);});
+  const L='ABCDE';
+  document.getElementById('quizBox').innerHTML=cur.map((c,n)=>{
+    const q=c.q;
+    return '<div class="quiz-q" id="q'+n+'"><div class="q-num">SOAL '+String(n+1).padStart(2,'0')+' / '+q.t+'</div>'+
+    (q.v?'<div class="q-vignette">'+q.v+'</div>':'')+
+    '<p class="q-question">'+q.q+'</p><div class="q-opts">'+
+    c.opts.map((o,i)=>'<button class="q-opt" data-i="'+i+'" onclick="ans('+n+','+i+')"><span class="ol">'+L[i]+'</span><span>'+o+'</span></button>').join('')+
+    '</div><div class="q-exp" id="exp'+n+'">✅ <strong>Jawaban: '+L[c.correct]+'</strong><br><br>'+q.e+'<div class="q-src">Asal: '+tags(q)+'</div></div></div>';
+  }).join('');
+  document.getElementById('scoreCard').classList.remove('show');
+}
+function ans(n,i){
+  if(answered[n]!==undefined)return;
+  answered[n]=i;
+  const c=cur[n],card=document.getElementById('q'+n);
+  card.querySelectorAll('.q-opt').forEach(b=>{b.disabled=true;});
+  const btns=card.querySelectorAll('.q-opt');
+  if(i===c.correct){btns[i].classList.add('correct');score++;document.getElementById('dot'+n).classList.add('ok');}
+  else{btns[i].classList.add('wrong');btns[c.correct].classList.add('correct');document.getElementById('dot'+n).classList.add('no');}
+  document.getElementById('exp'+n).classList.add('show');
+  if(Object.keys(answered).length===cur.length)setTimeout(showScore,700);
+}
+function showScore(){
+  const sc=document.getElementById('scoreCard');sc.classList.add('show');
+  document.getElementById('scoreNum').textContent=score;
+  document.getElementById('scoreTotal').textContent='/ '+cur.length;
+  const r=score/cur.length;
+  const msgs=['Yuk belajar lagi, kamu pasti bisa! 💪','Lumayan, review lagi yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Kamu keren! 🔥','PERFECT! Dokter masa depan! 🌸✨'];
+  document.getElementById('scoreMsg').textContent=msgs[r<=0.3?0:r<=0.55?1:r<=0.75?2:r<1?3:4];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function reshuffle(){build();window.scrollTo({top:0,behavior:'smooth'});}
+function toggleExtra(){includeExtra=!includeExtra;build();}
+build();
+</script>
+</body>
+</html>

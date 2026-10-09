@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 Psikodinamika & Psikoterapi Suportif — dr. RH Budhi Muljanto, Sp.KJ</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #6FA3D8;
+  --blue-light: #9DC3E8;
+  --blue-pale: #EAF3FC;
+  --blue-deep: #2F5C8C;
+  --blue-muted: #4F7FB0;
+  --rose: #E58FB0;
+  --rose-light: #F0AFC8;
+  --rose-pale: #FDEEF4;
+  --rose-deep: #B85578;
+  --mint: #7BBFA8;
+  --mint-pale: #E4F5F0;
+  --mint-deep: #3D8B73;
+  --peach: #E8A87C;
+  --peach-pale: #FDF0E6;
+  --peach-deep: #C07040;
+  --sky: #8FC1E3;
+  --sky-pale: #EAF6FD;
+  --sky-deep: #3A7A9A;
+  --cream: #FAFAFF;
+  --white: #ffffff;
+  --text: #253247;
+  --text-muted: #647087;
+  --border: #DCE7F5;
+  --shadow: rgba(111,163,216,0.18);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); font-size:15px; line-height:1.75; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1F3A5C 0%, #3F6B96 38%, #8FA8CE 68%, #E8A9C4 100%);
+  padding: 64px 52px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(255,255,255,0.08);pointer-events:none;
+}
+.hero::after {
+  content:'';position:absolute;bottom:-100px;left:5%;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(229,143,176,0.18);pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.92);
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,52px);font-weight:900;
+  color:#fff;line-height:1.15;margin-bottom:14px;
+}
+.hero h1 em { font-style:italic; color:#FDE3EF; }
+.hero-sub { color:rgba(255,255,255,0.85);font-size:14.5px;font-weight:300;max-width:600px;line-height:1.7; }
+.hero-pills { display:flex;flex-wrap:wrap;gap:10px;margin-top:28px; }
+.pill {
+  background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.26);
+  color:#fff;padding:6px 16px;border-radius:30px;font-size:12px;font-weight:500;
+}
+
+/* NAV */
+.sticky-nav {
+  position:sticky;top:0;z-index:200;
+  background:linear-gradient(90deg,#1F3A5C,#3F6B96);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  box-shadow:0 3px 20px rgba(31,58,92,0.4);
+}
+.sticky-nav::-webkit-scrollbar {display:none;}
+.nav-btn {
+  background:none;border:none;
+  color:rgba(220,235,255,0.7);
+  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.4px;padding:13px 20px;white-space:nowrap;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.2s;
+}
+.nav-btn:hover,.nav-btn.active {
+  color:#fff;border-bottom-color:#E58FB0;
+}
+
+/* LAYOUT */
+.container { max-width:960px;margin:0 auto;padding:44px 24px; }
+
+/* SECTIONS */
+.section {display:none;animation:fadeUp 0.3s ease;}
+.section.active {display:block;}
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.section-heading {
+  font-family:'Playfair Display',serif;font-size:29px;font-weight:700;
+  color:var(--blue-deep);margin-bottom:6px;
+}
+.section-desc {
+  color:var(--text-muted);font-size:13.5px;
+  padding-bottom:20px;border-bottom:2px solid var(--border);margin-bottom:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--white);border-radius:18px;padding:24px 28px;
+  margin-bottom:20px;border:1px solid var(--border);
+  box-shadow:0 2px 14px var(--shadow);
+  transition:box-shadow 0.2s,transform 0.2s;
+}
+.card:hover {box-shadow:0 8px 28px rgba(111,163,216,0.24);transform:translateY(-2px);}
+.card-title {
+  font-family:'Lora',serif;font-size:17px;font-weight:600;
+  color:var(--blue-deep);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.card-icon {
+  width:32px;height:32px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+
+/* IMAGE SLIDE */
+.slide-img {
+  width:100%;border-radius:12px;margin:14px 0 8px;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(111,163,216,0.18);
+}
+.slide-caption {
+  font-size:12px;color:var(--text-muted);text-align:center;
+  font-style:italic;margin-bottom:12px;
+}
+
+/* ALERTS */
+.alert {
+  padding:13px 17px;border-radius:11px;margin:13px 0;
+  font-size:13.5px;display:flex;gap:10px;line-height:1.65;
+}
+.alert-lavender {background:var(--blue-pale);border-left:4px solid var(--blue);color:var(--blue-deep);}
+.alert-rose {background:var(--rose-pale);border-left:4px solid var(--rose);color:var(--rose-deep);}
+.alert-mint {background:var(--mint-pale);border-left:4px solid var(--mint);color:var(--mint-deep);}
+.alert-peach {background:var(--peach-pale);border-left:4px solid var(--peach);color:var(--peach-deep);}
+.alert-sky {background:var(--sky-pale);border-left:4px solid var(--sky);color:var(--sky-deep);}
+.alert-icon {flex-shrink:0;font-size:15px;margin-top:1px;}
+
+/* DR NOTE */
+.dr-note {
+  background:linear-gradient(135deg,var(--blue-pale),var(--rose-pale));
+  border:1.5px solid var(--blue-light);
+  border-radius:13px;padding:14px 18px;margin:14px 0;
+  font-size:13.5px;line-height:1.7;
+}
+.dr-note::before {
+  content:'🎤 dr. Budhi menekankan: ';
+  font-weight:700;color:var(--blue-deep);
+}
+
+/* TABLES */
+.table-wrap {overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:16px;}
+table {width:100%;border-collapse:collapse;font-size:13.5px;}
+th {
+  background:linear-gradient(90deg,var(--blue-deep),var(--blue-muted));
+  color:#fff;padding:11px 14px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:0.4px;
+}
+th:first-child {border-radius:11px 0 0 0;}
+th:last-child {border-radius:0 11px 0 0;}
+td {padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13.5px;}
+tr:last-child td {border-bottom:none;}
+tr:nth-child(even) td {background:#F6FAFF;}
+tr:hover td {background:var(--blue-pale);transition:background 0.15s;}
+
+/* GRIDS */
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.grid-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* MINI CARDS */
+.mini-card {background:var(--white);border:1px solid var(--border);border-radius:13px;padding:16px 18px;}
+.mini-card h4 {font-family:'Lora',serif;font-size:14px;color:var(--blue-deep);margin-bottom:8px;}
+.mini-card p,.mini-card li {font-size:13px;color:var(--text-muted);line-height:1.65;}
+.mini-card ul {padding-left:16px;}
+.mini-card li {margin-bottom:3px;}
+
+/* STYLED LIST */
+.styled-list {list-style:none;padding:0;}
+.styled-list li {
+  padding:7px 0 7px 24px;border-bottom:1px solid var(--border);
+  font-size:13.5px;position:relative;line-height:1.65;
+}
+.styled-list li::before {
+  content:'◆';position:absolute;left:0;
+  color:var(--blue-light);font-size:9px;top:11px;
+}
+.styled-list li:last-child {border-bottom:none;}
+
+/* CLINICAL REASONING */
+.cr-box {
+  background:linear-gradient(135deg,var(--blue-pale),var(--rose-pale));
+  border:1.5px solid var(--blue-light);border-radius:14px;
+  padding:18px 22px;margin:14px 0;
+}
+.cr-label {
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--blue-deep);margin-bottom:10px;
+}
+.cr-steps {counter-reset:cr;list-style:none;padding:0;}
+.cr-steps li {
+  counter-increment:cr;padding:7px 0 7px 36px;position:relative;
+  font-size:13.5px;border-bottom:1px solid rgba(111,163,216,0.2);line-height:1.65;
+}
+.cr-steps li:last-child {border-bottom:none;}
+.cr-steps li::before {
+  content:counter(cr);position:absolute;left:0;top:8px;
+  width:24px;height:24px;
+  background:var(--blue-muted);color:#fff;
+  border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+
+/* MNEMONIC */
+.mnemonic {
+  background:linear-gradient(135deg,var(--blue-pale),var(--rose-pale));
+  border:2px solid var(--blue-light);border-radius:15px;
+  padding:18px 22px;margin:14px 0;
+}
+.mnemonic-label {font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:6px;}
+.mnemonic-text {font-family:'Playfair Display',serif;font-size:19px;color:var(--text);font-weight:700;}
+.mnemonic-sub {font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.6;}
+
+/* HIGHLIGHTS */
+.hl-lav {background:var(--blue-pale);color:var(--blue-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-rose {background:var(--rose-pale);color:var(--rose-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-mint {background:var(--mint-pale);color:var(--mint-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+.hl-peach {background:var(--peach-pale);color:var(--peach-deep);padding:1px 7px;border-radius:5px;font-weight:600;font-size:13px;}
+
+/* COLLAPSE */
+.collapse-btn {
+  background:none;border:none;width:100%;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;font-family:inherit;
+}
+.collapse-btn .chev {transition:transform 0.25s;font-size:11px;color:var(--text-muted);}
+.collapse-btn.open .chev {transform:rotate(180deg);}
+.collapse-body {display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.collapse-body.open {display:block;animation:fadeUp 0.25s ease;}
+
+/* DIVIDER */
+.divider {height:1px;background:var(--border);margin:22px 0;}
+
+/* COMPARE */
+.compare-wrap {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.compare-col {border-radius:13px;padding:18px;border:2px solid;}
+.compare-col.left {background:var(--blue-pale);border-color:var(--blue-light);}
+.compare-col.right {background:var(--rose-pale);border-color:var(--rose-light);}
+.compare-col h4 {font-family:'Lora',serif;font-size:15px;margin-bottom:10px;}
+.compare-col.left h4 {color:var(--blue-deep);}
+.compare-col.right h4 {color:var(--rose-deep);}
+.compare-row {display:flex;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);gap:8px;}
+.compare-row:last-child {border-bottom:none;}
+.compare-row span:first-child {opacity:0.6;width:90px;flex-shrink:0;font-size:12px;}
+@media(max-width:600px){.compare-wrap{grid-template-columns:1fr;}}
+
+/* PSYCHE FIGURE CARDS */
+.psyche-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0;}
+@media(max-width:640px){.psyche-grid{grid-template-columns:1fr;}}
+.psyche-fig {text-align:center;}
+.psyche-fig img {width:78px;height:auto;border-radius:10px;filter:saturate(0.85);}
+.psyche-fig .p-label {font-family:'Lora',serif;font-size:13px;font-weight:600;color:var(--blue-deep);margin-top:6px;}
+.psyche-fig .p-sub {font-size:11px;color:var(--text-muted);}
+.psyche-state {
+  border-radius:16px;padding:18px 20px;margin:16px 0;border:2px solid var(--border);
+  background:var(--white);
+}
+.psyche-state.healthy {border-color:var(--mint);background:var(--mint-pale);}
+.psyche-state.neurotic {border-color:var(--peach);background:var(--peach-pale);}
+.psyche-state.psychotic {border-color:var(--rose);background:var(--rose-pale);}
+.psyche-state.psychopathic {border-color:var(--blue-deep);background:#EAF0FA;}
+.psyche-state-title {font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:8px;}
+.psyche-bubbles {display:flex;flex-direction:column;gap:6px;margin-top:8px;}
+.p-bubble {font-size:12.5px;line-height:1.55;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.7);}
+.p-bubble b {display:inline-block;min-width:64px;}
+
+/* FLOW DIAGRAM */
+.flow-wrap {display:flex;flex-direction:column;gap:0;align-items:stretch;margin:16px 0;}
+.flow-box {
+  background:linear-gradient(90deg,var(--blue-deep),var(--blue-muted));
+  color:#fff;padding:14px 18px;border-radius:12px;font-size:13px;text-align:center;
+  font-weight:600;line-height:1.5;
+}
+.flow-box.alt {background:linear-gradient(90deg,var(--rose-deep),var(--rose));}
+.flow-arrow {text-align:center;font-size:20px;color:var(--blue-muted);padding:2px 0;}
+.flow-branch {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:2px 0;}
+@media(max-width:600px){.flow-branch{grid-template-columns:1fr;}}
+.flow-branch .flow-box {font-size:12px;}
+
+/* DERAJAT BADGES */
+.derajat {
+  display:inline-flex;align-items:center;padding:3px 10px;
+  border-radius:8px;font-size:11px;font-weight:700;margin:2px;
+}
+.d1{background:#e8f5e8;color:#2d7a55;}
+.d2{background:var(--peach-pale);color:var(--peach-deep);}
+.d3{background:var(--rose-pale);color:var(--rose-deep);}
+.d4{background:#1F3A5C;color:#fff;}
+
+/* VIDEO */
+.video-wrap {
+  position:relative;width:100%;padding-bottom:56.25%;
+  margin:18px 0;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(111,163,216,0.28);
+}
+.video-wrap iframe {
+  position:absolute;top:0;left:0;width:100%;height:100%;border:none;
+}
+
+/* QUIZ */
+.quiz-q {
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:28px;margin-bottom:24px;position:relative;
+}
+.q-num {
+  position:absolute;top:-12px;left:22px;
+  background:linear-gradient(90deg,var(--blue-deep),var(--rose-deep));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;
+  padding:4px 16px;border-radius:10px;
+}
+.q-vignette {
+  background:linear-gradient(135deg,var(--blue-pale),var(--rose-pale));
+  border-left:4px solid var(--blue-light);border-radius:0 11px 11px 0;
+  padding:14px 17px;font-size:13.5px;line-height:1.7;margin-bottom:16px;
+  color:var(--blue-deep);
+}
+.q-question {font-weight:600;font-size:14px;margin-bottom:14px;color:var(--text);}
+.q-opts {display:flex;flex-direction:column;gap:8px;}
+.q-opt {
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:11px;padding:11px 15px;font-size:13.5px;cursor:pointer;
+  text-align:left;font-family:inherit;
+  display:flex;gap:10px;align-items:flex-start;
+  transition:all 0.18s;color:var(--text);
+}
+.q-opt:hover:not(:disabled){border-color:var(--blue);background:var(--blue-pale);}
+.q-opt .ol {
+  font-weight:700;font-size:12px;min-width:22px;height:22px;
+  border-radius:50%;background:rgba(0,0,0,0.06);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.q-opt.correct {background:var(--mint-pale)!important;border-color:var(--mint)!important;color:var(--mint-deep);}
+.q-opt.correct .ol {background:var(--mint);color:#fff;}
+.q-opt.wrong {background:var(--rose-pale)!important;border-color:var(--rose)!important;color:var(--rose-deep);}
+.q-opt.wrong .ol {background:var(--rose);color:#fff;}
+.q-opt:disabled {cursor:default;}
+.q-exp {
+  display:none;margin-top:14px;background:var(--mint-pale);
+  border-radius:11px;padding:14px 17px;font-size:13.5px;line-height:1.7;
+  color:var(--mint-deep);border-left:3px solid var(--mint);
+}
+.q-exp.show {display:block;animation:fadeUp 0.3s ease;}
+.quiz-progress {display:flex;gap:6px;margin-bottom:26px;flex-wrap:wrap;}
+.pdot {width:10px;height:10px;border-radius:50%;background:rgba(111,163,216,0.25);transition:background 0.3s;}
+.pdot.ok {background:var(--mint);}
+.pdot.no {background:var(--rose);}
+.score-card {
+  background:linear-gradient(135deg,#1F3A5C,#7FA8CE,#E8A9C4);
+  color:#fff;border-radius:22px;padding:44px;
+  text-align:center;display:none;margin-top:28px;
+  animation:fadeUp 0.4s ease;
+}
+.score-card.show {display:block;}
+.score-big {font-family:'Playfair Display',serif;font-size:76px;font-weight:900;color:#EAF3FC;line-height:1;margin:10px 0;}
+.score-msg {font-size:15px;opacity:0.9;margin-top:8px;}
+.btn-restart {
+  margin-top:22px;background:#fff;color:var(--blue-deep);
+  border:none;border-radius:30px;padding:12px 30px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;transition:transform 0.2s;
+}
+.btn-restart:hover {transform:translateY(-2px);}
+
+/* IMG GRID */
+.img-grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:600px){.img-grid-2{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  .hero{padding:36px 20px 32px;}
+  .container{padding:28px 16px;}
+  .card{padding:18px 20px;}
+}
+
+/* ====== SOAL DOSEN HIGHLIGHT SYSTEM ====== */
+.soal-dosen {
+  background: linear-gradient(135deg, #16233A, #3A2340);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 16px 0;
+  border: 2px solid #E58FB0;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(229,143,176,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.soal-dosen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6FA3D8, #E58FB0, #6FA3D8);
+  border-radius: 16px 16px 0 0;
+}
+.soal-dosen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.soal-dosen-badge {
+  background: linear-gradient(90deg, #6FA3D8, #3F6B96);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-badge-warn {
+  background: linear-gradient(90deg, #E85A80, #C02050);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.soal-dosen-cohort {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.cohort-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+}
+.cohort-axon { background: rgba(111,163,216,0.35); }
+.cohort-arthron { background: rgba(229,143,176,0.35); }
+.cohort-aorta { background: rgba(123,191,168,0.35); }
+.cohort-anthelix { background: rgba(232,168,124,0.35); }
+.soal-dosen-content {
+  color: rgba(255,255,255,0.92);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.soal-dosen-content strong { color: #FDE3EF; }
+.soal-dosen-content .hl-warn {
+  background: rgba(232,60,96,0.25);
+  border: 1px solid rgba(232,60,96,0.5);
+  color: #FFB0C0;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-content .hl-ok {
+  background: rgba(123,191,168,0.25);
+  border: 1px solid rgba(123,191,168,0.4);
+  color: #A0FFD8;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.soal-dosen-keyword {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(111,163,216,0.2);
+  border: 1px solid rgba(111,163,216,0.4);
+  color: #C8E0FF;
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+/* ====== FLOATING RANGKUMAN BUTTON ====== */
+.float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #1F3A5C, #E58FB0);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(229,143,176,0.45);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(229,143,176,0.55); }
+.float-pulse {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #FFB0C0;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.7; }
+}
+
+/* ====== MODAL RANGKUMAN ====== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10,15,30,0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-box {
+  background: linear-gradient(160deg, #14213A, #3A2340);
+  border: 2px solid #E58FB0;
+  border-radius: 24px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(229,143,176,0.4);
+}
+.modal-box::-webkit-scrollbar { width: 6px; }
+.modal-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: #E58FB0; border-radius: 3px; }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; font-size: 18px;
+  width: 34px; height: 34px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(229,143,176,0.4); }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: #FDE3EF;
+  margin-bottom: 6px;
+}
+.modal-sub { color: rgba(255,255,255,0.55); font-size: 12.5px; margin-bottom: 24px; }
+.modal-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(229,143,176,0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-item-num {
+  position: absolute;
+  top: -8px; left: 14px;
+  background: linear-gradient(90deg, #6FA3D8, #E58FB0);
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 2px 10px; border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.modal-item-q {
+  color: #C8E0FF; font-weight: 600; font-size: 13.5px;
+  margin-bottom: 6px; padding-top: 4px;
+}
+.modal-item-a {
+  color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.65;
+}
+.modal-item-a strong { color: #A0FFD8; }
+.modal-cohorts { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.modal-nav-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #6FA3D8, #E58FB0);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+.modal-nav-btn:hover { opacity: 0.88; }
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 Psychotherapy & Psychosocial Interventions · dr. RH Budhi Muljanto, Sp.KJ</div>
+  <h1>Psikodinamika &amp; <em>Psikoterapi Suportif</em></h1>
+  <p class="hero-sub">Disusun dari PPT & rekaman kuliah dr. Budhi. Dari konflik bawah sadar, struktur Id-Ego-Superego, mekanisme pertahanan, sampai prinsip praktis psikoterapi suportif di praktik dokter umum.</p>
+  <div class="hero-pills">
+    <span class="pill">🧊 Topografi Kesadaran</span>
+    <span class="pill">😈 Id · Ego · Superego</span>
+    <span class="pill">🌱 Fase Psikoseksual Freud</span>
+    <span class="pill">🛡️ Mekanisme Pertahanan</span>
+    <span class="pill">💬 Psikoterapi Suportif</span>
+    <span class="pill">🧠 10 Soal Quiz</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="sticky-nav" id="mainNav">
+  <button class="nav-btn active" onclick="show('overview')">🏠 Overview</button>
+  <button class="nav-btn" onclick="show('topografi')">🧊 Topografi & Struktur</button>
+  <button class="nav-btn" onclick="show('spektrum')">🎭 Normal–Ambang–Patologik</button>
+  <button class="nav-btn" onclick="show('psikoseksual')">🌱 Fase Psikoseksual</button>
+  <button class="nav-btn" onclick="show('defensi')">🛡️ Mekanisme Pertahanan</button>
+  <button class="nav-btn" onclick="show('terapi')">💬 Psikoterapi</button>
+  <button class="nav-btn" onclick="show('quiz')">🧠 Quiz</button>
+</div>
+
+<div class="container">
+
+<!-- ================= OVERVIEW ================= -->
+<div class="section active" id="sec-overview">
+  <h2 class="section-heading">Apa itu Psikodinamik?</h2>
+  <p class="section-desc">Definisi, prinsip dasar, dan kenapa pendekatan ini penting buat klinisi — bukan cuma teori psikoanalisis lama.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--blue-pale)">📖</span>Definisi Psikiatri Psikodinamik</div>
+    <p>Psikiatri Psikodinamik adalah suatu pendekatan <strong>diagnosis dan terapi</strong> yang khas dengan cara pikir pasien dan klinisi, meliputi:</p>
+    <ul class="styled-list">
+      <li><strong>Konflik bawah sadar</strong> (unconscious conflict)</li>
+      <li><strong>Defisit dan distorsi</strong> struktur intrapsikik</li>
+      <li><strong>Relasi objek internal</strong></li>
+      <li>...yang diintegrasikan dengan penemuan kontemporer <strong>neurosciences</strong></li>
+    </ul>
+    <div class="dr-note">Kalau ada teman yang tekanan darahnya bagus, lab bagus, rajin olahraga — tapi sering sakit kepala, atau bangun pagi tidak semangat lalu siang baru semangat — itu tandanya ada <strong>konflik di alam bawah sadar</strong> yang tidak disadari orangnya sendiri. Sebagai klinisi kita tidak langsung tahu; baru muncul saat pasien bercerita.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="mini-card">
+      <h4>🧩 Psikodinamik sebagai pengetahuan</h4>
+      <p>Pengetahuan & teori sistematis tentang <strong>tingkah laku manusia dan motivasinya</strong> — baik yang disadari maupun (lebih sering digarap) yang <strong>tidak disadari</strong>.</p>
+    </div>
+    <div class="mini-card">
+      <h4>⚡ Psikodinamik sebagai pendekatan</h4>
+      <p>Memandang proses mental sebagai <strong>gerakan & interaksi energi psikik</strong> yang berlangsung intra-individual (dalam diri) maupun inter-individual (dengan orang lain).</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🔍</span>Yang Dipelajari dalam Psikodinamik</div>
+    <div class="grid-3">
+      <div class="mini-card"><h4>Struktur</h4><p>Kepribadian — sistem psikofisik yang dinamis & unik pada tiap individu</p></div>
+      <div class="mini-card"><h4>Kekuatan</h4><p>Dorongan, the drive, libido, instincts</p></div>
+      <div class="mini-card"><h4>Gerakan</h4><p>Movement, action — termasuk mimik, posisi duduk, gerak tubuh saat wawancara</p></div>
+      <div class="mini-card"><h4>Perkembangan</h4><p>Development — tahap tumbuh kembang individu</p></div>
+      <div class="mini-card"><h4>Maksud & Tujuan</h4><p>Fenomena psikologik pada seseorang — tidak ada perilaku tanpa makna</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">📌</span>3 Prinsip Utama Psikodinamik</div>
+    <ol class="cr-steps">
+      <li>Semua perilaku manusia <strong>ada maknanya</strong> — pada kondisi gangguan, makna ini jadi sangat tampak (mis. cemas → jantung berdebar, keringat dingin).</li>
+      <li><strong>Masa lalu memengaruhi masa kini</strong> dan berguna untuk memahami hal yang terjadi sekarang.</li>
+      <li>Sebab-akibat <strong>bukan garis linier</strong>, tapi prinsipnya <strong>multifaktorial</strong> — banyak hal saling berpengaruh.</li>
+    </ol>
+  </div>
+
+  <div class="alert alert-sky">
+    <span class="alert-icon">💡</span>
+    <span>Contoh klasik dari kuliah: seseorang bilang <em>"saya benci sekali sama dia"</em> — tapi kalau diperhatikan, dia justru dekat sekali dengan orang itu. Ini bukan hal yang aneh secara psikodinamik — yang keluar ke permukaan (afek/perilaku) sering merupakan <strong>distorsi</strong> dari apa yang sesungguhnya tersimpan di alam bawah sadar.</span>
+  </div>
+</div>
+
+<!-- ================= TOPOGRAFI & STRUKTUR ================= -->
+<div class="section" id="sec-topografi">
+  <h2 class="section-heading">Topografi Kesadaran & Struktur Kepribadian</h2>
+  <p class="section-desc">Tiga lapis kesadaran (Freud) dan tiga komponen struktur kepribadian yang bekerja di dalamnya.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--blue-pale)">🌊</span>Tiga Lapis Kesadaran</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Lapisan</th><th>Isi</th><th>Sifat</th></tr>
+        <tr><td><strong>Conscious</strong><br>(Alam sadar)</td><td>Persepsi dari luar (lingkungan) & dari dalam (prasadar)</td><td>Bisa langsung kita komunikasikan, lihat, dengar sekarang</td></tr>
+        <tr><td><strong>Preconscious</strong><br>(Prasadar)</td><td>Penghubung bawah sadar–sadar; peristiwa tak menyenangkan yang "dilupakan"; proses pikir sekunder & sensor represif</td><td><strong>Bisa disadari</strong> kalau kita memusatkan perhatian</td></tr>
+        <tr><td><strong>Unconscious</strong><br>(Bawah sadar)</td><td>Material represi, dorongan instink, harapan, mimpi, gejala neurotik; proses pikir primer, prinsip kesenangan</td><td>Tidak disadari — inilah wilayah kerja utama psikodinamik</td></tr>
+      </table>
+    </div>
+    <div class="dr-note">Waktu jadi mahasiswa, ilmu yang cuma "ditelan" tanpa diulang akan tersimpan di alam <strong>prasadar</strong> — makanya bisa dipanggil balik kalau kita berpikir keras (misalnya saat ujian). Kalau peristiwa tak menyenangkan seperti ban motor kena paku pas terburu-buru kuliah — itu juga awalnya disimpan di prasadar, "berusaha dilupakan", belum sampai ke alam bawah sadar sepenuhnya.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🧊</span>Struktur Kepribadian: Id — Ego — Superego</div>
+    <img src="data:image/jpeg;base64,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" class="slide-img" alt="Diagram iceberg Id, Ego, Superego">
+    <p class="slide-caption">Hanya sebagian kecil kepribadian (Ego) yang "terlihat" di alam sadar — sebagian besar Id dan bahkan Superego berada di bawah permukaan (alam bawah sadar).</p>
+    <div class="grid-3">
+      <div class="mini-card">
+        <h4>😈 Id</h4>
+        <p><strong>Dorongan primitif</strong> — gudang alam bawah sadar berisi hal baik & buruk. Ini sumber energi jiwa; kita bisa hidup karena punya Id.</p>
+      </div>
+      <div class="mini-card">
+        <h4>🧍 Ego</h4>
+        <p><strong>Rasional, eksekutor</strong> — bagian yang berhubungan dengan dunia luar. Tidak semua Ego berada di alam sadar.</p>
+      </div>
+      <div class="mini-card">
+        <h4>👼 Superego</h4>
+        <p><strong>Moral, aturan/norma</strong> yang kita rasakan & jalani. Menurut Freud, Superego juga sebagian besar ada di <strong>alam bawah sadar</strong>, bukan hanya di alam sadar.</p>
+      </div>
+    </div>
+    <div class="dr-note">Superego itu <strong>tidak semuanya kita sadari</strong> — bahkan menurut Freud, ia sebagian besar ada di alam bawah sadar. Yang muncul ke alam sadar biasanya norma-norma yang kita rasakan langsung, misalnya dengar azan → "oh sudah waktunya sholat" — itu bagian permukaan dari Superego.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">⚖️</span>Konflik Id vs Ego — Contoh Sehari-hari</div>
+    <div class="cr-box">
+      <div class="cr-label">Contoh dari kuliah</div>
+      <p style="font-size:13.5px;line-height:1.7;"><strong>Id</strong> minta lulus ujian. <strong>Ego</strong> (rasional) bilang "kan belum belajar". Supaya "lulus" tetap tercapai → muncul dorongan untuk mencontek. <strong>Saat itulah terjadi pertempuran/konflik antara Id dan Ego</strong> — Ego berperan sebagai <strong>eksekutor</strong> yang akhirnya memutuskan tindakan apa yang benar-benar dilakukan. Kalau konflik ini terus berulang, bisa jadi sumber masalah di kemudian hari.</p>
+    </div>
+    <div class="alert alert-mint">
+      <span class="alert-icon">✅</span>
+      <span>Contoh lain: butuh makan tapi tidak bawa uang → pikiran "hutang atau nyolong?" → <strong>Superego</strong> menjawab "lebih baik hutang daripada mencuri" berdasarkan norma yang tersimpan.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NORMAL - AMBANG - PATOLOGIK ================= -->
+<div class="section" id="sec-spektrum">
+  <h2 class="section-heading">Spektrum Normal — Ambang — Patologik</h2>
+  <p class="section-desc">Bagaimana pengalaman diproses lewat alam sadar/bawah sadar, menghasilkan kepribadian normal, kondisi ambang, atau patologik — dan bagaimana ketimpangan Id-Ego-Superego tampak secara klinis.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--blue-pale)">🔀</span>Dari Pengalaman ke Respons Menetap</div>
+    <div class="flow-wrap">
+      <div class="flow-box">Pengalaman (Lingkungan) → Persepsi, Interpretasi, Konklusi</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box">Alam Sadar, Prasadar, Bawah Sadar</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-branch">
+        <div class="flow-box" style="background:linear-gradient(90deg,var(--mint-deep),var(--mint))">Normal Kepribadian<br><span style="font-weight:400;font-size:11px;">→ ranah Psikologi</span></div>
+        <div class="flow-box alt">Patologik<br><span style="font-weight:400;font-size:11px;">→ ranah Psikiatri</span></div>
+      </div>
+      <div class="flow-arrow">↕ ada zona <strong>Ambang</strong> di antaranya — di sinilah intervensi klinis paling berperan</div>
+      <div class="flow-box" style="background:linear-gradient(90deg,var(--blue-muted),var(--rose))">Respons, Interaksi, Eksistensi — relatif menetap jangka panjang</div>
+    </div>
+    <div class="dr-note">Pergerakan dari normal → ambang → patologik itu yang paling penting diperhatikan, karena di situlah <strong>intervensi kita sebagai dokter/psikiater bekerja</strong>. Yang di zona ambang harus ditarik ke arah normal; yang sudah patologik juga ditarik ke normal, tapi jelas lebih sulit dibanding saat masih di zona ambang.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🎭</span>Mekanisme Adaptasi</div>
+    <div class="flow-wrap">
+      <div class="flow-box">Pemenuhan Kebutuhan <span style="opacity:.7">vs</span> Masalah<br><span style="font-weight:400;font-size:11.5px">(Kemampuan ~ Batas) &nbsp;+&nbsp; (Lingkungan + / −)</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-branch">
+        <div class="flow-box" style="background:linear-gradient(90deg,var(--mint-deep),var(--mint))">Tercapai tujuan / kegagalan diminimalkan<br><span style="font-weight:400;font-size:11px;">→ Kemampuan meningkat ↑</span></div>
+        <div class="flow-box alt">Kurang berhasil dalam realitas<br><span style="font-weight:400;font-size:11px;">→ bergeser ke fantasi</span></div>
+      </div>
+    </div>
+    <div class="alert alert-rose">
+      <span class="alert-icon">⚠️</span>
+      <span>Kalau terus gagal di realitas lalu terus-menerus lari ke fantasi → hati-hati, ini jalur menuju <strong>banyak melamun → bicara sendiri → makin menarik diri</strong>. Ini red flag yang perlu diwaspadai secara klinis.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🃏</span>Keseimbangan Id-Ego-Superego: dari Sehat sampai Patologik</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:6px;">Ilustrasi klasik: kalau <strong>Ego</strong> (eksekutor rasional) bisa mengelola tarikan dari <strong>Id</strong> (dorongan primitif) dan <strong>Superego</strong> (moral/aturan), jiwa berfungsi sehat. Begitu keseimbangan ini timpang, muncul gambaran klinis yang khas.</p>
+    <div class="psyche-grid">
+      <div class="psyche-fig"><img src="data:image/jpeg;base64,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" alt="Id"><div class="p-label">Id</div><div class="p-sub">dorongan primitif</div></div>
+      <div class="psyche-fig"><img src="data:image/jpeg;base64,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" alt="Ego"><div class="p-label">Ego</div><div class="p-sub">eksekutor rasional</div></div>
+      <div class="psyche-fig"><img src="data:image/jpeg;base64,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" alt="Superego"><div class="p-label">Superego</div><div class="p-sub">moral & norma</div></div>
+    </div>
+
+    <div class="psyche-state healthy">
+      <div class="psyche-state-title" style="color:var(--mint-deep)">✅ Jiwa Sehat — Ego yang Memegang Kendali</div>
+      <div class="psyche-bubbles">
+        <div class="p-bubble"><b>Ego:</b> "Saya yang pegang kendali — apa pun yang kalian mau, harus lewat saya dulu."</div>
+        <div class="p-bubble"><b>Id & Superego:</b> "Oke."</div>
+      </div>
+      <p style="font-size:12.5px;margin-top:8px;color:var(--text-muted)">Dorongan Id disalurkan secara wajar, Superego tidak berlebihan menekan — fungsi psikologis seimbang.</p>
+    </div>
+
+    <div class="psyche-state neurotic">
+      <div class="psyche-state-title" style="color:var(--peach-deep)">😟 Neurotik — Superego Terlalu Dominan</div>
+      <div class="psyche-bubbles">
+        <div class="p-bubble"><b>Superego:</b> "Dengar! Saya yang pegang kendali, dan kalian di sini bukan untuk bersenang-senang. Siap-siap porsi cemas dobel dengan tambahan rasa bersalah!"</div>
+        <div class="p-bubble"><b>Id:</b> "Enggak asyik." &nbsp;|&nbsp; <b>Ego:</b> "...(merengek pelan)"</div>
+      </div>
+      <p style="font-size:12.5px;margin-top:8px;color:var(--text-muted)">Moral/norma terlalu keras menekan → muncul kecemasan & rasa bersalah berlebihan (overkontrol).</p>
+    </div>
+
+    <div class="psyche-state psychotic">
+      <div class="psyche-state-title" style="color:var(--rose-deep)">🌀 Psikotik — Id Mengambil Alih Sepenuhnya</div>
+      <div class="psyche-bubbles">
+        <div class="p-bubble"><b>Id:</b> "Seks! Makanan! Minuman! Obat-obatan! SEKARANG!"</div>
+        <div class="p-bubble"><b>Ego & Superego:</b> "...siapa yang matiin lampunya?"</div>
+      </div>
+      <p style="font-size:12.5px;margin-top:8px;color:var(--text-muted)">Ego & Superego "padam" (tidak berfungsi mengontrol) → hilangnya uji realitas (<em>reality testing</em>), dorongan primitif tidak terkendali.</p>
+    </div>
+
+    <div class="psyche-state psychopathic">
+      <div class="psyche-state-title" style="color:var(--blue-deep)">🚩 Psikopatik — Superego Nyaris Tidak Ada</div>
+      <div class="psyche-bubbles">
+        <div class="p-bubble"><b>Id:</b> "Oke. Pertama, kasih saya makan. Lalu saya mau seks — banyak, dan saya tidak terlalu peduli apakah pasangannya bersedia. Setelah itu saya mau menyakiti orang. Parah. Nanti lapar lagi, jadi..."</div>
+        <div class="p-bubble"><b>Ego:</b> "Oke deh. Ayo jalan."</div>
+      </div>
+      <p style="font-size:12.5px;margin-top:8px;color:var(--text-muted)">Superego nyaris tidak berperan (tidak ada rasa bersalah) → Ego jadi "pelaksana" Id tanpa filter moral → perilaku impulsif-agresif tanpa hambatan.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PSIKOSEKSUAL ================= -->
+<div class="section" id="sec-psikoseksual">
+  <h2 class="section-heading">Fase Perkembangan Psikoseksual (Freud)</h2>
+  <p class="section-desc">Prinsip: kondisi patologik berasal dari konflik alam bawah sadar dari masa kanak, sesuai tahap perkembangan yang dilalui.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--blue-pale)">🧬</span>Prinsip Psikodinamik tentang Perkembangan</div>
+    <ul class="styled-list">
+      <li>Kondisi patologik berasal dari <strong>material konflik bawah sadar</strong> dari masa kanak (sesuai tahap perkembangan).</li>
+      <li>Dengan teknik tertentu (asosiasi bebas / psikoterapi), material konflik bawah sadar <strong>didorong ke prasadar & sadar</strong> untuk diselesaikan.</li>
+      <li>Untuk membantu pengungkapan itu, diperlukan pemahaman <strong>tahapan perkembangan psikoseksual/psikososial</strong>.</li>
+      <li>Berbasis teori psikoanalisis, psikoseksual, dan dorongan libido.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">🌱</span>4 Fase Psikoseksual Freud</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Fase</th><th>Usia</th><th>Sumber Kepuasan (Libido)</th><th>Ciri</th></tr>
+        <tr><td><strong>Oral</strong></td><td>1–2 tahun</td><td>Mulut</td><td>Menghisap, menggigit, menelan, memuntahkan. Nangis kalau lapar/ompol → diam setelah disusui/dibersihkan.</td></tr>
+        <tr><td><strong>Anal</strong></td><td>2–4 tahun</td><td>Anus & alat kelamin</td><td>Kepuasan lewat pengontrolan menahan/membuang feses. <strong>Toilet training dimulai di usia ini.</strong></td></tr>
+        <tr><td><strong>Oedipal / Genital awal</strong></td><td>5–8 tahun</td><td>Alat genital</td><td>Sudah ada hasrat seksual terhadap lawan jenis, tapi belum matang. Anak sering "mempermainkan" alat genitalnya sendiri.</td></tr>
+        <tr><td><strong>Laten</strong></td><td>9 tahun–dewasa</td><td>—</td><td>Kebutuhan seksual anak tidak lagi jadi hal yang "dimainkan"/dipentingkan.</td></tr>
+      </table>
+    </div>
+    <div class="dr-note">Toilet training seharusnya <strong>dimulai sejak usia 2 tahun</strong> — bukan menunda terus pakai pampers sampai usia 4 tahun dengan alasan "nanti juga bisa sendiri". Untuk perilaku memegang-megang alat genital di usia fase Oedipal: <strong>jangan dimarahi berlebihan</strong>, tapi dialihkan perhatiannya secara halus, dan jangan pula dibuat anak jadi terkejut/trauma.</div>
+  </div>
+
+  <div class="alert alert-sky">
+    <span class="alert-icon">🔎</span>
+    <span>Perbandingan dengan tahap perkembangan Erikson (psikososial) lebih sederhana untuk dipelajari lebih dulu, karena tahapan psikoseksual Freud "lebih njelimet" — perlu observasi & anamnesis yang lebih dalam.</span>
+  </div>
+</div>
+
+<!-- ================= MEKANISME PERTAHANAN ================= -->
+<div class="section" id="sec-defensi">
+  <h2 class="section-heading">Mekanisme Pertahanan (Defense Mechanisms)</h2>
+  <p class="section-desc">Cara psike melindungi diri dari kecemasan/stres berlebihan — semua orang memakainya, dan biasanya tidak disadari.</p>
+
+  <div class="alert alert-lavender">
+    <span class="alert-icon">📌</span>
+    <span><strong>Prinsip penting:</strong> mekanisme pertahanan pada dasarnya <strong>tidak disadari</strong> oleh individu. Semua orang memakai berbagai mekanisme secara bergantian (hari ini pakai A, besok B) — yang jadi masalah adalah kalau <strong>hanya menggunakan satu mekanisme terus-menerus</strong> (fiksasi).</span>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🌟</span>Mekanisme Matur (Matang)</div>
+    <div class="grid-4">
+      <div class="mini-card"><h4>Supresi</h4><p>Menekan pikiran/perasaan tak dapat diterima <strong>secara sadar</strong>.<br><em>Contoh: sengaja "melupakan" kejadian tersandung tadi pagi.</em></p></div>
+      <div class="mini-card"><h4>Altruisme</h4><p>Menganggap kebutuhan/minat pribadi tidak penting dibanding orang lain.<br><em>Contoh: menganggap kesandung tadi "tidak penting", toh tidak sampai fatal.</em></p></div>
+      <div class="mini-card"><h4>Sublimasi</h4><p>Mengganti dorongan bawah sadar yang tak diterima dengan alternatif yang diterima sosial.<br><em>Contoh: gagal jadi polisi → jadi dokter.</em></p></div>
+      <div class="mini-card"><h4>Humor</h4><p>Kemampuan membuat hal lucu dari diri sendiri/situasi yang dihadapi.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--rose-pale)">⚠️</span>Mekanisme Imatur (Potensial Patogenik)</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Mekanisme</th><th>Definisi Singkat</th><th>Contoh</th></tr>
+        <tr><td><strong>Denial</strong> (Penyangkalan)</td><td>Menyangkal realitas yang menimbulkan takut/malu/sakit/cemas</td><td>Berdebar-debar tapi bilang "tidak apa-apa" lalu pergi & makan seperti biasa</td></tr>
+        <tr><td><strong>Represi</strong></td><td>Menyingkirkan kebutuhan & motivasi dari alam sadar, ditekan ke alam bawah sadar — <strong>tidak disadari</strong></td><td>Trauma masa kecil yang "hilang" dari ingatan sadar</td></tr>
+        <tr><td><strong>Proyeksi</strong></td><td>Melindungi diri dengan menuduhkan (kesalahan sendiri) kepada orang lain</td><td>"Saya tidak lulus gara-gara dia ngajak nonton"</td></tr>
+        <tr><td><strong>Introyeksi</strong></td><td>Memasukkan (sifat/nilai/tanggung jawab orang lain) ke dalam diri sendiri</td><td>"Ini gara-gara saya tidak mengajaknya belajar, jadi dia tidak lulus"</td></tr>
+        <tr><td><strong>Reaksi Formasi</strong></td><td>Membentuk sikap yang berlawanan dengan perasaan sebenarnya, supaya tidak menuruti dorongan yang dianggap buruk</td><td>Sebenarnya benci seseorang, tapi terlihat akrab & dekat dengannya sehari-hari</td></tr>
+        <tr><td><strong>Undoing</strong> (Peniadaan)</td><td>Ritual untuk "meniadakan" pikiran/kejadian buruk yang baru dialami</td><td>Ibu hamil membawa gunting/peniti kecil setelah melihat sesuatu yang tidak baik</td></tr>
+        <tr><td><strong>Isolasi</strong></td><td>Memisahkan isi pikiran dari afek/perasaan yang seharusnya menyertainya</td><td>Bisa menceritakan peristiwa traumatis tanpa menunjukkan emosi sama sekali</td></tr>
+        <tr><td><strong>Penghalangan</strong> (Blocking)</td><td>Menghambat pikiran/impuls yang tidak disukai agar tidak muncul ke kesadaran</td><td>Tiba-tiba "blank" saat topik yang tidak disukai muncul</td></tr>
+        <tr><td><strong>Regresi</strong></td><td>Mundur ke fase perkembangan sebelumnya saat menghadapi stres</td><td>Gigit kuku/gigit pensil saat cemas → jejak konflik fase oral</td></tr>
+        <tr><td><strong>Negativisme</strong></td><td>Berperilaku bertentangan dengan yang seharusnya/diharapkan</td><td>Menolak melakukan hal yang justru dibutuhkan</td></tr>
+        <tr><td><strong>Disosiasi</strong></td><td>Memisahkan sekelompok proses mental/perilaku dari kesadaran utama</td><td>"Blank" pada periode tertentu setelah kejadian traumatis</td></tr>
+        <tr><td><strong>Displacement</strong></td><td>Mengalihkan emosi/dorongan dari objek asli ke objek lain yang lebih aman</td><td>Marah pada atasan, dilampiaskan ke keluarga di rumah</td></tr>
+        <tr><td><strong>Identifikasi (dgn agresor)</strong></td><td>Mengambil alih sikap/pembenaran dari pihak yang justru menyakiti</td><td>Korban mulai membenarkan tindakan pelaku ("Stockholm syndrome")</td></tr>
+        <tr><td><strong>Rasionalisasi</strong></td><td>Mencari alasan pembenar yang "masuk akal" untuk perilaku yang sebenarnya tidak dapat diterima</td><td>"Saya boleh nyontek karena soalnya memang terlalu susah"</td></tr>
+        <tr><td><strong>Fantasi</strong></td><td>Lari dari kegagalan realitas ke dunia khayalan</td><td>Melamun berlebihan sampai berisiko bicara sendiri</td></tr>
+        <tr><td><strong>Konversi</strong></td><td>Konflik emosional diubah menjadi gejala fisik/somatik</td><td>Kelumpuhan mendadak tanpa dasar organik setelah stres berat</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🔀</span>Perbandingan yang Sering Terjebak di Soal</div>
+    <div class="compare-wrap">
+      <div class="compare-col left">
+        <h4>Supresi</h4>
+        <div class="compare-row"><span>Kesadaran</span><span><strong>Disadari</strong></span></div>
+        <div class="compare-row"><span>Kategori</span><span>Matur</span></div>
+        <div class="compare-row"><span>Contoh</span><span>Sengaja tidak memikirkan lagi teguran atasan pagi ini, fokus kerja</span></div>
+      </div>
+      <div class="compare-col right">
+        <h4>Represi</h4>
+        <div class="compare-row"><span>Kesadaran</span><span><strong>Tidak disadari</strong></span></div>
+        <div class="compare-row"><span>Kategori</span><span>Imatur</span></div>
+        <div class="compare-row"><span>Contoh</span><span>Trauma masa kecil "hilang" dari ingatan tanpa usaha sadar</span></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="compare-wrap">
+      <div class="compare-col left">
+        <h4>Proyeksi</h4>
+        <div class="compare-row"><span>Arah</span><span>Kesalahan diri → <strong>dituduhkan ke orang lain</strong></span></div>
+        <div class="compare-row"><span>Contoh</span><span>"Saya tidak lulus gara-gara diajak nonton dia"</span></div>
+      </div>
+      <div class="compare-col right">
+        <h4>Introyeksi</h4>
+        <div class="compare-row"><span>Arah</span><span>Tanggung jawab orang lain → <strong>ditarik ke diri sendiri</strong></span></div>
+        <div class="compare-row"><span>Contoh</span><span>"Gara-gara saya tidak ajak dia belajar, dia jadi tidak lulus"</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PSIKOTERAPI ================= -->
+<div class="section" id="sec-terapi">
+  <h2 class="section-heading">Psikoterapi Psikodinamik & Psikoterapi Suportif</h2>
+  <p class="section-desc">Yang harus diperhatikan klinisi selama terapi, dan prinsip praktis psikoterapi suportif yang bisa dilakukan dokter umum.</p>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--blue-pale)">🗂️</span>8 Hal yang Diperhatikan dalam Psikoterapi Psikodinamik</div>
+    <ol class="cr-steps">
+      <li>Pengalaman pasien <strong>dan terapis</strong> selama psikoterapi maupun sebelumnya (sikap dokter juga jadi perhatian!)</li>
+      <li>Kondisi alam sadar & bawah sadar, terutama <strong>mekanisme defensi</strong> yang ditampilkan pasien</li>
+      <li>Interaksi dengan orang lain & kesan yang timbul terhadap orang lain</li>
+      <li>Karakteristik fisik (mimik wajah, sikap tubuh saat wawancara)</li>
+      <li>Isi pikir pada interaksi dengan lingkungan & respons kumulatif dari pengalamannya</li>
+      <li>Latar belakang sosial budaya</li>
+      <li>Agama / kepercayaan</li>
+      <li>Pola & kapasitas kognitif pasien</li>
+    </ol>
+    <div class="dr-note">Sikap dokter/terapis juga masuk penilaian — kalau dokternya berbuat sesuatu tanpa disadari, itu sudah jadi penyimpangan/kemunduran sehingga terapi biasanya kurang berhasil. Agama/kepercayaan <strong>bukan sekadar isian kolom rekam medis</strong> — penting untuk pendekatan ke pasien. Begitu juga latar belakang sosial budaya, karena bisa sangat berbeda antar daerah.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--mint-pale)">🎯</span>Tujuan Psikoterapi Suportif</div>
+    <div class="grid-2">
+      <div class="mini-card"><h4>✔️ Yang DIKERJAKAN</h4><ul><li>Mengatasi gejala, konflik, & masalah</li><li>Memperbaiki harga diri</li><li>Meningkatkan kemampuan adaptif</li><li>Memperbaiki fungsi-fungsi Ego</li><li>Memantapkan fungsi kehidupan yang wajar/normal</li></ul></div>
+      <div class="mini-card" style="background:var(--rose-pale);border-color:var(--rose-light)"><h4 style="color:var(--rose-deep)">❌ Yang TIDAK DIKERJAKAN</h4><p><strong>Tidak ada upaya mengubah kepribadian individu.</strong> Target-nya cukup meningkatkan kesadaran individu terhadap apa yang dialami — bukan merombak struktur kepribadian.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="card-icon" style="background:var(--peach-pale)">🩺</span>Syarat Melakukan Psikoterapi Suportif</div>
+    <ol class="cr-steps">
+      <li><strong>Mulai pembicaraan</strong> dari hal-hal yang pernah diucapkan & disukai pasien — jangan langsung ke topik sensitif (mis. jangan langsung tanya soal perceraian yang baru dialami).</li>
+      <li>Kalau pasien sudah bercerita tentang topik sensitifnya sendiri, terapis cukup "mengiring" dan mendorongnya terus bercerita (teknik <em>"ngegongi"</em>) — bukan menginterogasi dengan pertanyaan tajam.</li>
+      <li>Hanya bisa berhasil kalau terapis dipandang pasien sebagai orang yang <strong>bisa dipercaya & bisa membantu</strong>.</li>
+      <li>Terapis harus dapat menilai & menetapkan bagaimana hubungannya dengan pasien.</li>
+      <li>Terapis harus sadar bahwa tugasnya <strong>hanya</strong>: meredakan kecemasan pasien, meningkatkan harga diri & harapan pasien, dan mendukung fungsi psikologis normal secara konsisten.</li>
+    </ol>
+    <div class="dr-note">Pendekatan ke pasien itu personal — bisa jadi ada pasien yang justru senang ditegur langsung oleh dokter tertentu ("enak dimarahin sama dokter itu"), tapi dengan dokter lain reaksinya berbeda. Ini karena masing-masing pasien punya "kecocokan" tersendiri dengan terapisnya — jangan disamaratakan.</div>
+  </div>
+</div>
+
+<!-- ================= QUIZ ================= -->
+<div class="section" id="sec-quiz">
+  <h2 class="section-heading">🧠 Quiz — Uji Pemahaman</h2>
+  <p class="section-desc">10 soal vignette. Klik salah satu jawaban untuk melihat pembahasan langsung.</p>
+  <div class="quiz-progress" id="quizProg"></div>
+
+  <!-- Q1 -->
+  <div class="quiz-q" id="q1">
+    <div class="q-num">SOAL 01 / DEFINISI</div>
+    <div class="q-vignette">Seorang pasien datang berulang kali dengan keluhan sakit kepala kronik. Pemeriksaan fisik dan laboratorium seluruhnya normal. Setelah wawancara mendalam, ditemukan bahwa keluhan ini muncul setiap kali pasien harus bertemu dengan mertuanya, sesuatu yang tidak pernah disadari pasien sebelumnya.</div>
+    <p class="q-question">Pendekatan manakah yang paling menekankan adanya <em>konflik bawah sadar</em> di balik gejala seperti ini?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q1',true)"><span class="ol">A</span>Pendekatan psikodinamik</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">B</span>Pendekatan biologis murni</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">C</span>Pendekatan kognitif-perilaku murni</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">D</span>Pendekatan sosial-budaya murni</button>
+      <button class="q-opt" onclick="ans(this,'q1',false)"><span class="ol">E</span>Pendekatan farmakologis murni</button>
+    </div>
+    <div class="q-exp" id="exp-q1">✅ <strong>A — Pendekatan psikodinamik</strong><br><br>Psikiatri psikodinamik menekankan cara pikir pasien-klinisi yang meliputi <strong>konflik bawah sadar (unconscious conflict)</strong>, defisit/distorsi struktur intrapsikik, dan relasi objek internal — persis seperti kasus sakit kepala yang ternyata terkait konflik dengan mertua yang tidak disadari.</div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-q" id="q2">
+    <div class="q-num">SOAL 02 / TOPOGRAFI</div>
+    <div class="q-vignette">Seorang mahasiswa lupa akan sebuah kejadian tidak menyenangkan minggu lalu. Namun, ketika ia benar-benar memusatkan perhatian dan berusaha keras mengingat, kejadian tersebut kembali muncul dengan jelas di pikirannya.</div>
+    <p class="q-question">Kejadian tersebut paling mungkin tersimpan di lapisan kesadaran mana?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">A</span>Unconscious (bawah sadar)</button>
+      <button class="q-opt" onclick="ans(this,'q2',true)"><span class="ol">B</span>Preconscious (prasadar)</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">C</span>Conscious (alam sadar) sejak awal</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">D</span>Id</button>
+      <button class="q-opt" onclick="ans(this,'q2',false)"><span class="ol">E</span>Superego</button>
+    </div>
+    <div class="q-exp" id="exp-q2">✅ <strong>B — Preconscious (prasadar)</strong><br><br>Ciri khas prasadar: peristiwa tak menyenangkan yang "dilupakan" namun <strong>dapat disadari kembali bila memusatkan perhatian</strong>. Ini berbeda dari unconscious yang tidak bisa dipanggil kembali hanya dengan usaha fokus biasa.</div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-q" id="q3">
+    <div class="q-num">SOAL 03 / STRUKTUR KEPRIBADIAN</div>
+    <div class="q-vignette">Seseorang merasa sangat ingin makan sesuatu yang lezat (dorongan), namun ia sadar sedang tidak punya cukup uang. Setelah menimbang situasi, ia akhirnya memutuskan untuk pulang dan memasak sendiri di rumah.</div>
+    <p class="q-question">Struktur kepribadian manakah yang berperan sebagai "eksekutor" rasional yang mengambil keputusan akhir tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">A</span>Id</button>
+      <button class="q-opt" onclick="ans(this,'q3',true)"><span class="ol">B</span>Ego</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">C</span>Superego semata</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">D</span>Alam prasadar</button>
+      <button class="q-opt" onclick="ans(this,'q3',false)"><span class="ol">E</span>Libido</button>
+    </div>
+    <div class="q-exp" id="exp-q3">✅ <strong>B — Ego</strong><br><br>Ego bersifat <strong>rasional dan berperan sebagai eksekutor</strong> — ia yang menimbang dorongan dari Id dan batasan/norma dari Superego, lalu memutuskan tindakan nyata yang akan dilakukan.</div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-q" id="q4">
+    <div class="q-num">SOAL 04 / FASE PSIKOSEKSUAL</div>
+    <div class="q-vignette">Seorang anak usia 3 tahun sedang dalam proses dilatih oleh orang tuanya untuk mengendalikan buang air besar dan buang air kecil (toilet training).</div>
+    <p class="q-question">Menurut Freud, anak ini sedang berada pada fase psikoseksual apa?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">A</span>Oral</button>
+      <button class="q-opt" onclick="ans(this,'q4',true)"><span class="ol">B</span>Anal</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">C</span>Oedipal</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">D</span>Laten</button>
+      <button class="q-opt" onclick="ans(this,'q4',false)"><span class="ol">E</span>Genital dewasa</button>
+    </div>
+    <div class="q-exp" id="exp-q4">✅ <strong>B — Anal (2–4 tahun)</strong><br><br>Kepuasan libido pada fase ini berasal dari anus lewat pengontrolan menahan/membuang feses — dan inilah usia dimulainya <strong>toilet training</strong>.</div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-q" id="q5">
+    <div class="q-num">SOAL 05 / FASE PSIKOSEKSUAL</div>
+    <div class="q-vignette">Seorang anak laki-laki usia 6 tahun sering terlihat memegang-megang alat kelaminnya sendiri saat bermain di rumah. Orang tuanya panik dan bertanya apakah ini normal.</div>
+    <p class="q-question">Fase psikoseksual apa yang sesuai, dan bagaimana respons yang paling tepat?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">A</span>Fase Anal — segera dimarahi tegas</button>
+      <button class="q-opt" onclick="ans(this,'q5',true)"><span class="ol">B</span>Fase Oedipal (5–8 th) — dialihkan perhatiannya secara halus, tanpa dimarahi berlebihan</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">C</span>Fase Laten — dibiarkan saja tanpa respons apa pun</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">D</span>Fase Oral — perlu evaluasi psikiatri segera</button>
+      <button class="q-opt" onclick="ans(this,'q5',false)"><span class="ol">E</span>Ini tanda gangguan jiwa berat pada anak</button>
+    </div>
+    <div class="q-exp" id="exp-q5">✅ <strong>B — Fase Oedipal, dialihkan secara halus</strong><br><br>Usia 5–8 tahun (fase Oedipal), anak wajar "mempermainkan" alat genitalnya. Respons yang tepat: <strong>dialihkan perhatiannya dengan halus</strong> ("ayo di sini kotor, yuk main yang lain") — bukan dimarahi keras, tapi juga jangan dibiarkan tanpa arahan sama sekali.</div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-q" id="q6">
+    <div class="q-num">SOAL 06 / SUPRESI VS REPRESI</div>
+    <div class="q-vignette">Seorang dokter merasa sakit hati ditegur atasannya pagi ini. Ia secara sadar memutuskan untuk tidak memikirkannya lagi dan fokus bekerja melayani pasien sepanjang hari.</div>
+    <p class="q-question">Mekanisme pertahanan apa yang digunakan dokter tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q6',true)"><span class="ol">A</span>Supresi</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">B</span>Represi</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">C</span>Denial</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">D</span>Disosiasi</button>
+      <button class="q-opt" onclick="ans(this,'q6',false)"><span class="ol">E</span>Proyeksi</button>
+    </div>
+    <div class="q-exp" id="exp-q6">✅ <strong>A — Supresi</strong><br><br>Supresi = menekan pikiran/perasaan tak diterima <strong>secara sadar</strong> — persis seperti dokter yang secara sengaja/sadar memutuskan tidak memikirkan lagi teguran tadi. Beda dengan represi, yang prosesnya <strong>tidak disadari</strong>.</div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-q" id="q7">
+    <div class="q-num">SOAL 07 / REAKSI FORMASI</div>
+    <div class="q-vignette">Seorang karyawan merasa kesal dengan bosnya karena gajinya dipotong sepihak. Di belakang, ia sering menjelek-jelekkan bosnya bersama teman kerja. Namun setiap bertemu langsung dengan bosnya, ia selalu memuji-muji secara berlebihan.</div>
+    <p class="q-question">Mekanisme pertahanan apa yang paling sesuai dengan perilaku karyawan tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">A</span>Splitting</button>
+      <button class="q-opt" onclick="ans(this,'q7',true)"><span class="ol">B</span>Reaksi formasi</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">C</span>Represi</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">D</span>Undoing</button>
+      <button class="q-opt" onclick="ans(this,'q7',false)"><span class="ol">E</span>Sublimasi</button>
+    </div>
+    <div class="q-exp" id="exp-q7">✅ <strong>B — Reaksi formasi</strong><br><br>Perasaan sebenarnya (kesal/benci) ditutupi dengan sikap yang justru berlawanan (memuji berlebihan) di depan objek yang sebenarnya tidak disukai — pola klasik reaksi formasi.</div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-q" id="q8">
+    <div class="q-num">SOAL 08 / DENIAL</div>
+    <div class="q-vignette">Seorang perawat melihat pasiennya terjatuh dari tempat tidur karena tidak dijaga dengan baik. Saat ditanya oleh dokter mengapa hal itu bisa terjadi, perawat tersebut menjawab dengan tenang bahwa "pasien terjatuh sendiri".</div>
+    <p class="q-question">Mekanisme pertahanan apa yang digunakan perawat tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q8',true)"><span class="ol">A</span>Denial (penyangkalan)</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">B</span>Represi</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">C</span>Supresi</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">D</span>Kompensasi</button>
+      <button class="q-opt" onclick="ans(this,'q8',false)"><span class="ol">E</span>Konversi</button>
+    </div>
+    <div class="q-exp" id="exp-q8">✅ <strong>A — Denial</strong><br><br>Perawat menyangkal kenyataan (kelalaiannya) yang membuatnya merasa bersalah/malu, dengan menyatakan sesuatu yang tidak sesuai kenyataan ("pasien jatuh sendiri").</div>
+    <div class="soal-dosen" style="margin-top:14px;">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">Bank Soal</span></div>
+      <div class="soal-dosen-cohort"><span class="cohort-tag cohort-aorta">AORTA'19 No.3 & No.32</span></div>
+      <div class="soal-dosen-content">Vignette identik pernah muncul di bank soal UB dengan jawaban kunci <strong>Denial</strong>.</div>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-q" id="q9">
+    <div class="q-num">SOAL 09 / SUBLIMASI</div>
+    <div class="q-vignette">Seorang anak sejak kecil dikenal sangat aktif, tidak bisa diam, dan sering berlari ke sana kemari. Setelah dewasa, ia justru menjadi pemain sepak bola profesional dengan kecepatan lari tercepat di timnya.</div>
+    <p class="q-question">Mekanisme pertahanan apa yang paling menggambarkan perjalanan anak tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">A</span>Supresi</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">B</span>Regresi</button>
+      <button class="q-opt" onclick="ans(this,'q9',true)"><span class="ol">C</span>Sublimasi</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">D</span>Undoing</button>
+      <button class="q-opt" onclick="ans(this,'q9',false)"><span class="ol">E</span>Identifikasi</button>
+    </div>
+    <div class="q-exp" id="exp-q9">✅ <strong>C — Sublimasi</strong><br><br>Dorongan yang tadinya tampak "tidak diterima" (hiperaktif, tidak bisa diam) dialihkan ke bentuk yang <strong>diterima secara sosial dan bahkan berprestasi</strong> — persis contoh sublimasi klasik dari kuliah (cita-cita gagal jadi polisi → jadi dokter).</div>
+    <div class="soal-dosen" style="margin-top:14px;">
+      <div class="soal-dosen-header"><span class="soal-dosen-badge">Bank Soal</span></div>
+      <div class="soal-dosen-cohort"><span class="cohort-tag cohort-axon">UB Blok Psikiatri No.25</span></div>
+      <div class="soal-dosen-content">Vignette hampir identik pernah muncul dengan jawaban kunci <strong>Sublimasi</strong>.</div>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-q" id="q10">
+    <div class="q-num">SOAL 10 / PSIKOTERAPI SUPORTIF</div>
+    <div class="q-vignette">Seorang dokter umum melakukan psikoterapi terhadap pasiennya dengan tujuan meredakan kecemasan dan meningkatkan harga diri pasien, tanpa berusaha mengubah struktur kepribadian pasien tersebut.</div>
+    <p class="q-question">Jenis psikoterapi apa yang paling tepat menggambarkan tindakan dokter tersebut?</p>
+    <div class="q-opts">
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">A</span>Psikoanalisis klasik</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">B</span>Psikoterapi rekonstruktif</button>
+      <button class="q-opt" onclick="ans(this,'q10',true)"><span class="ol">C</span>Psikoterapi suportif</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">D</span>Terapi elektrokonvulsif</button>
+      <button class="q-opt" onclick="ans(this,'q10',false)"><span class="ol">E</span>Psikoterapi dinamik jangka panjang yang mengubah kepribadian</button>
+    </div>
+    <div class="q-exp" id="exp-q10">✅ <strong>C — Psikoterapi suportif</strong><br><br>Ciri khas psikoterapi suportif: mengatasi gejala, memperbaiki harga diri, meningkatkan kemampuan adaptif, memperbaiki fungsi Ego, memantapkan fungsi kehidupan wajar — <strong>tanpa upaya mengubah kepribadian</strong>. Ini bisa dan seharusnya bisa dilakukan dokter umum.</div>
+  </div>
+
+  <!-- Score -->
+  <div class="score-card" id="scoreCard">
+    <div style="font-size:40px;margin-bottom:8px;">🧊</div>
+    <div class="score-big" id="scoreNum">0</div>
+    <div style="font-size:18px;opacity:0.85;margin-top:4px;">/ 10</div>
+    <p class="score-msg" id="scoreMsg"></p>
+    <button class="btn-restart" onclick="resetQuiz()">🔁 Ulangi Quiz</button>
+  </div>
+</div><!-- /quiz -->
+
+</div><!-- /container -->
+
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+let answered = {}, score = 0, total = 10;
+
+function initDots() {
+  const p = document.getElementById('quizProg');
+  p.innerHTML = '';
+  for (let i=1; i<=total; i++) {
+    const d = document.createElement('div');
+    d.className = 'pdot';
+    d.id = 'dot' + i;
+    p.appendChild(d);
+  }
+}
+
+function ans(btn, qid, correct) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  const qNum = parseInt(qid.replace('q',''));
+  const card = document.getElementById(qid);
+  card.querySelectorAll('.q-opt').forEach(b => { b.disabled = true; });
+  if (correct) {
+    btn.classList.add('correct'); score++;
+    document.getElementById('dot'+qNum).classList.add('ok');
+  } else {
+    btn.classList.add('wrong');
+    document.getElementById('dot'+qNum).classList.add('no');
+    card.querySelectorAll('.q-opt').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(',true)')) b.classList.add('correct');
+    });
+  }
+  const exp = document.getElementById('exp-' + qid);
+  if (exp) exp.classList.add('show');
+  if (Object.keys(answered).length === total) setTimeout(showScore, 700);
+}
+
+function showScore() {
+  const sc = document.getElementById('scoreCard');
+  sc.classList.add('show');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Yuk baca lagi bagian yang meleset, kamu pasti bisa! 💪','Lumayan, review lagi bagian yang belum jelas ya! 📖','Bagus! Tinggal sedikit lagi sempurna! 🌟','Hampir sempurna! Keren! 🔥','PERFECT! Mantap paham psikodinamiknya! 🧊✨'];
+  const idx = score <= 3 ? 0 : score <= 5 ? 1 : score <= 7 ? 2 : score <= 9 ? 3 : 4;
+  document.getElementById('scoreMsg').textContent = msgs[idx];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetQuiz() {
+  answered = {}; score = 0;
+  document.querySelectorAll('.q-opt').forEach(b => { b.disabled=false; b.classList.remove('correct','wrong'); });
+  document.querySelectorAll('.q-exp').forEach(e => e.classList.remove('show'));
+  document.getElementById('scoreCard').classList.remove('show');
+  initDots();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+initDots();
+</script>
+
+<!-- ====== FLOATING SOAL DOSEN BUTTON ====== -->
+<button class="float-btn" onclick="openModal()">
+  <div class="float-pulse"></div>
+  🔴 Soal Dosen
+</button>
+
+<!-- ====== MODAL RANGKUMAN SOAL DOSEN ====== -->
+<div class="modal-overlay" id="soalDosenModal" onclick="closeModalOuter(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">🔴 Rangkuman Soal Dosen</div>
+    <p class="modal-sub">Poin yang dr. Budhi tekankan langsung di kuliah & pola soal yang sering muncul di bank soal</p>
+
+    <div class="modal-item">
+      <div class="modal-item-num">01 · DEFINISI</div>
+      <div class="modal-item-q">Apa definisi lengkap Psikiatri Psikodinamik menurut PPT?</div>
+      <div class="modal-item-a">Pendekatan diagnosis & terapi karakteristik dengan cara pikir pasien-klinisi, meliputi <strong>konflik bawah sadar</strong>, <strong>defisit & distorsi struktur intrapsikik</strong>, dan <strong>relasi objek internal</strong>, yang diintegrasikan dengan penemuan kontemporer neurosciences.</div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">02 · TRICKY ⚠️</div>
+      <div class="modal-item-q">Supresi vs Represi — apa pembedanya, sering ketuker?</div>
+      <div class="modal-item-a"><strong>Supresi:</strong> menekan pikiran secara SADAR (matur).<br><strong>Represi:</strong> menyingkirkan ke bawah sadar secara TIDAK disadari (imatur).</div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">03 · KONSEP PENTING</div>
+      <div class="modal-item-q">Apakah psikoterapi suportif berupaya mengubah kepribadian pasien?</div>
+      <div class="modal-item-a"><strong>Tidak.</strong> Psikoterapi suportif sama sekali tidak berupaya mengubah kepribadian — hanya mengatasi gejala, memperbaiki harga diri, fungsi adaptif & fungsi Ego, serta memantapkan fungsi kehidupan yang wajar.</div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">04 · USIA PENTING</div>
+      <div class="modal-item-q">Toilet training idealnya dimulai usia berapa?</div>
+      <div class="modal-item-a">Mulai usia <strong>2 tahun</strong> (awal fase Anal, 2–4 tahun) — bukan ditunda terus dengan pampers sampai usia 4 tahun.</div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">05 · REAKSI FORMASI</div>
+      <div class="modal-item-q">Ciri khas reaksi formasi pada vignette klinik?</div>
+      <div class="modal-item-a">Perasaan sebenarnya (benci/kesal) ditutupi dengan sikap yang <strong>berlawanan secara berlebihan</strong> (memuji, tampak akrab) di depan objek yang sebenarnya tidak disukai.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-axon">UB Blok Psikiatri No.12</span><span class="cohort-tag cohort-aorta">AORTA'19 No.2</span></div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">06 · DENIAL</div>
+      <div class="modal-item-q">Vignette klasik denial yang sering muncul di bank soal?</div>
+      <div class="modal-item-a">Perawat/keluarga yang <strong>menyangkal kelalaian</strong> ("pasien jatuh sendiri") padahal sebenarnya tidak dijaga dengan baik.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-aorta">AORTA'19 No.3 & No.32</span></div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">07 · SUBLIMASI</div>
+      <div class="modal-item-q">Vignette klasik sublimasi yang sering muncul di bank soal?</div>
+      <div class="modal-item-a">Anak hiperaktif/tak bisa diam sejak kecil → dewasa jadi atlet/pelari tercepat — dorongan yang tadinya "tidak diterima" disalurkan ke bentuk yang <strong>diterima sosial & berprestasi</strong>.</div>
+      <div class="modal-cohorts"><span class="cohort-tag cohort-axon">UB Blok Psikiatri No.25</span></div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">08 · SERING SALAH PAHAM</div>
+      <div class="modal-item-q">Apakah Superego seluruhnya berada di alam sadar?</div>
+      <div class="modal-item-a"><strong>Tidak.</strong> Menurut Freud, Superego (moral/norma) <strong>sebagian besar juga berada di alam bawah sadar</strong>, bukan hanya alam sadar — sering jadi jebakan soal konseptual.</div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">09 · PROYEKSI VS INTROYEKSI</div>
+      <div class="modal-item-q">Bedakan arah proyeksi dan introyeksi!</div>
+      <div class="modal-item-a"><strong>Proyeksi:</strong> kesalahan diri sendiri dituduhkan ke orang lain.<br><strong>Introyeksi:</strong> tanggung jawab/sifat orang lain justru ditarik masuk ke diri sendiri.</div>
+    </div>
+
+    <div class="modal-item">
+      <div class="modal-item-num">10 · SYARAT PSIKOTERAPI SUPORTIF</div>
+      <div class="modal-item-q">Bagaimana cara memulai psikoterapi suportif yang benar?</div>
+      <div class="modal-item-a">Mulai dari hal yang <strong>disukai/pernah diucapkan pasien</strong>, bukan langsung ke topik sensitif. Terapis hanya bertugas meredakan cemas, meningkatkan harga diri & harapan, serta mendukung fungsi psikologis normal — <strong>bukan mengorek luka lama secara langsung</strong>.</div>
+    </div>
+
+    <button class="modal-nav-btn" onclick="closeModal(); show('quiz')">🧠 Langsung ke Quiz →</button>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('soalDosenModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('soalDosenModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOuter(e) {
+  if (e.target === document.getElementById('soalDosenModal')) closeModal();
+}
+</script>
+
+</body>
+</html>
