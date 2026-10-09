@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blok Psychiatry & Mental Health — Ranger HQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════
+   COLOR TOKENS — edit di sini untuk ganti warna
+   ═══════════════════════════════════════════ */
+:root {
+  --dark:      #16232A;   /* navy gelap  — header, sidebar  */
+  --teal:      #075056;   /* teal        — aksen sekunder   */
+  --ice:       #E4EEF0;   /* ice blue    — latar & surface  */
+  --orange:    #FF5B04;   /* oranye      — HIGHLIGHT PENTING */
+  --ice-dark:  #C8DAE0;
+  --dark-80:   rgba(22,35,42,0.80);
+  --dark-12:   rgba(22,35,42,0.12);
+  --dark-06:   rgba(22,35,42,0.06);
+  --teal-15:   rgba(7,80,86,0.15);
+  --orange-15: rgba(255,91,4,0.13);
+  --white:     #ffffff;
+  --radius:    14px;
+  --radius-sm: 8px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Raleway', 'Segoe UI', sans-serif;
+  background: var(--ice);
+  color: var(--dark);
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+/* ── BACK BAR ── */
+.back-bar {
+  background: var(--dark);
+  padding: 9px 40px;
+  display: flex; align-items: center;
+}
+.back-bar a {
+  color: var(--ice);
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; opacity: 0.65;
+  transition: opacity 0.15s;
+}
+.back-bar a:hover { opacity: 1; }
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--teal) 100%);
+  padding: 52px 48px 44px;
+  position: relative; overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 85% 30%, rgba(255,91,4,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 80%, rgba(7,80,86,0.4) 0%, transparent 55%);
+  pointer-events: none;
+}
+header::after {
+  content: '🧠';
+  position: absolute; right: 52px; bottom: 20px;
+  font-size: 7rem; opacity: 0.07; pointer-events: none;
+  line-height: 1;
+}
+.header-inner { position: relative; z-index: 1; max-width: 780px; }
+.header-block-tag {
+  display: inline-block;
+  font-family: 'Lora', serif;
+  font-size: 0.8rem; font-style: italic;
+  color: rgba(228,238,240,0.60);
+  margin-bottom: 12px; letter-spacing: 0.02em;
+}
+header h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900; line-height: 1.05;
+  color: var(--ice); letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+header h1 em {
+  font-style: normal; color: #FF8C52;
+  font-family: 'Lora', serif; font-weight: 600;
+}
+.header-meta {
+  font-size: 0.82rem; font-weight: 500;
+  color: rgba(228,238,240,0.52);
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.header-meta span { display: flex; align-items: center; gap: 6px; }
+
+/* shortcut buttons */
+.header-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--orange); color: #fff;
+  font-family: inherit; font-size: 0.8rem; font-weight: 800;
+  letter-spacing: 0.06em; padding: 11px 22px;
+  border-radius: 40px; border: none; cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, transform 0.15s;
+  box-shadow: 0 4px 18px rgba(255,91,4,0.35);
+}
+.btn-primary:hover { background: #e04e00; transform: translateY(-2px); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(228,238,240,0.12); color: var(--ice);
+  font-family: inherit; font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.06em; padding: 11px 22px;
+  border-radius: 40px; border: 1.5px solid rgba(228,238,240,0.25);
+  cursor: pointer; text-decoration: none;
+  transition: background 0.18s;
+}
+.btn-secondary:hover { background: rgba(228,238,240,0.20); }
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  background: var(--teal);
+  padding: 12px 48px;
+  display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
+}
+.stat-item {
+  font-size: 0.76rem; font-weight: 800;
+  color: var(--ice); letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 7px;
+}
+.stat-num { color: #FF8C52; font-size: 1rem; font-weight: 900; }
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  background: var(--white);
+  border-bottom: 2px solid var(--dark-12);
+  padding: 14px 48px;
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.filter-label {
+  font-size: 0.68rem; font-weight: 900;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--dark); opacity: 0.4;
+  margin-right: 4px; white-space: nowrap;
+}
+.filter-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--ice); color: var(--dark);
+  font-family: inherit; font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.04em; padding: 6px 14px;
+  border-radius: 40px; border: 2px solid transparent;
+  cursor: pointer; white-space: nowrap;
+  transition: all 0.16s;
+}
+.filter-chip:hover { border-color: var(--teal); }
+.filter-chip.active { background: var(--dark); color: var(--ice); border-color: var(--dark); }
+.filter-chip.active.p1 { background: #C0392B; border-color: #C0392B; }
+.filter-chip.active.p2 { background: #E67E22; border-color: #E67E22; }
+.filter-chip.active.p3 { background: #2471A3; border-color: #2471A3; }
+.filter-chip.active.p4 { background: #1E8449; border-color: #1E8449; }
+.filter-chip.active.dr-erna { background: var(--teal); border-color: var(--teal); }
+.filter-chip.active.dr-budhi { background: #6C3483; border-color: #6C3483; }
+.filter-chip.active.dr-etha { background: var(--orange); border-color: var(--orange); }
+.filter-chip.active.dr-agil { background: #117A65; border-color: #117A65; }
+.filter-divider { width: 1px; height: 22px; background: var(--dark-12); flex-shrink: 0; }
+
+/* ── MAIN LAYOUT ── */
+main { max-width: 1060px; margin: 0 auto; padding: 44px 32px 100px; }
+
+/* ── SECTION HEADERS ── */
+.section-head {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 22px; margin-top: 48px;
+}
+.section-head:first-child { margin-top: 0; }
+.section-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--dark); color: var(--ice);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.section-title { font-size: 1.1rem; font-weight: 900; letter-spacing: -0.01em; }
+.section-line { flex: 1; height: 1.5px; background: var(--dark-12); }
+
+/* ═══════════════════════════════════════
+   MIND MAP
+   ═══════════════════════════════════════ */
+.mindmap-wrap {
+  background: var(--white);
+  border: 2px solid var(--dark-12);
+  border-radius: var(--radius);
+  padding: 28px 28px 24px;
+  margin-bottom: 10px;
+}
+.mindmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+.mm-node {
+  background: var(--ice);
+  border: 2px solid var(--dark-12);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.mm-node-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  gap: 10px;
+  transition: background 0.15s;
+}
+.mm-node-head:hover { background: var(--ice-dark); }
+.mm-node-title {
+  font-size: 0.82rem; font-weight: 800;
+  color: var(--dark); line-height: 1.3; flex: 1;
+}
+.mm-node-badge {
+  font-size: 0.62rem; font-weight: 900;
+  padding: 3px 9px; border-radius: 20px;
+  background: var(--dark); color: var(--ice);
+  white-space: nowrap; flex-shrink: 0;
+}
+.mm-node-arrow {
+  font-size: 0.7rem; color: var(--dark); opacity: 0.4;
+  transition: transform 0.22s;
+  flex-shrink: 0;
+}
+.mm-node.open .mm-node-arrow { transform: rotate(180deg); }
+.mm-node-body {
+  display: none;
+  padding: 0 14px 12px;
+  border-top: 1.5px solid var(--dark-12);
+}
+.mm-node.open .mm-node-body { display: block; }
+.mm-sub {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--dark-06);
+  font-size: 0.75rem;
+}
+.mm-sub:last-child { border-bottom: none; }
+.mm-sub-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); flex-shrink: 0; margin-top: 5px;
+}
+.mm-sub-info { flex: 1; }
+.mm-sub-name { font-weight: 700; color: var(--dark); line-height: 1.3; }
+.mm-sub-ref {
+  font-size: 0.68rem; font-weight: 600; color: var(--teal);
+  margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════
+   KULIAH GROUPS & CARDS
+   ═══════════════════════════════════════ */
+.priority-group { margin-bottom: 8px; }
+
+.priority-group-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 18px;
+  background: var(--white);
+  border: 2px solid var(--dark-12);
+  border-radius: var(--radius);
+  cursor: pointer; user-select: none;
+  transition: border-color 0.16s;
+  margin-bottom: 2px;
+}
+.priority-group-head:hover { border-color: var(--teal); }
+.priority-group.open .priority-group-head {
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom-color: transparent;
+}
+
+.priority-badge {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 900;
+  flex-shrink: 0; color: #fff;
+}
+.p1 .priority-badge { background: #C0392B; }
+.p2 .priority-badge { background: #E67E22; }
+.p3 .priority-badge { background: #2471A3; }
+.p4 .priority-badge { background: #1E8449; }
+.px .priority-badge { background: #6D6D6D; }
+
+.priority-group-title { font-size: 0.92rem; font-weight: 800; flex: 1; }
+.priority-soal-tag {
+  font-size: 0.68rem; font-weight: 900;
+  letter-spacing: 0.08em; padding: 4px 12px;
+  border-radius: 20px; background: var(--ice);
+  color: var(--dark); white-space: nowrap;
+}
+.priority-soal-tag.hot { background: var(--orange-15); color: var(--orange); }
+.priority-arrow {
+  font-size: 0.75rem; color: var(--dark); opacity: 0.35;
+  transition: transform 0.22s; flex-shrink: 0;
+}
+.priority-group.open .priority-arrow { transform: rotate(180deg); }
+
+.priority-group-body {
+  display: none;
+  background: var(--white);
+  border: 2px solid var(--dark-12);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 8px 10px 10px;
+}
+.priority-group.open .priority-group-body { display: block; }
+
+/* kuliah card */
+.kuliah-card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none; color: inherit;
+  transition: background 0.15s, transform 0.15s;
+  border-left: 3px solid transparent;
+  margin-bottom: 2px;
+}
+.kuliah-card:hover {
+  background: var(--ice);
+  transform: translateX(3px);
+}
+.kuliah-card.highlight { border-left-color: var(--orange); }
+.kuliah-card.hidden { display: none; }
+
+.k-num {
+  font-size: 0.65rem; font-weight: 900;
+  color: var(--dark); opacity: 0.38;
+  min-width: 36px; text-align: right;
+  flex-shrink: 0; letter-spacing: 0.02em;
+}
+.k-body { flex: 1; min-width: 0; }
+.k-title { font-size: 0.86rem; font-weight: 700; color: var(--dark); line-height: 1.3; }
+.k-meta { display: flex; align-items: center; gap: 8px; margin-top: 3px; flex-wrap: wrap; }
+.k-doctor {
+  font-size: 0.70rem; font-weight: 600;
+  color: var(--teal); display: flex; align-items: center; gap: 4px;
+}
+.k-soal {
+  font-size: 0.62rem; font-weight: 900;
+  padding: 2px 8px; border-radius: 20px;
+  background: var(--orange-15); color: var(--orange);
+  display: flex; align-items: center; gap: 3px;
+}
+.k-arrow {
+  font-size: 0.85rem; color: var(--dark); opacity: 0.25;
+  flex-shrink: 0; transition: opacity 0.15s, transform 0.15s;
+}
+.kuliah-card:hover .k-arrow { opacity: 0.7; transform: translateX(3px); }
+
+/* ── DOCTOR COLOR DOTS ── */
+.dot-erna  { width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0; }
+.dot-budhi { width:8px;height:8px;border-radius:50%;background:#6C3483;flex-shrink:0; }
+.dot-etha  { width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0; }
+.dot-agil  { width:8px;height:8px;border-radius:50%;background:#117A65;flex-shrink:0; }
+
+/* ═══════════════════════════════════════
+   TUTORIAL SECTION
+   ═══════════════════════════════════════ */
+.tutorial-group { margin-bottom: 8px; }
+.tutorial-group-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 18px;
+  background: var(--white);
+  border: 2px solid var(--dark-12);
+  border-radius: var(--radius);
+  cursor: pointer; user-select: none;
+  transition: border-color 0.16s;
+  margin-bottom: 2px;
+}
+.tutorial-group-head:hover { border-color: var(--teal); }
+.tutorial-group.open .tutorial-group-head {
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom-color: transparent;
+}
+.tutorial-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--teal); color: var(--ice);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.tutorial-group-title { font-size: 0.92rem; font-weight: 800; flex: 1; }
+.tutorial-week-tag {
+  font-size: 0.68rem; font-weight: 900;
+  padding: 4px 12px; border-radius: 20px;
+  background: var(--teal-15); color: var(--teal);
+  white-space: nowrap;
+}
+.tutorial-arrow {
+  font-size: 0.75rem; color: var(--dark); opacity: 0.35;
+  transition: transform 0.22s;
+}
+.tutorial-group.open .tutorial-arrow { transform: rotate(180deg); }
+.tutorial-group-body {
+  display: none;
+  background: var(--white);
+  border: 2px solid var(--dark-12); border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 8px 10px 10px;
+}
+.tutorial-group.open .tutorial-group-body { display: block; }
+.tutorial-card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 16px; border-radius: var(--radius-sm);
+  text-decoration: none; color: inherit;
+  transition: background 0.15s, transform 0.15s;
+  margin-bottom: 2px;
+}
+.tutorial-card:hover { background: var(--ice); transform: translateX(3px); }
+.t-week {
+  font-size: 0.65rem; font-weight: 900;
+  color: var(--teal); min-width: 36px;
+  text-align: right; flex-shrink: 0;
+}
+.t-title { font-size: 0.86rem; font-weight: 700; flex: 1; }
+.t-arrow {
+  font-size: 0.85rem; color: var(--dark); opacity: 0.25;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.tutorial-card:hover .t-arrow { opacity: 0.7; transform: translateX(3px); }
+
+/* ═══════════════════════════════════════
+   LATIHAN SOAL SECTION
+   ═══════════════════════════════════════ */
+.quiz-section {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--teal) 100%);
+  border-radius: var(--radius);
+  padding: 36px 36px 32px;
+  position: relative; overflow: hidden;
+  margin-top: 52px;
+}
+.quiz-section::before {
+  content: '📝';
+  position: absolute; right: 36px; top: 24px;
+  font-size: 5rem; opacity: 0.07; pointer-events: none;
+}
+.quiz-section-title {
+  font-size: 1.2rem; font-weight: 900;
+  color: var(--ice); margin-bottom: 6px;
+}
+.quiz-section-sub {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(228,238,240,0.50); margin-bottom: 24px;
+}
+.quiz-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 12px; }
+.quiz-slot {
+  background: rgba(228,238,240,0.08);
+  border: 2px solid rgba(228,238,240,0.15);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  text-decoration: none; color: var(--ice);
+  display: flex; align-items: center; gap: 14px;
+  transition: background 0.18s, border-color 0.18s;
+}
+.quiz-slot:hover { background: rgba(228,238,240,0.15); border-color: rgba(228,238,240,0.30); }
+.quiz-slot.placeholder { opacity: 0.45; pointer-events: none; cursor: default; }
+.quiz-slot-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--orange); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.quiz-slot.placeholder .quiz-slot-icon { background: rgba(228,238,240,0.20); }
+.quiz-slot-body { flex: 1; }
+.quiz-slot-title { font-size: 0.84rem; font-weight: 800; margin-bottom: 3px; }
+.quiz-slot-tag {
+  display: inline-block;
+  font-size: 0.62rem; font-weight: 900;
+  padding: 2px 8px; border-radius: 20px;
+  background: var(--orange); color: #fff;
+}
+.quiz-slot.placeholder .quiz-slot-tag {
+  background: rgba(228,238,240,0.20); color: rgba(228,238,240,0.55);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark); color: rgba(228,238,240,0.35);
+  text-align: center; padding: 26px;
+  font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em;
+}
+footer span { color: rgba(255,140,82,0.80); }
+
+/* ── HIDDEN by filter ── */
+.kuliah-card.filtered { display: none; }
+
+@media (max-width: 640px) {
+  .back-bar, header, .stats-strip, .filter-bar { padding-left: 20px; padding-right: 20px; }
+  main { padding: 28px 16px 70px; }
+  header { padding: 36px 20px 32px; }
+  .quiz-section { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="../ranger-hq.html">← Ranger HQ</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="header-block-tag">Blok 7 · Semester 7 · Ranger HQ</div>
+    <h1>Psychiatry &<br/><em>Mental Health</em></h1>
+    <div class="header-meta">
+      <span>📚 26 Materi Kuliah</span>
+      <span>💬 4 Tutorial</span>
+      <span>📋 100 Soal Blueprint</span>
+      <span>👩‍⚕️ 5 Dosen Pengampu</span>
+    </div>
+    <div class="header-btns">
+      <a href="#latsoal" class="btn-primary">⚡ Langsung ke Latihan Soal</a>
+      <a href="#kuliah" class="btn-secondary">📖 Lihat Semua Kuliah</a>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item">🔴 <span class="stat-num">44</span> soal Prioritas 1</div>
+  <div class="stat-item">🟠 <span class="stat-num">25</span> soal Prioritas 2</div>
+  <div class="stat-item">🟡 <span class="stat-num">33</span> soal Prioritas 3</div>
+  <div class="stat-item">🟢 <span class="stat-num">15</span> soal Prioritas 4</div>
+  <div class="stat-item">⚠️ <span class="stat-num">3</span> materi tambahan</div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Prioritas</span>
+  <button class="filter-chip active" data-filter="all" onclick="applyFilter(this)">Semua</button>
+  <button class="filter-chip p1" data-filter="p1" onclick="applyFilter(this)">🔴 P1</button>
+  <button class="filter-chip p2" data-filter="p2" onclick="applyFilter(this)">🟠 P2</button>
+  <button class="filter-chip p3" data-filter="p3" onclick="applyFilter(this)">🟡 P3</button>
+  <button class="filter-chip p4" data-filter="p4" onclick="applyFilter(this)">🟢 P4</button>
+  <div class="filter-divider"></div>
+  <span class="filter-label">Dosen</span>
+  <button class="filter-chip dr-erna"  data-filter="erna"  onclick="applyFilter(this)">dr. Erna</button>
+  <button class="filter-chip dr-budhi" data-filter="budhi" onclick="applyFilter(this)">dr. Budhi</button>
+  <button class="filter-chip dr-etha"  data-filter="etha"  onclick="applyFilter(this)">dr. Etha</button>
+  <button class="filter-chip dr-agil"  data-filter="agil"  onclick="applyFilter(this)">dr. Agil</button>
+  <button class="filter-chip dr-sukis"  data-filter="sukis"  onclick="applyFilter(this)">dr. Sukis</button>
+</div>
+
+<!-- MAIN -->
+<main>
+
+<!-- ═══════════════════════════════════════════
+     MIND MAP
+     ═══════════════════════════════════════════ -->
+<div class="section-head">
+  <div class="section-icon">🗺️</div>
+  <div class="section-title">Peta Belajar — DSM-5</div>
+  <div class="section-line"></div>
+</div>
+<div class="mindmap-wrap">
+  <div class="mindmap-grid">
+
+    <!-- Mood Disorders -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">😔 Gangguan Mood</div>
+        <div class="mm-node-badge" style="background:#C0392B">P1 · 10 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Major Depressive Disorder</div><div class="mm-sub-ref">📄 K.7.1 & K.7.2 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Bipolar I & II Disorder</div><div class="mm-sub-ref">📄 K.7.1 & K.7.2 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Cyclothymia, Dysthymia</div><div class="mm-sub-ref">📄 K.7.1 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Persistent Depressive Disorder</div><div class="mm-sub-ref">📄 K.7.2 — dr. Erna</div></div></div>
+      </div>
+    </div>
+
+    <!-- Psychotic -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">🌀 Skizofrenia & Psikotik</div>
+        <div class="mm-node-badge" style="background:#C0392B">P1 · 10 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Schizophrenia (Kriteria A-E)</div><div class="mm-sub-ref">📄 K.3 & K.4 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Schizoaffective Disorder</div><div class="mm-sub-ref">📄 K.4 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Brief Psychotic, Delusional Disorder</div><div class="mm-sub-ref">📄 K.3 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">MSE pada Psikosis</div><div class="mm-sub-ref">📄 K.3 — dr. Erna</div></div></div>
+      </div>
+    </div>
+
+    <!-- MSE & Psychopathology -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">🔍 Status Mental & Psikopatologi</div>
+        <div class="mm-node-badge" style="background:#C0392B">P1 · 8 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Komponen MSE (penampilan, afek, pikiran…)</div><div class="mm-sub-ref">📄 K.3 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Halusinasi vs Ilusi vs Waham</div><div class="mm-sub-ref">📄 K.3 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Wawancara Psikiatri</div><div class="mm-sub-ref">📄 K.2 — dr. Erna</div></div></div>
+      </div>
+    </div>
+
+    <!-- Anxiety & OCD -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">😰 Ansietas & OCD</div>
+        <div class="mm-node-badge" style="background:#C0392B">P1 · 8 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">GAD, Panic Disorder, Social Anxiety</div><div class="mm-sub-ref">📄 K.8 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">OCD & Body Dysmorphic</div><div class="mm-sub-ref">📄 K.8 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Fobia Spesifik & Agorafobia</div><div class="mm-sub-ref">📄 K.8 — dr. Erna</div></div></div>
+      </div>
+    </div>
+
+    <!-- Psychiatric Emergency -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">🚨 Kedaruratan Psikiatri</div>
+        <div class="mm-node-badge" style="background:#C0392B">P1 · 8 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Suicide Risk Assessment</div><div class="mm-sub-ref">📄 K.12 — dr. Etha</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Self-Harm & Krisis Akut</div><div class="mm-sub-ref">📄 K.12 — dr. Etha</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Agitasi & Restrain</div><div class="mm-sub-ref">📄 K.12 — dr. Etha</div></div></div>
+      </div>
+    </div>
+
+    <!-- Substance -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">💊 NAPZA & Adiksi</div>
+        <div class="mm-node-badge" style="background:#E67E22">P2 · 7 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Alcohol, Opioid, Cannabis Use Disorder</div><div class="mm-sub-ref">📄 K.19 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Nicotine Dependence</div><div class="mm-sub-ref">📄 K.19 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Behavioral Addictions</div><div class="mm-sub-ref">📄 K.19 — dr. Budhi</div></div></div>
+      </div>
+    </div>
+
+    <!-- Trauma -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">💔 Trauma & Stresor</div>
+        <div class="mm-node-badge" style="background:#E67E22">P2 · 6 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">PTSD & Acute Stress Disorder</div><div class="mm-sub-ref">📄 K.9 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Adjustment Disorder</div><div class="mm-sub-ref">📄 K.9 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Grief & Complicated Bereavement</div><div class="mm-sub-ref">📄 K.9 — dr. Erna</div></div></div>
+      </div>
+    </div>
+
+    <!-- Psychopharmacology -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">💉 Psikofarmakologi</div>
+        <div class="mm-node-badge" style="background:#E67E22">P2 · 6 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Antipsikotik Tipikal & Atipikal</div><div class="mm-sub-ref">📄 K.21 — dr. Etha</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Antidepresan (SSRI, TCA, MAOI)</div><div class="mm-sub-ref">📄 K.21 — dr. Etha</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Mood Stabilizer, Benzodiazepin</div><div class="mm-sub-ref">📄 K.21 — dr. Etha</div></div></div>
+      </div>
+    </div>
+
+    <!-- Child & Adolescent -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">👶 Psikiatri Anak & Remaja</div>
+        <div class="mm-node-badge" style="background:#2471A3">P3 · 5 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">ADHD, Autism Spectrum</div><div class="mm-sub-ref">📄 K.14 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Conduct & Oppositional Defiant</div><div class="mm-sub-ref">📄 K.14 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Separation Anxiety, Enuresis</div><div class="mm-sub-ref">📄 K.14 — dr. Budhi</div></div></div>
+      </div>
+    </div>
+
+    <!-- Geriatric -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">👴 Geriatri & Neurokognitif</div>
+        <div class="mm-node-badge" style="background:#2471A3">P3 · 5 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Demensia Alzheimer & Vaskular</div><div class="mm-sub-ref">📄 K.18 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Delirium vs Demensia</div><div class="mm-sub-ref">📄 K.18 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">MCI (Mild Cognitive Impairment)</div><div class="mm-sub-ref">📄 K.18 — dr. Budhi</div></div></div>
+      </div>
+    </div>
+
+    <!-- Sleep -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">😴 Gangguan Tidur</div>
+        <div class="mm-node-badge" style="background:#2471A3">P3 · 4 soal</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Insomnia, Hypersomnia</div><div class="mm-sub-ref">📄 K.10 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Narcolepsy, Sleep Apnea</div><div class="mm-sub-ref">📄 K.10 — dr. Budhi</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Parasomnia (nightmare, somnambulism)</div><div class="mm-sub-ref">📄 K.10 — dr. Budhi</div></div></div>
+      </div>
+    </div>
+
+    <!-- Somatic -->
+    <div class="mm-node" onclick="toggleMM(this)">
+      <div class="mm-node-head">
+        <div class="mm-node-title">🤒 Somatic & Disosiatif</div>
+        <div class="mm-node-badge" style="background:#6D6D6D">Tambahan</div>
+        <div class="mm-node-arrow">▼</div>
+      </div>
+      <div class="mm-node-body">
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Somatic Symptom Disorder</div><div class="mm-sub-ref">📄 K.23 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Illness Anxiety (Hipokondriasis)</div><div class="mm-sub-ref">📄 K.23 — dr. Erna</div></div></div>
+        <div class="mm-sub"><div class="mm-sub-dot"></div><div class="mm-sub-info"><div class="mm-sub-name">Conversion / Functional Neurological</div><div class="mm-sub-ref">📄 K.23 — dr. Erna</div></div></div>
+      </div>
+    </div>
+
+  </div><!-- /mindmap-grid -->
+</div>
+
+<!-- ═══════════════════════════════════════════
+     KULIAH
+     ═══════════════════════════════════════════ -->
+<div class="section-head" id="kuliah">
+  <div class="section-icon">📖</div>
+  <div class="section-title">Materi Kuliah</div>
+  <div class="section-line"></div>
+</div>
+
+<!-- ── PRIORITAS 1 ── -->
+<div class="priority-group p1 open" id="group-p1">
+  <div class="priority-group-head" onclick="toggleGroup(this)">
+    <div class="priority-badge">P1</div>
+    <div class="priority-group-title">Prioritas 1 — Wajib Dikuasai</div>
+    <div class="priority-soal-tag hot">44 soal · 44%</div>
+    <div class="priority-arrow">▼</div>
+  </div>
+  <div class="priority-group-body">
+
+    <a href="K.2 Wawancara Psikiatri - dr.Erna.html" class="kuliah-card highlight" data-priority="p1" data-doctor="erna">
+      <div class="k-num">K.2</div>
+      <div class="k-body">
+        <div class="k-title">Wawancara Psikiatri</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">6 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.3 Pemeriksaan Mental Status - dr. Erna.html" class="kuliah-card highlight" data-priority="p1" data-doctor="erna">
+      <div class="k-num">K.3</div>
+      <div class="k-body">
+        <div class="k-title">Pemeriksaan Mental Status & Psikopatologi</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">8 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.7.1 Depressive and Bipolar Disorders - dr. Erna.html" class="kuliah-card highlight" data-priority="p1" data-doctor="erna">
+      <div class="k-num">K.7.1</div>
+      <div class="k-body">
+        <div class="k-title">Depressive and Bipolar Disorders (Bagian 1)</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">10 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.7.2 Depressive and Bipolar Disorders 2 - dr. Erna.html" class="kuliah-card highlight" data-priority="p1" data-doctor="erna">
+      <div class="k-num">K.7.2</div>
+      <div class="k-body">
+        <div class="k-title">Depressive and Bipolar Disorders (Bagian 2)</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">10 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.8 Anxiety OCD - dr. Erna.html" class="kuliah-card highlight" data-priority="p1" data-doctor="erna">
+      <div class="k-num">K.8</div>
+      <div class="k-body">
+        <div class="k-title">Anxiety and Obsessive-Compulsive Disorders</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">8 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.12 Kedaruratan Psikiatri, Self-Harm & Bunuh Diri - dr. Etha.html" class="kuliah-card highlight" data-priority="p1" data-doctor="etha">
+      <div class="k-num">K.12</div>
+      <div class="k-body">
+        <div class="k-title">Psychiatric Emergencies, Suicide and Self-Harm</div>
+        <div class="k-meta"><div class="dot-etha"></div><div class="k-doctor">Dr.dr. Adriesti Herdaetha, Sp.KJ., M.H.</div><div class="k-soal">8 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <!-- Slot kosong — tambahkan kuliah baru di sini dengan menyalin blok <a> di atas -->
+
+  </div>
+</div>
+
+<!-- ── PRIORITAS 2 ── -->
+<div class="priority-group p2" id="group-p2">
+  <div class="priority-group-head" onclick="toggleGroup(this)">
+    <div class="priority-badge">P2</div>
+    <div class="priority-group-title">Prioritas 2 — Penting</div>
+    <div class="priority-soal-tag hot">25 soal · 25%</div>
+    <div class="priority-arrow">▼</div>
+  </div>
+  <div class="priority-group-body">
+
+    <a href="K.4 Klasifikasi Gangguan Jiwa - dr. Erna.html" class="kuliah-card" data-priority="p2" data-doctor="erna">
+      <div class="k-num">K.4</div>
+      <div class="k-body">
+        <div class="k-title">Klasifikasi Gangguan Jiwa & Formulasi Diagnostik Multiaksial</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">5 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.9 Trauma Stressor Related Disorders - dr. Erna.html" class="kuliah-card" data-priority="p2" data-doctor="erna">
+      <div class="k-num">K.9</div>
+      <div class="k-body">
+        <div class="k-title">Trauma- and Stressor-Related Disorders</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">6 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.19 NAPZA dan Perilaku Adiktif - dr. Budhi.html" class="kuliah-card" data-priority="p2" data-doctor="budhi">
+      <div class="k-num">K.19</div>
+      <div class="k-body">
+        <div class="k-title">Substance Use Disorders, Nicotine Dependence and Behavioral Addictions</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">7 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.21 Psikofarmakologi - dr. Etha.html" class="kuliah-card" data-priority="p2" data-doctor="etha">
+      <div class="k-num">K.21</div>
+      <div class="k-body">
+        <div class="k-title">Psychopharmacology in Psychiatry</div>
+        <div class="k-meta"><div class="dot-etha"></div><div class="k-doctor">Dr.dr. Adriesti Herdaetha, Sp.KJ., M.H.</div><div class="k-soal">6 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ── PRIORITAS 3 ── -->
+<div class="priority-group p3" id="group-p3">
+  <div class="priority-group-head" onclick="toggleGroup(this)">
+    <div class="priority-badge">P3</div>
+    <div class="priority-group-title">Prioritas 3 — Menengah</div>
+    <div class="priority-soal-tag">33 soal · 33%</div>
+    <div class="priority-arrow">▼</div>
+  </div>
+  <div class="priority-group-body">
+
+    <a href="K.1 Sejarah Psikiatri, Kesehatan Mental - dr. Budhi.html" class="kuliah-card" data-priority="p3" data-doctor="budhi">
+      <div class="k-num">K.1</div>
+      <div class="k-body">
+        <div class="k-title">Foundations of Psychiatry: History, Mental Health & Human Development</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">5 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.5 Dasar Biologis Psikologis Gangguan Jiwa - dr. Etha.html" class="kuliah-card" data-priority="p3" data-doctor="etha">
+      <div class="k-num">K.5</div>
+      <div class="k-body">
+        <div class="k-title">Biological and Psychological Foundations of Mental Disorders</div>
+        <div class="k-meta"><div class="dot-etha"></div><div class="k-doctor">Dr.dr. Adriesti Herdaetha, Sp.KJ., M.H.</div><div class="k-soal">5 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.10 Gangguan Tidur - dr. Budhi.html" class="kuliah-card" data-priority="p3" data-doctor="budhi">
+      <div class="k-num">K.10</div>
+      <div class="k-body">
+        <div class="k-title">Sleep Disorders</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">4 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.11 Intervensi Psikoterapi dan Psikososial - dr. Budhi.html" class="kuliah-card" data-priority="p3" data-doctor="budhi">
+      <div class="k-num">K.11</div>
+      <div class="k-body">
+        <div class="k-title">Psychotherapy and Psychosocial Interventions</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">4 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.14 Keswa Anak dan Remaja - dr. Budhi.html" class="kuliah-card" data-priority="p3" data-doctor="budhi">
+      <div class="k-num">K.14</div>
+      <div class="k-body">
+        <div class="k-title">Child and Adolescent Mental and Behavioral Disorders</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">5 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.18 Geriatri Neurokognitif - dr. Budhi.html" class="kuliah-card" data-priority="p3" data-doctor="budhi">
+      <div class="k-num">K.18</div>
+      <div class="k-body">
+        <div class="k-title">Geriatric Psychiatry and Neurocognitive Disorders</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">5 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ── PRIORITAS 4 ── -->
+<div class="priority-group p4" id="group-p4">
+  <div class="priority-group-head" onclick="toggleGroup(this)">
+    <div class="priority-badge">P4</div>
+    <div class="priority-group-title">Prioritas 4 — Review Cepat</div>
+    <div class="priority-soal-tag">15 soal · 15%</div>
+    <div class="priority-arrow">▼</div>
+  </div>
+  <div class="priority-group-body">
+
+    <a href="K.6 Psikodinamika Psikoterapi Suportif - dr. Budhi.html" class="kuliah-card" data-priority="p4" data-doctor="budhi">
+      <div class="k-num">K.6</div>
+      <div class="k-body">
+        <div class="k-title">Psychodynamic</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">3 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.15 Seksualitas Disfungsi Parafilia - dr. Budhi.html" class="kuliah-card" data-priority="p4" data-doctor="budhi">
+      <div class="k-num">K.15</div>
+      <div class="k-body">
+        <div class="k-title">Normal Sexuality, Sexual Dysfunction and Paraphilic Disorders</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div><div class="k-soal">3 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.16 Gangguan Makan dan Ekskresi - dr. Erna.html" class="kuliah-card" data-priority="p4" data-doctor="erna">
+      <div class="k-num">K.16</div>
+      <div class="k-body">
+        <div class="k-title">Eating and Elimination Disorders</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">3 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.17 Etika Kapasitas Rawat Paksa.html" class="kuliah-card" data-priority="p4" data-doctor="sukis">
+      <div class="k-num">K.17</div>
+      <div class="k-body">
+        <div class="k-title">Ethics, Capacity and Involuntary Treatment in Psychiatry</div>
+        <div class="k-meta"><div class="dot-sukis"></div><div class="k-doctor">Dr.dr. Siti Soekiswati, SH, MH</div><div class="k-soal">3 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.20 Gangguan Kepribadian.html" class="kuliah-card" data-priority="p4" data-doctor="erna">
+      <div class="k-num">K.20</div>
+      <div class="k-body">
+        <div class="k-title">Personality Disorders</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div><div class="k-soal">3 soal</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ── MATERI TAMBAHAN ── -->
+<div class="priority-group px" id="group-px">
+  <div class="priority-group-head" onclick="toggleGroup(this)">
+    <div class="priority-badge">⚠️</div>
+    <div class="priority-group-title">Materi Tambahan — Tetap Direview</div>
+    <div class="priority-soal-tag">Tidak di blueprint</div>
+    <div class="priority-arrow">▼</div>
+  </div>
+  <div class="priority-group-body">
+
+    <a href="K.0 Kesehatan Jiwa Islam - dr. Budhi.html" class="kuliah-card" data-priority="px" data-doctor="budhi">
+      <div class="k-num">K.0</div>
+      <div class="k-body">
+        <div class="k-title">Islamic Perspectives on Mental Health and Psychiatry</div>
+        <div class="k-meta"><div class="dot-budhi"></div><div class="k-doctor">dr. RH Budhi Muljanto, Sp.KJ</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.22 Deteksi Dini Depresi, Ansietas & KDRT - dr. Agil.html" class="kuliah-card" data-priority="px" data-doctor="agil">
+      <div class="k-num">K.22</div>
+      <div class="k-body">
+        <div class="k-title">Mental Health in Primary Care and Family Medicine</div>
+        <div class="k-meta"><div class="dot-agil"></div><div class="k-doctor">dr. Agil Priambodo, M.Biomed., Sp.KKLP</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.23 SSRD — Somatic Symptom, Illness Anxiety & Konversi - dr. Erna.html" class="kuliah-card" data-priority="px" data-doctor="erna">
+      <div class="k-num">K.23</div>
+      <div class="k-body">
+        <div class="k-title">Somatic Symptom, Illness Anxiety and Dissociative Disorders</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+    <a href="K.24 Introduction to Psychiatry - dr. Erna.html" class="kuliah-card" data-priority="px" data-doctor="erna">
+      <div class="k-num">K.24</div>
+      <div class="k-body">
+        <div class="k-title">Introduction to Psychiatry and Mental Health</div>
+        <div class="k-meta"><div class="dot-erna"></div><div class="k-doctor">dr. Erna Herawati, Sp.KJ</div></div>
+      </div>
+      <div class="k-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     TUTORIAL
+     ═══════════════════════════════════════════ -->
+<div class="section-head" style="margin-top:52px;">
+  <div class="section-icon">💬</div>
+  <div class="section-title">Tutorial</div>
+  <div class="section-line"></div>
+</div>
+
+<div class="tutorial-group open">
+  <div class="tutorial-group-head" onclick="toggleGroup(this)">
+    <div class="tutorial-icon">📋</div>
+    <div class="tutorial-group-title">Skenario Tutorial</div>
+    <div class="tutorial-week-tag">4 Pekan</div>
+    <div class="tutorial-arrow">▼</div>
+  </div>
+  <div class="tutorial-group-body">
+
+    <a href="T.1 Depresi.html" class="tutorial-card">
+      <div class="t-week">T.1</div>
+      <div class="t-title">Depresi</div>
+      <div class="t-arrow">→</div>
+    </a>
+
+    <a href="T.2 Fobia Spesifik.html" class="tutorial-card">
+      <div class="t-week">T.2</div>
+      <div class="t-title">Fobia Spesifik</div>
+      <div class="t-arrow">→</div>
+    </a>
+
+    <a href="T.3 Skizofrenia.html" class="tutorial-card">
+      <div class="t-week">T.3</div>
+      <div class="t-title">Skizofrenia</div>
+      <div class="t-arrow">→</div>
+    </a>
+
+    <a href="T.4 Ketergantungan Nikotin.html" class="tutorial-card">
+      <div class="t-week">T.4</div>
+      <div class="t-title">Ketergantungan Nikotin</div>
+      <div class="t-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     LATIHAN SOAL
+     ═══════════════════════════════════════════ -->
+<div id="latsoal" class="quiz-section">
+  <div class="quiz-section-title">⚡ Latihan Soal</div>
+  <div class="quiz-section-sub">Klik untuk membuka bank soal. Sisipkan file HTML quiz di slot yang tersedia.</div>
+  <div class="quiz-slots">
+
+    <!-- SLOT 1 — quiz campur (nanti tautkan file quiz HTML yang sudah ada) -->
+    <a href="https://cbt-psikiatri-ub.beaverjerry7604.chatgpt.site/" class="quiz-slot placeholder">
+      <div class="quiz-slot-icon">📝</div>
+      <div class="quiz-slot-body">
+        <div class="quiz-slot-title">Bank Soal Campuran</div>
+        <!-- Ganti href="#" dengan nama file quiz HTML kamu, lalu hapus class "placeholder" -->
+        <span class="quiz-slot-tag">Segera</span>
+      </div>
+    </a>
+
+    <!-- SLOT 2 — quiz per topik (belum ada, digarap terpisah) -->
+    <a href="#" class="quiz-slot placeholder">
+      <div class="quiz-slot-icon">🗂️</div>
+      <div class="quiz-slot-body">
+        <div class="quiz-slot-title">Bank Soal per Topik</div>
+        <!-- Dikerjakan terpisah setelah file quiz pertama dikirim -->
+        <span class="quiz-slot-tag">Dikerjakan terpisah</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+</main>
+
+<footer>
+  Ranger HQ &nbsp;·&nbsp; <span>Psychiatry & Mental Health</span> &nbsp;·&nbsp; Semester 7
+</footer>
+
+<script>
+// ── TOGGLE MIND MAP NODE ──────────────────────
+function toggleMM(node) {
+  node.classList.toggle('open');
+}
+
+// ── TOGGLE PRIORITY / TUTORIAL GROUP ─────────
+function toggleGroup(headEl) {
+  const group = headEl.closest('.priority-group, .tutorial-group');
+  group.classList.toggle('open');
+}
+
+// ── FILTER ───────────────────────────────────
+function applyFilter(chip) {
+  const filter = chip.dataset.filter;
+
+  // update chip active states
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+
+  const cards = document.querySelectorAll('.kuliah-card');
+
+  cards.forEach(card => {
+    const prio   = card.dataset.priority || '';
+    const doctor = card.dataset.doctor   || '';
+
+    let show = false;
+    if (filter === 'all') {
+      show = true;
+    } else if (['p1','p2','p3','p4','px'].includes(filter)) {
+      show = prio === filter;
+    } else {
+      // doctor filter
+      show = doctor === filter;
+    }
+
+    const link = card.closest('a') || card;
+    link.style.display = show ? '' : 'none';
+  });
+
+  // hide/show groups that have no visible cards; also auto-open matching groups
+  document.querySelectorAll('.priority-group').forEach(group => {
+    const visible = [...group.querySelectorAll('a.kuliah-card, a[href]')]
+      .filter(a => a.style.display !== 'none').length;
+    group.style.display = visible > 0 ? '' : 'none';
+    if (visible > 0 && filter !== 'all') group.classList.add('open');
+  });
+}
+</script>
+</body>
+</html>
